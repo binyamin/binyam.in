@@ -1,0 +1,258 @@
+/* Variable */
+:root{
+    --bg: #EFEFEF;
+    --main: #707070;
+    --accent: #425777;
+}
+/* Reset */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--main);
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--bg);
+    height: 10vh;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 #b4b4b4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar a.logo-link {
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    height: 80%;
+}
+
+.navbar .nav-link {
+    font-size: 1.5em;
+    margin: 0 1em;
+    text-decoration: none;
+
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    display: inline-block;
+    background: var(--main);
+    height: 2px;
+    width: 2em;
+
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: width .5s ease-in-out;
+}
+
+.navbar .nav-link.active {
+    color: var(--accent);
+}
+
+.navbar .nav-link.active::after {
+    width: .5em;
+    background: var(--accent);
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
+/* Splash Section */
+
+.splash {
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 10vh;
+    padding-top: 10vh;
+
+    position: relative;
+    top: 0;
+
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.splash::after {
+    content: "";
+    /* Background image by Anders Jildén @Unsplash.com */
+    background-image: url(assets/skyline.jpg);
+    background-size: cover;
+    opacity: 0.2;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.splash .splash-text {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.splash .splash-text .jobTitle {
+    color: var(--accent);
+}
+
+.splash .cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    padding: .25em 1em;
+    margin-top: 1em;
+    transition: background .2s ease-out;
+}
+
+.splash .cta-btn:hover {
+    color: white;
+    background: var(--accent);
+}
+
+.splash .avatar {
+    margin-top: 200px;
+    clip-path: circle(20% at 290px 130px);
+    -webkit-clip-path: circle(20% at 290px 130px);
+    box-shadow: 3px 3px 6px 0 #b4b4b4;
+}
+
+/* About Section */
+.about{
+    position: relative;
+    overflow-x: hidden;
+    padding: 200px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.about::after {
+    content: "";
+    display: inline-block;
+    background: var(--accent);
+    height: 80%;
+    width: 200px;
+    transform: rotate(20deg);
+
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+
+.about h1 {
+    grid-column: 1/3;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.about .about-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about .about-text p {
+    margin: 1em 0;
+}
+.about .about-text span {
+    font-size: 1.5em;
+}
+
+.about .skill-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.about .skill-container {
+    margin: 1em 0;
+}
+
+.about .skill-container .icon::before {
+    font-size: 3em;
+    color: var(--accent);
+}
+
+.about .skill-container p {
+    display: inline-block;
+    color: var(--accent);
+    width: 50px;
+    margin: 1em;
+}
+
+.about .skills {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.about .skill-container span {
+    box-shadow: 0 0 6px 3px #b4b4b4;
+    color: var(--accent);
+    padding: .5em;
+    margin: .5em;
+}
+
+/* Work Section */
+.work {
+
+}
+.item{
+    position: relative;
+    height: 275px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.item img {
+    height: 100%;
+    text-align: center;
+}
+
+figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: #33333320;
+    transition: max-height 1s ease-out;
+
+}
+
+.item:hover figcaption {
+    max-height: 100%;
+}
