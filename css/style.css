@@ -5,7 +5,7 @@
     --accent: #425777;
 }
 /* Reset */
-*, *::before, *::after {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar .nav-link {
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 0 1em;
     text-decoration: none;
 
@@ -66,11 +66,7 @@ body {
     transition: width .5s ease-in-out;
 }
 
-.navbar .nav-link.active {
-    color: var(--accent);
-}
-
-.navbar .nav-link.active::after {
+.navbar .nav-link.current::after {
     width: .5em;
     background: var(--accent);
 }
@@ -99,8 +95,10 @@ body {
 .splash::after {
     content: "";
     /* Background image by Anders Jildén @Unsplash.com */
-    background-image: url(assets/skyline.jpg);
+    background-image: url(../assets/skyline.jpg);
+    background-color: #333;
     background-size: cover;
+    background-position: center;
     opacity: 0.2;
 
     position: absolute;
@@ -127,7 +125,7 @@ body {
     color: var(--accent);
     border: 2px solid var(--accent);
     border-radius: 5px;
-    padding: .25em 1em;
+    padding: .25em 1.5em;
     margin-top: 1em;
     transition: background .2s ease-out;
 }
@@ -216,43 +214,272 @@ body {
 }
 
 .about .skill-container span {
-    box-shadow: 0 0 6px 3px #b4b4b4;
+    box-shadow: 0 0 6px 1px #b4b4b4;
     color: var(--accent);
     padding: .5em;
     margin: .5em;
 }
 
 /* Work Section */
-.work {
 
+.work {
+    padding-top: 15vh;
+    text-align: center;
 }
+.work h2 {
+    font-style: italic;
+}
+
+.portfolio-container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .item{
     position: relative;
-    height: 275px;
-    width: 400px;
+    width: 30%;
+    border-radius: 15px;
     overflow: hidden;
+    margin: 2em auto;
 }
 
 .item img {
-    height: 100%;
+    width: 100%;
     text-align: center;
 }
 
-figcaption{
+.item-content{
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     max-height: 0;
-    overflow: hidden;
-    background: #33333320;
-    transition: max-height 1s ease-out;
-
+    overflow-y: hidden;
+    background: var(--bg);
+    transition: max-height .5s ease-out;
 }
 
-.item:hover figcaption {
+.item:hover .item-content {
     max-height: 100%;
+}
+.item-content p {
+    font-style: italic;
+}
+.item-content .btn{
+    margin-top: 2em;
+    border: 1px solid var(--main);
+    padding: .25em 1em;
+    text-decoration: none;
+    transition: background .2s ease-in-out;
+}
+
+.item-content .btn:hover {
+    background: var(--main);
+    color: var(--bg);
+}
+
+/* Contact Section */
+.content {
+    padding: 0 1em;
+}
+.contact .content {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--accent);
+    background-image: linear-gradient(var(--accent), #384A64);
+}
+
+.contact .content h1 {
+    padding-top: 150px;
+    color: var(--bg);
+    text-align: center;
+    font-size: 1.35em;
+}
+
+.contact .content .icon-row {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.contact .content .icon-row a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--main);
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: opacity .2s ease-in-out;
+}
+
+.icon-row a:hover {
+    opacity: 0.7;
+}
+
+.contact .content .icon-row .icon {
+    font-size: 2em;
+}
+
+.contact .content .icon-row .icon>* {
+    color: var(--bg);
+}
+
+.contact .content p {
+    padding-top: 100px;
+    padding-bottom: 1em;
+    color: var(--bg);
+    text-align: center;
+}
+
+.contact .content p>* {
+    color: var(--bg);
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        height: 70px;
+        top: -3px; /* 0px, minus 3px to accomodate the box-shadow */
+    }
+
+    .nav {
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+        background: white;
+        width: 100%;
+        padding: 0;
+        transition: max-height 0.7s ease-out, padding 0.7s ease-out ;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .nav.activeMenu {
+        max-height: 700px;
+        padding: .5em;
+    }
+
+    .nav .nav-link {
+        display: block;
+        font-size: 2em;
+        margin: 2.5em;
+    }
+
+    /* Hamburger Icon (with animation) */
+    .navbar .hamburger {
+        display: inline;
+    }
+
+    .hamburger .bars{
+        background: var(--main);
+        display: block;
+        width: 2.5em;
+        height: .25em;
+        margin: 0.5em;
+        text-align: center;
+        transition: width .3s ease-out, transform .5s ease-out;
+    }
+
+    .navbar .hamburger.responsive :first-child{transform: rotate(45deg) translate(7px, 6px);}
+    .navbar .hamburger.responsive :nth-child(2){width: 0;}
+    .navbar .hamburger.responsive :last-child{transform: rotate(-45deg) translate(10px, -10px);}
+
+    /* Splash Section */
+    .splash {
+        overflow: hidden;
+        padding-top: 70px;
+        
+        /*Accomodate various mobile sizes*/
+        min-height: 812px; /*section is at least iphone-x size*/
+        height: auto; /*expand if needed*/
+
+        flex-direction: column;
+        justify-content: flex-start ;
+    }
+
+    .splash .container {
+        padding-top: 7%;
+        text-align: center;
+        width: 70%;
+    }
+
+    .splash .splash-text {
+        line-height: 48px;
+    }
+
+    .splash .cta-btn {
+        font-size: 1.5em;
+        position: absolute;
+        bottom: 7%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .splash .avatar {
+        margin-top: 0;
+        position: relative;
+        left: 7%;
+    }
+
+    /* About Section */
+    .about {
+        padding: 1em;
+        display: block;
+    }
+
+    .about::after {
+        display: none;
+    }
+
+    .about .skill-container {
+        text-align: center;
+        margin: 2em auto;
+    }
+    .about .skill-container p {
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+        margin: 1em 0;
+    }
+    .about .skill-container .icon {
+        display: block;
+        font-size: 30vw;
+        margin: 0 auto;
+    }
+
+    .about .skill-container .skills {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    /*Work Section*/
+    .portfolio-container {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .item {
+        width: 90%;
+    }
 }

@@ -12,7 +12,8 @@
 	<script defer src="js/main.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<header class="navbar" id="navbar">
@@ -20,7 +21,7 @@
 			<img src="assets/logo.svg" alt="Binyamin Green" class="logo">
 		</a>
 		<nav class="nav">
-			<a href="#splash" class="nav-link active scroll">Home</a>
+			<a href="#splash" class="nav-link current scroll">Home</a>
 			<a href="#about" class="nav-link scroll">About</a>
 			<a href="#work" class="nav-link scroll">Work</a>
 			<a href="#contact" class="nav-link scroll">Contact</a>
@@ -34,11 +35,11 @@
 	<main class="splash" id="splash">
 		<div class="container">
 			<p class="splash-text">
-			Hi, I'm Ben.<br>
+			Hi, I'm Binyamin.<br>
 			I'm a Front End<br>
 			<span class="jobTitle">Web Developer and Designer</span><br>
 			living in Baltimore, MD</p>
-			<a href="#about" class="cta-btn">Meet Me</a>
+			<a href="#about" class="cta-btn scroll">Meet Me</a>
 		</div>
 		<img src="assets/profile.JPG" alt="Binyamin Green in Ghiradelli Square, San Fransisco" class="avatar"/>
 	</main>
@@ -79,16 +80,67 @@
 		<h1>Work</h1>
 		<h2>Some projects I've worked on</h2>
 		<div class="portfolio-container">
-			<div></div>
 			<figure class="item">
 				<img src="assets/item-1.png" alt="JonDoe.com">
-				<figcaption>
+				<figcaption class="item-content">
 					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
+					<a href="#" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="assets/item-1.png" alt="JonDoe.com">
+				<figcaption class="item-content">
+					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
+					<a href="#" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="assets/item-1.png" alt="JonDoe.com">
+				<figcaption class="item-content">
+					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
+					<a href="#" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="assets/item-1.png" alt="JonDoe.com">
+				<figcaption class="item-content">
+					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
+					<a href="#" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="assets/item-1.png" alt="JonDoe.com">
+				<figcaption class="item-content">
+					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
+					<a href="#" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="assets/item-1.png" alt="JonDoe.com">
+				<figcaption class="item-content">
+					<h1>JonDoe.com</h1>
+					<p>This is a description</p>
 					<a href="#" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</figure>
 		</div>
 	</main>
-	<footer class="contact" id="contact"></footer>
+	<footer class="contact" id="contact">
+		<main class="content">
+			<h1>If you need something, drop me a note...</h1>
+			<div class="icon-row">
+				<a href="mailto:binyaminagreen@gmail.com"><i class="far fa-envelope icon"></i></a>
+				<a href="https://www.github.io/b3u"><i class="fab fa-github icon"></i></a>
+				<a href="https://www.freecodecamp.org/b3u"><i class="fab fa-free-code-camp icon"></i></a>
+				<a href="https://www.codepen.io/b3u"><i class="fab fa-codepen icon"></i></a>
+			</div>
+			<p>© Copyright <span class="copy"></span> by Binyamin Aron Green</p>
+		</main>
+	</footer>
 </body>
 </html>
