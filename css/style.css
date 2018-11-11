@@ -335,11 +335,8 @@ body {
 }
 
 .contact .content .icon-row .icon {
-    font-size: 2em;
-}
-
-.contact .content .icon-row .icon>* {
-    color: var(--bg);
+    width: 60%;
+    fill: var(--bg);
 }
 
 .contact .content p {
