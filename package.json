@@ -15,8 +15,9 @@
   "bugs": {
     "url": "https://github.com/b3u/Portfolio-B/issues"
   },
-  "homepage": "https://github.com/b3u/Portfolio-B#readme",
+  "homepage": "https://b3u.github.io",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "jump.js": "^1.0.2"
   }
 }
