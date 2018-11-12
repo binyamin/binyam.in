@@ -6,3 +6,8 @@
 * CSS
 * Javascript
 * jQuery
+
+## Todo
+----------
+[] Remove jQuery.
+[] Either remove all box shadows for a modern look or add all box shadows (buttons too) for a material-design look.

@@ -1,0 +1,22 @@
+{
+  "name": "b3u.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3u/Portfolio-B.git"
+  },
+  "author": "Binyamin Aron Green",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b3u/Portfolio-B/issues"
+  },
+  "homepage": "https://github.com/b3u/Portfolio-B#readme",
+  "dependencies": {
+    "jump.js": "^1.0.2"
+  }
+}

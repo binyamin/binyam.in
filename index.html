@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Binyamin Aron Green">
+	<meta name="description" content="">
+	<meta name="keywords" content="web developer, websites, web designer, node, express">
 	<link rel="icon" href="assets/favicon.ico" type="favicon/icon">
 
 	<title>BinyaminGreen.com</title>
@@ -12,8 +14,7 @@
 	<script defer src="js/main.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-1"></script>
@@ -31,10 +32,10 @@
 			<img src="assets/logo.svg" alt="Binyamin Green" class="logo">
 		</a>
 		<nav class="nav">
-			<a href="#splash" class="nav-link current scroll">Home</a>
-			<a href="#about" class="nav-link scroll">About</a>
-			<a href="#work" class="nav-link scroll">Work</a>
-			<a href="#contact" class="nav-link scroll">Contact</a>
+			<a href="#!" data-target="#splash" class="nav-link current scroll">Home</a>
+			<a href="#!" data-target="#about" class="nav-link scroll">About</a>
+			<a href="#!" data-target="#work" class="nav-link scroll">Work</a>
+			<a href="#!" data-target="#contact" class="nav-link scroll">Contact</a>
 		</nav>
 		<div class="hamburger">
 			<span class="bars"></span>
@@ -49,7 +50,8 @@
 			I'm a Full-Stack<br>
 			<span class="jobTitle">Web Designer and Developer</span><br>
 			living in Baltimore, MD</p>
-			<a href="#about" class="cta-btn scroll">Meet Me</a>
+			<a href="#!" data-target="#about" class="cta-btn btn-primary scroll">About Me</a>
+			<a href="#!" class="cta-btn btn-secondary scroll">Resume</a>
 		</div>
 		<img src="assets/profile.JPG" alt="Binyamin Green in Ghiradelli Square, San Fransisco" title="Binyamin Green in Ghiradelli Square, San Fransisco" class="avatar"/>
 	</main>
@@ -62,7 +64,7 @@
 		</article>
 		<article class="skill-section">
 			<div class="skill-container">
-				<i class="fas fa-bezier-curve fa-2x icon"></i>
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M17.696 2.292A.994.994 0 0 0 16.99 2c-.288.015-.521.105-.708.294l-2.49 2.5L11.586 7H7a.998.998 0 0 0-.939.658l-4 11c-.133.365-.042.774.232 1.049l2 2a.997.997 0 0 0 1.049.232l11-4A.998.998 0 0 0 17 17v-4.586l2.207-2.207v-.001h.001l2.5-2.506a.997.997 0 0 0-.002-1.414l-4.01-3.994zm-2.403 9.001A.996.996 0 0 0 15 12v4.3l-9.249 3.363 4.671-4.671c.026.001.052.008.078.008A1.5 1.5 0 1 0 9 13.5c0 .026.007.052.008.078l-4.671 4.671L7.7 9H12c.266 0 .52-.105.707-.293L14.5 6.914 17.086 9.5l-1.793 1.793zm3.206-3.208l-2.586-2.586 1.08-1.085 2.592 2.582-1.086 1.089z"/></svg>
 				<p>Graphic Design</p>
 				<div class="skills">
 					<span>Inkscape</span>
@@ -73,8 +75,7 @@
 				</div>
 			</div>
 			<div class="skill-container">
-				<i class="fas fa-code fa-2x icon"></i>
-				<p>Web Development</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M21,4H3C2.447,4,2,4.447,2,5v14c0,0.553,0.447,1,1,1h18c0.553,0,1-0.447,1-1V5C22,4.447,21.553,4,21,4z M4,18V8h16v10H4z"/><path d="M9.293 9.293l-3 3c-.391.391-.391 1.023 0 1.414l3 3 1.414-1.414L8.414 13l2.293-2.293L9.293 9.293zM14.707 9.293l-1.414 1.414L15.586 13l-2.293 2.293 1.414 1.414 3-3c.391-.391.391-1.023 0-1.414L14.707 9.293z"/></svg>				<p>Web Development</p>
 				<div class="skills">
 					<span>HTML</span>
 					<span>CSS</span>
@@ -92,51 +93,51 @@
 		<h2>Some projects I've worked on</h2>
 		<div class="portfolio-container">
 			<div class="item">
-				<img src="assets/item-1.png" alt="JonDoe.com">
+				<img src="assets/code.jpg" alt="">
 				<figcaption class="item-content">
-					<h1>JonDoe.com</h1>
-					<p>This is a description</p>
-					<a href="#" class="btn">Check it out &#8594;</a>
+					<h1>Code Cafe</h1>
+					<p>A template product site</p>
+					<a href="https://b3u.github.io/Template-Sites/CodeCafe" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</div>
 			<div class="item">
-				<img src="assets/kittimore.jpeg" alt="Kittimore">
+				<img src="assets/avenue.jpg" alt="">
 				<figcaption class="item-content">
-					<h1>Kittmore</h1>
-					<p>A fictional cat e-store</p>
+					<h1>Kittimore</h1>
+					<p>A fictional cat-themed e-store</p>
 					<a href="https://sleepy-shore-63735.herokuapp.com/" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</div>
 			<figure class="item">
-				<img src="assets/item-1.png" alt="JonDoe.com">
+				<img src="assets/man.jpg" alt="">
 				<figcaption class="item-content">
-					<h1>JonDoe.com</h1>
-					<p>This is a description</p>
-					<a href="#" class="btn">Check it out &#8594;</a>
-				</figcaption>
-			</figure>
-			<figure class="item">
-				<img src="assets/item-1.png" alt="JonDoe.com">
-				<figcaption class="item-content">
-					<h1>JonDoe.com</h1>
-					<p>This is a description</p>
-					<a href="#" class="btn">Check it out &#8594;</a>
+					<h1>Paper Boy</h1>
+					<p>A sample portfolio page.</p>
+					<a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</figure>
 			<div class="item">
-				<img src="assets/item-1.png" alt="JonDoe.com">
+				<img src="https://unsplash.it/640/426" alt="">
 				<figcaption class="item-content">
-					<h1>JonDoe.com</h1>
-					<p>This is a description</p>
-					<a href="#" class="btn">Check it out &#8594;</a>
+					<h1>Code Cafe</h1>
+					<p>A template product site</p>
+					<a href="https://b3u.github.io/Template-Sites/CodeCafe" class="btn">Check it out &#8594;</a>
+				</figcaption>
+			</div>
+			<div class="item">
+				<img src="https://unsplash.it/g/640/426" alt="">
+				<figcaption class="item-content">
+					<h1>Kittimore</h1>
+					<p>A fictional cat-themed e-store</p>
+					<a href="https://sleepy-shore-63735.herokuapp.com/" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</div>
 			<figure class="item">
-				<img src="assets/item-1.png" alt="JonDoe.com">
+				<img src="https://unsplash.it/640/426?random" alt="">
 				<figcaption class="item-content">
-					<h1>JonDoe.com</h1>
-					<p>This is a description</p>
-					<a href="#" class="btn">Check it out &#8594;</a>
+					<h1>Paper Boy</h1>
+					<p>A sample portfolio page.</p>
+					<a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="btn">Check it out &#8594;</a>
 				</figcaption>
 			</figure>
 		</div>
@@ -147,7 +148,7 @@
 			<div class="icon-row">
 				<a href="mailto:binyaminagreen@gmail.com">
 						<svg role="img" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>				</a>
-				<a href="https://www.github.io/b3u">
+				<a href="https://www.github.com/b3u">
 					<svg role="img" class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
 				</a>
 				<a href="https://www.linkedin.com/in/binyamin-green-0b5391172/">
@@ -160,5 +161,16 @@
 			<p>© Copyright <span class="copy"></span> by Binyamin Aron Green</p>
 		</main>
 	</footer>
+	<script type="module">
+		import jump from './node_modules/jump.js/dist/jump.module.js'
+
+		var link = document.querySelectorAll('.scroll');
+
+		link.forEach(element => {
+			element.addEventListener('click', () => {
+				jump(element.dataset.target);
+			})
+		});
+	</script>
 </body>
 </html>
