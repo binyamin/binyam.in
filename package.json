@@ -17,7 +17,6 @@
   },
   "homepage": "https://b3u.github.io",
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "jump.js": "^1.0.2"
   }
 }
