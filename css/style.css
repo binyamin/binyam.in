@@ -1,8 +1,8 @@
 /* Variable */
 :root{
-    --bg: #EFEFEF;
-    --main: #707070;
-    --accent: #425777;
+    --bg: hsl(0, 0%, 94%);
+    --main: hsl(0, 0%, 10%);
+    --accent: hsl(145, 39%, 47%);
 }
 /* Reset */
 * {
@@ -13,20 +13,19 @@
 }
 
 body {
-    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
 }
 
 /* Navbar */
 .navbar {
     background: var(--bg);
-    height: 10vh;
     width: 100%;
     box-shadow: 0 1px 6px 0 #b4b4b4;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2em;
+    padding: .5rem 2rem;
 
     position: fixed;
     top: 0;
@@ -41,7 +40,7 @@ body {
 }
 
 .navbar .logo {
-    height: 80%;
+    height: 50px;
 }
 
 .navbar .nav-link {
@@ -119,36 +118,34 @@ body {
     color: var(--accent);
 }
 
-.splash .cta-btn {
+.btn {
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
-    border: 2px solid var(--accent);
-    border-radius: 5px;
-    padding: .25em 1.5em;
+    border: 1px solid var(--accent);
+    border-radius: 25px;
+    padding: .25em 1em;
     margin-top: 1em;
+}
+
+.btn-primary {
+    color: white;
+    background: var(--accent);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow .2s ease-out;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+    color: var(--accent);
+    margin-left: 1em;
     transition: background .2s ease-out;
 }
 
-.splash .btn-primary {
-    color: white;
-    background: var(--accent);
-}
-
-.splash .btn-primary:hover {
-    color: var(--accent);
-    background: none;
-}
-
-.splash .btn-secondary {
-    color: var(--accent);
-    background: none;
-    margin-left: 1em;
-}
-
-.splash .btn-secondary:hover {
-    color: white;
-    background: var(--accent);
+.btn-secondary:hover {
+    background: rgba(73, 166, 112, 0.12);
 }
 
 .splash .avatar {
@@ -202,7 +199,8 @@ body {
     display: flex;
     justify-content: space-around;
     width: 70%;
-    margin: 5rem auto;
+    margin: 5em auto;
+    margin-top: 150px;
 }
 .about .skill-section {
     margin: 1em 0;
@@ -232,7 +230,7 @@ body {
 }
 
 .about .skill-section span {
-    box-shadow: 0 0 6px 1px #b4b4b4;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
     color: var(--accent);
     padding: .5em;
     margin: .5em;
@@ -260,60 +258,63 @@ body {
 }
 
 .item{
-    position: relative;
     width: 30%;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
     margin: 2em auto;
+    box-shadow: 0 0px 3px rgba(0,0,0,0.25);
+    transition: box-shadow .25s ease-out;
+}
+
+.item:hover {
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.25); 
+}
+
+.item:last-of-type:hover {
+    box-shadow: 0 0px 3px rgba(0,0,0,0.25);
 }
 
 .item img {
     width: 100%;
     text-align: center;
-    opacity: .7;
+    display: block;
+}
+
+.item a {
+    text-decoration: none;
 }
 
 .item-content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    height: 100%;
-    max-height: 0;
-    overflow-y: hidden;
-    background: var(--bg);
-    transition: max-height .5s ease-out;
+    background: white;
+    padding: 1.5rem;
+    text-align: left;
 }
 
-.item-content::after{
-    content: '<>''
+.card-action{
+    margin-top: 2rem;
+    text-align: right;
+    color: var(--accent);
 }
 
-.item:hover .item-content {
-    max-height: 100%;
-}
-.item-content p {
-    font-style: italic;
-}
+/* Button
 .item-content .btn{
-    margin-top: 2em;
-    border: 1px solid var(--main);
+    background-color: var(--main);
+    color: var(--bg);
+    border: 2px solid var(--main);
+
+    margin-top: 2rem;
     padding: .25em 1em;
+    display: inline-block;
+
     text-decoration: none;
+
     transition: background .2s ease-in-out;
-}
+ }
 
 .item-content .btn:hover {
-    background: var(--main);
-    color: var(--bg);
-}
+    background: white;
+    color: var(--main);
+} */
 
 /* Contact Section */
 .content {
@@ -323,7 +324,7 @@ body {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     background-color: var(--accent);
-    background-image: linear-gradient(var(--accent), #384A64);
+    background-image: linear-gradient(var(--accent), hsl(145, 49%, 50%));
 }
 
 .contact .content h1 {
@@ -343,22 +344,21 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: var(--main);
     width: 50px;
     height: 50px;
     margin: 0 10px;
     cursor: pointer;
     transform: scale(0.9);
-    transition: opacity .2s ease-in-out;
-}
-
-.icon-row a:hover {
-    opacity: 0.7;
 }
 
 .contact .content .icon-row .icon {
     width: 60%;
     fill: var(--bg);
+    transition: fill .2s ease-in-out;
+}
+
+.contact .content .icon-row .icon:hover {
+    fill: var(--main);
 }
 
 .contact .content p {
@@ -450,9 +450,17 @@ body {
     .splash .cta-btn {
         font-size: 1.5em;
         position: absolute;
-        bottom: 7%;
         left: 50%;
         transform: translate(-50%, 0);
+        width: 70%;
+    }
+
+    .splash .cta-btn.btn-primary {
+        margin-top: 300px;
+    }
+
+    .splash .cta-btn.btn-secondary {
+        margin: 380px 0;
     }
 
     .splash .avatar {
@@ -471,25 +479,12 @@ body {
         display: none;
     }
 
-    .about .skill-container {
-        text-align: center;
-        margin: 2em auto;
-    }
-    .about .skill-container p {
-        font-size: 2em;
-        width: 100%;
-        text-align: center;
-        margin: 1em 0;
-    }
-    .about .skill-container .icon {
-        display: block;
-        font-size: 30vw;
-        margin: 0 auto;
+    .about .about-text {
+        width: 70%;
     }
 
-    .about .skill-container .skills {
+    .about .skill-container {
         flex-direction: column;
-        margin: 0 auto;
     }
 
     /*Work Section*/

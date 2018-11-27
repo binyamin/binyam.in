@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script defer src="js/main.js"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 	<!-- <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script> -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -50,8 +50,8 @@
 			I'm a Full-Stack<br>
 			<span class="jobTitle">Web Designer and Developer</span><br>
 			living in Baltimore, MD</p>
-			<a href="#!" data-target="#about" class="cta-btn btn-primary scroll">Learn About Me</a>
-			<a href="https://drive.google.com/file/d/1MxljdBsobv8gEl3HuJ_FdKiM1D0xNpPU/view" target="_blank" class="cta-btn btn-secondary scroll">See my Resume</a>
+			<a href="#!" data-target="#about" class="btn btn-primary scroll">Learn About Me</a>
+			<a href="https://drive.google.com/file/d/1MxljdBsobv8gEl3HuJ_FdKiM1D0xNpPU/view" target="_blank" class="btn btn-secondary scroll">See my Resume</a>
 		</div>
 		<img src="assets/profile.JPG" alt="Binyamin Green in Ghiradelli Square, San Fransisco" title="Binyamin Green in Ghiradelli Square, San Fransisco" class="avatar"/>
 	</main>
@@ -87,6 +87,7 @@
 					<span>jQuery</span>
 					<span>React</span>
 					<span>Git</span>
+					<span>GitHub</span>
 					<!-- <span>Wordpress</span> -->
 				</div>
 			</section>
@@ -107,28 +108,31 @@
 		<h1>Work</h1>
 		<h2>Some projects I've worked on</h2>
 		<div class="portfolio-container">
-			<div class="item">
+			<figure class="item">
+				<a href="https://b3u.github.io/Template-Sites/CodeCafe">
 				<img src="assets/code.jpg" alt="">
 				<figcaption class="item-content">
 					<h1>Code Cafe</h1>
-					<p>A template product site</p>
-					<a href="https://b3u.github.io/Template-Sites/CodeCafe" class="btn">Check it out &#8594;</a>
+					<p>A template product site. Click to view!</p>
 				</figcaption>
-			</div>
-			<div class="item">
+				</a>
+			</figure>
+			<figure class="item">
+				<a href="https://sleepy-shore-63735.herokuapp.com/">
 				<img src="assets/avenue.jpg" alt="">
 				<figcaption class="item-content">
 					<h1>Kittimore</h1>
-					<p>A fictional cat-themed e-store</p>
-					<a href="https://sleepy-shore-63735.herokuapp.com/" class="btn">Check it out &#8594;</a>
+					<p>A fictional cat-themed e-store.</p>
+					<p class="card-action">view site</p>
 				</figcaption>
-			</div>
+				</a>
+			</figure>
 			<figure class="item">
 				<img src="assets/man.jpg" alt="">
 				<figcaption class="item-content">
 					<h1>Paper Boy</h1>
 					<p>A sample portfolio page.</p>
-					<a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="btn">Check it out &#8594;</a>
+					<a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="btn btn-secondary">Check it out &#8594;</a>
 				</figcaption>
 			</figure>
 			<!-- <div class="item">
@@ -145,7 +149,7 @@
 		<main class="content">
 			<h1>If you need something, drop me a note...</h1>
 			<div class="icon-row">
-				<a href="mailto:binyaminagreen@gmail.com">
+				<a href="mailto:binyaminagreen@gmail.com?subject=Website Referral">
 						<svg role="img" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>				</a>
 				<a href="https://www.github.com/b3u">
 					<svg role="img" class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -168,6 +172,13 @@
 		link.forEach(element => {
 			element.addEventListener('click', () => {
 				jump(element.dataset.target);
+
+				document.querySelectorAll('.nav-link').forEach(link =>{
+					link.classList.remove('current');
+					if(element.dataset.target === link.dataset.target) {
+						link.classList.add('current');
+					}
+				})
 			})
 		});
 	</script>
