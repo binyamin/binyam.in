@@ -1,4 +1,4 @@
-/* Variable */
+/* Variables */
 :root{
     --bg: hsl(0, 0%, 94%);
     --main: hsl(0, 0%, 10%);
@@ -141,18 +141,18 @@ body {
 .btn-secondary {
     color: var(--accent);
     margin-left: 1em;
+    background: rgba(255, 255, 255, 0.5);
     transition: background .2s ease-out;
 }
 
 .btn-secondary:hover {
-    background: rgba(73, 166, 112, 0.12);
+    background: hsla(145, 39%, 90%, 0.5);
 }
 
 .splash .avatar {
     margin-top: 200px;
     clip-path: circle(20% at 290px 130px);
     -webkit-clip-path: circle(20% at 290px 130px);
-    box-shadow: 3px 3px 6px 0 #b4b4b4;
 }
 
 /* About Section */
@@ -160,10 +160,6 @@ body {
     position: relative;
     overflow-x: hidden;
     padding-top: 100px;
-/* 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto; */
 }
 
 .about::after {
@@ -192,58 +188,59 @@ body {
 .about .about-text p {
     margin: 1em 0;
 }
+
 .about .about-text span {
     font-size: 1.5em;
 }
-.about .skill-container {
+
+.skill-container {
     display: flex;
     justify-content: space-around;
     width: 70%;
-    margin: 5em auto;
-    margin-top: 150px;
-}
-.about .skill-section {
-    margin: 1em 0;
-    display: inline-block;
-    text-align: center;
+    margin: 75px auto;
 }
 
-.about .skill-section .icon{
-    fill: var(--accent);
-    margin: 0;
-}
-
-.about .skill-section .skill-title {
+.skill-section {
+    width: 30%; 
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.about .skill-section .skill-title p {
-    color: var(--accent);
+.skill-section .icon {
+    fill: var(--accent);
+}
+
+.skill-section .skill-title {
     font-weight: bold;
-}
-
-.about .skills {
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
-}
-
-.about .skill-section span {
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
     color: var(--accent);
-    padding: .5em;
-    margin: .5em;
+}
+
+.skill-section .skills{
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.skill-section .skills li::before {
+    content: '\2714';
+    margin-right: 5px;
+}
+
+.skill-section .skills li {
+    list-style-type :none;
+    padding: 3px 0;
 }
 
 /* Work Section */
-
 .work {
     padding-top: 15vh;
     text-align: center;
 }
-.work h2 {
+.work .work-lead {
     font-style: italic;
+    font-size: 1.25rem;
+    font-weight: normal;
 }
 
 .portfolio-container {
@@ -270,18 +267,10 @@ body {
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.25); 
 }
 
-.item:last-of-type:hover {
-    box-shadow: 0 0px 3px rgba(0,0,0,0.25);
-}
-
 .item img {
     width: 100%;
     text-align: center;
     display: block;
-}
-
-.item a {
-    text-decoration: none;
 }
 
 .item-content{
@@ -290,31 +279,25 @@ body {
     text-align: left;
 }
 
-.card-action{
+.item-content div {
     margin-top: 2rem;
     text-align: right;
+}
+.card-action{
     color: var(--accent);
+    text-decoration: none;
+    padding: .25rem .5rem;
+    border: 1px solid white;
+    transition: border .2s ease-out, background-color .2s ease-out;
 }
 
-/* Button
-.item-content .btn{
-    background-color: var(--main);
-    color: var(--bg);
-    border: 2px solid var(--main);
+.card-action:hover {
+    border: 1px solid var(--accent);
+}
 
-    margin-top: 2rem;
-    padding: .25em 1em;
-    display: inline-block;
-
-    text-decoration: none;
-
-    transition: background .2s ease-in-out;
- }
-
-.item-content .btn:hover {
-    background: white;
-    color: var(--main);
-} */
+.card-action:focus{
+    background-color: rgba(73, 166, 112, .25);
+}
 
 /* Contact Section */
 .content {
