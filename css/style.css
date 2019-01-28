@@ -359,6 +359,32 @@ body {
     color: var(--bg);
 }
 
+.main {
+    height: 100vh;
+    width: 100%;
+    padding: 200px 24px 0 24px;
+
+    position: relative;
+    top: 0;
+}
+
+.main::after {
+    content: "";
+    /* Background image by Anders Jildén @Unsplash.com */
+    background-image: url(../assets/skyline.jpg);
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 @media only screen and (max-width: 768px) {
 
     /* Navigation */
