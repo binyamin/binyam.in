@@ -5,15 +5,19 @@
     --accent: hsl(145, 39%, 47%);
 }
 /* Reset */
-* {
+body, p, h1, h2, h3, h4, h5, h6{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+a {
     color: var(--main);
 }
 
 body {
     font-family: 'Roboto', 'Segoe UI', sans-serif;
+    color: var(--main);
 }
 
 /* Navbar */
