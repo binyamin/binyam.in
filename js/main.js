@@ -1,6 +1,5 @@
 /*-------Sections-------
   - Navbar underline effect
-  - Smooth scroll effect
   - Responsive Navbar & hamburger animation
   - Update copyright year
 */
@@ -19,16 +18,10 @@ navlink.forEach(function(e) {
 
 //Responsive Navbar
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav');
-
-hamburger.addEventListener('click', function(){
+document.querySelector('.hamburger').addEventListener('click', function(){
     this.classList.toggle('responsive');
-    navMenu.classList.toggle('activeMenu');
+    document.querySelector('.nav').classList.toggle('activeMenu');
  })
 
 //Copyright Year
-const copyYear = document.querySelector('.copy');
-
-const now = new Date();
-copyYear.innerHTML = now.getFullYear();
+document.querySelector('.copy').innerHTML = new Date().getFullYear();
