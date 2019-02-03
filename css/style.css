@@ -4,6 +4,7 @@
     --main: hsl(0, 0%, 10%);
     --accent: hsl(145, 39%, 47%);
 }
+
 /* Reset */
 body, p, h1, h2, h3, h4, h5, h6{
     padding: 0;
@@ -15,8 +16,9 @@ a {
     color: var(--main);
 }
 
+html{scroll-behavior: smooth}
 body {
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-family: Roboto, 'Segoe UI', sans-serif;
     color: var(--main);
 }
 
@@ -34,6 +36,8 @@ body {
     position: fixed;
     top: 0;
     z-index: 2;
+
+    box-sizing: border-box;
 }
 
 .navbar a.logo-link {
@@ -114,8 +118,8 @@ body {
 
 .splash .splash-text {
     font-weight: bold;
-    font-size: 2em;
-    line-height: 48px;
+    font-size: 1.5rem;
+    line-height: 36px;
 }
 
 .splash .splash-text .jobTitle {
@@ -179,9 +183,10 @@ body {
     top: 0;
 }
 
-.about h1 {
+.about h2 {
     text-align: center;
     padding: 1em 0;
+    font-size: 1.75rem;
 }
 
 .about .about-text {
@@ -193,8 +198,8 @@ body {
     margin: 1em 0;
 }
 
-.about .about-text span {
-    font-size: 1.5em;
+.about .about-text ::first-letter {
+    font-size: 1.25em;
 }
 
 .skill-container {
@@ -241,9 +246,12 @@ body {
     padding-top: 15vh;
     text-align: center;
 }
+
+.work h2 {font-size: 1.75rem}
+
 .work .work-lead {
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: normal;
 }
 
@@ -287,6 +295,8 @@ body {
     margin-top: 2rem;
     text-align: right;
 }
+.item-content h3 {font-size: 1.25rem}
+
 .card-action{
     color: var(--accent);
     text-decoration: none;
@@ -307,6 +317,7 @@ body {
 .content {
     padding: 0 1em;
 }
+
 .contact .content {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
@@ -314,11 +325,12 @@ body {
     background-image: linear-gradient(var(--accent), hsl(145, 49%, 50%));
 }
 
-.contact .content h1 {
+.contact .content h2 {
     padding-top: 150px;
     color: var(--bg);
     text-align: center;
     font-size: 1.35em;
+    font-weight: normal;
 }
 
 .contact .content .icon-row {
@@ -390,7 +402,6 @@ body {
     /* Navigation */
     .navbar {
         height: 70px;
-        top: -3px; /* 0px, minus 3px to accomodate the box-shadow */
     }
 
     .nav {
@@ -442,12 +453,9 @@ body {
         overflow: hidden;
         padding-top: 70px;
         
-        /*Accomodate various mobile sizes*/
-        min-height: 812px; /*section is at least iphone-x size*/
-        height: auto; /*expand if needed*/
-
         flex-direction: column;
         justify-content: flex-start ;
+        box-sizing: border-box;
     }
 
     .splash .container {

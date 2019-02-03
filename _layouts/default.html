@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Funny Clip</title>
   
   <link rel="stylesheet" href="../css/style.css">
@@ -31,7 +32,21 @@
       </div>
     </header>
     {{content}}
-    {% include footer.html %}
+    <footer>
+        <section>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            {% for page in site.html_pages %}
+                <li><a href={{ page.url | relative_url }}>{{ page.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <img src="./assets/profile.JPG" alt="A picture of me">
+            <p>My name is Binyamin Green. I'm 20 years old, and I'm a college student at CCBC. I moonlight as a web developer. In my free time, I enjoy computer programming, reading and playing music.</p>
+        </section>
+        <p>© Copyright <span class="copy"></span> by Binyamin Aron Green</p>
+    </footer>
 </body>
 </html>
     
