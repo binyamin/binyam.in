@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payments - Binyamin Green | Student & Web Developer</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Paypal -->
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+    <script>paypal.Buttons().render('main');</script> -->
+
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <a href="#splash" class="logo-link">
+            <img src="assets/logo.svg" alt="Binyamin Green" class="logo">
+        </a>
+        <nav class="nav">
+            <a href="/#splash" class="nav-link">Home</a>
+            <a href="/#about" class="nav-link">About</a>
+            <a href="/#work" class="nav-link">Work</a>
+            <a href="/#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span class="bars"></span>
+            <span class="bars"></span>
+            <span class="bars"></span>
+        </div>
+    </header>
+    <main class="splash" style="display: inline-block; margin: 0; box-sizing: border-box; padding: 10vh 24px 0 24px;">
+        <section class="item" style="width:200px; padding: 50px 0; background-color: #fff; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <h2>Hi Moshe!</h2>
+            <!-- Create a button that your customers click to complete their purchase. -->
+            <button id="checkout-button" class="btn btn-primary" style="padding: 12px 24px; cursor: pointer;" role="link">Pay $40</button>
+            <div id="error-message"></div>
+        </section>
+    </main>
+</body>
+<script>
+    var stripe = Stripe('pk_live_i4v1sUvPqn65nbPrJkYEGc8V', {
+        betas: ['checkout_beta_4']
+    });
+    
+    var checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+        items: [{sku: 'sku_ETxhub2801vRKF', quantity: 1}],
+    
+        // Note that it is not guaranteed your customers will be redirected to this
+        // URL *100%* of the time, it's possible that they could e.g. close the
+        // tab between form submission and the redirect.
+        successUrl: window.location.protocol + '//b3u.netlify.com/success',
+        cancelUrl: window.location.protocol + '//b3u.netlify.com/canceled',
+        })
+        .then(function (result) {
+        if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+        }
+        });
+    });
+    </script>
+</html>

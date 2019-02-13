@@ -1,4 +1,4 @@
-# [b3u.netlify.com](b3u.netlify.com)
+# [b3u.netlify.com](https://b3u.netlify.com)
 *My personal portfolio website*
 <br/>
 <br/>
