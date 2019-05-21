@@ -1,0 +1,44 @@
+{
+    "prodId": "//Greenhouse//Family Events Calendar//EN",
+    "method": "PUBLISH",
+    "timezone": "America/New_York",
+    "name": "Family Events",
+    "events": [
+        {
+            "id": "f1sh",
+            "uid": "f1sh",
+            "start": "1998-08-11T04:00:00.000Z",
+            "end": "1998-08-11T16:00:00.000Z",
+            "timezone": "America/New_York",
+            "stamp": "2019-05-21T01:18:34.541Z",
+            "timestamp": "2019-05-21T01:18:34.541Z",
+            "allDay": true,
+            "repeating": {
+                "freq": "YEARLY"
+            },
+            "summary": "Binyamin's Birthday",
+            "description": "Happy Birthday!",
+            "attendees": [],
+            "alarms": [],
+            "categories": []
+        },
+        {
+            "id": "8kwb",
+            "uid": "8kwb",
+            "start": "2000-07-07T04:00:00.000Z",
+            "end": "2000-07-07T16:00:00.000Z",
+            "timezone": "America/New_York",
+            "stamp": "2019-05-21T01:24:13.214Z",
+            "timestamp": "2019-05-21T01:24:13.214Z",
+            "allDay": true,
+            "repeating": {
+                "freq": "YEARLY"
+            },
+            "summary": "Yakira's Birthday",
+            "description": "Happy Birthday!",
+            "attendees": [],
+            "alarms": [],
+            "categories": []
+        }
+    ]
+}

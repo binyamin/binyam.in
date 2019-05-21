@@ -1,8 +1,0 @@
----
-title: Binyamin Green - Student & Web Developer
-permalink: /:collection/:slug
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-mentions
----

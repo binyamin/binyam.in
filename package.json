@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b3u/b3u.netlify.com.git"
+    "url": "https://github.com/b3u/b3u.netlify.com.git"
   },
   "author": "Binyamin Aron Green",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/b3u/b3u.netlify.com/issues"
   },
-  "homepage": "https://b3u.netlify.com"
+  "homepage": "https://b3u.netlify.com",
+  "dependencies": {
+    "express": "^4.17.0",
+    "ical-generator": "^1.7.1"
+  }
 }
