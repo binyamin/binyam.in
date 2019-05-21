@@ -4,8 +4,7 @@ const fs = require('fs')
 const app = express()
 let ical = require('ical-generator')
 
-const { cal } = require('./public/js/calmodule')
-const port = 3000
+const port = process.env.port || 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded())
