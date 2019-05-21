@@ -105,7 +105,7 @@ body {
 .splash::after {
     content: "";
     /* Background image by Anders Jildén @Unsplash.com */
-    background-image: url(../assets/skyline.jpg);
+    background-image: url(../assets/img/skyline.jpg);
     background-color: #333;
     background-size: cover;
     background-position: center;
@@ -499,8 +499,6 @@ body {
 
 .cal .cal-form__btn { transition: border-radius .3s ease-in-out}
 .cal .cal-form__btn:hover { border-radius: 8px}
-
-.cal-form *:invalid {box-shadow: var(--accent) 0px 0px 1.5px 1px}
 
 .cal ~ footer.contact {
     width: 100%;

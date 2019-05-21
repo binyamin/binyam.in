@@ -11,11 +11,6 @@ document.getElementById('copyBtn').addEventListener('click', () => {
 
 let form = document.querySelector('.cal-form');
 
-form.addEventListener('submit', () => {
-    form.hidden = true;
-    form.reset();
-})
-
 document.getElementById('cancelBtn').addEventListener('click', () => {
     form.hidden = true;
     form.reset();

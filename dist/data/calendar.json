@@ -1,8 +1,8 @@
 {
     "prodId": "//Greenhouse//Family Events Calendar//EN",
     "method": "PUBLISH",
-    "timezone": "America/New_York",
     "name": "Family Events",
+    "timezone": "America/New_York",
     "events": [
         {
             "id": "f1sh",
@@ -36,6 +36,24 @@
             },
             "summary": "Yakira's Birthday",
             "description": "Happy Birthday!",
+            "attendees": [],
+            "alarms": [],
+            "categories": []
+        },
+        {
+            "id": "ea2l",
+            "uid": "ea2l",
+            "start": "2003-01-10T05:00:00.000Z",
+            "end": "2003-01-10T05:00:00.000Z",
+            "timezone": "America/New_York",
+            "stamp": "2019-05-21T19:37:14.199Z",
+            "timestamp": "2019-05-21T19:37:14.199Z",
+            "allDay": true,
+            "repeating": {
+                "freq": "YEARLY"
+            },
+            "summary": "🎂 Yehuda's Birthday",
+            "description": "Happy Birthday 'dude!",
             "attendees": [],
             "alarms": [],
             "categories": []
