@@ -8,7 +8,7 @@ const app = express()
 
 const devMode = false
 
-devMode ? require('dotenv').config() : ''
+require('dotenv').config()
 
 const port = process.env.PORT || 3000
 
@@ -92,12 +92,13 @@ app.post('/calendar/add', urlencodedParser, (req, res) => {
                     method: 'PATCH',
                     body: body,
                     headers: {
-                      Authorization: 'token ' + process.env.gist_access_token
+                      Authorization: 'token ' + process.env.GIST_ACCESS_TOKEN
                     }
                 })
                 .then(resp => {
                     // Redirect user
                     if(resp.ok) {
+                        console.log('Event written successfully')
                         res.redirect('/calendar');
                     } else {
                         console.log(resp)
