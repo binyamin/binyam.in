@@ -20,8 +20,10 @@
   "homepage": "https://b3u.netlify.com",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
     "express": "^4.17.0",
-    "ical-generator": "^1.7.1"
+    "ical-generator": "^1.7.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

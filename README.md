@@ -4,4 +4,4 @@
 <br/>
 Hi, I'm Binyamin Green. I'm 20 years old, and I'm a student by day and a web developer by night. In my free time, I enjoy computer programming, reading and playing music.
 <br/>
-![Signed, Binyamin Green](./assets/signature_sm.png)
+![Signed, Binyamin Green](./public/assets/img/signature_sm.png)

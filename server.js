@@ -1,9 +1,11 @@
 const express = require('express')
 const path = require('path')
-const fs = require('fs')
+const fetch = require('node-fetch');
 const bodyParser = require('body-parser')
 let ical = require('ical-generator')
+
 const app = express()
+require('dotenv').config()
 
 const port = process.env.PORT || 3000
 
@@ -16,54 +18,91 @@ app.get('/calendar', (req, res) => res.sendFile(path.join(__dirname, 'views/cale
 
 app.get('/cal.ics', (req, res) => {
     res.set('Content-Type', 'text/calendar')
-    fs.readFile('./dist/data/calendar.json', (err, data) => {
-        if (err) throw err;
-        let cal = ical(JSON.parse(data)).toString();  
-        res.send(cal)
-    })
+
+    fetch('https://api.github.com/gists/1f645dcb9824446393d71dc7a513fb2e')
+        .then(res => res.json())
+        .then(json => {
+            json = JSON.parse(json.files['calendar.json'].content)
+            let cal = ical(json).toString();
+            res.send(cal)
+        })
+        .catch(err => {throw err});
 })
 
-app.get('/calendar/text', (req, res) => {
+app.get('/cal.txt', (req, res) => {
     res.set('Content-Type', 'text/plain')
-    fs.readFile('./dist/data/calendar.json', (err, data) => {
-        if (err) throw err;
-        let cal = ical(JSON.parse(data)).toString();  
-        res.send(cal)
-    })
+    
+    fetch('https://api.github.com/gists/1f645dcb9824446393d71dc7a513fb2e')
+        .then(res => res.json())
+        .then(json => {
+            json = JSON.parse(json.files['calendar.json'].content)
+            let cal = ical(json).toString();
+            res.send(cal)
+        })
+        .catch(err => {throw err});
 })
 
 app.post('/calendar/add', urlencodedParser, (req, res) => {
-    fs.readFile('./dist/data/calendar.json', (err, data) => {
-        if (err) throw err;
-        try {
-            if (!data) return res.send('Data is null');
-            data = JSON.parse(data);
-            
-            let myCal = ical(data)
-            let formData = req.body;
+        fetch('https://api.github.com/gists/1f645dcb9824446393d71dc7a513fb2e')
+            .then(res => res.json())
+            .then(data => {
+                // Parse data
+                let bodyDesc = data.files['calendar.json'].description
+                data = JSON.parse(data.files['calendar.json'].content)
 
-            let start = formData.evStartDate.split('-').concat(formData.evStartTime.split(':'));
-            let end = formData.evEndDate.split('-').concat(formData.evEndTime.split(':'));
-            let title = (formData.evType === 'bday') ? '🎂 '+ formData.evTitle : formData.evTitle
+                // Pass form data to calendar object
+                let myCal = ical(data)
+                let formData = req.body;
+    
+                let start = formData.evStartDate.split('-').concat(formData.evStartTime.split(':'));
+                let end = formData.evEndDate.split('-').concat(formData.evEndTime.split(':'));
+                let title = (formData.evType === 'bday') ? '🎂 '+ formData.evTitle : formData.evTitle
+    
+                myCal.createEvent({
+                    timezone: 'America/New_York',
+                    start: new Date(start[0], start[1]-1, start[2], start[3] || '0', start[4] || '0'),
+                    end: new Date(end[0], end[1]-1, end[2], end[3] || '0', end[4] || '0'),
+                    allDay: formData.evAllday,
+                    repeating: formData.evYearly ? {freq: "YEARLY"} : null,
+                    summary: title,
+                    description: formData.evDesc,
+                    location: formData.evLoc
+                })
+    
+                // Parse data for storage
+                data = JSON.stringify(myCal.toJSON(), null, 2)
+  
+                let body = {
+                    description: bodyDesc,
+                    files: {
+                        "calendar.json": {
+                            filename: "calendar.json",
+                            content: data
+                        }
+                    }
+                }
 
-            myCal.createEvent({
-                timezone: 'America/New_York',
-                start: new Date(start[0], start[1]-1, start[2], start[3] || '0', start[4] || '0'),
-                end: new Date(end[0], end[1]-1, end[2], end[3] || '0', end[4] || '0'),
-                allDay: formData.evAllday,
-                repeating: formData.evYearly ? {freq: "YEARLY"} : null,
-                summary: title,
-                description: formData.evDesc,
-                location: formData.evLoc
+                body = JSON.stringify(body)
+
+                // Patch data to https://gist.github.com 
+                fetch('https://api.github.com/gists/1f645dcb9824446393d71dc7a513fb2e', {
+                    method: 'PATCH',
+                    body: body,
+                    headers: {
+                      Authorization: 'token ' + process.env.gist_access_token
+                    }
+                })
+                .then(resp => {
+                    // Redirect user
+                    if(resp.ok) {
+                        res.redirect('/calendar');
+                    } else {
+                        console.log(resp)
+                        res.send('Uh oh! Please contact Binyamin and tell him that an error has occurred')
+                    }
+                })
             })
-
-            fs.writeFile('dist/data/calendar.json', JSON.stringify(myCal.toJSON(), null, 4), (err) => err ? console.error(err): false)
-            res.redirect('/calendar');
-        }
-        catch(err) {
-            res.send(`Uh oh! Please contact Binyamin, and tell him "${err}"`)
-        }
-    })
+            .catch(err => {throw err});
 })
 
 
