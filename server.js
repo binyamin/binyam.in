@@ -5,7 +5,10 @@ const bodyParser = require('body-parser')
 let ical = require('ical-generator')
 
 const app = express()
-require('dotenv').config()
+
+const devMode = false
+
+devMode ? require('dotenv').config() : ''
 
 const port = process.env.PORT || 3000
 
