@@ -1,59 +1,59 @@
-const gulp = require('gulp');
+const gulp = require("gulp");
 
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const nodemon = require('gulp-nodemon');
+const rename = require("gulp-rename");
+const sourcemaps = require("gulp-sourcemaps");
+const nodemon = require("gulp-nodemon");
 
-const uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
+const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
 
-const cleanCSS = require('gulp-clean-css')
-const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require("gulp-clean-css");
+const autoprefixer = require("gulp-autoprefixer");
 
-const imagemin = require('gulp-imagemin');
+const imagemin = require("gulp-imagemin");
 
 function js(cb) {
-  gulp.src('public/js/*.js')
+  gulp
+    .src("js/*.js")
     .pipe(sourcemaps.init())
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
     .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(gulp.dest("js"));
   cb();
 }
 
 function css(cb) {
-    gulp.src('public/css/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(autoprefixer())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(rename({ extname: '.min.css' }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/css'))
-  cb()
+  gulp
+    .src("css/*.css")
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(rename({ extname: ".min.css" }))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("css"));
+  cb();
 }
 
 function img(cb) {
-    gulp.src('public/assets/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/assets'))
-    cb()
+  gulp
+    .src("assets/**/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("assets"));
+  cb();
 }
 
-function serve(done) {
-    nodemon({
-      script: 'server.js',
-      ignore: "dist/**/*",
-      ext: 'js html css',
-      env: { 'NODE_ENV': 'development' },
-      tasks: ['pack'],
-      done: done
-    })
+function watch() {
+  gulp.watch("css/*.css", css);
+  gulp.watch("js/*.js", js);
+  gulp.watch('*.html');
 }
 
-exports.pack = gulp.parallel(js, css)
-exports.build = gulp.parallel(js, css, img)
-exports.serve = serve
+exports.pack = gulp.parallel(js, css);
+exports.build = gulp.parallel(js, css, img);
+exports.watch = watch;
