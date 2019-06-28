@@ -8,7 +8,7 @@
 }
 
 /* Reset */
-body, form,
+body,
 p, h1, h2, h3, h4, h5, h6{
     padding: 0;
     margin: 0;
@@ -373,140 +373,6 @@ body {
 .contact .content p>* {
     color: var(--bg);
 }
-
-/* Calendar */
-.cal {
-    margin-bottom: 0;
-    height: 90vh;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.cal__title {
-    margin-top: 48px;
-}
-
-.cal__lead {
-    text-align: center;
-    margin-top: 24px;
-    max-width: 400px;
-    width: 80%;
-}
-
-.cal__copy {
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 36px;
-}
-
-.cal__copy .copy__btn {
-    border: none;
-    background-color: var(--accent);
-    color: var(--bg);
-    outline: none;
-    cursor: pointer;
-}
-
-.cal__copy .copy__link {
-    background-color: var(--bg);
-    border: 2px solid var(--accent);
-    padding: 0 6px;
-    color: rgba(0,0,0,0.75);
-    font-size: 14px;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cal__btn {
-    margin-top: 12px;
-
-    border: none;
-    cursor: pointer;
-    background-color: var(--accent);
-    color: var(--bg);
-    padding: 8px 16px;
-    outline: none;
-}
-
-.cal-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: var(--bg);
-    border-top: 36px solid var(--accent);
-    width: 350px;
-    padding: 24px 24px 0 24px;
-    z-index: 3;
-}
-
-.cal-form > p label {
-    display: block;
-    margin-bottom: 4px;
-}
-
-.cal-form > p input[type=text],
-.cal-form > p textarea,
-.cal-form > p select {
-    float: right;
-    width: 80%;
-}
-
-.cal-form textarea {
-    resize: none;
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-}
-.cal-form div p input {
-    font-family: Montserrat, sans-serif;
-}
-
-.cal-form div:not(.cal-form__btn-cont) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.cal-form .cal-form__yearly {
-    grid-column: 1/2;
-    grid-row: 2/5;
-}
-
-.cal-form div,
-.cal-form > p {
-    clear: both;
-    margin: 2px 0;
-}
-
-.cal-form .cal-form__btn-cont {
-    text-align: right;
-    padding: 8px 4px;
-}
-
-.cal-form .cal-form__btn {
-    outline: none;
-    background-color: var(--accent);
-    padding: 4px 8px;
-    border: none;
-    color: var(--bg);
-    cursor: pointer;
-}
-
-.cal .cal-form__btn { transition: border-radius .3s ease-in-out}
-.cal .cal-form__btn:hover { border-radius: 8px}
-
-.cal ~ footer.contact {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-.cal ~ footer.contact p {padding-top: 24px}
 
 @media only screen and (max-width: 768px) {
 

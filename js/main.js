@@ -1,9 +1,3 @@
-/*-------Sections-------
-  - Navbar underline effect
-  - Responsive Navbar & hamburger animation
-  - Update copyright year
-*/
-
 // Navbar underline effect
 const navlink = document.querySelectorAll('.nav-link');
 
@@ -30,6 +24,3 @@ document.querySelector('.hamburger').addEventListener('click', function(){
     this.classList.toggle('responsive');
     document.querySelector('.nav').classList.toggle('activeMenu');
  })
-
-//Copyright Year
-document.querySelector('.copy-date').innerHTML = new Date().getFullYear();

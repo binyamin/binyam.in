@@ -1,6 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500.000016" height="500.000016" viewBox="0 0 500.00002 500.00002" fill="none">
-  <g transform="translate(-80.075447 -284.27408)">
-    <rect ry="42.831726" y="284.27408" x="80.075447" height="500" width="500" fill="#333" paint-order="markers stroke fill"/>
-    <path d="M229.27608 374.14879h40.43842s-.10957 98.28476 0 138.99336c16.94061-12.87341 37.53223-20.5186 60.44587-20.5186 41.59943 0 77.29884 25.19186 92.72795 61.13226-15.42911.0365-30.85091.0585-46.2727.073-37.40262-43.26982-108.42869-16.41172-107.86067 40.76898.56808 57.18069 72.11364 82.62257 108.64928 38.61824l-42.52678-.21175v-39.45995c29.33939.10221 66.74748 0 96.10877-.095v3.45384c-1.78898 54.15155-46.24349 97.49615-100.82585 97.49615-55.71418 0-100.88429-45.17009-100.88429-100.88426.59877-68.30281-.43812-151.01244 0-219.36634z" fill="#6fcf97"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500.000016"
+   height="500.000016"
+   viewBox="0 0 500.00002 500.00002"
+   fill="none"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2400"
+     inkscape:window-height="1256"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="1.946"
+     inkscape:cx="255.65262"
+     inkscape:cy="269.52727"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g6" />
+  <g
+     transform="translate(-80.075447 -284.27408)"
+     id="g6">
+    <rect
+       ry="38.206856"
+       y="284.27408"
+       x="80.075447"
+       height="500"
+       width="500"
+       id="rect2"
+       style="fill:#333333;paint-order:markers stroke fill"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       d="M229.27608 374.14879h40.43842s-.10957 98.28476 0 138.99336c16.94061-12.87341 37.53223-20.5186 60.44587-20.5186 41.59943 0 77.29884 25.19186 92.72795 61.13226-15.42911.0365-30.85091.0585-46.2727.073-37.40262-43.26982-108.42869-16.41172-107.86067 40.76898.56808 57.18069 72.11364 82.62257 108.64928 38.61824l-42.52678-.21175v-39.45995c29.33939.10221 66.74748 0 96.10877-.095v3.45384c-1.78898 54.15155-46.24349 97.49615-100.82585 97.49615-55.71418 0-100.88429-45.17009-100.88429-100.88426.59877-68.30281-.43812-151.01244 0-219.36634z"
+       fill="#6fcf97"
+       id="path4" />
   </g>
 </svg>

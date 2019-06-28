@@ -14,7 +14,7 @@ const imagemin = require("gulp-imagemin");
 
 function js(cb) {
   gulp
-    .src("js/*.js")
+    .src("js/main.js")
     .pipe(sourcemaps.init())
     .pipe(
       babel({
@@ -30,7 +30,7 @@ function js(cb) {
 
 function css(cb) {
   gulp
-    .src("css/*.css")
+    .src("css/style.css")
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: "ie8" }))
@@ -49,8 +49,8 @@ function img(cb) {
 }
 
 function watch() {
-  gulp.watch("css/*.css", css);
-  gulp.watch("js/*.js", js);
+  gulp.watch("css/style.css", css);
+  gulp.watch("js/main.js", js);
   gulp.watch('*.html');
 }
 
