@@ -1,16 +1,18 @@
 ---
 layout: post
-img: '/assets/posts/piano.jpg'
+title: Five Useful Tips for Adobe XD
+date: 2019-08-12T16:07:08.773Z
+thumbnail: /assets/uploads/img.jpeg
 ---
-
 Adobe XD is becoming the go-to tools for UI/UX Designers in 2019. It’s free, modern, and extensible. XD has many features, some of which you may not be aware of. Here are five useful tips for working within Adobe XD.
 
----
+- - -
 
 ## Math
+
 Adobe XD, as well as other programs such as Blender, Gimp and Inkscape, allows math in the input fields. Let’s say that I had two circles with a width of 258px each , and I wanted one to be half as big as the other. I could do the math mentally, which could get complicated. Or, I could type 258/2, and XD will do the math for me.
 
-![Doing math in Adobe XD](../assets/posts/math-in-xd.gif)
+![Doing math in Adobe XD](/assets/uploads/math-in-xd.gif)
 
 ## Assets
 
@@ -27,8 +29,9 @@ XD has awesome automatic guides which can help you align things perfectly. Somet
 ## Adjust Corners Separately
 
 I found this awesome tip in a [tweet](https://twitter.com/elainecchao/status/1123289664671100928) from Elaine Chao.
-> #adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
-> 
+
+> \#adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
+>
 > @adobexd
 
 Thanks Elaine.
@@ -36,6 +39,7 @@ Thanks Elaine.
 ## Shortcuts
 
 Shortcuts are awesome. They speed up your workflow, and make you look really professional 😎. You can find a comprehensive list here. Some useful shortcuts are:
- - `ctr/cmd + k`: Create component from selection
- - `ctrl/cmd + shift + y`: Toggle assets panel
- - `alt + drag`: Duplicate selection
+
+* `ctr/cmd + k`: Create component from selection
+* `ctrl/cmd + shift + y`: Toggle assets panel
+* `alt + drag`: Duplicate selection
