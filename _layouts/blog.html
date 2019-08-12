@@ -22,6 +22,7 @@
 
 	<link rel="stylesheet" href="/css/style.min.css">
 	<script defer src="/js/main.min.js"></script>
+	<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 </head>
 <body>
 	<header class="navbar" id="navbar">
@@ -62,5 +63,16 @@
 			<p>Copyright © 2019 by Binyamin Aron Green</p>
 		</main>
 	</footer>
+<!-- 	<script>
+	if (window.netlifyIdentity) {
+		window.netlifyIdentity.on("init", user => {
+		if (!user) {
+			window.netlifyIdentity.on("login", () => {
+			document.location.href = "/admin/";
+			});
+		}
+		});
+	}
+	</script> -->
 </body>
 </html>
