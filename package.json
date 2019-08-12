@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "bundle exec jekyll serve",
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "jekyll-build": "bundle exec jekyll build"
   },
   "repository": {
     "type": "git",
