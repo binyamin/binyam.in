@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Five Useful Tips for Adobe XD
-date: 2019-08-12T16:07:08.773Z
-thumbnail: /assets/uploads/img.jpeg
+date: 2019-06-18T12:00:00.773Z
+thumbnail: /assets/uploads/5-tips-xd.jpeg
 ---
 Adobe XD is becoming the go-to tools for UI/UX Designers in 2019. It’s free, modern, and extensible. XD has many features, some of which you may not be aware of. Here are five useful tips for working within Adobe XD.
 

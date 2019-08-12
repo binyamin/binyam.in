@@ -491,38 +491,31 @@ main {
         flex-direction: column;
         justify-content: flex-start ;
         box-sizing: border-box;
-    }
 
-    .splash .container {
-        padding-top: 7%;
-        text-align: center;
-        width: 70%;
-    }
+        .container {
+            padding-top: 7%;
+            text-align: center;
+            width: 70%;
+        }
 
-    .splash .splash-text {
-        line-height: 48px;
-    }
+        .splash-text {
+            line-height: 48px;
+        }
 
-    .splash .cta-btn {
-        font-size: 1.5em;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 70%;
-    }
+        .splash__btn {
+            font-size: 1.5em;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 70%;
+            margin-top: 300px;
+        }
 
-    .splash .cta-btn.btn-primary {
-        margin-top: 300px;
-    }
-
-    .splash .cta-btn.btn-secondary {
-        margin: 380px 0;
-    }
-
-    .splash .avatar {
-        margin-top: 0;
-        position: relative;
-        left: 7%;
+        .avatar {
+            margin-top: 0;
+            position: relative;
+            left: 7%;
+        }
     }
 
     /* About Section */
