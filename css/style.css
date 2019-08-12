@@ -445,6 +445,24 @@ main {
   margin-bottom: 48px;
 }
 
+.post .post__thumbnail {
+  height: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post .post__thumbnail img {
+  width: 100%;
+}
+
 .post footer {
   text-align: center;
 }
@@ -478,16 +496,13 @@ main {
 }
 
 .post blockquote {
-  border-left: 6px solid #333;
+  border-left: 6px solid #49a670;
   padding-left: 8px;
   font-style: italic;
 }
 
 @media only screen and (max-width: 768px) {
   /* Navigation */
-  .navbar {
-    height: 70px;
-  }
   .nav {
     max-height: 0;
     overflow: hidden;
@@ -495,8 +510,8 @@ main {
     background: white;
     width: 100%;
     padding: 0;
-    -webkit-transition: max-height 0.7s ease-out, padding 0.7s ease-out;
-    transition: max-height 0.7s ease-out, padding 0.7s ease-out;
+    -webkit-transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
+    transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
     position: absolute;
     top: 70px;
     left: 0;
@@ -515,7 +530,7 @@ main {
     display: inline;
   }
   .hamburger .bars {
-    background: var(--main);
+    background: #191919;
     display: block;
     width: 2.5em;
     height: .25em;

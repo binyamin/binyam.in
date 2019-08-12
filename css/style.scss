@@ -385,6 +385,19 @@ main {
         margin-bottom: 48px;
     }
 
+    .post__thumbnail {
+        height: 200px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
     footer {
         text-align: center;
     }
@@ -418,19 +431,14 @@ main {
     }
     
     blockquote {
-        border-left: 6px solid #333;
+        border-left: 6px solid $accent;
         padding-left: 8px;
         font-style: italic;
     }
 }
 
 @media only screen and (max-width: 768px) {
-
     /* Navigation */
-    .navbar {
-        height: 70px;
-    }
-
     .nav {
         max-height: 0;
         overflow: hidden;
@@ -438,7 +446,7 @@ main {
         background: white;
         width: 100%;
         padding: 0;
-        transition: max-height 0.7s ease-out, padding 0.7s ease-out ;
+        transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
 
         position: absolute;
         top: 70px;
@@ -462,7 +470,7 @@ main {
     }
 
     .hamburger .bars{
-        background: var(--main);
+        background: $main;
         display: block;
         width: 2.5em;
         height: .25em;
