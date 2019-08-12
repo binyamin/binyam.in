@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Merriweather';
 
 /* Variables */
 :root{
@@ -372,6 +372,61 @@ body {
 
 .contact .content p>* {
     color: var(--bg);
+}
+
+.post {
+    width: 50%;
+    min-width: 300px;
+    margin: 14vh auto 0 auto;
+    font-family: Merriweather, serif;
+}
+
+
+.post header {
+    margin-bottom: 48px;
+}
+.post footer {
+    text-align: center;
+}
+
+.post .title {
+    font-size: 24px;
+}
+
+.post .date {
+    font-size: 14px;
+}
+
+.post p {
+    margin: 16px 0;
+}
+
+.post .title,
+.post .date,
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+    padding-top: 24px;
+    font-family: Montserrat, sans-serif;
+}
+
+.post hr {
+    border: none;
+}
+
+.post hr::after {
+    content: "•  •  •";
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.post blockquote {
+    border-left: 6px solid #333;
+    padding-left: 8px;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 768px) {

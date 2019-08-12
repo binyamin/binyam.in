@@ -4,6 +4,7 @@
   "description": "My personal website",
   "main": "/",
   "scripts": {
+    "serve": "bundle exec jekyll serve",
     "watch": "gulp watch",
     "build": "gulp build"
   },
