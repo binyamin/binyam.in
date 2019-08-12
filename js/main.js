@@ -1,5 +1,5 @@
-// Navbar underline effect
-const navlink = document.querySelectorAll('.nav-link');
+/* // Navbar underline effect
+const navlink = document.querySelectorAll('.js-nav-link');
 
 navlink.forEach(function(e) {
     e.addEventListener('click', function(){
@@ -18,7 +18,7 @@ window.addEventListener('scroll', ev => {
     }
   })
 })
-
+ */
 //Responsive Navbar
 document.querySelector('.hamburger').addEventListener('click', function(){
     this.classList.toggle('responsive');

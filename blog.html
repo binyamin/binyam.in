@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+---
+
+<main class="post">
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+
+    {% for post in site.posts %}
+    <p>
+        <a href="{{post.url}}">{{ post.title }}</a> - <i>{{post.date | date: "%b %d, %Y"}}</i>
+    </p>
+    <p>
+        {{post.excerpt}}
+    </p>
+    <hr/>
+    <br/>
+    {% endfor %}
+</main>

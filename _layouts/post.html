@@ -1,17 +1,20 @@
 ---
-layout: blog
+layout: default
 ---
-<header>
-    <p><span class="title">{{page.title}}</span> | <span class="date">{{page.date | date: "%b %d, %Y"}}</span></p>
-    <div>
-        <img src="{{page.thumbnail}}" alt="">
-    </div>
-</header>
 
-{{content}}
+<main class="post">
+    <header>
+        <p><span class="title">{{page.title}}</span> | <span class="date">{{page.date | date: "%b %d, %Y"}}</span></p>
+        <div>
+            <img class="post__thumbnail" src="{{page.thumbnail}}" alt="">
+        </div>
+    </header>
 
-<footer>
-    <hr />
-    <p>Thanks for checking out my blog.</p>
-    <img src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
-</footer>
+    {{content}}
+
+    <footer>
+        <hr />
+        <p>Thanks for checking out my blog.</p>
+        <img src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
+    </footer>
+</main>

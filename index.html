@@ -1,144 +1,82 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" href="assets/favicon.ico" type="favicon/icon">
-	<title>Binyamin Green | Student & Web Developer</title>
+---
+layout: default
+---
 
-	<meta name="author" content="Binyamin Aron Green">
-	<meta name="description" content="Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community.">
-	<meta name="keywords" content="programmer, web developer, developer, websites, front-end, full-stack, back-end, web designer, html, html5, css, css3, javascript, react, node, express">
-	<meta name="theme-color" content="#49a670">
+<section class="splash">
+	<div class="container">
+		<p class="splash-text">
+		Hi, I'm Binyamin.<br>
+		I'm a Front-End<br>
+		<span class="job-title">Web Designer and Developer</span><br>
+		living in Baltimore, MD</p>
+		<a href="/#contact" class="splash__btn">Contact Me</a>
+	</div>
+	<img src="assets/img/profile.jpg" class="avatar" alt="" />
+</section>
 
-	<meta property="og:title" content="Binyamin Green | Student & Web Developer">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://b3u.netlify.com/">
-	<meta property="og:image" content="assets/favicon.ico">
-	<meta property="og:description" content="Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community.">
-	
-    <link rel="canonical" href="https://b3u.netlify.com/">
-
-	<link rel="stylesheet" href="css/style.min.css">
-	<script defer src="js/main.min.js"></script>
-</head>
-<body>
-	<header class="navbar" id="navbar">
-		<a href="#splash" class="logo-link">
-			<img src="assets/logo.svg" alt="Binyamin Green" class="logo">
-		</a>
-		<nav class="nav">
-			<a href="#splash" class="nav-link current">Home</a>
-			<a href="#about" class="nav-link">About</a>
-			<a href="#work" class="nav-link">Work</a>
-			<a href="#contact" class="nav-link">Contact</a>
-		</nav>
-		<div class="hamburger">
-			<span class="bars"></span>
-			<span class="bars"></span>
-			<span class="bars"></span>
+<section class="about">
+	<h2>About</h2>
+	<p class="about__text">Hi, I'm Binyamin Green. I'm 21 years old, and I'm a student by day and a web developer by night. In my free time, I enjoy computer programming, reading and playing music.</p>
+	<div class="skill-container">
+		<div class="skill-section">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="48" height="48" viewBox="0 0 24 24"><path d="M17.696 2.292A.994.994 0 0 0 16.99 2c-.288.015-.521.105-.708.294l-2.49 2.5L11.586 7H7a.998.998 0 0 0-.939.658l-4 11c-.133.365-.042.774.232 1.049l2 2a.997.997 0 0 0 1.049.232l11-4A.998.998 0 0 0 17 17v-4.586l2.207-2.207v-.001h.001l2.5-2.506a.997.997 0 0 0-.002-1.414l-4.01-3.994zm-2.403 9.001A.996.996 0 0 0 15 12v4.3l-9.249 3.363 4.671-4.671c.026.001.052.008.078.008A1.5 1.5 0 1 0 9 13.5c0 .026.007.052.008.078l-4.671 4.671L7.7 9H12c.266 0 .52-.105.707-.293L14.5 6.914 17.086 9.5l-1.793 1.793zm3.206-3.208l-2.586-2.586 1.08-1.085 2.592 2.582-1.086 1.089z"/></svg>
+			<p class="skill-title">Design</p>
+			<ul class="skills">
+				<li>Inkscape</li>
+				<li>GIMP</li>
+				<li>Adobe XD</li>
+				<li>Figma</li>
+			</ul>
 		</div>
-	</header>
-	<main class="splash" id="splash">
-		<div class="container">
-			<p class="splash-text">
-			Hi, I'm Binyamin.<br>
-			I'm a Front-End<br>
-			<span class="jobTitle">Web Designer and Developer</span><br>
-			living in Baltimore, MD</p>
-			<a href="#contact" class="btn btn-primary scroll">Contact Me</a>
-			<a href="https://drive.google.com/file/d/1MxljdBsobv8gEl3HuJ_FdKiM1D0xNpPU/view" target="_blank" class="btn btn-secondary scroll">See my Resume</a>
+		<div class="skill-section">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="48" height="48" viewBox="0 0 24 24"><path d="M21,4H3C2.447,4,2,4.447,2,5v14c0,0.553,0.447,1,1,1h18c0.553,0,1-0.447,1-1V5C22,4.447,21.553,4,21,4z M4,18V8h16v10H4z"/><path d="M9.293 9.293l-3 3c-.391.391-.391 1.023 0 1.414l3 3 1.414-1.414L8.414 13l2.293-2.293L9.293 9.293zM14.707 9.293l-1.414 1.414L15.586 13l-2.293 2.293 1.414 1.414 3-3c.391-.391.391-1.023 0-1.414L14.707 9.293z"/></svg>
+			<p class="skill-title">Development</p>
+			<ul class="skills">
+				<li>HTML5/CSS3</li>
+				<li>Javascript</li>
+				<li>jQuery</li>
+				<li>Node.js</li>
+			</ul>
 		</div>
-		<img src="assets/img/profile.jpg" class="avatar" alt="" />
-	</main>
-	<main class="about" id="about">
-		<h2>About Me</h2>
-		<section class="about-text">
-			<p>If you've come to this section, I assume you're wondering what I actually do. I primarily create websites and web applications. I also design logos, posters and business cards. I love to chat, so drop me a note below!</p>
-			<p>My name is Binyamin Aron Green, and I live in Baltimore, MD. I'm 20 years old, and I am currently enrolled in <em>Community College of Baltimore County</em>. My interests include computer programming, music and reading.</p>
-		</section>
-		<article class="skill-container">
-			<section class="skill-section">
-        		<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="48" height="48" viewBox="0 0 24 24"><path d="M17.696 2.292A.994.994 0 0 0 16.99 2c-.288.015-.521.105-.708.294l-2.49 2.5L11.586 7H7a.998.998 0 0 0-.939.658l-4 11c-.133.365-.042.774.232 1.049l2 2a.997.997 0 0 0 1.049.232l11-4A.998.998 0 0 0 17 17v-4.586l2.207-2.207v-.001h.001l2.5-2.506a.997.997 0 0 0-.002-1.414l-4.01-3.994zm-2.403 9.001A.996.996 0 0 0 15 12v4.3l-9.249 3.363 4.671-4.671c.026.001.052.008.078.008A1.5 1.5 0 1 0 9 13.5c0 .026.007.052.008.078l-4.671 4.671L7.7 9H12c.266 0 .52-.105.707-.293L14.5 6.914 17.086 9.5l-1.793 1.793zm3.206-3.208l-2.586-2.586 1.08-1.085 2.592 2.582-1.086 1.089z"/></svg>
-				<p class="skill-title">Design</p>
-				<ul class="skills">
-					<li>Inkscape</li>
-					<li>GIMP</li>
-					<li>Adobe XD</li>
-					<li>Figma</li>
-				</ul>
-			</section>
-			<section class="skill-section">
-        		<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="48" height="48" viewBox="0 0 24 24"><path d="M21,4H3C2.447,4,2,4.447,2,5v14c0,0.553,0.447,1,1,1h18c0.553,0,1-0.447,1-1V5C22,4.447,21.553,4,21,4z M4,18V8h16v10H4z"/><path d="M9.293 9.293l-3 3c-.391.391-.391 1.023 0 1.414l3 3 1.414-1.414L8.414 13l2.293-2.293L9.293 9.293zM14.707 9.293l-1.414 1.414L15.586 13l-2.293 2.293 1.414 1.414 3-3c.391-.391.391-1.023 0-1.414L14.707 9.293z"/></svg>
-				<p class="skill-title">Development</p>
-				<ul class="skills">
-        			<li>HTML5/CSS3</li>
-        			<li>Javascript</li>
-        			<li>jQuery</li>
-        			<li>Node.js</li>
-        		</ul>
-			</section>
-			<section class="skill-section">
-         		<svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 16 16"><path d="M12.667 2h-2c0-0.368-0.298-0.667-0.667-0.667v0h-4c-0.368 0-0.667 0.298-0.667 0.667v0h-2c-0.368 0-0.667 0.298-0.667 0.667v0 11.333c0 0.368 0.298 0.667 0.667 0.667v0h9.333c0.368 0 0.667-0.298 0.667-0.667v0-11.333c0-0.368-0.298-0.667-0.667-0.667v0zM12 13.333h-8v-10h1.333v0.667c0 0.368 0.298 0.667 0.667 0.667v0h4c0.368 0 0.667-0.298 0.667-0.667v0-0.667h1.333v10z"></path></svg>
-          		<p class="skill-title">General</p>
-				<ul class="skills">
-					<li>MS Office</li>
-					<li>Git</li>
-				</ul>
-			</section>
-		</article>
-	</main>
-	<main class="work" id="work">
-		<h2>Work</h2>
-		<p class="work-lead">Some projects I've worked on</p>
-		<div class="portfolio-container">
-			<figure class="item">
-				<img src="assets/img/code.jpg" alt="">
-				<figcaption class="item-content">
-					<h3>Emes Studios</h3>
-					<p>Website for a Studio Engineer</p>
-					<div><a href="https://emes.netlify.com" class="card-action">view site</a></div>
-				</figcaption>
-			</figure>
-			<figure class="item">
-				<img src="assets/img/piano.jpg" alt="">
-				<figcaption class="item-content">
-					<h3>Noteclef</h3>
-					<p>Website for piano app</p>
-					<div>
-						<a href="https://noteclef.github.io/" class="card-action">view site</a>
-					</div>
-				</figcaption>
-			</figure>
-			<figure class="item">
-				<img src="assets/img/man.jpg" alt="">
-				<figcaption class="item-content">
-					<h3>Paper Boy</h3>
-					<p>A sample portfolio page</p>
-					<div><a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="card-action">view site</a></div>
-				</figcaption>
-			</figure>
+		<div class="skill-section">
+			<svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 16 16"><path d="M12.667 2h-2c0-0.368-0.298-0.667-0.667-0.667v0h-4c-0.368 0-0.667 0.298-0.667 0.667v0h-2c-0.368 0-0.667 0.298-0.667 0.667v0 11.333c0 0.368 0.298 0.667 0.667 0.667v0h9.333c0.368 0 0.667-0.298 0.667-0.667v0-11.333c0-0.368-0.298-0.667-0.667-0.667v0zM12 13.333h-8v-10h1.333v0.667c0 0.368 0.298 0.667 0.667 0.667v0h4c0.368 0 0.667-0.298 0.667-0.667v0-0.667h1.333v10z"></path></svg>
+			<p class="skill-title">General</p>
+			<ul class="skills">
+				<li>MS Office</li>
+				<li>Git</li>
+			</ul>
 		</div>
-	</main>
-	<footer class="contact" id="contact">
-		<main class="content">
-			<h2>If you need something, drop me a note...</h2>
-			<div class="icon-row">
-				<a href="mailto:binyaminagreen@gmail.com?subject=Website Referral">
-						<svg role="img" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>				</a>
-				<a href="https://www.github.com/b3u">
-					<svg role="img" class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-				</a>
-				<a href="https://twitter.com/BinyaminGreen">
-					<svg role="img" class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-				</a>
-				<a href="https://medium.com/@binyaminagreen">
-					<svg role="img" class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.067a.376.376 0 0 0 .143.361l1.257 1.234v.271h-6.322v-.27l1.302-1.265c.128-.128.128-.165.128-.36V8.99l-3.62 9.195h-.49L6.69 8.99v6.163a.85.85 0 0 0 .233.707l1.694 2.054v.271H3.815v-.27L5.51 15.86a.82.82 0 0 0 .218-.707V8.027a.624.624 0 0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z"/></svg>
-				</a>
-			</div>
-			<p>Copyright © 2019 by Binyamin Aron Green</p>
-		</main>
-	</footer>
-</body>
-</html>
+	</div>
+</section>
+<section class="work">
+	<h2>Work</h2>
+	<p class="work-lead">Some projects I've worked on</p>
+	<div class="portfolio-container">
+		<figure class="item">
+			<img src="assets/img/code.jpg" alt="">
+			<figcaption class="item-content">
+				<h3>Emes Studios</h3>
+				<p>Website for a Studio Engineer</p>
+				<div><a href="https://emes.netlify.com" class="card-action">view site</a></div>
+			</figcaption>
+		</figure>
+		<figure class="item">
+			<img src="assets/img/piano.jpg" alt="">
+			<figcaption class="item-content">
+				<h3>Noteclef</h3>
+				<p>Website for piano app</p>
+				<div>
+					<a href="https://noteclef.github.io/" class="card-action">view site</a>
+				</div>
+			</figcaption>
+		</figure>
+		<figure class="item">
+			<img src="assets/img/man.jpg" alt="">
+			<figcaption class="item-content">
+				<h3>Paper Boy</h3>
+				<p>A sample portfolio page</p>
+				<div><a href="https://b3u.github.io/Template-Sites/Paper%20Boy" class="card-action">view site</a></div>
+			</figcaption>
+		</figure>
+	</div>
+</section>

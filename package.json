@@ -5,8 +5,6 @@
   "main": "/",
   "scripts": {
     "serve": "bundle exec jekyll serve",
-    "watch": "gulp watch",
-    "build": "gulp build",
     "jekyll-build": "bundle exec jekyll build"
   },
   "repository": {
@@ -19,19 +17,6 @@
     "url": "https://github.com/b3u/b3u.netlify.com/issues"
   },
   "homepage": "https://b3u.netlify.com",
-  "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-nodemon": "^2.4.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
-  },
   "browserslist": [
     "last 1 version",
     "> 1%",

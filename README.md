@@ -2,6 +2,6 @@
 *My personal portfolio website*
 <br/>
 <br/>
-Hi, I'm Binyamin Green. I'm 20 years old, and I'm a student by day and a web developer by night. In my free time, I enjoy computer programming, reading and playing music.
+Hi, I'm Binyamin Green. I'm 21 years old, and I'm a student by day and a web developer by night. In my free time, I enjoy computer programming, reading and playing music.
 <br/>
-![Signed, Binyamin Green](./public/assets/img/signature_sm.png)
+![Signed, Binyamin Green](/assets/img/signature_sm.png)
