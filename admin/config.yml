@@ -17,4 +17,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "desc", widget: "text", required: false, hint: "This will be displayed on the site and in searches."}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -2,3 +2,6 @@ collections:
   posts:
     output: true
     permalink: /blog/:title
+
+title: "Binyamin Green | Student & Web Developer"
+desc: "Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community."

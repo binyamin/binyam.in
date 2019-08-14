@@ -1,19 +1,45 @@
+{% comment %} Meta Title {% endcomment %}
+{% assign metatitle = site.title %}
+
+{% if page.collection == 'posts' %}
+    {% assign metatitle = page.title %}
+{% elsif page.title %}
+    {% assign metatitle = metatitle | prepend: " - " | prepend: page.title %}
+{% endif %}
+
+{% comment %} Meta Description {% endcomment %}
+{% assign metadesc = site.desc %}
+
+{% if page.collection == 'posts' %}
+    {% assign metadesc = page.excerpt  | strip_html | strip_newlines %}
+    {% if page.desc %}
+        {% assign metadesc = page.desc %}
+    {% endif %}
+{% endif %}
+
+{% comment %} Meta Og Type {% endcomment %}
+{% assign type = 'website' %}
+{% if page.collection == 'posts' %}
+    {% assign type = 'article' %}
+{% endif%}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href="/assets/favicon.ico" type="favicon/icon">
-<title>Binyamin Green | Student & Web Developer</title>
+
+<title>{{- metatitle -}}</title>
 
 <meta name="author" content="Binyamin Aron Green">
-<meta name="description" content="Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community.">
+<meta name="description" content="{{- metadesc -}}">
 <meta name="keywords" content="programmer, web developer, developer, websites, front-end, full-stack, back-end, web designer, html, html5, css, css3, javascript, react, node, express">
 <meta name="theme-color" content="#49a670">
 
-<meta property="og:title" content="Binyamin Green | Student & Web Developer">
-<meta property="og:type" content="website">
+<meta property="og:title" content="{{- metatitle -}}">
+<meta property="og:type" content={{type}}>
 <meta property="og:url" content="https://b3u.netlify.com/">
 <meta property="og:image" content="/assets/favicon.ico">
-<meta property="og:description" content="Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community.">
+<meta property="og:description" content="{{- metadesc -}}">
 
 <link rel="canonical" href="https://b3u.netlify.com/">
 
