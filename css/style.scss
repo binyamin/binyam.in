@@ -201,9 +201,7 @@ main {
     }
 
     .avatar {
-        margin-top: 200px;
-        clip-path: circle(20% at 290px 130px);
-        -webkit-clip-path: circle(20% at 290px 130px);
+        border-radius: 50%;
     }
 }
 
@@ -367,17 +365,18 @@ main {
         padding-left: 32px;
     }
     img {
-        clip-path: circle(20% at 290px 130px);
-        -webkit-clip-path: circle(20% at 290px 130px);
+        border-radius: 50%;
     }
 }
 
 
-/* Post */
+/*=============
+  Post Pages
+=============== */
 
 .post {
-    width: 50%;
-    min-width: 300px;
+    width: 700px;
+
     margin: 14vh auto 0 auto;
     font-family: Merriweather, serif;
 
@@ -385,8 +384,10 @@ main {
         margin-bottom: 48px;
     }
 
-    .post__thumbnail {
-        height: 200px;
+    &__thumbnail {
+        width: 100%;
+        height: 525px;
+
         overflow: hidden;
 
         display: flex;
@@ -421,13 +422,13 @@ main {
 
     hr {
         border: none;
-    }
-
-    hr::after {
-        content: "•  •  •";
-        display: block;
-        width: 100%;
-        text-align: center;
+     
+        &::after {
+            content: "•  •  •";
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
     
     blockquote {
@@ -435,53 +436,78 @@ main {
         padding-left: 8px;
         font-style: italic;
     }
+
+    img:not(.post_signature) {
+        width: 90%;
+        max-width: 600px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     /* Navigation */
-    .nav {
-        max-height: 0;
-        overflow: hidden;
-        text-align: center;
-        background: white;
-        width: 100%;
-        padding: 0;
-        transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
+    .navbar {
+        .nav {
+            max-height: 0;
+            overflow: hidden;
+            text-align: center;
+            background: white;
+            width: 100%;
+            padding: 0;
+            transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
 
-        position: absolute;
-        top: 70px;
-        left: 0;
+            position: absolute;
+            top: 70px;
+            left: 0;
+        
+            &.activeMenu {
+            max-height: 700px;
+            padding: .5em;
+            }
+
+            .nav-link {
+                display: block;
+                font-size: 2em;
+                margin: 2.5em;
+            }
+        }
+
+        /* Hamburger Icon (with animation) */
+        .hamburger {
+            display: inline;
+            
+            .bars{
+                background: $main;
+                display: block;
+                width: 2.5em;
+                height: .25em;
+                margin: 0.5em;
+                text-align: center;
+                transition: width .3s ease-out, transform .5s ease-out;
+            }
+
+            &.responsive :first-child{
+                transform: rotate(45deg) translate(7px, 6px);
+            }
+
+            &.responsive :nth-child(2){
+                width: 0;
+            }
+
+            &.hamburger.responsive :last-child{
+                transform: rotate(-45deg) translate(10px, -10px);
+            }
+        }
     }
 
-    .nav.activeMenu {
-        max-height: 700px;
-        padding: .5em;
+    /* Global Footer*/
+    .contact {
+        margin-top: 24px;
+        padding: 0 16px;
     }
 
-    .nav .nav-link {
-        display: block;
-        font-size: 2em;
-        margin: 2.5em;
-    }
-
-    /* Hamburger Icon (with animation) */
-    .navbar .hamburger {
-        display: inline;
-    }
-
-    .hamburger .bars{
-        background: $main;
-        display: block;
-        width: 2.5em;
-        height: .25em;
-        margin: 0.5em;
-        text-align: center;
-        transition: width .3s ease-out, transform .5s ease-out;
-    }
-
-    .navbar .hamburger.responsive :first-child{transform: rotate(45deg) translate(7px, 6px);}
-    .navbar .hamburger.responsive :nth-child(2){width: 0;}
-    .navbar .hamburger.responsive :last-child{transform: rotate(-45deg) translate(10px, -10px);}
+    /*=========
+      Home Page
+    =========*/
 
     /* Splash Section */
     .splash {
@@ -512,37 +538,79 @@ main {
         }
 
         .avatar {
-            margin-top: 0;
-            position: relative;
-            left: 7%;
+            width: 40%;
         }
     }
 
     /* About Section */
     .about {
         padding: 1em;
-        display: block;
-    }
+        text-align: center;
+        
+        &::after {
+            display: none;
+        }
 
-    .about::after {
-        display: none;
-    }
+        &__text {
+            width: 100%;
+        }
 
-    .about .about-text {
-        width: 70%;
-    }
+        .skill-container {
+            flex-direction: column;
+        }
 
-    .about .skill-container {
-        flex-direction: column;
-    }
+        .skill-section {
+            width: 100%;
+            margin-bottom: 32px;
+        }
 
+        .skills {
+            padding: 0;
+            text-align: left;
+        }
+    }
+    
     /*Work Section*/
-    .portfolio-container {
-        flex-direction: column;
-        margin-top: 10px;
+    .work {
+        padding-top: 0;
+        
+        .portfolio-container {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .item {
+            width: 90%;
+        }
     }
 
-    .item {
-        width: 90%;
+    /*=============
+      About Page
+    ==============*/
+    .about-page {
+        h2 {
+            margin: 32px 0;
+        }
+
+        section {
+            width: 90%;
+            padding-left: 0;
+            margin-bottom: 24px;
+        }
+        
+        img {
+            margin-bottom: 24px;
+        }
+    }
+
+    /*=============
+      Post Pages
+    =============== */
+    .post {
+        width: 350px;
+        
+        &__thumbnail {
+            height: #{350 * 0.75}px;
+        }
     }
 }
