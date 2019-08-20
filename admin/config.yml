@@ -29,4 +29,5 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "song"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Artist", name: "artist", widget: "string"}
+      - {label: "Source", name: "source", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
