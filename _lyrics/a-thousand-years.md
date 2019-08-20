@@ -2,6 +2,7 @@
 layout: song
 title: A Thousand Years
 artist: Christina Perri
+source: 'https://genius.com/Christina-perri-a-thousand-years-lyrics'
 ---
 **\[Verse 1]**
 
