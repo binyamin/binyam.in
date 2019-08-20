@@ -505,6 +505,16 @@ main {
   max-width: 600px;
 }
 
+/* ================
+    Lyrics Page(s)
+================= */
+.lyrics-page {
+  width: 40%;
+  min-width: 300px;
+  margin: 65px auto 0 auto;
+  padding-top: 24px;
+}
+
 @media only screen and (max-width: 768px) {
   /* Navigation */
   .navbar {

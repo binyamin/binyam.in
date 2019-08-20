@@ -2,6 +2,18 @@ collections:
   posts:
     output: true
     permalink: /blog/:title
+  lyrics:
+    output: true
+    permalink: /lyrics/:title
 
 title: "Binyamin Green | Student & Web Developer"
 desc: "Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community."
+
+plugins:
+  - jekyll-paginate
+
+# Algolia
+algolia:
+  application_id: NRWKMRTTHN
+  index_name: lyrically
+  search_only_api_key: c128fd862060eafa52a68338eba03ed4
