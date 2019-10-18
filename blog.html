@@ -1,21 +1,21 @@
 ---
 layout: default
 title: Blog
+main_class: post
 ---
 
-<main class="post">
-    <header>
-        <h1>Welcome to My Blog</h1>
-    </header>
+<header>
+    <h1>Welcome to My Blog</h1>
+    <a class="post__btn--subscribe" href="https://tinyletter.com/BinyaminGreen" target="_blank">Subscribe to My Newsletter</a>         
+</header>
 
-    {% for post in site.posts %}
-    <p>
-        <a href="{{post.url}}">{{ post.title }}</a> - <i>{{post.date | date: "%b %d, %Y"}}</i>
-    </p>
-    <p>
-        {{post.excerpt}}
-    </p>
-    <hr/>
-    <br/>
-    {% endfor %}
-</main>
+{% for post in site.posts %}
+<p>
+    <a href="{{post.url}}">{{ post.title }}</a> - <i>{{post.date | date: "%b %d, %Y"}}</i>
+</p>
+<div>
+    {{post.excerpt}}
+</div>
+<hr/>
+<br/>
+{% endfor %}

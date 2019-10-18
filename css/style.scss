@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Merriweather');
 
 /* Variables */
 $bg: #efefef;
 $main: #191919;
 $accent: #49a670;
+
+$f-ss: Poppins, sans-serif;
+$f-s: Merriweather, serif;
 
 /* Global */
 a {
@@ -15,7 +18,7 @@ html{scroll-behavior: smooth}
 body {
     padding: 0;
     margin: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: $f-ss;
     color: $main;
 
     display: flex;
@@ -381,7 +384,7 @@ main:not(.index) {
     width: 700px;
 
     margin: 14vh auto 0 auto;
-    font-family: Merriweather, serif;
+    font-family: $f-s;
 
     header {
         margin-bottom: 48px;
@@ -420,7 +423,7 @@ main:not(.index) {
 
     .title, .date, h1, h2, h3, h4, h5, h6 {
         padding-top: 24px;
-        font-family: Montserrat, sans-serif;
+        font-family: $f-ss;
     }
 
     hr {
@@ -444,16 +447,16 @@ main:not(.index) {
         width: 90%;
         max-width: 600px;
     }
-}
 
-/* ================
-    Lyrics Page(s)
-================= */
-.lyrics-page {
-    width: 40%;
-    min-width: 300px;
-    margin: 65px auto 0 auto;
-    padding-top: 24px;
+    &__btn--subscribe {
+        font-family: $f-ss;
+        text-decoration: none;
+        display: inline-block;
+        color: $bg;
+        background-color: $accent;
+        padding: 8px 12px;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.14);
+    }
 }
 
 @media only screen and (max-width: 768px) {

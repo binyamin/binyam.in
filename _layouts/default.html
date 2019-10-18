@@ -5,7 +5,9 @@
 </head>
 <body>
     {% include header.html %}
-	{{ content }}
+    <main class={{ page.main_class }}>
+        {{ content }}
+    </main>
     {% include footer.html %}
 </body>
 </html>

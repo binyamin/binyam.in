@@ -1,5 +1,6 @@
 ---
 layout: post
+main_class: post
 title: Five Useful Tips for Adobe XD
 date: 2019-06-18T16:11:04.629Z
 thumbnail: /assets/uploads/5-tips-xd.jpeg
