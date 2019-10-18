@@ -87,6 +87,9 @@ body {
 /* Global Main Content */
 main {
     flex-grow: 1;
+}
+
+main:not(.index) {
     margin-top: 65px;
 }
 

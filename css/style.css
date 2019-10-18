@@ -99,6 +99,9 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+main:not(.index) {
   margin-top: 65px;
 }
 
