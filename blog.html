@@ -11,10 +11,10 @@ main_class: post
 
 {% for post in site.posts %}
 <p>
-    <a href="{{post.url}}">{{ post.title }}</a> - <i>{{post.date | date: "%b %d, %Y"}}</i>
+    <a href="{{post.url}}">{{ post.title }}</a> ({{post.date | date: "%b %d, %Y"}})
 </p>
-<div>
-    {{post.excerpt}}
+<div class="post__excerpt">
+    {{post.excerpt | strip_html | truncate: 200}}
 </div>
 <hr/>
 <br/>

@@ -17,6 +17,6 @@ collections:
       - {label: "Main Class", name: "main_class", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", hint: "Should be a 4:3 ratio image"}
-      - {label: "Description", name: "desc", widget: "text", required: false, hint: "This will be displayed on the site and in searches."}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", hint: "Should be a 1024x400 ratio image", required: false}
+      - {label: "Description", name: "desc", widget: "text", required: false, hint: "This will be displayed on the site and in searches. Less than 144 characters please."}
       - {label: "Body", name: "body", widget: "markdown"}

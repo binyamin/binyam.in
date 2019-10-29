@@ -7,6 +7,8 @@ $accent: #49a670;
 
 $f-ss: Poppins, sans-serif;
 
+$body-height: calc(100vh - 65px);
+
 /* Global */
 a {
     color: $main;
@@ -36,10 +38,6 @@ body {
     align-items: center;
     padding: 0 32px;
     height: 65px;
-
-    position: fixed;
-    top: 0;
-    z-index: 2;
 
     box-sizing: border-box;
 
@@ -91,23 +89,18 @@ main {
     flex-grow: 1;
 }
 
-main:not(.index) {
-    margin-top: 65px;
-}
-
 /* Global Footer */
 .contact {
-    box-sizing: border-box;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    // -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     background-color: $accent;
     background-image: linear-gradient($accent, hsl(145, 49%, 50%));
 
     h2 {
-        padding-top: 50px;
+        padding-top: 12px;
         color: $bg;
         text-align: center;
-        font-size: 1.35em;
+        font-size: 1em;
         font-weight: normal;
     }
 
@@ -140,7 +133,7 @@ main:not(.index) {
 
     p {
         margin: 0;
-        padding-top: 32px;
+        padding-top: 12px;
         padding-bottom: 1em;
         color: $bg;
         text-align: center;
@@ -153,13 +146,13 @@ main:not(.index) {
 
 /* Splash Section */
 .splash {
-    margin-top: 65px;
-    height: calc(100vh - 65px);
+    height: $body-height;
 
-    position: relative;
+    position: relative; // Required for after pseudo element
     
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     &::after {
@@ -179,22 +172,23 @@ main:not(.index) {
         z-index: -1;
     }
 
-    .splash-text {
+    &-text {
         font-size: 24px;
         line-height: 36px;
+        text-align: center;
+        
+        .job-title {
+            color: $accent;
+        }
     }
 
-    .splash-text .job-title {
-        color: $accent;
-    }
 
     &__btn {
         display: inline-block;
         text-decoration: none;
-        border: 1px solid $accent;
-        border-radius: 25px;
-        padding: .25em 1em;
-        margin-top: 1em;
+        border-radius: 4px;
+        padding: 4px 12px;
+        margin-top: 12px;
         color: white;
         background: $accent;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
@@ -203,10 +197,6 @@ main:not(.index) {
         &:hover {
             box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
         }
-    }
-
-    .avatar {
-        border-radius: 50%;
     }
 }
 
@@ -381,45 +371,35 @@ main:not(.index) {
 
 .post {
     width: 700px;
-
-    margin: 14vh auto 0 auto;
+    margin: 0 auto;
 
     header {
-        margin-bottom: 48px;
+        margin: 12px 0 36px 0;
+
+        h1 {
+            margin: 4px 0 12px 0;
+        }
     }
 
     &__thumbnail {
         width: 100%;
-        height: 525px;
-
-        overflow: hidden;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            width: 100%;
-        }
     }
 
     footer {
+        margin-bottom: 24px;
         text-align: center;
     }
 
-    .title {
+    .post__title {
         font-size: 24px;
-    }
-
-    .date {
-        font-size: 14px;
+        text-decoration: none;
     }
 
     p {
         margin: 16px 0;
     }
 
-    .title, .date, h1, h2, h3, h4, h5, h6 {
+    .post__title, h1, h2, h3, h4, h5, h6 {
         padding-top: 24px;
     }
 
@@ -440,7 +420,7 @@ main:not(.index) {
         font-style: italic;
     }
 
-    a {
+    a:not(.post__btn--subscribe):not(.post__title) {
         color: $accent;
 
         &:hover, &:focus {
@@ -448,18 +428,27 @@ main:not(.index) {
         }
     }
 
-    img:not(.post_signature) {
+    img:not(.post__signature):not(.post__thumbnail) {
         width: 90%;
-        max-width: 600px;
+    }
+
+    &__signature {
+        margin-bottom: 24px;
     }
 
     &__btn--subscribe {
-        text-decoration: none;
         display: inline-block;
-        color: $bg;
-        background-color: $accent;
+        text-decoration: none;
+        border-radius: 4px;
         padding: 8px 12px;
-        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.14);
+        color: $bg;
+        background: $accent;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        transition: box-shadow .2s ease-out;
+        
+        &:hover {
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+        }
     }
 }
 
@@ -476,11 +465,12 @@ main:not(.index) {
             transition: max-height 0.5s ease-out, padding-top 0.2s ease-out, padding-bottom 0.2s ease-out;
 
             position: absolute;
-            top: 70px;
+            top: 65px;
             left: 0;
+            z-index: 2;
         
             &.activeMenu {
-            max-height: 700px;
+            max-height: $body-height;
             padding: .5em;
             }
 
@@ -531,12 +521,11 @@ main:not(.index) {
 
     /* Splash Section */
     .splash {
-        overflow: hidden;
-        padding-top: 70px;
+        // padding-top: 70px;
+        // overflow: hidden;
         
         flex-direction: column;
-        justify-content: flex-start ;
-        box-sizing: border-box;
+        justify-content: center ;
 
         .container {
             padding-top: 7%;
@@ -544,17 +533,10 @@ main:not(.index) {
             width: 70%;
         }
 
-        .splash-text {
-            line-height: 48px;
-        }
-
         .splash__btn {
-            font-size: 1.5em;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 70%;
-            margin-top: 300px;
+            width: 60%;
+            font-size: 1.35em;
+            margin-top: 24px;
         }
 
         .avatar {
@@ -628,9 +610,5 @@ main:not(.index) {
     =============== */
     .post {
         width: 350px;
-        
-        &__thumbnail {
-            height: #{350 * 0.75}px;
-        }
     }
 }

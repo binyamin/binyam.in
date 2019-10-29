@@ -4,10 +4,8 @@ main_class: post
 ---
 
     <header>
-        <p><span class="title">{{page.title}}</span> | <span class="date">{{page.date | date: "%b %d, %Y"}}</span></p>
-        <div class="post__thumbnail">
-            <img src="{{page.thumbnail}}" alt="">
-        </div>
+        <img src="{{page.thumbnail}}" alt="" class="post__thumbnail">
+        <p><a class="post__title" href="{{page.url}}">{{page.title}}</a> | Originally posted {{page.date | date: "%b %d, %Y"}}</p>
     </header>
 
     {{content}}
@@ -15,8 +13,7 @@ main_class: post
     <footer>
         <hr />
         <p>Thanks for checking out my blog.</p>
-        <img class="post_signature" src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
-        <br>
-        <br>
+        <img class="post__signature" src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
+        <br/>
         <a class="post__btn--subscribe" href="https://tinyletter.com/BinyaminGreen" target="_blank">Subscribe to My Newsletter</a>             
     </footer>

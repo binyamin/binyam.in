@@ -44,11 +44,11 @@
 
 <meta property="og:title" content="{{- metatitle -}}">
 <meta property="og:type" content={{type}}>
-<meta property="og:url" content="{{ page.url | prepend: 'https://b3u.netlify.com'  }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{- metaimg -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
-<link rel="canonical" href="{{ page.url | prepend: 'https://b3u.netlify.com' }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <link rel="stylesheet" href="/css/style.css">
 <script defer src="/js/main.js"></script>
