@@ -6,15 +6,22 @@
 {% elsif page.title %}
     {% assign metatitle = metatitle | prepend: " - " | prepend: page.title %}
 {% endif %}
-
+    
 {% comment %} Meta Description {% endcomment %}
 {% assign metadesc = site.desc %}
-
+    
 {% if page.collection == 'posts' %}
     {% assign metadesc = page.excerpt  | strip_html | strip_newlines %}
     {% if page.desc %}
         {% assign metadesc = page.desc %}
     {% endif %}
+{% endif %}
+    
+{% comment %}Meta Og Image{% endcomment %}
+{% assign metaimg = '/assets/favicon.ico' %}
+
+{% if page.collection == 'posts' %}
+    {% assign metaimg = page.thumbnail %}
 {% endif %}
 
 {% comment %} Meta Og Type {% endcomment %}
@@ -37,11 +44,11 @@
 
 <meta property="og:title" content="{{- metatitle -}}">
 <meta property="og:type" content={{type}}>
-<meta property="og:url" content="https://b3u.netlify.com/">
-<meta property="og:image" content="/assets/favicon.ico">
+<meta property="og:url" content="{{ page.url | prepend: 'https://b3u.netlify.com'  }}">
+<meta property="og:image" content="{{- metaimg -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
-<link rel="canonical" href="https://b3u.netlify.com/">
+<link rel="canonical" href="{{ page.url | prepend: 'https://b3u.netlify.com' }}">
 
 <link rel="stylesheet" href="/css/style.css">
 <script defer src="/js/main.js"></script>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Poppins|Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 /* Variables */
 /* Global */
 a {
@@ -439,7 +439,6 @@ main:not(.index) {
 .post {
   width: 700px;
   margin: 14vh auto 0 auto;
-  font-family: Merriweather, serif;
 }
 
 .post header {
@@ -483,7 +482,6 @@ main:not(.index) {
 
 .post .title, .post .date, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   padding-top: 24px;
-  font-family: Poppins, sans-serif;
 }
 
 .post hr {
@@ -503,13 +501,20 @@ main:not(.index) {
   font-style: italic;
 }
 
+.post a {
+  color: #49a670;
+}
+
+.post a:hover, .post a:focus {
+  opacity: 0.75;
+}
+
 .post img:not(.post_signature) {
   width: 90%;
   max-width: 600px;
 }
 
 .post__btn--subscribe {
-  font-family: Poppins, sans-serif;
   text-decoration: none;
   display: inline-block;
   color: #efefef;
