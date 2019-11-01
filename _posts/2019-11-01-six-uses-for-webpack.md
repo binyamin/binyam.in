@@ -14,7 +14,7 @@ Webpack's main usage is bundling JavaScript. In node.js, `require` or `import` i
 
 Another use-case is minifying CSS and/or JavaScript. Minification is simply stripping all white-space from a file. It's a very effective way of decreasing file size, thus speeding up load time. Minifying JS requires no plugins, however minifying css does. There are also plugins which increase the browser-compatibility of your css, such as autoprefixer.
 
-You can preprocess scss. There are other ways such as gulp, node-sass and even a VS Code extension, but once you're using webpack this is a pretty useful feature. This requires a [webpack loader](http://binyam.in).
+You can preprocess scss. There are other ways such as gulp, node-sass and even a VS Code extension, but once you're using webpack this is a pretty useful feature. This requires a webpack loader.
 
 You can compile jsx for ReactJS. This is can be easier to set up in some situations, especially in a complex environment such as an electron app. There's a good tutorial on compiling jsx with webpack [here](https://www.valentinog.com/blog/babel/). Note that this requires a plugin as well.
 
