@@ -21,9 +21,10 @@ steps:
     bundle install
     jekyll build
   displayName: 'jekyll'
-- task: install@1
-  inputs:
-    version: '2.0'
+- script: sudo npm install -g netlify-cli@2.0
+  displayName: 'Install Netlify CLI'
+- script: ls -als
+  displayName: Stuff
 - task: deploy@1
   inputs:
     authToken: '$(NETLIFY_PAT)'
