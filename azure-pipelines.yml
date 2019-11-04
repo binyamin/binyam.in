@@ -13,22 +13,20 @@ steps:
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.6'
-
 - script: |
     gem install jekyll bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
- 
 - script: |
     bundle install
     jekyll build
   displayName: 'jekyll'
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+- task: install@1
   inputs:
-    SourceFolder: '_site'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: PublishBuildArtifacts@1
+    version: '2.0'
+- task: deploy@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: site
+    authToken: '$(NETLIFY_PAT)'
+    siteId: '$(NETLIFY_SITE_ID)'
+    sourceDirectory: '$(System.DefaultWorkingDirectory)'
+    isValidationOnly: false
