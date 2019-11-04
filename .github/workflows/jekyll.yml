@@ -10,12 +10,16 @@ jobs:
       - name: Clone External
         run: git clone https://github.com/b3u/hanucode.git .
       - uses: actions/checkout@v1
-      - name: Build the site in the jekyll/builder container
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future" 
-      - name: GitHub Pages Deploy
-        uses: maxheld83/ghpages@v0.1.2
-        env: 
-          BUILD_DIR: _site
+#       - name: Build the site in the jekyll/builder container
+#         run: |
+#           docker run \
+#           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+#           jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future" 
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BASE_BRANCH: master # The branch the action should deploy from.
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: _site # The folder the action should deploy.
+          BUILD_SCRIPT: jekyll build --future # The build script the action should
