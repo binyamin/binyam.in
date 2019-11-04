@@ -25,9 +25,5 @@ steps:
   displayName: 'Install Netlify CLI'
 - script: ls -als
   displayName: Stuff
-- task: deploy@1
-  inputs:
-    authToken: '$(NETLIFY_PAT)'
-    siteId: '$(NETLIFY_SITE_ID)'
-    sourceDirectory: '$(System.DefaultWorkingDirectory)'
-    isValidationOnly: false
+- script: netlify deploy --auth $(NETLIFY_PAT) -- site $(NETLIFY_SITE_ID) --prod --dir=_site
+  displayName: Netlify Deploy
