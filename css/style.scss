@@ -452,6 +452,34 @@ main {
     }
 }
 
+
+/*============
+  Hanucode Page
+==============*/
+.hanucode {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hanucode::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    background-image: url('/assets/img/menorah.jpg'); // Image by Element5 Digital on Unsplash.com
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
 @media only screen and (max-width: 768px) {
     /* Navigation */
     .navbar {
