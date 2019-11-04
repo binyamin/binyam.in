@@ -23,9 +23,5 @@ steps:
   displayName: 'jekyll'
 - script: sudo npm install -g netlify-cli@2.0
   displayName: 'Install Netlify CLI'
-- script: netlify deploy --prod --dir=_site
+- script: NETLIFY_AUTH_TOKEN=$NETLIFY_PAT NETLIFY_SITE_ID=$NETLIFY_SITE_ID netlify deploy --prod --dir=_site
   displayName: Deploy to Netlify
-  env:
-    NETIFY_AUTH_TOKEN: $(NETLIFY_PAT)
-    NETLIFY_SITE_ID: $(NETLIFY_SITE_ID)
-    
