@@ -4,9 +4,8 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Clone External
         run: git clone https://github.com/b3u/hanucode.git .
@@ -15,6 +14,8 @@ jobs:
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-      - name: Github Deployment
-        uses: NiklasMerz/github-deployment-action@v1.0.0
+          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future" 
+      - name: GitHub Pages Deploy
+        uses: maxheld83/ghpages@v0.1.2
+        env: 
+          BUILD_DIR: _site
