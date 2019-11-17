@@ -4,9 +4,21 @@ collections:
     permalink: /blog/:title
     main_class: post
     layout: post
+  drafts:
+    output: true
+    permalink: /drafts/:title
+    main_class: post
+    layout: post
 
 title: "Binyamin Green | Student & Web Developer"
 desc: "Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community."
 
-plugins:
-  - jekyll-paginate
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

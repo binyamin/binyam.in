@@ -1,0 +1,125 @@
+/* Global */
+a {
+    color: $main;
+}
+
+ul.task-list { list-style-type: none; padding-left: 16px; } // For GFM Tasklist Extension
+
+html{scroll-behavior: smooth}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $f-ss;
+    color: $main;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Global header */
+.navbar {
+    background: $bg;
+    width: 100%;
+    box-shadow: 0 1px 6px 0 #b4b4b4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    height: 65px;
+
+    box-sizing: border-box;
+
+    .logo {
+        height: 70%;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        margin: 0 16px;
+        text-decoration: none;
+
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: "";
+        display: inline-block;
+        background: $main;
+        height: 2px;
+        width: 80%;
+
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: width .3s ease-in-out;
+    }
+
+    .nav-link.current::after {
+        width: 8px;
+        background: $accent;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Global Main Content */
+main {
+    flex-grow: 1;
+    padding-bottom: 24px;
+}
+
+/* Global Footer */
+.contact {
+    // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    background-color: $accent;
+
+    h2 {
+        padding-top: 12px;
+        color: $bg;
+        text-align: center;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    .icon-row {
+        padding-top: 8px;
+        text-align: center;
+    }
+
+    .icon-row a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    .icon-row .icon {
+        width: 60%;
+        fill: $bg;
+        transition: fill .2s ease-in-out;
+    }
+
+    .icon-row .icon:hover {
+        fill: #bbb;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 12px;
+        padding-bottom: 1em;
+        color: $bg;
+        text-align: center;
+    }
+}

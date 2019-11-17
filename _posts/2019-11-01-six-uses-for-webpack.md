@@ -2,7 +2,7 @@
 layout: post
 main_class: post
 title: Six Uses for Webpack
-date: 2019-11-01T16:57:05.622Z
+date: 2019-11-15T11:05:00.622Z
 desc: >-
   I've always tried to avoid Webpack. After all, it's not the only tool of its
   kind on the market. However, once you know how to use it, it can be a very

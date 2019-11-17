@@ -1,144 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* Variables */
-$bg: #efefef;
-$main: #191919;
-$accent: #49a670;
+@import 'partials/variables';
 
-$f-ss: Poppins, sans-serif;
-
-$body-height: calc(100vh - 65px);
-
-/* Global */
-a {
-    color: $main;
-}
-
-html{scroll-behavior: smooth}
-
-body {
-    padding: 0;
-    margin: 0;
-    font-family: $f-ss;
-    color: $main;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Global header */
-.navbar {
-    background: $bg;
-    width: 100%;
-    box-shadow: 0 1px 6px 0 #b4b4b4;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 32px;
-    height: 65px;
-
-    box-sizing: border-box;
-
-    a.logo-link {
-        height: 70%;
-        
-        display: flex;
-        align-items: center;
-    }
-    
-    .logo {
-        height: 100%;
-    }
-
-    .nav-link {
-        font-size: 20px;
-        margin: 0 16px;
-        text-decoration: none;
-
-        position: relative;
-    }
-
-    .nav-link::after {
-        content: "";
-        display: inline-block;
-        background: $main;
-        height: 2px;
-        width: 80%;
-
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        transition: width .3s ease-in-out;
-    }
-
-    .nav-link.current::after {
-        width: 8px;
-        background: $accent;
-    }
-
-    .hamburger {
-        display: none;
-    }
-}
-
-/* Global Main Content */
-main {
-    flex-grow: 1;
-}
-
-/* Global Footer */
-.contact {
-    // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    // -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    background-color: $accent;
-    background-image: linear-gradient($accent, hsl(145, 49%, 50%));
-
-    h2 {
-        padding-top: 12px;
-        color: $bg;
-        text-align: center;
-        font-size: 1em;
-        font-weight: normal;
-    }
-
-    .icon-row {
-        padding-top: 8px;
-        text-align: center;
-    }
-
-    .icon-row a {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 50px;
-        height: 50px;
-        margin: 0 10px;
-        cursor: pointer;
-        transform: scale(0.9);
-    }
-
-    .icon-row .icon {
-        width: 60%;
-        fill: $bg;
-        transition: fill .2s ease-in-out;
-    }
-
-    .icon-row .icon:hover {
-        fill: #bbb;
-    }
-
-    p {
-        margin: 0;
-        padding-top: 12px;
-        padding-bottom: 1em;
-        color: $bg;
-        text-align: center;
-    }
-}
+@import 'partials/global';
+@import 'partials/post';
 
 /*=========
   Home page
@@ -148,7 +13,7 @@ main {
 .splash {
     height: $body-height;
 
-    position: relative; // Required for after pseudo element
+    position: relative; // Required for `::after` pseudo element
     
     display: flex;
     flex-direction: column;
@@ -157,7 +22,7 @@ main {
 
     &::after {
         content: "";
-        /* Background image by Anders Jildén @Unsplash.com */
+        /* Background image by Anders Jildén at Unsplash.com */
         background-image: url(../assets/img/skyline.jpg);
         background-color: #333;
         background-size: cover;
@@ -172,8 +37,13 @@ main {
         z-index: -1;
     }
 
+    h1.splash-title {
+        font-weight: normal;
+        margin: 0;
+    }
+
     &-text {
-        font-size: 24px;
+        font-size: 21px;
         line-height: 36px;
         text-align: center;
         
@@ -258,13 +128,8 @@ main {
         margin-left: 1rem;
     }
 
-    .skill-section .skills li::before {
-        content: '\2714';
-        margin-right: 5px;
-    }
-
     .skill-section .skills li {
-        list-style-type :none;
+        list-style-image: url('../assets/icons/check.svg');
         padding: 3px 0;
     }
 }
@@ -350,6 +215,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 32px 0;
 
     h2 {
         width: 100%;
@@ -401,35 +267,6 @@ main {
 
     .post__title, h1, h2, h3, h4, h5, h6 {
         padding-top: 24px;
-    }
-
-    hr {
-        border: none;
-     
-        &::after {
-            content: "•  •  •";
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
-    }
-    
-    blockquote {
-        border-left: 6px solid $accent;
-        padding-left: 8px;
-        font-style: italic;
-    }
-
-    a:not(.post__btn--subscribe):not(.post__title) {
-        color: $accent;
-
-        &:hover, &:focus {
-            opacity: 0.75;
-        }
-    }
-
-    img:not(.post__signature):not(.post__thumbnail) {
-        width: 90%;
     }
 
     &__signature {

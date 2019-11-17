@@ -1,4 +1,10 @@
-node_modules
-_site
-.jekyll-cache
+node_modules/
+
+# jekyll
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# netlify
 Gemfile.lock

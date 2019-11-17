@@ -1,0 +1,51 @@
+// Global post styles
+
+.post {
+    code {
+        font-family: $f-code;
+    }
+    
+    pre code {
+        font-size: 14px;
+    }
+    
+    :not(pre) > code {
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        padding: 2px 4px;
+    }
+
+    img:not(.post__signature):not(.post__thumbnail):not(.emoji) {
+        width: 90%;
+    }
+    
+    hr {
+        border: none;
+        
+        &::after {
+            content: "•  •  •";
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    
+    blockquote {
+        border-left: 6px solid $accent;
+        padding: 4px 0 4px 8px;
+        font-style: italic;
+        background-color: #fbfbfb;
+        font-size: 14px;
+
+        p { margin: 0; }
+    }
+
+    a:not(.post__btn--subscribe):not(.post__title) {
+        color: $accent;
+        
+        &:hover, &:focus {
+            opacity: 0.75;
+        }
+    }
+}

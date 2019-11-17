@@ -2,8 +2,8 @@
   "name": "b3u.netlify.com",
   "version": "1.0.0",
   "description": "My personal website",
-  "main": "/",
   "scripts": {
+    "postinstall": "bundle install",
     "start": "bundle exec jekyll serve",
     "jekyll-build": "bundle exec jekyll build"
   },
