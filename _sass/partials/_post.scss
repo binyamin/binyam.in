@@ -2,7 +2,7 @@
 
 .post {
     code {
-        font-family: $f-code;
+        font-family: $f-mono;
     }
     
     pre code {
@@ -28,17 +28,6 @@
             width: 100%;
             text-align: center;
         }
-    }
-    
-    
-    blockquote {
-        border-left: 6px solid $accent;
-        padding: 4px 0 4px 8px;
-        font-style: italic;
-        background-color: #fbfbfb;
-        font-size: 14px;
-
-        p { margin: 0; }
     }
 
     a:not(.post__btn--subscribe):not(.post__title) {

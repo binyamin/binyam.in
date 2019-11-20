@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "My personal website",
   "scripts": {
-    "postinstall": "bundle install",
+    "postinstall": "gem install bundler && bundle install",
     "start": "bundle exec jekyll serve",
-    "jekyll-build": "bundle exec jekyll build"
+    "compile": "bundle exec jekyll build"
   },
   "repository": {
     "type": "git",
