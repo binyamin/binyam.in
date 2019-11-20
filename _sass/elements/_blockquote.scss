@@ -1,9 +1,20 @@
 blockquote {
-    border-left: 6px solid $accent;
-    padding: 4px 0 4px 8px;
-    font-style: italic;
-    background-color: #fbfbfb;
-    font-size: 14px;
+    border-left: 6px solid map-get($black, dark);
+    padding: 4px 8px;
+    display: inline-block;
+    background-color: map-get($white, light);
+    font-size: 19px;
 
     p { margin: 0; }
+
+    cite {
+        display: block;
+        text-indent: 5px;
+        font-style: italic;
+        font-size: 14px;
+
+        &::before {
+            content: "- ";
+        }
+    }
 }

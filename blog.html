@@ -3,19 +3,14 @@ layout: default
 title: Blog
 main_class: post
 ---
-
 <header>
-    <h1>Welcome to My Blog</h1>
-    <a class="post__btn--subscribe" href="https://tinyletter.com/BinyaminGreen" target="_blank">Subscribe to My Newsletter</a>         
+    <h1><i class="bx bxs-book"></i> Welcome to My Blog</h1>
+    <p>I write articles on web design and development, and occasionally just ramble. You can <a href="https://tinyletter.com/BinyaminGreen" target="_blank">subscribe to my newsletter</a> to be notified of new posts.</p>
 </header>
 
 {% for post in site.posts %}
-<p>
-    <a href="{{post.url}}">{{ post.title }}</a> ({{post.date | date: "%b %d, %Y"}})
-</p>
-<div class="post__excerpt">
-    {{post.excerpt | strip_html | truncate: 200}}
-</div>
+<p><a href="{{post.url}}">{{ post.title }}</a> ({{post.date | date: "%b %d, %Y"}})</p>
+<div>{{post.excerpt | strip_html | truncate: 200}}</div>
 <hr/>
 <br/>
 {% endfor %}

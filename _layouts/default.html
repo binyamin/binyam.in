@@ -5,9 +5,6 @@
 </head>
 <body>
     {% include header.html %}
-    {% if page.layout == "choco" %}
-        {% include sidebar.html %}
-    {% endif %}
     <main class={{ page.main_class }}>
         {{ content }}
     </main>

@@ -25,7 +25,6 @@ desc: "Binyamin Green is a student and web developer specializing in front-end w
 
 kramdown:
   input: GFM
-  hard_wrap: false
   syntax_highlighter_opts:
     span:
       line_numbers: false

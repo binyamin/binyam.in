@@ -3,17 +3,18 @@ layout: default
 main_class: post
 ---
 
-    <header>
-        <img src="{{page.thumbnail}}" alt="" class="post__thumbnail">
-        <p><a class="post__title" href="{{page.url}}">{{page.title}}</a> | Originally posted {{page.date | date: "%b %d, %Y"}}</p>
-    </header>
-
+<header>
+    {% if page.thumbnail %}
+        <img src="{{page.thumbnail}}" alt="" class="banner">
+    {% endif %}
+    <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+    <p>Originally posted {{page.date | date: "%b %d, %Y"}}</p>
+</header>
+<article>
     {{content}}
-
-    <footer>
-        <hr />
-        <p>Thanks for checking out my blog.</p>
-        <img class="post__signature" src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
-        <br/>
-        <a class="post__btn--subscribe" href="https://tinyletter.com/BinyaminGreen" target="_blank">Subscribe to My Newsletter</a>             
-    </footer>
+</article>
+<footer>
+    <hr>
+    <img class="center" src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
+    <p>Thanks for checking out my blog. If you liked this post, <a href="https://tinyletter.com/BinyaminGreen" target="_blank">subscribe to my email list</a></p>
+</footer>

@@ -1,0 +1,9 @@
+.task-list-item {
+    &-checkbox {display: none;}
+
+    &::before {
+        font-family: boxicons;
+        content: "\e9f0";
+        margin-right: 4px;
+    }
+}

@@ -1,9 +1,52 @@
-/* Variables */
-$bg: #FCFEFF;
-$main: #0A0B0D;
-$accent: hsl(145, 39%, 47%);
-
-$f-ss: Montserrat, Helvetica, "Segoe UI", Arial, sans-serif;
-$f-mono: "Source Code Pro", Monaco, Consolas, "Courier New", monospace;
-
 $body-height: calc(100vh - 65px);
+
+// Fonts
+$ff-sans: Montserrat, Helvetica, "Segoe UI", Arial, sans-serif;
+$ff-mono: "Source Code Pro", Monaco, Consolas, "Courier New", monospace;
+
+// Colors
+$accent: (
+    "light": #77D19C,
+    "medium": #58B27D,
+    "dark": #4E9E6F,
+    "extra-dark": #196C3C
+);
+
+$white: (
+    "extra-light": #FCFEFF,
+    "light": #F5F9FC,
+    "medium": #E3E8EB,
+    "dark": #D7DADE,
+    "extra-dark": #B1BBC7
+);
+
+$black: (
+    "light": #76808A,
+    "medium": #4E5561,
+    "dark": #0A0B0D
+);
+
+$info: (
+    "light": #7EBAED,
+    "medium": #559DD9,
+    "dark": #4C8CC2,
+    "extra-dark": #19466B
+);
+
+$success: (
+    "light": #51CFAA,
+    "medium": #52A990,
+    "dark": #39977C
+);
+
+$warning: (
+    "light": #F7D586,
+    "medium": #EBBE54,
+    "dark": #DEAD37
+);
+
+$error: (
+    "light": #E07B70,
+    "medium": #F16050,
+    "dark": #D15345
+);

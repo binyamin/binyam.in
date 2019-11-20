@@ -1,8 +1,13 @@
 @import 'variables';
 
 @import 'global';
-@import 'partials/post';
+
+@import "elements/code";
 @import "elements/blockquote";
+@import "elements/rule";
+@import "elements/typography";
+@import "elements/media";
+@import "elements/list";
 
 /*=========
   Home page
@@ -36,39 +41,15 @@
         z-index: -1;
     }
 
-    h1.splash-title {
+    h1 {
         font-weight: normal;
         margin: 0;
     }
 
-    &-text {
-        font-size: 21px;
+    p {
+        font-size: 19px;
         line-height: 36px;
         text-align: center;
-        
-        .job-title {
-            font-family: $f-mono;
-            border-radius: 4px;
-            background-color: #f1f1f1;
-            padding: 2px 6px;
-        }
-    }
-
-
-    &__btn {
-        display: inline-block;
-        text-decoration: none;
-        border-radius: 4px;
-        padding: 4px 12px;
-        margin-top: 12px;
-        color: white;
-        background: $accent;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
-        transition: box-shadow .2s ease-out;
-        
-        &:hover {
-            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-        }
     }
 }
 
@@ -77,33 +58,29 @@
     position: relative;
     overflow-x: hidden;
     padding-top: 100px;
-
+    text-align: center;
+    
     &::after {
         content: "";
         display: inline-block;
-        background: $accent;
+        background: map-get($accent, medium);
         height: 80%;
         width: 100px;
         transform: rotate(8deg);
-
+        
         position: absolute;
         right: -75px;
         top: 25px;
     }
-
-    h2 {
-        text-align: center;
-        font-size: 28px;
-    }
-
-    &__text {
+    
+    > p {
         width: 50%;
         margin: 0 auto;
     }
 
     .skill-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 70%;
         margin: 75px auto;
     }
@@ -113,26 +90,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        text-align: left;
 
-    .skill-section .icon {
-        fill: $accent;
-    }
+        i {
+            font-size: 48px;
+            margin-bottom: 8px;
+            color: map-get($accent, medium);
+        }
 
-    .skill-section .skill-title {
-        font-weight: bold;
-        color: $accent;
-    }
-
-    .skill-section .skills{
-        display: inline-block;
-        margin-top: 1rem;
-        margin-left: 1rem;
-    }
-
-    .skill-section .skills li {
-        list-style-image: url(/assets/icons/check.svg);
-        padding: 3px 0;
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -193,7 +161,7 @@
     .item-content h3 {font-size: 1.25rem}
 
     .card-action{
-        color: $accent;
+        color: map-get($accent, medium);
         text-decoration: none;
         padding: .25rem .5rem;
         border: 1px solid white;
@@ -201,11 +169,11 @@
     }
 
     .card-action:hover {
-        border: 1px solid $accent;
+        border: 1px solid map-get($accent, medium);
     }
 
     .card-action:focus{
-        background-color: rgba(73, 166, 112, .25);
+        background-color: transparentize(map-get($accent, dark), 0.75);
     }
 }
 
@@ -240,55 +208,6 @@
 .post {
     width: 700px;
     margin: 0 auto;
-
-    header {
-        margin: 12px 0 36px 0;
-
-        h1 {
-            margin: 4px 0 12px 0;
-        }
-    }
-
-    &__thumbnail {
-        width: 100%;
-    }
-
-    footer {
-        margin-bottom: 24px;
-        text-align: center;
-    }
-
-    .post__title {
-        font-size: 24px;
-        text-decoration: none;
-    }
-
-    p {
-        margin: 16px 0;
-    }
-
-    .post__title, h1, h2, h3, h4, h5, h6 {
-        padding-top: 24px;
-    }
-
-    &__signature {
-        margin-bottom: 24px;
-    }
-
-    &__btn--subscribe {
-        display: inline-block;
-        text-decoration: none;
-        border-radius: 4px;
-        padding: 8px 12px;
-        color: $bg;
-        background: $accent;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
-        transition: box-shadow .2s ease-out;
-        
-        &:hover {
-            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-        }
-    }
 }
 
 
@@ -303,6 +222,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .hanucode::before {
     content: "";
 
@@ -353,7 +273,7 @@
             display: inline;
             
             .bars{
-                background: $main;
+                background: map-get($black, dark);
                 display: block;
                 width: 2.5em;
                 height: .25em;
