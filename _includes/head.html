@@ -26,14 +26,14 @@
     {% assign metaicon = page.icon | prepend: '/assets/' %}
 {% endif %}
 
-{% assign metaimg = '/assets/favicon.ico' %}
+{% assign metaimg = 'https://binyam.in/assets/favicon.ico' %}
 
 {% if page.collection == 'posts' %}
-    {% assign metaimg = page.thumbnail %}
+    {% assign metaimg = page.thumbnail  | prepend: "https://binyam.in" %}
 {% endif %}
 
 {% if page.icon %}
-    {% assign metaimg = page.icon | prepend: '/assets/' %}
+    {% assign metaimg = page.icon | prepend: 'https://binyam.in/assets/' %}
 {% endif %}
 
 {% comment %} Meta Og Type {% endcomment %}
@@ -56,7 +56,7 @@
 
 <meta property="og:title" content="{{- metatitle -}}">
 <meta property="og:type" content={{type}}>
-<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ page.url | prepend: 'https://binyam.in' }}">
 <meta property="og:image" content="{{- metaimg -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
@@ -68,7 +68,7 @@
 <meta name="twitter:creator" content="@binyamingreen" />
 <meta name="twitter:title" content="{{- page.title -}}" />
 <meta name="twitter:description" content="{{- page.desc -}}" />
-<meta name="twitter:image" content="{{- page.twitter.img | prepend: '/assets/' -}}" />
+<meta name="twitter:image" content="{{- page.twitter.img | prepend: 'https://binyam.in/assets/' -}}" />
 {% endif %}
 
 <link rel="stylesheet" href="/assets/css/vendor/dracula.css">
