@@ -239,6 +239,51 @@
     opacity: 0.4;
 }
 
+.devme-page {
+    text-align: center;
+    height: $body-height;
+    margin-top: 96px;
+
+    h1, h2 {
+        font-weight: normal;
+    }
+
+    form {
+        margin: 48px 0 36px 0;
+        display: flex;
+        justify-content: center;
+
+        input[type=email] {
+            font-family: $ff-sans;
+            padding: 4px 8px;
+            border: 1px solid map-get($info, dark);
+            border-radius: 0;
+
+            &:focus {
+                background-color: transparentize(map-get($info, light), 0.7);
+                outline: none;
+            }
+        }
+
+        input[type=submit] {
+            background-color: map-get($info, dark);
+            border: none;
+            color: map-get($white, light);
+            border-radius: 0;
+
+            &:focus {
+                outline: none;
+                background-color: map-get($info, medium);
+            }
+        }
+    }
+
+    a i {
+        font-size: 36px;
+        margin: 0 12px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* Navigation */
     .navbar {
