@@ -68,7 +68,12 @@ footer {
 
     .social-wrapper a {
         margin: 0 12px;
+        text-decoration: none;
         color: map-get($white, extra-dark) !important;
+
+        .icon {
+            font-size: 32px;
+        }
             
         &:hover {
             color: map-get($white, dark) !important;

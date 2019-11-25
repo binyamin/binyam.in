@@ -3,6 +3,8 @@
 
 {% if page.collection == 'posts' %}
     {% assign metatitle = page.title %}
+{% elsif page.fulltitle%}
+    {% assign metatitle = page.title %}
 {% elsif page.title %}
     {% assign metatitle = metatitle | prepend: " - " | prepend: page.title %}
 {% endif %}
@@ -17,11 +19,21 @@
     {% endif %}
 {% endif %}
     
-{% comment %}Meta Og Image{% endcomment %}
+{% comment %}Meta Og Images{% endcomment %}
+{% assign metaicon = '/assets/favicon.ico' %}
+
+{% if page.icon %}
+    {% assign metaicon = page.icon | prepend: '/assets/' %}
+{% endif %}
+
 {% assign metaimg = '/assets/favicon.ico' %}
 
 {% if page.collection == 'posts' %}
     {% assign metaimg = page.thumbnail %}
+{% endif %}
+
+{% if page.icon %}
+    {% assign metaimg = page.icon | prepend: '/assets/' %}
 {% endif %}
 
 {% comment %} Meta Og Type {% endcomment %}
@@ -33,7 +45,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href="/assets/favicon.ico" type="favicon/icon">
+<link rel="icon" href="{{- metaicon -}}" type="favicon/icon">
 
 <title>{{- metatitle -}}</title>
 
@@ -49,6 +61,14 @@
 <meta property="og:description" content="{{- metadesc -}}">
 
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+{% if page.twitter %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{- page.twitter.handle | prepend:'@' -}}" />
+<meta name="twitter:title" content="{{- page.title -}}" />
+<meta name="twitter:description" content="{{- page.desc -}}" />
+<meta name="twitter:image" content="{{- page.twitter.img -}}" />
+{% endif %}
 
 <link rel="stylesheet" href="/assets/css/vendor/dracula.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap">
