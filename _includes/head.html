@@ -67,7 +67,7 @@
 <meta name="twitter:site" content="{{- page.twitter.handle | prepend:'@' -}}" />
 <meta name="twitter:title" content="{{- page.title -}}" />
 <meta name="twitter:description" content="{{- page.desc -}}" />
-<meta name="twitter:image" content="{{- page.twitter.img -}}" />
+<meta name="twitter:image" content="{{- page.twitter.img | prepend: '/assets/' -}}" />
 {% endif %}
 
 <link rel="stylesheet" href="/assets/css/vendor/dracula.css">
