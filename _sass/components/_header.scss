@@ -1,0 +1,28 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px 0 32px;
+
+    &__links-wrapper ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 24px;
+        margin: 0 8px;
+    }
+    
+    &__link a {
+        fill: $black--dark;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            fill: $accent--dark;
+        }
+    }
+}

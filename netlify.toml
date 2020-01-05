@@ -3,3 +3,14 @@
 [[redirects]]
   from = "/devme"
   to = "https://devme.netlify.com"
+
+[[redirects]]
+  from = "/gifts"
+  to = "https://www.gifthero.com/list/c94b429f-1dfa-4ab2-95d8-ad8094446ed7"
+
+[[headers]]
+  for = "/**/*"
+  [headers.values]
+    cache-control = '''
+      max-age=31536000,
+      no-cache'''

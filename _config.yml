@@ -20,8 +20,8 @@ defaults:
       layout: post
       main_class: post
 
-title: "Binyamin Green | Student & Web Developer"
-desc: "Binyamin Green is a student and web developer specializing in front-end websites. He is based out of Baltimore, Maryland in the heart of the Jewish, orthodox community."
+title: Binyamin Green | Developer, Designer, Musician, Nerd
+desc: Binyamin Green is a student in practice and a web developer at heart. He is currently workinbg on DevMe (https://GetDevMe.com).
 
 kramdown:
   input: GFM

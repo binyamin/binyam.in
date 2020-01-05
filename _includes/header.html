@@ -1,14 +1,24 @@
-<header class="navbar" id="navbar">
-    <img src="/assets/logo.svg" alt="" class="logo">
-    <nav class="nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/blog" class="nav-link">Blog</a>
-        <a href="#contact" class="nav-link">Contact</a>
+<header class="page-header">
+    <a href="/">
+        <img src="/assets/logo.svg" alt="" class="logo" width="48" height="48">
+    </a>
+    <nav class="page-header__links-wrapper">
+        <ul>
+            <li class="page-header__link">
+                <a href="https://github.com/b3u" rel="external noreferrer" aria-label="Link to my GitHub profile">
+                    {% include icons/bxl-github.svg %}
+                </a>
+            </li>
+            <li class="page-header__link">
+                <a href="https://www.facebook.com/binyaminagreen" rel="external noreferrer" aria-label="Link to my Facebook profile">
+                    {% include icons/bxl-facebook-square.svg %}
+                </a>
+            </li>
+            <li class="page-header__link">
+                <a href="https://linkedin.com/in/b3u" rel="external noreferrer" aria-label="Link to my Linkedin profile">
+                    {% include icons/bxl-linkedin-square.svg %}
+                </a>
+            </li>
+        </ul>
     </nav>
-    <div class="hamburger">
-        <span class="bars"></span>
-        <span class="bars"></span>
-        <span class="bars"></span>
-    </div>
 </header>

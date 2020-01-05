@@ -1,3 +1,10 @@
+// For GFM Tasklist Extension
+
+ul.task-list {
+    list-style-type: none;
+    padding-left: 16px;
+}
+
 .task-list-item {
     &-checkbox {display: none;}
 
