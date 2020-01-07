@@ -7,38 +7,25 @@ layout: default
     <h1 class="hero__title">Hi, I'm Binyamin</h1>
     <p class="hero__lead">I'm a developer, designer, and certifiable nerd.</p>
     <ul class="hero__links">
-      <li><a class="panel-tab-js" href="#" role="button" data-href="chat">
+      <li><a class="hero-link" href="#" role="button" data-micromodal-trigger="modal-chat">
         {% include icons/bxs-chat.svg %}
         <span>Chat</span>
-      </a></li>
-      <li><a class="panel-tab-js" href="#" role="button" data-href="writings">
+      </a>
+    </li>
+      <li><a class="hero-link" href="/blog">
         {% include icons/bxs-pen.svg %}
         <span>Writings</span>
-      </a></li>
-      <li><a class="panel-tab-js" href="#" role="button" data-href="bio">
-        {% include icons/bxs-user-pin.svg %}
-        <span>Bio</span>
       </a></li>
     </ul>
   </div>
   <figure class="hero__img-wrapper">
     {% include_relative assets/img/avatar.svg %}
   </figure>
-
-  <section id="chat" class="panel" hidden>
-    <p>I enjoy making new friends. My Gmail is <em>BinyaminAGreen</em>.</p>
-  </section>
-
-  <section id="writings" class="panel" hidden>
-    <p>I publish articles on <a href="https://dev.to/b3u">DevTo</a>, <a href="https://hackernoon.com/binyamin">Hackernoon</a>, and <a href="/blog">my personal blog</a>. I'm very proud of <a href="#">this article</a>.</p>
-  </section>
-
-  <section id="bio" class="panel" hidden>
-      <h2>About Me</h2>
-      <h3>Skills</h3>
-      <p>Frontend Code, UI Design, Piano, Public Speaking</p>
-      <h3>Education</h3>
-      <p>Israel Henry Beren High School, Ner Yisroel Rabbinical College, CCBC Maryland</p>
-      </ul>
-  </section>
 </main>
+
+<div id="modal-chat" class="modal-wrapper" aria-hidden="true" data-micromodal-close>
+  <div class="modal" role="dialog" aria-labelledby="modal-chat-title">
+    <h2 class="modal__header" id="modal-chat-title">Contact Me</h2>
+    <p class="modal__body">I enjoy making new friends. My Gmail is <em>BinyaminAGreen</em>.</p>
+  </div>
+</div>
