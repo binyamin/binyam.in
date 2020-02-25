@@ -8,17 +8,17 @@
 {% elsif page.title %}
     {% assign metatitle = metatitle | prepend: " - " | prepend: page.title %}
 {% endif %}
-    
+
 {% comment %} Meta Description {% endcomment %}
 {% assign metadesc = site.desc %}
-    
+
 {% if page.collection == 'posts' %}
     {% assign metadesc = page.excerpt  | strip_html | strip_newlines %}
     {% if page.desc %}
         {% assign metadesc = page.desc %}
     {% endif %}
 {% endif %}
-    
+
 {% comment %}Meta Og Images{% endcomment %}
 {% assign metaicon = '/assets/favicon.ico' %}
 
@@ -75,5 +75,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/js/micromodal.min.js"></script>
 <script defer src="/assets/js/main.js"></script>
+<script defer src="/assets/js/timeago.min.js"></script>
+<script defer src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
