@@ -1,6 +1,5 @@
 ---
 layout: post
-main_class: post
 title: Six Uses for Webpack
 date: 2019-11-15T11:05:00.622Z
 desc: >-

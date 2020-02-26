@@ -1,6 +1,5 @@
 ---
 layout: post
-main_class: post
 title: 'My Year as a Moderator '
 date: 2019-10-25T19:10:26.424Z
 thumbnail: /assets/uploads/my-year-as-a-moderator.png

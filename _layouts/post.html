@@ -8,10 +8,10 @@ layout: default
         <img src="{{page.thumbnail}}" alt="" class="banner">
     </figure>
     {% endif %}
-    <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+    <h1 id="top">{{page.title}}</h1>
     <p>Originally posted {{page.date | date: "%b %d, %Y"}}</p>
 </header>
-<article id="top">
+<article>
     {{content}}
 </article>
 <a href="#top">&UpArrow; top</a>

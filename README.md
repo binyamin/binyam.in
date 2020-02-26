@@ -6,3 +6,4 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fbinyam.in)](https://binyam.in)
 
 The CSS framework I use is [Chota](https://jenil.github.io/chota/#components).
+The font is [Inter](https://rsms.me/inter).

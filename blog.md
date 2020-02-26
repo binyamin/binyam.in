@@ -3,8 +3,8 @@ title: Blog
 layout: default
 ---
 
-# Welcome to My Blog
-I write articles on web design and development, and occasionally just ramble. I publish articles to [Dev.To](https://dev.to/b3u) and [Hackernoon](https://hackernoon.com/binyamin).
+# Blog
+I write articles on web design and development, and occasionally just ramble. I publish stuff on [Dev.To](https://dev.to/b3u) and [Hackernoon](https://hackernoon.com/binyamin).
 
 ---
 

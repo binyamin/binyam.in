@@ -1,13 +1,5 @@
 :root {
   --color-primary: #6FCF97;
-  /* --color-lightGrey: #d2d6dd; */
-  /* --color-grey: #747681; */
-  /* --color-darkGrey: #3f4144; */
-  /* --color-error: #d43939; */
-  /* --color-success: #28bd14; */
-  /* --grid-maxWidth: 120rem; */
-  /* --grid-gutter: 2rem; */
-  /* --font-size: 1.6rem; */
   --font-family: Inter, "Segoe UI", Arial, sans-serif;
   --mono-font: "Source Code Pro", Monaco, Consolas, "Courier New", monospace;
 }
@@ -34,4 +26,20 @@ main {
   border-radius: 999px;
   overflow: hidden;
   max-width: 40vh;
+}
+nav {
+  transition: width .3s ease;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown summary {
+  padding: 1rem 2rem;
+}
+
+.custom-dropdown .card {
+  position: absolute;
+  right: 0;
 }

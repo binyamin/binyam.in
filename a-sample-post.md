@@ -1,6 +1,5 @@
 ---
 layout: post
-main_class: post
 title: A Sample Post
 date: 2019-11-15T12:00:00.629Z
 ---

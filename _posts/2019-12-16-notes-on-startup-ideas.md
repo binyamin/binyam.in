@@ -1,10 +1,9 @@
 ---
 layout: post
-main_class: post
 title: Notes on Startup Ideas
 date: 2019-12-17T01:37:30.434Z
 desc: >-
-  When you come up with a business idea,  you may want to start the coding
+  When you come up with a business idea, you may want to start the coding
   immediately. However, research should be the first step.
 ---
 **Note:** This article is a summary of <https://peterthaleikis.com/business-idea-validation/>
