@@ -14,9 +14,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Main Class", name: "main_class", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", hint: "Should be a 1024x400 ratio image", required: false}
-      - {label: "Description", name: "desc", widget: "text", required: false, hint: "This will be displayed on the site and in searches. Less than 144 characters please."}
+      - {label: "Description", name: "desc", widget: "text", required: false, hint: "This will be displayed on the site and in search results. Less than 144 characters please."}
       - {label: "Body", name: "body", widget: "markdown"}

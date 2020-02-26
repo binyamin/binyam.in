@@ -2,20 +2,11 @@ collections:
   posts:
     output: true
     permalink: /blog/:title
-  drafts:
-    output: true
-    permalink: /drafts/:title
-  
+
 defaults:
   - scope:
       path: ""
       type: "posts"
-    values:
-      layout: post
-      main_class: post
-  - scope:
-      path: ""
-      type: "drafts"
     values:
       layout: post
       main_class: post
@@ -29,5 +20,5 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
       start_line: 1

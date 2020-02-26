@@ -1,20 +1,18 @@
 ---
 layout: default
-main_class: post
 ---
 
 <header>
     {% if page.thumbnail %}
+    <figure>
         <img src="{{page.thumbnail}}" alt="" class="banner">
+    </figure>
     {% endif %}
     <h1><a href="{{page.url}}">{{page.title}}</a></h1>
     <p>Originally posted {{page.date | date: "%b %d, %Y"}}</p>
 </header>
-<article>
+<article id="top">
     {{content}}
 </article>
-<footer>
-    <hr>
-    <img class="center" src="/assets/img/signature_sm.png" alt="Signed, Binyamin Green">
-    <p>Thanks for checking out my blog. If you liked this post, <a href="https://tinyletter.com/BinyaminGreen" target="_blank">subscribe to my email list</a></p>
-</footer>
+<a href="#top">&UpArrow; top</a>
+<blockquote>Psst: Thanks for checking out my blog. If you want, you can <a href="https://buymeacoff.ee/b3u">support my work</a>.</blockquote>
