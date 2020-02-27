@@ -8,3 +8,6 @@ _site/
 
 # netlify
 Gemfile.lock
+
+# random
+/assets/fonts/

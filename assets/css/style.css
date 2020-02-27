@@ -1,3 +1,4 @@
+/* start overrides */
 :root {
   --color-primary: #6FCF97;
   --font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -8,6 +9,11 @@
   :root { --font-family: 'Inter var', "Segoe UI", Arial, sans-serif; }
 }
 
+.is-rounded {
+  overflow: hidden;
+}
+
+/* end overrides */
 html {
   scroll-behavior: smooth;
 }
@@ -42,4 +48,15 @@ nav {
 .custom-dropdown .card {
   position: absolute;
   right: 0;
+}
+
+.c-is-tooltip {
+  display: none;
+}
+
+.c-has-tooltip:hover ~ .c-is-tooltip {
+  display: inline-block;
+  max-width: 200px;
+  position: absolute;
+  transform: translate(0,-50%);
 }

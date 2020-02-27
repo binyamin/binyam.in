@@ -6,10 +6,14 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: post
-      main_class: post
 
 title: Binyamin Green | Developer, Designer, Musician, Nerd
 desc: Binyamin Green is a student in practice and a web developer at heart. He is currently workinbg on DevMe (https://GetDevMe.com).
