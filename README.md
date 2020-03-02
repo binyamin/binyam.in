@@ -6,5 +6,5 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fbinyam.in&style=for-the-badge)](https://binyam.in)
 [![Powered by tiny hamsters](https://img.shields.io/badge/Powered_By-Tiny_Hamsters-5d9741?labelColor=c1d72f&style=for-the-badge)](https://bitrebels.com/technology/hamster-smartphone-charger-prototype/)
 
-The CSS framework I use is [Chota](https://jenil.github.io/chota/).
-The font is [Inter](https://rsms.me/inter).
+- The CSS framework I use is [Chota](https://jenil.github.io/chota/).
+- The font is [Inter](https://rsms.me/inter).
