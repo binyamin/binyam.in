@@ -17,6 +17,7 @@ defaults:
 
 title: Binyamin Green | Developer, Designer, Musician, Nerd
 desc: Binyamin Green is a student in practice and a web developer at heart. He is currently workinbg on DevMe (https://GetDevMe.com).
+author: Binyamin Green
 
 kramdown:
   input: GFM
