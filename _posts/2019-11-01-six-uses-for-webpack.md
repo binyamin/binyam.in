@@ -6,6 +6,7 @@ desc: >-
   I've always tried to avoid Webpack. After all, it's not the only tool of its
   kind on the market. However, once you know how to use it, it can be a very
   effective tool.
+tags: [code]
 ---
 I've always tried to avoid Webpack. I would tell myself it was either too complicated or unnecessary. After all, it's not the only tool of its kind on the market. Yet recently I've come to terms with  Webpack. Once you know how to use it, it can be a very effective tool.
 

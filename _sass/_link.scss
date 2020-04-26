@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a:not([class^=btn]) {
+    color: $clr-accent--dark;
+    
+    &:hover {
+        color: $clr-accent;
+    }
+
+    &:focus {
+        color: $clr-accent;
+        outline: none;
+        border: 1.5px solid transparent;
+        box-shadow: 0 0 0 1px $clr-accent;
+        border-radius: 4px;
+    }
+}

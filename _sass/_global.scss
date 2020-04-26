@@ -1,0 +1,123 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  min-width: 328px;
+}
+
+.page-footer {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* Code */
+var, kbd, code {
+  font-family: $ff-mono;
+  font-size: 90%;
+  color: #d43939;
+  background-color: #f3f3f6;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* Blockquote */
+blockquote {
+  display: inline-block;
+  background-color: #f2f2f2;
+  border-left: 8px solid $clr-accent;
+  padding: 8px 16px 8px 8px;
+  margin-left: 20px;
+
+  > p {
+    margin: initial;
+  }
+}
+
+/* Lists */
+ul > li p {
+  margin: auto;
+}
+
+// Screen Reader Only (from https://scottohara.me)
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+// Post
+.post {
+  width: calc(100vw / 2.15);
+  min-width: 300px;
+  margin: 0 auto;
+
+  &-header {
+    margin: 2.5em 0 2em 0;
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-details {
+    color: #666666;
+    margin: 0.5em 0;
+  }
+
+  &-tags {
+    margin: 0.5em 0;
+  }
+}
+
+// Blog
+.blog-title {
+  margin-bottom: 0;
+}
+
+.blog-tag {
+  margin-top: 0;
+  color: #666;
+
+  a {
+    color: #666 !important;
+  }
+}
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-item {
+  margin: 1.75em 0;
+
+  &__title a {
+    font-size: $fs-h4;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+  &__tags, &__details {
+    margin-left: 0.5em;
+  }
+
+  &__tags a {
+    color: #666666 !important;
+  }
+}

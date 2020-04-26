@@ -6,6 +6,7 @@ thumbnail: /assets/uploads/final.png
 desc: >-
   I love reading fantasy and science-fiction. Here are a couple of my favorite
   books ever.
+tags: [reading]
 ---
 Intricate worlds ensnare the mind. For this reason, I enjoy reading fantasy and science-fiction books. There are so many good novels, and endless amounts of excellent short-fiction. To create a list of my favorite stories is impossible — I have so many! What follows, then, is a rough list of a couple books which I adore.
 

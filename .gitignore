@@ -4,10 +4,6 @@ node_modules/
 _site/
 .jekyll-cache/
 .sass-cache/
+.tweet-cache/
 .jekyll-metadata
-
-# netlify
 Gemfile.lock
-
-# random
-/assets/fonts/

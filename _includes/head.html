@@ -1,0 +1,78 @@
+
+{% comment %} Meta Title {% endcomment %}
+{% assign metatitle = site.title %}
+
+{% if page.title %}
+    {% assign metatitle = metatitle | prepend: " | " | prepend: page.title %}
+{% endif %}
+
+{% comment %} Meta Description {% endcomment %}
+{% assign metadesc = site.desc %}
+
+{% if page.collection == 'posts' %}
+    {% assign metadesc = page.excerpt  | strip_html | strip_newlines %}
+    {% if page.desc %}
+        {% assign metadesc = page.desc %}
+    {% endif %}
+{% endif %}
+
+{% comment %}Meta Og Images{% endcomment %}
+{% assign metaicon = '/assets/favicon.ico' %}
+
+{% if page.icon %}
+    {% assign metaicon = page.icon | prepend: '/assets/' %}
+{% endif %}
+
+{% assign metaimg = 'https://binyam.in/assets/favicon.ico' %}
+
+{% if page.collection == 'posts' %}
+    {% assign metaimg = page.thumbnail  | prepend: "https://binyam.in" %}
+{% endif %}
+
+{% if page.icon %}
+    {% assign metaimg = page.icon | prepend: 'https://binyam.in/assets/' %}
+{% endif %}
+
+{% comment %} Meta Og Type {% endcomment %}
+{% assign type = 'website' %}
+{% if page.collection == 'posts' %}
+    {% assign type = 'article' %}
+{% endif%}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="https://binyam.in/assets/favicon.ico" type="favicon/icon">
+
+<title>{{- metatitle -}}</title>
+
+<meta name="author" content="Binyamin Aron Green">
+<meta name="description" content="{{- metadesc -}}">
+<meta name="keywords" content="programmer, web developer, developer, websites, front-end, full-stack, back-end, web designer, html, html5, css, css3, javascript, react, node, express">
+<meta name="theme-color" content="#49a670">
+
+<meta property="og:title" content="{{-metatitle-}}">
+<meta property="og:type" content="{{type}}">
+<meta property="og:url" content="{{ page.url | prepend: 'https://binyam.in' }}">
+<meta property="og:image" content="{{- metaimg -}}">
+<meta property="og:description" content="{{- metadesc -}}">
+
+<link rel="canonical" href="{{ page.url | prepend: 'https://binyam.in'}}">
+
+<link href="https://binyam.in/feed.xml" rel="alternate" type="application/atom+xml"/>
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@binyamingreen" />
+<meta name="twitter:creator" content="@binyamingreen" />
+<meta name="twitter:title" content="{{-metatitle-}}" />
+<meta name="twitter:description" content="{{-metadesc-}}" />
+<meta name="twitter:image" content="{{- metaimg -}}" />
+
+<link rel="stylesheet" href="https://unpkg.com/normalize.css@latest">
+<link rel="stylesheet" href="/assets/css/dracula.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- Boxicons -->
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<!-- <script defer src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script> -->

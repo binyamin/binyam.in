@@ -1,0 +1,29 @@
+collections: 
+  posts:
+    output: true
+    permalink: /blog/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+title: Binyamin Green
+desc: Binyamin Green is a student in practice and a web developer at heart.
+author: Binyamin Aron Green
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1

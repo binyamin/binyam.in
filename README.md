@@ -7,5 +7,5 @@
 [![Powered by tiny hamsters](https://img.shields.io/badge/Powered_By-Tiny_Hamsters-5d9741?labelColor=c1d72f&style=for-the-badge)](https://bitrebels.com/technology/hamster-smartphone-charger-prototype/)
 
 -[x] code
--[] link
--[] type
+-[x] link
+-[x] type
