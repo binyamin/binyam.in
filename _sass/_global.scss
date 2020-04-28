@@ -5,14 +5,15 @@ body {
   margin: 0 24px;
 }
 
-main {
+main:not(.default) {
   flex-grow: 1;
-}
-
-.container {
-  width: 60%;
+  width: calc(100vw / 2.15);
   margin: 0 auto;
   min-width: 328px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .page-footer {
@@ -61,10 +62,6 @@ ul > li p {
 
 // Post
 .post {
-  width: calc(100vw / 2.15);
-  min-width: 300px;
-  margin: 0 auto;
-
   &-header {
     margin: 2.5em 0 2em 0;
   }

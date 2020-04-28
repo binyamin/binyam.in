@@ -7,22 +7,29 @@
     {% include nav.html %}
     <main class="post">
         <div id="top"></div>
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <p class="post-details">{{ page.date | date: "%B %d, %Y"}} &bull; {{ page.content | count_words }} words</p>
-            <p class="post-tags">
-                Tagged with
-                {% for tag in page.tags %}
-                    <a href="/blog?filter={{tag}}"><strong role="img">#</strong>{{tag}}</a>
-                {% endfor %}
-            </p>
-        </header>
-        <article>
-            {{ content }}
+        <article class="h-entry">
+            <header class="post-header">
+                <h1 class="post-title p-name">{{ page.title }}</h1>
+                <p class="post-details"><time class="dt-published" datetime="{{page.date}}">{{ page.date | date: "%B %d, %Y"}}</time> &bull; {{ page.content | count_words }} words</p>
+                <p class="post-tags">
+                    Tagged with
+                    {% for tag in page.tags %}
+                        <a href="/blog?filter={{tag}}" class="p-category"><strong role="img">#</strong>{{tag}}</a>
+                    {% endfor %}
+                </p>
+            </header>
+            <div class="e-content">
+                {{ content }}
+            </div>
+            <div class="post-footer">
+                <a href="{{ page.url }}" class="u-url" hidden>{{page.title}}</a>
+                <p class="h-card p-author" hidden>
+                    <a href="https://binyam.in" class="p-name u-url">Binyamin Green</a>
+                    <img src="/assets/avatar2.jpg" class="u-photo">
+                </p>
+                <a href="#top" class="sr-only">Top</a>
+            </div>
         </article>
-        <footer>
-            <a href="#top" class="sr-only">Top</a>
-        </footer>
     </main>
     {% include footer.html %}
 </body>
