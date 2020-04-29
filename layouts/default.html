@@ -5,7 +5,9 @@
 </head>
 <body>
     {% include nav.html %}
-    <main class="{{page.main-class}}">{{ content }}</main>
+    <main class="{{main_class}}">
+        {{ content }}
+    </main>
     {% include footer.html %}
 </body>
 </html>

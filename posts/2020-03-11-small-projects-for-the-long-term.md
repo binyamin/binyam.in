@@ -12,4 +12,4 @@ When asked how he "gets so much done", he responded,
 
 This statement has had a big impact on me recently. I've found that if I finish small goals often, I get more satisfaction than if I would have gotten with a large, never-ending project. I even revisited some old creations, and touched them up. I hope it makes your life more effective as well.
 
-See also https://blog.sindresorhus.com/small-focused-modules-9238d977a92a
+See also <https://blog.sindresorhus.com/small-focused-modules-9238d977a92a>

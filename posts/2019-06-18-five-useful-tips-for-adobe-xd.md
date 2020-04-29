@@ -1,5 +1,6 @@
 ---
 layout: post
+slug: hi
 title: Five Useful Tips for Adobe XD
 date: 2019-06-18T16:11:04.629Z
 thumbnail: /assets/uploads/5-tips-xd.jpeg
@@ -29,11 +30,14 @@ XD has awesome automatic guides which can help you align things perfectly. Somet
 ## Adjust Corners Separately
 
 I found this awesome tip in [a tweet  from Elaine Chao](https://twitter.com/elainecchao/status/1123289664671100928).
-{% twitter https://twitter.com/elainecchao/status/1123289664671100928 %}
 
-<!-- > #adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
->
-> @adobexd -->
+<blockquote class="twitter-tweet">
+#adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
+@adobexd
+
+By [@elaincchao](https://twitter.com/elainecchao/status/1123289664671100928) on Twitter
+
+</blockquote>
 
 Thanks Elaine.
 
