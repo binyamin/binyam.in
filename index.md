@@ -1,6 +1,6 @@
 ---
 layout: default
-main-class: text-center
+main_class: text-center
 ---
 
 <img src="/assets/img/avatar.svg" alt="" width="256" />

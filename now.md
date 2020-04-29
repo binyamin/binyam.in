@@ -1,7 +1,6 @@
 ---
 title: Now
 layout: default
-main-class: container
 ---
 
 # Now

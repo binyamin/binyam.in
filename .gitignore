@@ -1,9 +1,2 @@
 node_modules/
-
-# jekyll
-_site/
-.jekyll-cache/
-.sass-cache/
-.tweet-cache/
-.jekyll-metadata
-Gemfile.lock
+dist/
