@@ -1,8 +1,8 @@
 # netlify.toml
 
 [build]
-  publish = "_site/"
-  command = "bundle exec jekyll build"
+  publish = "dist/"
+  command = "eleventy"
 [build.processing]
   skip_processing = false
 [build.processing.css]
