@@ -1,5 +1,3 @@
-const puppeteer = require("puppeteer-core");
-
 module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
@@ -7,8 +5,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
         watch: ['sass/**/*.scss']
     })
-
-    // eleventyConfig.addPlugin(require("eleventy-xml-plugin"))
 
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("posts/**/*.md");
