@@ -13,24 +13,24 @@ permalink: /blog/{{ title | slug }}/index.html
         <article class="h-entry">
             <header class="post-header">
                 <h1 class="post-title p-name">{{ title }}</h1>
-                <p class="post-details">Published on <time class="dt-published" datetime="{{date}}">{{ page.date | date: "%B %d, %Y"}}</time> &bull; {% wordCount %}</p>
-                {% if tags %}
+                <p class="post-details">Published on <a href={{page.url}} class="u-url"><time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date: "%B %d, %Y"}}</time></a> &bull; {% wordCount %}</p>
                 <p class="post-tags">
+                {% if tags %}
                     Tagged with
                     {% for tag in tags %}
-                        <a href="/blog?filter={{tag}}" class="p-category"><strong role="img">#</strong>{{tag}}</a>
+                        <a href="/blog?filter={{tag}}"><strong role="img">#</strong><span class="p-category">{{tag}}</span></a>
                     {% endfor %}
-                </p>
                 {% endif %}
+                    <a href="/blog" class="p-category" hidden>posts</a>
+                </p>
             </header>
             <div class="e-content">
                 {{ content }}
             </div>
             <div class="post-footer">
-                <a href="{{ page.url }}" class="u-url" hidden>{{title}}</a>
                 <p class="h-card p-author" hidden>
-                    <a href="https://binyam.in" class="p-name u-url">Binyamin Green</a>
-                    <img src="/assets/avatar2.jpg" class="u-photo">
+                    <a href="https://binyam.in" class="p-name u-url" rel="author">Binyamin Green</a>
+                    <img src="/assets/img/profile.png" class="u-photo">
                 </p>
                 <a href="#top" class="sr-only">Top</a>
             </div>
