@@ -1,11 +1,9 @@
 ---
 layout: default
-main_class: text-center h-card
+main_class: text-center
 ---
 
-<img src="/assets/img/profile.png" alt="" class="u-photo" width="256" />
-
-<a href={{site.url}} class="u-url p-name" hidden>Binyamin Green</a>
+<img src="/assets/img/profile.png" alt="" width="256" />
 
 # Hi, I'm Binyamin
 
