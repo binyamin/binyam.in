@@ -2,7 +2,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
 
-    eleventyConfig.addPlugin(require("eleventy-xml-plugin"))
     eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
         watch: ['sass/**/*.scss']
     })
@@ -11,7 +10,6 @@ module.exports = function(eleventyConfig) {
         return collection.getFilteredByGlob("posts/**/*.md");
     });
  
-
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('js');
 

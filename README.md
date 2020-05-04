@@ -7,7 +7,7 @@
 [![Powered by tiny hamsters](https://img.shields.io/badge/Powered_By-Tiny_Hamsters-5d9741?labelColor=c1d72f&style=for-the-badge)](https://bitrebels.com/technology/hamster-smartphone-charger-prototype/)
 
 **To Add**
-- word count
+- word count (1/2 done)
 - [x] rss feed
 - sitemap
 - [syntax highlighting](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
