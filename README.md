@@ -9,5 +9,5 @@
 **To Add**
 - word count (1/2 done)
 - [x] rss feed
-- sitemap
-- [syntax highlighting](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
+- [x] sitemap
+- [x] [syntax highlighting](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
