@@ -21,6 +21,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "eleventy-plugin-excerpt": "^1.1.2",
-    "eleventy-plugin-sass": "^1.0.0"
+    "eleventy-plugin-sass": "^1.0.0",
+    "highlight.js": "^10.0.2",
+    "markdown-it": "^10.0.0",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-anchor": "^5.2.7",
+    "markdown-it-attrs": "^3.0.2",
+    "markdown-it-footnote": "^3.0.2",
+    "slugify": "^1.4.0"
   }
 }

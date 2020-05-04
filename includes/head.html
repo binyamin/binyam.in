@@ -1,33 +1,22 @@
-
-{% comment %} Meta Title {% endcomment %}
 {% assign metatitle = site.title %}
-
 {% if title %}
     {% assign metatitle = title | append: " &VerticalLine; " | append: site.title %}
 {% endif %}
 
-{% comment %} Meta Description {% endcomment %}
 {% assign metadesc = site.desc %}
-
 {% if desc %}
     {% assign metadesc = desc %}
 {% endif %}
 
-{% comment %}Meta Og Images{% endcomment %}
-{% assign metaicon = '/assets/favicon.ico' %}
-
 {% assign metaimg = 'https://binyam.in/assets/favicon.ico' %}
-
-{% if page.collection == 'posts' %}
-    {% assign metaimg = page.thumbnail  | prepend: "https://binyam.in" %}
+{% if image %}
+    {% assign metaimg = image | absolute_url %}
 {% endif %}
 
-{% comment %} Meta Og Type {% endcomment %}
 {% assign metatype = 'website' %}
 {% if type == 'post' %}
     {% assign metatype = 'article' %}
 {% endif%}
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -57,8 +46,8 @@
 <meta name="twitter:description" content="{{-metadesc-}}" />
 <meta name="twitter:image" content="{{- metaimg -}}" />
 
-<link rel="stylesheet" href="https://unpkg.com/normalize.css@latest">
-<link rel="stylesheet" href="/assets/res/dracula.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/nord.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap">
 <link rel="stylesheet" href="/style.css">
 <script defer src="/js/index.js"></script>

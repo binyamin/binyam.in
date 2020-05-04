@@ -2,7 +2,7 @@
 layout: post
 title: My top reading picks
 date: 2020-03-22T04:00:00.000Z
-thumbnail: /assets/uploads/final.png
+image: /assets/uploads/final.png
 desc: >-
   I love reading fantasy and science-fiction. Here are a couple of my favorite
   books ever.

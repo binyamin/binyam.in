@@ -22,6 +22,11 @@ A paragraph (from the Greek paragraphos, “to write beside” or “written bes
 3. Things
 
 ## Block-level Elements
+```js
+function foo(bar) {
+    return bar;
+}
+```
 
 <button>Button</button>
 

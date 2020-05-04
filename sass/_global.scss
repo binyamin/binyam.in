@@ -21,8 +21,16 @@ main:not(.default) {
   margin-bottom: 4px;
 }
 
+
+/* Header Anchors */
+h1, h2, h3, h4, h5, h6 {
+  &:not(:hover) a:not([class^=btn]).deeplink {
+    display: none;
+  }
+}
+
 /* Code */
-var, kbd, code {
+var, kbd, :not(pre.hljs) code {
   font-family: $ff-mono;
   font-size: 90%;
   color: #d43939;
