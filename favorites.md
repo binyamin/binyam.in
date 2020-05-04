@@ -3,12 +3,7 @@ layout: default
 title: Favorites
 ---
 # Favorites
-<!-- (Text from <https://perell.com/reccomendations>)
-I’m on a mission to use the internet to accelerate the spread of interesting ideas.  
-
-What follows is a collection of my favorite books, blogs, podcasts, and videos. I’ve spent years and years collecting these links and now, I’m excited to share the best of the best with you. 
-
-In this collection, I brought together my favorite things on the internet and sprinkled in my own work too. I hope this page will help you spend more time learning and less time searching.  -->
+<!-- A short paragraph here would explain what this page is and why I added it. -->
 
 ## Writing
 1. David Perell has a [a great article](https://www.perell.com/blog/the-ultimate-guide-to-writing-online) about writing online.

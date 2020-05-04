@@ -20,6 +20,8 @@
   "homepage": "https://github.com/b3u/b3u.netlify.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "eleventy-plugin-sass": "^1.0.0"
+    "eleventy-plugin-excerpt": "^1.1.2",
+    "eleventy-plugin-sass": "^1.0.0",
+    "eleventy-xml-plugin": "^0.1.0"
   }
 }
