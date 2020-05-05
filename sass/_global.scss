@@ -30,13 +30,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Code */
-var, kbd, :not(pre.hljs) code {
+var, kbd, code {
   font-family: $ff-mono;
   font-size: 90%;
   color: #d43939;
   background-color: #f3f3f6;
   padding: 2px 4px;
   border-radius: 2px;
+}
+
+pre.hljs code {
+  color: inherit;
+  background-color: inherit;
+  padding: inherit;
+  border-radius: 0;
 }
 
 /* Blockquote */

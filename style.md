@@ -50,3 +50,6 @@ function foo(bar) {
 + The <dfn>dfn element</dfn> indicates a definition.
 + The <mark>mark element</mark> indicates a highlight.
 + The <var>variable element</var>, such as <var>x</var> = <var>y</var>.
++ A footnote is... a footnote[^1].
+
+[^1]: It's a footnote.

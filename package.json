@@ -2,7 +2,7 @@
   "name": "b3u.netlify.com",
   "private": true,
   "version": "1.0.0",
-  "description": "My personal portfolio website",
+  "description": "My personal website",
   "scripts": {
     "start": "eleventy --serve",
     "compile": "eleventy"
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/b3u/b3u.netlify.com/issues"
   },
-  "homepage": "https://github.com/b3u/b3u.netlify.com#readme",
+  "homepage": "https://binyam.in",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "eleventy-plugin-excerpt": "^1.1.2",

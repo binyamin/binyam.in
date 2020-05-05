@@ -1,7 +1,7 @@
-module.exports = function (eleventyConfig) {
-    const slugify = require("slugify");
-    const hljs = require('highlight.js');
+const hljs = require('highlight.js');
+const slugify = require("slugify");
 
+module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
 
@@ -17,10 +17,6 @@ module.exports = function (eleventyConfig) {
         return `<span id="wordCount">Number of words</span>`;
     })
 
-    eleventyConfig.addFilter("absolute_url", value => {
-        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
-    })
-
     eleventyConfig.addPairedShortcode("anchor", tag => {
         const string = tag.substring(tag.indexOf(">") + 1, tag.lastIndexOf("<"));
         tag = (
@@ -31,6 +27,10 @@ module.exports = function (eleventyConfig) {
             + tag.substring(tag.lastIndexOf("<"))
         )
         return tag;
+    })
+
+    eleventyConfig.addFilter("absolute_url", value => {
+        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
     })
 
     /* ----------------------
