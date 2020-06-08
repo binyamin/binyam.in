@@ -1,0 +1,70 @@
+@media print {
+    body {
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 12pt;
+    }
+
+    @page {
+        margin: 2.0cm;
+    }
+
+    abbr[title] {
+        text-decoration: none;
+    }
+
+    abbr[title]::after {
+        content: " (" attr(title) ")"
+    }
+
+    main:not(.default) {
+        width: 100%;
+        margin: 0;
+    }
+
+    blockquote {
+        border: none;
+        background-color: transparent;
+        margin: 0 0 0 1em;
+        padding: 0;
+    }
+
+    .page-header, .page-footer, .post-tags {
+        display: none;
+    }
+    .post-header::after {
+        content: "Written By Binyamin Green"
+    }
+
+    .post-details, .post-header::after {
+        font-size: 11pt;
+        margin-left: 0.5em;
+    }
+    
+    code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    pre.hljs, pre.hljs * {
+        color: #000;
+    }
+    pre.hljs {
+        border: 1px solid #000;
+        background-color: transparent;
+        overflow-wrap: break-word;
+        margin: 0 0.5em;
+        page-break-inside: avoid;
+    }
+
+    a:not([class^=btn]), .post-details, code {
+        color: inherit;
+    }
+
+
+    a[href*="//"]::after {
+      content: " (" attr(href) ")";
+    }
+}
