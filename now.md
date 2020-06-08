@@ -7,8 +7,8 @@ layout: default
 What am I up to? I'm glad you asked.
 
 ## Goals
-* I'm trying to write an article every week
-* I walk each day for about 10-15 minutes.
-* This summer, I will be working as a lifeguard at [Camp HASC](https://camphasc.org)
+* I'm trying to write more often
+* I walk for about 10-15 minutes every day
+* I'm working towards a degree in Computer Science at [CCBC](https://ccbcmd.edu)
 
 Feel free to [email me](mailto:binyamingreen@protonmail.com) with any questions.

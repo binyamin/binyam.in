@@ -11,16 +11,14 @@ permalink: /blog/{{ title | slug }}/index.html
     <main class="post">
         <article class="h-entry">
             <header class="post-header">
-                {% anchor %}
                 <h1 class="post-title p-name">{{ title }}</h1>
-                {% endanchor %}
                 <p class="post-details">Published on <a href={{page.url}} class="u-url"><time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date: "%B %d, %Y"}}</time></a> &bull; {% wordCount %}</p>
                 <p class="post-tags">
                     {% if tags %}
-                        Tagged with
-                        {% for tag in tags %}
-                            <a href="/blog?filter={{tag}}"><strong role="img">#</strong><span class="p-category">{{tag}}</span></a>
-                        {% endfor %}
+                    Tagged with
+                    {% for tag in tags %}
+                    <a href="/blog?filter={{tag}}"><strong role="img">#</strong><span class="p-category">{{tag}}</span></a>
+                    {% endfor %}
                     {% endif %}
                     <a href="/blog" class="p-category" hidden>posts</a>
                 </p>
@@ -38,5 +36,6 @@ permalink: /blog/{{ title | slug }}/index.html
         </article>
     </main>
     {% include footer.html %}
+    <script src="/js/twitter.js"></script>
 </body>
 </html>

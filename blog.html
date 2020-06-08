@@ -4,9 +4,7 @@ title: Writing
 ---
 
 <header>
-    {% anchor %}
     <h1 class="blog-title">Writing</h1>
-    {% endanchor %}
     <p class="blog-tag" id="pageTag" hidden aria-hidden="true">
         <small>
             <a href="{{page.url}}" role="button">(clear)</a>
@@ -18,10 +16,14 @@ title: Writing
 <ul class="post-list" id="postList">
     {% for post in collections.posts reversed %}
     <li class="post-item" data-tags={{ post.data.tags | default: "[]"}}>
+        <!-- <figure class="post-item__image"> -->
+            <!-- <img class="post-item__image" src="{{post.data.thumbnail |default: '/assets/logo.svg'}}" alt=""> -->
+        <!-- </figure> -->
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
         <p class="post-item__details">Posted {{ post.date | date: "%B %d, %Y"}}</p>
         {% if post.data.tags %}
             <p class="post-item__tags">
+
                 Tagged with
                 {% for tag in post.data.tags %}
                     <a href="/blog?filter={{tag}}" role="button"><strong role="img">#</strong>{{tag}}</a>
@@ -32,22 +34,4 @@ title: Writing
     {% endfor %}
 </ul>
 
-<script>
-    const posts = [...document.querySelectorAll("#postList li")];
-    const tag = location.search.slice(location.search.indexOf("=") + 1);
-
-    if(tag) {
-        let postsNoTag = posts.filter(l => JSON.parse(l.dataset.tags).includes(tag) === false);
-        let postCount = posts.length - postsNoTag.length;
-
-        let pageTag = document.getElementById("pageTag");
-        pageTag.prepend(`${postCount} ${(postCount) > 1 ? "posts" : "post"} tagged with ${tag}`);
-        pageTag.removeAttribute("hidden");
-        pageTag.setAttribute("aria-hidden", false);
-
-        postsNoTag.forEach(p => {
-            p.setAttribute("hidden", true);
-            p.setAttribute("aria-hidden", true);
-        });
-    }
-</script>
+<script src="/js/filterByTag.js"></script>

@@ -1,5 +1,4 @@
 const hljs = require('highlight.js');
-const slugify = require("slugify");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('default', "default.html");
@@ -15,18 +14,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("wordCount", () => {
         return `<span id="wordCount">Number of words</span>`;
-    })
-
-    eleventyConfig.addPairedShortcode("anchor", tag => {
-        const string = tag.substring(tag.indexOf(">") + 1, tag.lastIndexOf("<"));
-        tag = (
-            tag.substring(0, tag.indexOf(">") + 1)
-            + string
-            + " "
-            + `<a class="deeplink" href="#${slugify(string)}">§︎</a>`
-            + tag.substring(tag.lastIndexOf("<"))
-        )
-        return tag;
     })
 
     eleventyConfig.addFilter("absolute_url", value => {
@@ -56,21 +43,12 @@ module.exports = function (eleventyConfig) {
 
     const markdownItFootnote = require('markdown-it-footnote');
 
-    const markdownItAnchor = require('markdown-it-anchor');
-    const markdownItAnchorOptions = {
-        permalink: true,
-        permalinkClass: 'deeplink',
-        permalinkSymbol: '&#xa7;&#xFE0E;',
-        slugify: str => slugify(str)
-    };
-
     const markdownItAttributes = require('markdown-it-attrs');
 
     const markdownItAbbr = require('markdown-it-abbr');
 
     const md = markdownIt(markdownItOptions)
         .use(markdownItFootnote)
-        .use(markdownItAnchor, markdownItAnchorOptions)
         .use(markdownItAttributes)
         .use(markdownItAbbr)
     eleventyConfig.setLibrary('md', md);

@@ -5,13 +5,6 @@ if(document.getElementById("wordCount")) {
     document.getElementById("wordCount").textContent = count + " words"
 };
 
-// import twitter widget
-if(document.querySelector(".twitter-tweet")) {
-    let s = document.createElement("script");
-    s.src = "https://platform.twitter.com/widgets.js"
-    document.body.append(s)
-}
-
 // Mark external links
 if(document.querySelectorAll("a[href]").length > 0) {
     document.querySelectorAll("a[href]").forEach(l => {
@@ -20,6 +13,7 @@ if(document.querySelectorAll("a[href]").length > 0) {
         if(!isLinkLocal && !l.relList.contains("referrer")) {
             l.relList.add("external");
             l.relList.add("noreferrer");
+            l.relList.add("noopener")
             l.target = "_blank"
         };
     })

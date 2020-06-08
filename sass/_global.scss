@@ -21,14 +21,6 @@ main:not(.default) {
   margin-bottom: 4px;
 }
 
-
-/* Header Anchors */
-h1, h2, h3, h4, h5, h6 {
-  &:not(:hover) a:not([class^=btn]).deeplink {
-    display: none;
-  }
-}
-
 /* Code */
 var, kbd, code {
   font-family: $ff-mono;
@@ -39,11 +31,16 @@ var, kbd, code {
   border-radius: 2px;
 }
 
+pre {
+  line-height: normal;
+}
+
 pre.hljs code {
   color: inherit;
-  background-color: inherit;
+  background-color: transparent;
   padding: inherit;
   border-radius: 0;
+  line-height: normal;
 }
 
 /* Blockquote */
@@ -125,6 +122,7 @@ ul > li p {
       text-decoration: underline;
     }
   }
+
   &__tags, &__details {
     margin-left: 0.5em;
   }

@@ -12,11 +12,10 @@ One ~~workaround~~ _fully documented feature_ is to create a custom collection. 
 Here's the code for your `.eleventy.js` file.
 ```js
 module.exports = function(eleventyConfig) {
-    
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("posts/**/*.md");
     });
-
+    //...
 }
 ```
 
