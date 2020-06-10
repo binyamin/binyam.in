@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
     {% for post in collections.posts %}
     <item>
       <title>{{ post.data.title }}</title>
-      <description>{{ post.templateContent | strip_html }}</description>
+      <description>{{ post.templateContent | escape_once }}</description>
       <link>{{ post.url | url | prepend: "https://binyam.in" }}</link>
       <guid>{{ post.url | url | prepend: "https://binyam.in" }}</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
