@@ -1,11 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
-/**
- * 
- * @todo work with multiline yaml item (lesser priority)
- * @todo Fix up metadata to default to `/assets/uploads/<slugified-file-name>.png`
- */
+const yaml = require("js-yaml");
 
 const isTest = false;
 
@@ -81,11 +76,9 @@ if(isTest) {
             path.join(__dirname, "../posts", filePath),
             {encoding: "utf-8"}
         );
-        let txt = content.substring(3, content.indexOf("---", 3)).trim();
-        const lines = txt.split("\n");
-        const data = {};
-        lines.forEach(str => (data[str.split(":")[0]] = str.split(":")[1].trim()));
-        
+        const frontMatterText = content.substring(3, content.indexOf("---", 3)).trim();
+        const data = yaml.safeLoad(frontMatterText);
+
         if(!data.thumbnail) {
             createImage(data.title, path.join(__dirname, "../assets/uploads", slugify(data.title) + ".png"));
         }
