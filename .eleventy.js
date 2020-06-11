@@ -20,6 +20,14 @@ module.exports = function (eleventyConfig) {
         return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
     })
 
+    eleventyConfig.addFilter("slugify", str => {
+        return str
+            .toLowerCase()
+            .replace(/[^\w\s]+/g,'')
+            .replace(/\s+/g,'-')
+        ;
+    })
+
     /* ----------------------
     Custom Markdown Renderer 
     ----------------------- */

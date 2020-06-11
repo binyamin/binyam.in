@@ -4,10 +4,7 @@ title: 'My Year as a Moderator '
 date: 2019-10-25T19:10:26.424Z
 thumbnail: /assets/uploads/my-year-as-a-moderator.png
 tags: ["feedback"]
-desc: >-
-  I love answering questions or giving feedback. In my opinion, it helps me grow
-  as a person. Additionally, I like the camaraderie that comes with being part
-  of a community, if only an online one.
+desc: I love answering questions or giving feedback. In my opinion, it helps me grow as a person. Additionally, I like the camaraderie that comes with being part of a community, if only an online one.
 ---
 Okay, so it hasn't actually been a year. It's been slightly over eight months. But I digress. Since February of 2019, I have been a moderator on a discord community named *DesignCourse (Coursetro)*. Created by YouTuber Gary Simon, this place serves as a forum for questions and discussions regarding all sorts of design and development related topics. Recently, I realized that I have grown as a mod, as a developer, and as a person, since that day in February.
 
