@@ -2,7 +2,7 @@
 
 [build]
   publish = "dist/"
-  command = "compile"
+  command = "npm run compile"
 [build.processing]
   skip_processing = false
 [build.processing.css]
