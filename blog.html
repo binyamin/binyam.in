@@ -5,12 +5,12 @@ title: Writing
 
 <header>
     <h1 class="blog-title">Writing</h1>
+    <p><a href="/feed.xml">RSS</a></p>
     <p class="blog-tag" id="pageTag" hidden>
         <small>
             <a href="{{page.url}}" role="button">(clear)</a>
         </small>
     </p>
-    <p><a href="/feed.xml">RSS</a></p>
 </header>
 
 <ul class="post-list" id="postList">
@@ -30,5 +30,7 @@ title: Writing
     </li>
     {% endfor %}
 </ul>
+
+{% include newsletter.html %}
 
 <script src="/js/filterByTag.js"></script>

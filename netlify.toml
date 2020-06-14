@@ -2,7 +2,7 @@
 
 [build]
   publish = "dist/"
-  command = "eleventy"
+  command = "compile"
 [build.processing]
   skip_processing = false
 [build.processing.css]

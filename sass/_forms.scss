@@ -1,0 +1,25 @@
+[class^=btn] {
+    border: none;
+    background-color: $clr-accent--dark;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 12px;
+
+    &:hover, &:focus {
+        background-color: $clr-accent;
+    }
+}
+
+.input--text {
+    padding: 6px 8px 6px 6px;
+}
+
+.form {
+    text-align: center;
+
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 24px 0;
+    background-color: #efefef;
+    border: 1px solid #dddddd;
+}
