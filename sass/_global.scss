@@ -83,7 +83,7 @@ ul > li p {
   }
 
   &-details {
-    color: #666666;
+    color: #444;
     margin: 0.5em 0 0 0;
   }
 
@@ -99,10 +99,10 @@ ul > li p {
 
 .blog-tag {
   margin-top: 0;
-  color: #666;
+  color: #444;
 
   a {
-    color: #666 !important;
+    color: #444 !important;
   }
 }
 .post-list {
@@ -128,6 +128,33 @@ ul > li p {
   }
 
   &__tags a {
-    color: #666666 !important;
+    color: #444 !important;
   }
+}
+
+
+.wm-mentions {
+  margin: 12px 0;
+  padding: 0;
+}
+
+.wm-mention {
+  margin: 36px 0;
+  list-style: none;
+}
+
+.wm-mentioner__img {
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px 4px 0;
+  float: left;
+}
+
+.wm-mentioner {
+  display: inline-block;
+}
+
+.wm-mention__time {
+  color: #444;
 }

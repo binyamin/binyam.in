@@ -1,35 +1,8 @@
 const hljs = require('highlight.js');
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addLayoutAlias('default', "default.html");
-    eleventyConfig.addLayoutAlias('post', "post.html");
-
-    eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
-        watch: ['sass/**/*.scss']
-    })
-
-    eleventyConfig.addCollection("posts", function (collection) {
-        return collection.getFilteredByGlob("posts/**/*.md");
-    });
-
-    eleventyConfig.addShortcode("wordCount", () => {
-        return `<span id="wordCount">Number of words</span>`;
-    })
-
-    eleventyConfig.addFilter("absolute_url", value => {
-        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
-    })
-
-    eleventyConfig.addFilter("slugify", str => {
-        return str
-            .toLowerCase()
-            .replace(/[^\w\s]+/g,'')
-            .replace(/\s+/g,'-')
-        ;
-    })
-
     /* ----------------------
-    Custom Markdown Renderer 
+     Custom Markdown Renderer 
     ----------------------- */
     const markdownIt = require('markdown-it');
     const markdownItOptions = {
@@ -61,6 +34,42 @@ module.exports = function (eleventyConfig) {
         .use(markdownItAbbr)
     eleventyConfig.setLibrary('md', md);
 
+    /* ----------------------
+     Plugins, Filters,
+     and Shortcodes
+    ---------------------- */
+    
+    eleventyConfig.addLayoutAlias('default', "default.html");
+    eleventyConfig.addLayoutAlias('post', "post.html");
+
+    eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
+        watch: ['sass/**/*.scss']
+    })
+
+    eleventyConfig.addCollection("posts", function (collection) {
+        return collection.getFilteredByGlob("posts/**/*.md");
+    });
+
+    eleventyConfig.addShortcode("wordCount", () => {
+        return `<span id="wordCount">Number of words</span>`;
+    })
+
+    eleventyConfig.addPairedShortcode("notice", function(content) {
+        return `<div class="notice">${md.render(content)}</div>`;
+    });
+
+    eleventyConfig.addFilter("absolute_url", value => {
+        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
+    })
+
+    eleventyConfig.addFilter("slugify", str => {
+        return str
+            .toLowerCase()
+            .replace(/[^\w\s]+/g,'')
+            .replace(/\s+/g,'-')
+        ;
+    })
+
     eleventyConfig.addFilter("markdownify", string => {
         return md.render(string)
     })
@@ -68,6 +77,20 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('js');
 
+
+    eleventyConfig.addFilter("getMentionsForUrl", (webmentions, url) => {
+            const allowedTypes = ['mention-of', 'in-reply-to']
+        
+            const hasRequiredFields = entry => {
+                const { author, published, content } = entry
+                return author.name && published && content
+            }
+        
+            return webmentions.children
+                .filter(entry => entry['wm-target'] === url)
+                .filter(entry => allowedTypes.includes(entry['wm-property']))
+                .filter(hasRequiredFields)
+    })
     return {
         dir: {
             input: "./",
