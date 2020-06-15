@@ -30,6 +30,7 @@ permalink: /blog/{{ title | slug }}/index.html
             
             {% assign abs_url = page.url |absolute_url %}
             {% assign mentions = webmentions | getMentionsForUrl: abs_url %}
+            {% if mentions.length > 0 %}
             <h2>Webmentions
                 <a href="https://indieweb.org/Webmention" class="wm-note" title="What are webmentions?">(?)</a>
             </h2>
@@ -45,6 +46,7 @@ permalink: /blog/{{ title | slug }}/index.html
                     </li>
                 {% endfor %}
             </ul>
+            {% endif %}
             <div class="post-footer">
                 <p class="h-card p-author" hidden>
                     <a href="https://binyam.in" class="p-name u-url" rel="author">Binyamin Green</a>
