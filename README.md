@@ -8,3 +8,6 @@ My personal website
 
 **To Add**
 - word count for `blog.html`
+- #indieweb
+  - add notes, bookmarks. Change posts category to article <https://indieweb.org/posts>
+  - add `u-syndication` or `rel="syndication"`. "View on twitter" <https://indieweb.org/syndication-link-use-cases> <https://indieweb.org/Twitter#POSSE_to_Twitter>
