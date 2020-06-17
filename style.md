@@ -28,7 +28,7 @@ function foo(bar) {
 }
 ```
 
-<button>Button</button>
+<button class="btn">Button</button>
 
 ## Inline Elements
 + Keyboard Input: <kbd>Enter</kbd>

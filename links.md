@@ -15,3 +15,4 @@ layout: default
 ## Code
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) - [Mozilla](https://mozilla.org)'s HTML, CSS, and JavaScript reference.
 - ["Common Website Design Mistakes"](http://blog-en.tilda.cc/articles-website-design-mistakes) - A primer on web layout.
+- ["Simple & Boring"](https://css-tricks.com/simple-boring/), by [Chris Coyier](https://chriscoyier.net/) - A warning against complex websites.

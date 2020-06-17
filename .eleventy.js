@@ -1,4 +1,7 @@
 const hljs = require('highlight.js');
+const fs = require("fs");
+const path = require("path");
+const { S_IFMT } = require('constants');
 
 module.exports = function (eleventyConfig) {
     /* ----------------------

@@ -3,7 +3,7 @@
     {% if type == 'post' %}
         {% assign metatitle = title %}
     {% else %}
-        {% assign metatitle = title | append: " &VerticalLine; " | append: site.title %}
+        {% assign metatitle = title | append: " • " | append: site.title %}
     {% endif %}
 {% endif %}
 

@@ -3,7 +3,10 @@ layout: default
 main_class: text-center
 ---
 
-<img src="/assets/img/profile.png" alt="" width="256" />
+<picture>
+    <source srcset="assets/img/profile.webp">
+    <img src="assets/img/profile.jpeg" alt="" width="256"/>
+</picture>
 
 # Hi, I'm Binyamin
 
