@@ -22,14 +22,21 @@ async function fetchWebmentions() {
 }
 
 module.exports = async function() {
+    const cacheDir = path.join(__dirname, "../../.cache");
+    const cachedFile = path.join(cacheDir, "webmentions.json");
+
+    if(fs.existsSync(cacheDir) === false) {
+        fs.mkdirSync(cacheDir)
+    }
+
     if(process.env.NODE_ENV === "production") {
-        return (await fetchWebmentions());
+        return await fetchWebmentions();
     } else {
-        if(fs.existsSync(path.join(__dirname, "../cache/webmentions.json"))) {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, "../cache/webmentions.json"), {encoding: "utf-8"}));
+        if(fs.existsSync(cachedFile)) {
+            return JSON.parse(fs.readFileSync(cachedFile, {encoding: "utf-8"}));
         } else {
             const webmentions = await fetchWebmentions();
-            fs.writeFileSync(path.join(__dirname, "../cache/webmentions.json"), JSON.stringify(webmentions, null, 4))
+            fs.writeFileSync(cachedFile, JSON.stringify(webmentions, null, 4))
             return webmentions;
         }
     }

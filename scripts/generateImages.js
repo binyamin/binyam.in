@@ -2,9 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const yaml = require("js-yaml");
 
-const isTest = false;
-
-function createImage(title, outPath=path.join(__dirname)) {
+function createImage( title, outPath=__dirname ) {
     const {createCanvas, loadImage, registerFont} = require("canvas");
 
     const TITLE_TEXT = title;
@@ -37,7 +35,7 @@ function createImage(title, outPath=path.join(__dirname)) {
         }
         ctx.fillText(line, x, y);
     }
-    loadImage(path.join(__dirname, '../assets/img/twitter-bg.jpg')).then((image) => {
+    loadImage(path.join(__dirname, '../src/assets/img/twitter-bg.jpg')).then((image) => {
         ctx.drawImage(image, 0, 0, 800, 418)
 
         ctx.font = `bold ${fontSizeLg}pt 'Inter'`;
@@ -64,23 +62,27 @@ function slugify(str="") {
     ;
 }
 
-if(isTest) {
-    createImage("A really, really, really long title", path.join(__dirname, "out.png"))
-} else {
-    let fileArray = fs.readdirSync(path.join(__dirname, "../posts"));
+(() => {
+    if(fs.existsSync(path.join(__dirname, "../.cache")) === false) {
+        fs.mkdirSync(path.join(__dirname, "../.cache"))
+    }
+    if(fs.existsSync(path.join(__dirname, "../.cache/thumbnails")) === false) {
+        fs.mkdirSync(path.join(__dirname, "../.cache/thumbnails"))
+    }
+    let fileArray = fs.readdirSync(path.join(__dirname, "../src/posts"));
 
     fileArray.forEach(filePath => {
         if(!(filePath.endsWith(".md") ||filePath.endsWith(".markdown"))) return;
         
         const content = fs.readFileSync(
-            path.join(__dirname, "../posts", filePath),
+            path.join(__dirname, "../src/posts", filePath),
             {encoding: "utf-8"}
         );
         const frontMatterText = content.substring(3, content.indexOf("---", 3)).trim();
         const data = yaml.safeLoad(frontMatterText);
 
         if(!data.thumbnail) {
-            createImage(data.title, path.join(__dirname, "../assets/uploads", slugify(data.title) + ".png"));
+            createImage(data.title, path.join(__dirname, "../.cache/thumbnails", slugify(data.title) + ".png"));
         }
     })
-}
+})()

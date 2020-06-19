@@ -1,7 +1,6 @@
 const hljs = require('highlight.js');
 const fs = require("fs");
 const path = require("path");
-const { S_IFMT } = require('constants');
 
 module.exports = function (eleventyConfig) {
     /* ----------------------
@@ -46,11 +45,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', "post.html");
 
     eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
-        watch: ['sass/**/*.scss']
+        watch: ['src/sass/**/*.scss']
     })
 
     eleventyConfig.addCollection("posts", function (collection) {
-        return collection.getFilteredByGlob("posts/**/*.md");
+        return collection.getFilteredByGlob("src/posts/**/*.md");
     });
 
     eleventyConfig.addShortcode("wordCount", () => {
@@ -77,8 +76,9 @@ module.exports = function (eleventyConfig) {
         return md.render(string)
     })
 
-    eleventyConfig.addPassthroughCopy('assets');
-    eleventyConfig.addPassthroughCopy('js');
+    eleventyConfig.addPassthroughCopy('src/assets');
+    eleventyConfig.addPassthroughCopy('src/js');
+    eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
 
 
     eleventyConfig.addFilter("getMentionsForUrl", (webmentions, url) => {
@@ -96,8 +96,8 @@ module.exports = function (eleventyConfig) {
     })
     return {
         dir: {
-            input: "./",
-            output: "./dist",
+            input: "src",
+            output: "dist",
             layouts: "layouts",
             includes: "includes",
             data: "data"
