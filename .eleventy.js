@@ -1,46 +1,8 @@
-const hljs = require('highlight.js');
-const fs = require("fs");
-const path = require("path");
-
 module.exports = function (eleventyConfig) {
-    /* ----------------------
-     Custom Markdown Renderer 
-    ----------------------- */
-    const markdownIt = require('markdown-it');
-    const markdownItOptions = {
-        html: true,
-        breaks: true,
-        linkify: true,
-        highlight: function (str, lang) {
-            if (lang && hljs.getLanguage(lang)) {
-              try {
-                return '<pre class="hljs"><code>' +
-                       hljs.highlight(lang, str, true).value +
-                       '</code></pre>';
-              } catch (__) {}
-            }
-         
-            return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
-        }
-    };
 
-    const markdownItFootnote = require('markdown-it-footnote');
-
-    const markdownItAttributes = require('markdown-it-attrs');
-
-    const markdownItAbbr = require('markdown-it-abbr');
-
-    const md = markdownIt(markdownItOptions)
-        .use(markdownItFootnote)
-        .use(markdownItAttributes)
-        .use(markdownItAbbr)
+    const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
 
-    /* ----------------------
-     Plugins, Filters,
-     and Shortcodes
-    ---------------------- */
-    
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
 
@@ -67,7 +29,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("slugify", str => {
         return str
             .toLowerCase()
-            .replace(/[^\w\s]+/g,'')
+            .replace(/[^\w\s-]+/g,'')
             .replace(/\s+/g,'-')
         ;
     })
@@ -80,20 +42,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
 
-
-    eleventyConfig.addFilter("getMentionsForUrl", (webmentions, url) => {
-            const allowedTypes = ['mention-of', 'in-reply-to']
-        
-            const hasRequiredFields = entry => {
-                const { author, published, content } = entry
-                return author.name && published && content
-            }
-        
-            return webmentions.children
-                .filter(entry => entry['wm-target'] === url)
-                .filter(entry => allowedTypes.includes(entry['wm-property']))
-                .filter(hasRequiredFields)
-    })
     return {
         dir: {
             input: "src",
