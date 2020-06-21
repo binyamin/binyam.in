@@ -39,5 +39,13 @@ const md = markdownIt(markdownItOptions)
     .use(require('markdown-it-attrs'))
     .use(require('markdown-it-abbr'))
     .use(require("@kwvanderlinde/markdown-it-wikilinks")(mdWikilinksOptions))
+    .use(function(md) {
+        md.linkify.add("#", {
+            validate: /[\w-]+/,
+            normalize: match => {
+                match.url = "/notes/search?tag=" + match.raw.slice(1);
+            }
+        })
+    })
 
 module.exports = md;
