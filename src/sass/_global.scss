@@ -102,7 +102,7 @@ ul > li p {
   color: #444;
 
   a {
-    color: #444 !important;
+    color: currentColor;
   }
 }
 .post-list {
@@ -123,12 +123,16 @@ ul > li p {
     }
   }
 
-  &__tags, &__details {
-    margin-left: 0.5em;
+  &__details {
+    color: #444 !important;
+
+    a {
+      color: currentColor !important;
+    }
   }
 
-  &__tags a {
-    color: #444 !important;
+  &__desc {
+    margin-top: 4px;
   }
 }
 

@@ -2,7 +2,9 @@
 title: List all Posts using 11ty
 date: 2020-05-04
 thumbnail: /assets/uploads/11ty-post.jpg
-tags: [code, webdev]
+tags: [code, blogging, eleventy]
+desc: >-
+   Unlike Jekyll, Eleventy doesn't create a collection of all posts. But you can do it yourself very easily.
 ---
 
 On the front page of a blog, we often list the title of every post on the site. [Jekyll](https://jekyllrb.com) will automatically list all pages within the `_post` directory under one collection. [11ty](https://11ty.dev), however, creates collections based on the tags. In other words, the only way to tell 11ty that your page is a blog post is by adding an extra tag. You may not want to add the same tag for every post, especially if you already categorize your posts.

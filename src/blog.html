@@ -17,16 +17,15 @@ title: Writing
     {% for post in collections.posts reversed %}
     <li class="post-item" data-tags={{ post.data.tags | default: "[]"}}>
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
-        <p class="post-item__details">Posted {{ post.date | date: "%B %d, %Y"}}</p>
+        <p class="post-item__details">Posted {{ post.date | date: "%B %d, %Y"}}
         {% if post.data.tags %}
-            <p class="post-item__tags">
-
-                Tagged with
-                {% for tag in post.data.tags %}
-                    <a href="/blog?filter={{tag}}" role="button"><strong role="img">#</strong>{{tag}}</a>
-                {% endfor %}
-            </p>
+            &nbsp;•&nbsp;Tagged with
+            {% for tag in post.data.tags %}
+                <a href="/blog?filter={{tag}}" role="button" class="post-item__tag"><strong role="img">#</strong>{{tag}}</a>
+            {% endfor %}
         {% endif %}
+        </p>
+        <div class="post-item__desc">{{post.data.desc}}<div>
     </li>
     {% endfor %}
 </ul>

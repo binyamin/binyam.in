@@ -4,7 +4,10 @@ slug: hi
 title: Five Useful Tips for Adobe XD
 date: 2019-06-18T16:11:04.629Z
 thumbnail: /assets/uploads/5-tips-xd.jpeg
+desc: >-
+    Adobe XD is free, modern, and extensible. Here are five useful tips for working within Adobe XD.
 ---
+
 Adobe XD is becoming the go-to tools for UI/UX Designers in 2019. It’s free, modern, and extensible. XD has many features, some of which you may not be aware of. Here are five useful tips for working within Adobe XD.
 
 - - -
