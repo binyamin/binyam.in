@@ -4,7 +4,7 @@ permalink: /notes/
 title: My Notes
 ---
 
-{% for n in notes %}
+{% for n in collections.notes %}
 [[{{n.title}}]]
 {{n.title}}
 {% endfor %}
