@@ -1,5 +1,5 @@
 node_modules/
 dist/
-.cache
+.cache/
+src/notes/
 package-lock.json
-.env
