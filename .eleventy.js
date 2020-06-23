@@ -2,6 +2,8 @@ module.exports = function (eleventyConfig) {
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
+    
+    require("./eleventy/webmentions"); // Webmentions filter
 
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
