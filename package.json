@@ -7,7 +7,7 @@
     "postinstall": "node scripts/post-install",
     "start": "eleventy --serve",
     "precompile": "node scripts/generateImages",
-    "compile": "NODE_ENV=production eleventy"
+    "compile": "eleventy"
   },
   "repository": {
     "type": "git",

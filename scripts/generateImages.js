@@ -62,7 +62,7 @@ function slugify(str="") {
     ;
 }
 
-(() => {
+const run = () => {
     if(fs.existsSync(path.join(__dirname, "../.cache")) === false) {
         fs.mkdirSync(path.join(__dirname, "../.cache"))
     }
@@ -85,4 +85,10 @@ function slugify(str="") {
             createImage(data.title, path.join(__dirname, "../.cache/thumbnails", slugify(data.title) + ".png"));
         }
     })
-})()
+};
+
+if(process.env.NODE_ENV === "production") {
+    run();
+} else {
+    console.log("Skipping generateImages")
+}
