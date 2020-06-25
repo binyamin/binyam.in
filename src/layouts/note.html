@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <main class="note">
+        <header>
+            <h1 class="p-name">Note Title</h1>
+        </header>
+        <article class="p-content">
+            {{ content }}
+        </article>
+        <div class="bl">
+            <p class="bl__title"><strong>Linking to this Note</strong></p>
+            <div class="bl__link-item">
+                <a href="#" class="bl__url">§ Creative Mindset</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestias atque laboriosam optio voluptatibus, repudiandae ipsa exercitationem tempora perspiciatis.</p>
+            </div>
+            <div class="bl__link-item">
+                <a class="bl__url" href="#">§ Mindful Creativity</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestias atque laboriosam optio voluptatibus, repudiandae ipsa exercitationem tempora perspiciatis.</p>
+            </div>
+        </div>
+        <footer>
+            <p>If you enjoyed this note, let me know! You can <a href="mailto:binyamingreen@protonmail.com">email</a> me, or send me a <a href="https://twitter.com/messages/compose?recipient_id=1084624370327322624">direct message</a> on twitter.</p>
+        </footer>
+    </main>
+    {% include footer.html %}
+    {% include metrical.html %}
+</body>
+</html>

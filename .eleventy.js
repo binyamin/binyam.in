@@ -1,4 +1,5 @@
 module.exports = function (eleventyConfig) {
+    eleventyConfig.setUseGitIgnore(false);
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
@@ -12,6 +13,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection("posts", function (collection) {
         return collection.getFilteredByGlob("src/posts/**/*.md");
+    });
+
+    eleventyConfig.addCollection("notes", function (collection) {
+        return collection.getFilteredByGlob("src/notes/**/*.md");
     });
 
     eleventyConfig.addShortcode("wordCount", () => {
@@ -43,6 +48,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
 
     return {
+        useGitIgnore: false,
         dir: {
             input: "src",
             output: "dist",
