@@ -1,3 +1,5 @@
+const yaml = require("js-yaml");
+
 module.exports = function (eleventyConfig) {
 
     const md = require("./eleventy/markdownIt");
@@ -8,6 +10,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
+
+    eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
     eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
         watch: ['src/sass/**/*.scss']
@@ -38,7 +42,7 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addFilter("markdownify", string => {
-        return md.render(string)
+        return md.renderInline(string)
     })
 
     eleventyConfig.addPassthroughCopy('src/assets');

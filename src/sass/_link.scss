@@ -16,4 +16,10 @@ a:not([class^=btn]) {
         box-shadow: 0 0 0 1px $clr-accent;
         border-radius: 4px;
     }
+
+    &.icon-link svg {
+        fill: currentColor;
+        width: 1em;
+        height: 1em;
+    }
 }
