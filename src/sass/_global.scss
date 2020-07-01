@@ -12,13 +12,46 @@ main:not(.default) {
   min-width: 328px;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.home section.page-center {
+  // 100vh, minus height of navbar, minus margin on main
+  height: calc(100vh - 63px - 24px);
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  width: 100%;
+}
+
+.home img {
+  border-radius: 2px;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.25);
+}
+
 .text-center {
   text-align: center;
 }
 
 .page-footer {
   text-align: center;
-  margin-bottom: 4px;
+  display: inline-block;
+  margin: 8px auto;
+  border-top: 1px solid #999;
 }
 
 /* Code */
