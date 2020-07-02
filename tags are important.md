@@ -1,5 +1,3 @@
-# Tags are Important
-
 Lately, I've been thinking about Mind Gardens 🌱. Specifically, I've been exploring the idea of internal navigation through hashtags.
 
 If you don't know what a mind garden is, skim [“You and your mind garden”](https://nesslabs.com/mind-garden) by Anne-Laure Le Cunff.

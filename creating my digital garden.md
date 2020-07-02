@@ -1,5 +1,3 @@
-# Creating My Digital Garden
-
 By designing, I mean planning. Remember that [[design is not just visual]].
 - tags, because [[tags are important]]
 - backlinks section

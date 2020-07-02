@@ -1,4 +1,3 @@
-# Email Pet-Peeves
 ## Emails are not websites
 Pictures, buttons, and borders are often a bad idea, as they makes you look more branded and less personal.
 Some good examples are James Clear's and David Perell's Newsletters. David Perell uses pictures very effectively.
@@ -12,7 +11,7 @@ In one episode of [SyntaxFm](syntax.fm), Wes Bos (or was it Scott Tolinski (?)) 
 
 ## Admit yourself
 When you deliberately make yourself vulnerable, you build others' trust and confidence.
-In a recent newsletter, Cullin McGrath revealed his subscriber count. Although it seemed like a small number to me, I knew he was legit. He wasn't reaching for praise; he simply wanted to share ideas and opinions.
+In one issue of his newsletter,[Cullin McGrath](https://cullinm.com) revealed his subscriber count. Although it seemed like a small number to me, I knew he was legit. He wasn't reaching for praise; he simply wanted to share ideas and opinions.
 
 ## Emails are not blog posts
 Keep it short.
