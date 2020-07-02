@@ -1,8 +1,9 @@
 ---
 layout: note
 permalink: /notes/
-title: My Notes
+title: About these Notes
 ---
+
 {% for n in collections.notes %}
-{{n.data.title}}
+- [{{n.data.title}}]({{n.url}})
 {% endfor %}

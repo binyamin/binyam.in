@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
+    
+    require("./eleventy/filters")(eleventyConfig, md);
 
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
@@ -27,20 +29,8 @@ module.exports = function (eleventyConfig) {
         return `<div class="notice">${md.render(content)}</div>`;
     });
 
-    eleventyConfig.addFilter("absolute_url", value => {
-        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
-    })
-
-    eleventyConfig.addFilter("slugify", str => {
-        return str
-            .toLowerCase()
-            .replace(/[^\w\s-]+/g,'')
-            .replace(/\s+/g,'-')
-        ;
-    })
-
-    eleventyConfig.addFilter("markdownify", string => {
-        return md.render(string)
+    eleventyConfig.setBrowserSyncConfig({
+        online: false
     })
 
     eleventyConfig.addPassthroughCopy('src/assets');
