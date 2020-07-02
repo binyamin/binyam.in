@@ -1,17 +1,3 @@
-if(process.env.NETLIFY) {
-    if(process.env.BRANCH.startsWith("dev/")) {
-        fetchNotes();
-    }
-} else {
-    if (process.env.NODE_ENV==="production"){
-        fetchNotes();
-    }
-    else {
-        console.log("skipping postinstall");
-    }
-
-}
-
 const cp = require('child_process');
 const fs = require("fs");
 
@@ -41,12 +27,7 @@ const fetchNotes = () => {
         .finally(__ => {
             result("git subtree add --squash --prefix=src/notes/ notes master")
                 .then(__ => {
-                    const NotesJson = {
-                        layout: "note",
-                        type: "note"
-                    }
-
-                    fs.writeFileSync("src/notes/notes.json", JSON.stringify(NotesJson, null, 4));
+                    fs.copyFileSync("scripts/notesdata", "src/notes/notes.11tydata.js")
                     console.log("Files written to src/notes")
                 })
                 .catch(e => {
@@ -56,4 +37,17 @@ const fetchNotes = () => {
     }).catch(error => {
         console.log(error.message)
     })
+}
+
+if(process.env.NETLIFY) {
+    if(process.env.BRANCH.startsWith("dev/")) {
+        fetchNotes();
+    }
+} else {
+    if (process.env.NODE_ENV==="production"){
+        fetchNotes();
+    }
+    else {
+        console.log("skipping postinstall");
+    }
 }

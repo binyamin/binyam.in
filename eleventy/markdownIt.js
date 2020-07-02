@@ -21,16 +21,12 @@ const markdownItOptions = {
 };
 
 const mdWikilinksOptions = {
-    baseUrl: "/notes/",
+    baseURL: "/notes/",
+    relativeBaseURL: "../",
     uriSuffix: "/",
     linkPattern: /\[\[([\w\s/-]+)(\|([\w\s/]+))?\]\]/,
-    generatePageNameFromLabel: (label) => {
-        return label
-        .toLowerCase()
-        .replace(/[^\w\s-]+/g,'')
-        .replace(/\s+/g,'-')
-        .replace(/\.[md|markdown]$/g,'')
-        ;
+    postProcessPageName: (pageName) => {
+        return pageName.trim().toLowerCase().replace(/\s/g, "-");
     }
 }
 

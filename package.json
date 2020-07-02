@@ -31,6 +31,7 @@
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "title-case": "^3.0.2"
   }
 }

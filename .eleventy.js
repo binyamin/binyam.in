@@ -1,12 +1,14 @@
 const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.setUseGitIgnore(false);
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
     
     const wm = require("./eleventy/webmentions");
     eleventyConfig.addFilter("getMentionsForUrl", wm);
+    require("./eleventy/filters")(eleventyConfig, md);
 
     eleventyConfig.addLayoutAlias('default', "default.html");
     eleventyConfig.addLayoutAlias('post', "post.html");
@@ -21,6 +23,10 @@ module.exports = function (eleventyConfig) {
         return collection.getFilteredByGlob("src/posts/**/*.md");
     });
 
+    eleventyConfig.addCollection("notes", function (collection) {
+        return collection.getFilteredByGlob("src/notes/**/*.md");
+    });
+
     eleventyConfig.addShortcode("wordCount", () => {
         return `<span id="wordCount">Number of words</span>`;
     })
@@ -29,20 +35,8 @@ module.exports = function (eleventyConfig) {
         return `<div class="notice">${md.render(content)}</div>`;
     });
 
-    eleventyConfig.addFilter("absolute_url", value => {
-        return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
-    })
-
-    eleventyConfig.addFilter("slugify", str => {
-        return str
-            .toLowerCase()
-            .replace(/[^\w\s-]+/g,'')
-            .replace(/\s+/g,'-')
-        ;
-    })
-
-    eleventyConfig.addFilter("markdownify", string => {
-        return md.renderInline(string)
+    eleventyConfig.setBrowserSyncConfig({
+        online: false
     })
 
     eleventyConfig.addPassthroughCopy('src/assets');
@@ -50,6 +44,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
 
     return {
+        useGitIgnore: false,
         dir: {
             input: "src",
             output: "dist",
