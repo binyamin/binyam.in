@@ -1,2 +1,2 @@
 # Work smarter, not harder
-Be effective.
+If something ain't working, don't try to change it. Once you know the problem, the solution is normally obvious.
