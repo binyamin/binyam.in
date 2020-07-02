@@ -1,12 +1,18 @@
 const {titleCase} = require("title-case");
 
+const slugify = str => {
+    return str
+        .toLowerCase()
+        .replace(/[^\w\s]+/g,'')
+        .replace(/\s+/g,'-')
+    ;
+}
+
 module.exports = {
     layout: "note",
     type: "note",
     eleventyComputed: {
         title: data => titleCase(data.page.fileSlug),
-        webmentions: () => ({}),
-        pkg: () => ({}),
-        data: data => JSON.stringify(data, null, 4)
+        permalink: data => `/notes/${slugify(data.page.fileSlug)}/`
     }
 }
