@@ -39,15 +39,9 @@ const fetchNotes = () => {
     })
 }
 
-if(process.env.NETLIFY) {
-    if(process.env.BRANCH.startsWith("dev/")) {
-        fetchNotes();
-    }
-} else {
-    if (process.env.NODE_ENV==="production"){
-        fetchNotes();
-    }
-    else {
-        console.log("skipping postinstall");
-    }
+if (process.env.NODE_ENV==="production"){
+    fetchNotes();
+}
+else {
+    console.log("skipping postinstall");
 }
