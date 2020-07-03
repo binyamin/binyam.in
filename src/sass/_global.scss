@@ -225,3 +225,35 @@ ul > li p {
     margin-top: 8px;
   }
 }
+
+.bl {
+  margin-top: 12px;
+  color: #444;
+
+  &__title {
+    font-size: 1.2em;
+  }
+
+  &__link-item p {
+    font-size: $fs-small;
+    margin-top: 0;
+    margin-left: 6px;
+  }
+}
+
+.notes-footer {
+  color: #444;
+  font-size: $fs-small;
+
+  a {
+    color: currentColor !important;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    border-top: 1px solid #000;
+    width: 74%;
+    margin: 0 auto;
+  }
+}
