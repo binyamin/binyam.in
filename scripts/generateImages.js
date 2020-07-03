@@ -87,7 +87,7 @@ const run = () => {
     })
 };
 
-if(process.env.NODE_ENV === "production") {
+if(process.env.NODE_ENV === "production" || process.env.NETLIFY) {
     run();
 } else {
     console.log("Skipping generateImages")

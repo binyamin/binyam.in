@@ -25,6 +25,11 @@ const fetchNotes = () => {
             result("git remote add notes https://github.com/b3u/notes")
         })
         .finally(__ => {
+            if(process.env.NETLIFY) {
+                result("git config user.name \"Foobar\" && git config user.email \"foo@bar.io\"")
+                    .catch(e => console.error(e))
+            }
+
             result("git subtree add --squash --prefix=src/notes/ notes master")
                 .then(__ => {
                     fs.copyFileSync("scripts/notesdata", "src/notes/notes.11tydata.js")
