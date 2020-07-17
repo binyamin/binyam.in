@@ -13,15 +13,16 @@
             {{ content }}
         </article>
         <div class="bl">
-            <p class="bl__title"><strong>Linking to this Note</strong></p>
+            <p class="bl__title">Linking to this Note</p>
+            {% unless backlinks.length > 0 %}
+            <p class="bl__default">No backlinks found</p>
+            {% endunless%}
+            {% for link in backlinks %}
             <div class="bl__link-item">
-                <a href="#" class="bl__url">Creative Mindset</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestias atque laboriosam optio voluptatibus.</p>
+                <a href="{{link.url}}" class="bl__url">{{link.title}}</a>
+                <p>{{link.preview | markdownify | strip_html | default: "This note is mysterious"}}</p>
             </div>
-            <div class="bl__link-item">
-                <a class="bl__url" href="#">Mindful Creativity</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestias atque laboriosam optio voluptatibus.</p>
-            </div>
+            {% endfor %}
         </div>
         <footer class="notes-footer details">
             <p>If you enjoyed this note, let me know! You can <a href="mailto:binyamingreen@protonmail.com">email</a> me, or send me a <a href="https://twitter.com/messages/compose?recipient_id=1084624370327322624">direct message</a> on twitter.</p>

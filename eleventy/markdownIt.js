@@ -22,7 +22,7 @@ const markdownItOptions = {
 
 const mdWikilinksOptions = {
     baseURL: "/notes/",
-    relativeBaseURL: "../",
+    makeAllLinksAbsolute: true,
     uriSuffix: "/",
     linkPattern: /\[\[([\w\s/-]+)(\|([\w\s/]+))?\]\]/,
     postProcessPageName: (pageName) => {

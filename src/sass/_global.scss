@@ -116,7 +116,7 @@ ul > li p {
   }
 
   &-details {
-    color: #444;
+    color: $clr-grey--dark;
     margin: 0.5em 0 0 0;
   }
 
@@ -132,7 +132,7 @@ ul > li p {
 
 .blog-tag {
   margin-top: 0;
-  color: #444;
+  color: $clr-grey--dark;
 
   a {
     color: currentColor;
@@ -157,7 +157,7 @@ ul > li p {
   }
 
   &__details {
-    color: #444 !important;
+    color: $clr-grey--dark !important;
 
     a {
       color: currentColor !important;
@@ -193,7 +193,7 @@ ul > li p {
 }
 
 .wm-mention__time {
-  color: #444;
+  color: $clr-grey--dark;
 }
 
 .reading-list {
@@ -228,32 +228,47 @@ ul > li p {
 
 .bl {
   margin-top: 12px;
-  color: #444;
+  color: $clr-grey--dark;
 
   &__title {
-    font-size: 1.2em;
+    font-size: $fs-h4;
+    margin-bottom: 0;
   }
 
+  &__link-item {
+    margin-left: 12px;
+  }
+
+  &__url {
+    color: currentColor !important;
+  }
+
+  &__default {
+    margin: 0;
+    font-size: $fs-small;
+  }
   &__link-item p {
     font-size: $fs-small;
-    margin-top: 0;
-    margin-left: 6px;
+    margin: 0 0 0 6px;
   }
 }
 
 .notes-footer {
-  color: #444;
-  font-size: $fs-small;
+  margin-top: 24px;
+  
+  &::before {
+    content: "";
+    background-color: $clr-accent;
+    height: 2px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  color: $clr-grey--dark;
+  font-style: italic;
 
   a {
     color: currentColor !important;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    border-top: 1px solid #000;
-    width: 74%;
-    margin: 0 auto;
   }
 }
