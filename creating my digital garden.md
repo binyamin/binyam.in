@@ -1,4 +1,4 @@
-By designing, I mean planning. Remember that [[design is not just visual]].
+By "creating" I mean planning. Remember that [[design is not just visual]].
 - tags, because [[tags are important]]
 - backlinks section
 - page preview

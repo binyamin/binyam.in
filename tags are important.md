@@ -4,6 +4,8 @@ If you don't know what a mind garden is, skim [“You and your mind garden”](h
 
 If your wiki is your digital brain, it should mirror the way you recall information. So, how do you think?
 
+<!-- Anne-Laure Le Cunff talked about this in an interview with David Perell. She discussed how brains don't have tagging systems, and so people don't process information that way. Therefore, she believes tags are frequently ineffective. She uses tags, but not excessively. -->
+
 When I remember something, it's not because I looked it up in some mental thesaurus 📖! I associate the memory with something, and that association was triggered. It's kind of like a tag.
 
 Now, I can still find memories when they're needed. If an association is triggered, I automatically look for related thoughts. In other words, I can "search" for a "tag".
