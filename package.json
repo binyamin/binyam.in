@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "description": "My personal website",
   "scripts": {
-    "postinstall": "node scripts/post-install",
     "start": "eleventy --serve",
-    "precompile": "node scripts/generateImages",
+    "precompile": "node scripts/generateImages && node scripts/fetchNotes",
     "compile": "eleventy"
   },
   "repository": {

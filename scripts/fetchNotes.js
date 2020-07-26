@@ -1,7 +1,9 @@
 const cp = require('child_process');
 const fs = require("fs");
 
-const result = function(command){
+// Get node to recognize global modules
+
+const result = function(command) {
     return new Promise((resolve, reject) => {
         cp.exec(command, function(err, stdout, stderr){
             if(err != null){
@@ -48,5 +50,5 @@ if (process.env.NETLIFY || process.env.NODE_ENV==="production"){
     fetchNotes();
 }
 else {
-    console.log("skipping postinstall");
+    console.log("Skipping fetchNotes");
 }
