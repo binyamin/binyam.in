@@ -5,7 +5,7 @@
   "description": "My personal website",
   "scripts": {
     "start": "eleventy --serve",
-    "precompile": "node scripts/generateImages && node scripts/fetchNotes",
+    "precompile": "node scripts/fetchNotes && node scripts/generateImages",
     "compile": "eleventy"
   },
   "repository": {

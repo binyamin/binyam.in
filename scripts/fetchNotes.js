@@ -32,6 +32,8 @@ const fetchNotes = () => {
                     .catch(e => console.error(e))
             }
 
+            result("git status").then(out => console.log(out)) // For debugging purposes
+
             result("git subtree add --squash --prefix=src/notes/ notes master")
                 .then(__ => {
                     fs.copyFileSync("scripts/notesdata", "src/notes/notes.11tydata.js")
