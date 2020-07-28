@@ -26,8 +26,7 @@ permalink: /blog/{{ title | slug }}/index.html
             <div class="e-content">
                 {{ content }}
             </div>
-            {% include newsletter.html %}
-            
+                        
             {% assign abs_url = page.url |absolute_url %}
             {% assign mentions = webmentions | getMentionsForUrl: abs_url %}
             {% if mentions.length > 0 %}
