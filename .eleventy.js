@@ -39,6 +39,13 @@ module.exports = function (eleventyConfig) {
         online: false
     })
 
+    const {Liquid} = require("liquidjs");
+    eleventyConfig.setLibrary("liquid", new Liquid({
+        extname: ".liquid",
+        dynamicPartials: false,
+        strict_filters: false
+    }))
+
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
