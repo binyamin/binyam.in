@@ -49,8 +49,8 @@
 - title: A Universe Made for Two
   author: Jack M. Daniel
   isbn: 9781946351470
-  cover: http://covers.openlibrary.org/b/isbn/9781946351470-M.jpg?default=false
-  link: http://openlibrary.org/isbn/9781946351470
+  cover: https://covers.openlibrary.org/b/isbn/9781946351470-M.jpg?default=false
+  link: https://openlibrary.org/isbn/9781946351470
   notes: >-
     Philosophical work based on concepts such as the Bible, 
     yin & yang, and particle physics.
@@ -69,4 +69,7 @@
   cover: https://books.google.com/books/content?id=B8JyDwAAQBAJ&printsec=frontcover&zoom=1&img=1
   link: https://www.amazon.com/This-Marketing-Cant-Until-Learn/dp/0525540830
   notes: >-
-    “A must-read for every entrepreneur.... The world would be a much better place if businesses were led this way.” — [Derek Sivers](https://sivers.org/book/ThisIsMarketing)
+    “A must-read for every entrepreneur.... The world 
+    would be a much better place if businesses were 
+    led this way.” — [Derek Sivers]
+    (https://sivers.org/book/ThisIsMarketing)
