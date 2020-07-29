@@ -6,10 +6,13 @@ layout: default
 <h1>My Reading List</h1>
 <p class="larger">I'd like to read these {{books | size}} books</p>
 <ul class="reading-list">
-  {% for book in books %}
+  {% assign sorted_books = books | sort_ab: 'title' %}
+
+  {% for book in sorted_books %}
   <li class="book">
     <img class="book-img" src="{{book.cover}}" alt="" />
-    <p><strong>{{book.title}}</strong>
+    <p>
+      <strong>{{book.title}}</strong>
       <a href="{{book.link}}" class="icon-link" aria-label="Find book online">
         {% include ./assets/link-external.svg %}
       </a>
