@@ -1,5 +1,5 @@
 ---
-modified: 2020-08-02T18:17:55-04:00
+modified: 2020-08-02T18:18:17-04:00
 ---
 
 # Emails are not websites
@@ -11,7 +11,7 @@ Some good examples are James Clear's and David Perell's Newsletters. David Perel
 Let the user know the url of links, so they don't need to blindly trust that it leads to a safe site.
 A good compromise is to indicate the website on which the article can be found. [Frontend Focus](frontendfoc.us) puts the website in a `title` html attribute on their links.
 
- Emails are letters
+## Emails are letters
 Most of the newsletters I actually read, start with a greeting and end with the sender's name. You don't need the subscriber's name to talk directly to their heart.
 In one episode of [SyntaxFm](syntax.fm), Wes Bos (or was it Scott Tolinski (?)) said that he literally opens up Gmail every time he writes a promotional email. People like it when _other people_ connect with them.
 
