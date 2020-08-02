@@ -1,3 +1,9 @@
+---
+modified: 2020-08-02T13:09:05-04:00
+---
+
+# Cranium
+
 The cranium is where I collect my ideas.
 
 Fair warning: I'm still [[creating my digital garden]], so things may break.
