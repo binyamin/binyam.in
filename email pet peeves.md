@@ -1,4 +1,9 @@
-## Emails are not websites
+---
+modified: 2020-08-02T18:16:35-04:00
+---
+
+# Emails are not websites
+
 Pictures, buttons, and borders are often a bad idea, as they makes you look more branded and less personal.
 Some good examples are James Clear's and David Perell's Newsletters. David Perell uses pictures very effectively.
 
