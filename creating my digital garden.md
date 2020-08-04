@@ -1,4 +1,8 @@
-By "creating" I mean planning. Remember that [[design is not just visual]].
+---
+modified: 2020-08-04T18:10:14-04:00
+---
+
+By "creating" I mean . Remember that [[design is not just visual]].
 - tags, because [[tags are important]]
 - backlinks section
 - page preview
