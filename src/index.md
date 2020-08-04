@@ -21,7 +21,6 @@ I'm a front-end developer and college student from the US East Coast. When I'm n
 
 When I was 6, I began piano lessons.\
 On Saturdays I'm offline, because I observe the Jewish sabbath.\
-I still use a flip-phone. Yes, I know what year it is.\
 I study Computer Science at [CCBC MD](https://ccbcmd.edu).\
 I read and speak Hebrew, though not fluently.\
 I was in boy scouts, and I always wanted to make Eagle Scout.
