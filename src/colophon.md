@@ -13,6 +13,6 @@ I used [Figma](https://figma.com) to design the site. Figma is a web app, so you
 
 I decided on a minimalist design. I chose the [Inter](https://rsms.me/inter) font, and [a Minor Third type-scale](https://type-scale.com/?scale=1.200). I don't know much about typography, and type-scales seem professional. The accent color is always some variation of winter green.
 
-I recently switched from [Jekyll](jekyllrb.com) to [11ty](11ty.dev), because [11ty] uses JavaScript plugins. I examined a few free hosting services, and [Netlify](netlify.com) seemed the most powerful.
+I recently switched from [Jekyll](https://jekyllrb.com) to [11ty](https://11ty.dev), because [11ty] uses JavaScript plugins. I examined a few free hosting services, and [Netlify](https://netlify.com) seemed the most powerful.
 
 *[11ty]: Eleventy
