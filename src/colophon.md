@@ -7,7 +7,7 @@ layout: default
 
 _This page was inspired by [Eric Bailey](https://ericwbailey.design), who has something similar on his site._
 
-This site began in 2018, and the design has changed a lot over the years. The 2nd and 3rd iterations are [on GitHub Pages](https://b3u.github.io/archives), just in case someone wants to see them. The current version was originally conceived in December of 2019, and implemented slowly over the following months.
+This site began in 2018, and the design has changed a lot over the years. The 2nd and 3rd iterations are [on GitHub Pages](https://binyamin.github.io/archives), just in case someone wants to see them. The current version was originally conceived in December of 2019, and implemented slowly over the following months.
 
 I used [Figma](https://figma.com) to design the site. Figma is a web app, so you can open your files on any computer (including Linux). Plus, their free tier is perfect for my needs. You can view the design [here](https://www.figma.com/file/CERO1a9U7dVXyCm9p2tqnp/Binyam.in).
 

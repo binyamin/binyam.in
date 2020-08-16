@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b3u/binyam.in.git"
+    "url": "git+https://github.com/binyamin/binyam.in.git"
   },
   "keywords": [],
   "author": "Binyamin Aron Green",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/b3u/binyam.in/issues"
+    "url": "https://github.com/binyamin/binyam.in/issues"
   },
   "homepage": "https://binyam.in",
   "devDependencies": {

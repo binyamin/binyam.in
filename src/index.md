@@ -13,7 +13,7 @@ main_class: text-center home
 
 Welcome to my online home. {.larger}
 
-I'm a front-end developer and college student from the US East Coast. When I'm not in class, I [write](/blog) about my interests, [code](https://github.com/b3u){rel=me} some side-projects, or [listen to music](https://visualify.io/share/MB4iQ9yTQtgjtYpGC "See my Spotify Stats").
+I'm a front-end developer and college student from the US East Coast. When I'm not in class, I [write](/blog) about my interests, [code](https://github.com/binyamin){rel=me} some side-projects, or [listen to music](https://visualify.io/share/MB4iQ9yTQtgjtYpGC "See my Spotify Stats").
 
 </section>
 

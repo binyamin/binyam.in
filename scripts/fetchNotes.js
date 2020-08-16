@@ -24,7 +24,7 @@ const fetchNotes = () => {
             console.log("Remote `notes` found")
         })
         .catch(__ => {
-            result("git remote add notes https://github.com/b3u/notes")
+            result("git remote add notes https://github.com/binyamin/notes")
         })
         .finally(__ => {
             if(process.env.NETLIFY) {
