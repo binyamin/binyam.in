@@ -4,8 +4,17 @@
   cover: https://books.google.com/books/content?id=T5PqPWS0GKwC&printsec=frontcover&img=1&zoom=1
   link: https://google.com/books/edition/_/T5PqPWS0GKwC
   notes: >-
-    A dying Professor's guide to life, recorded by a 
-    former student. (I'm already halfway through it.)
+    A dying Professor's guide to life, recorded by one of
+    his former students.
+- title: Pinocchio
+  author: Carlo Collodi
+  isbn: 9780765305916
+  cover: https://books.google.com/books/content?id=rmmACgAAQBAJ&printsec=frontcover&img=1&zoom=1
+  link: https://google.com/books/edition/_/rmmACgAAQBAJ
+  notes: >-
+    Pinocchio is a novel for children by Italian author
+    Carlo Collodi. It is about the mischievous adventures
+    of an animated marionette and his father.
 - title: Journey to the West
   author: Wu Cheng'en, Timothy Richard
   isbn: 9780804839495
