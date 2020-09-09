@@ -3,3 +3,4 @@ dist/
 .cache/
 src/notes/
 package-lock.json
+.env*

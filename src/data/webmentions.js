@@ -1,6 +1,5 @@
-const fs = require("fs");
-const path = require("path");
 const fetch = require("node-fetch");
+const datacache = require("@binyamin/data-cache");
 
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
 
@@ -22,21 +21,15 @@ async function fetchWebmentions() {
 }
 
 module.exports = async function() {
-    const cacheDir = path.join(__dirname, "../../.cache");
-    const cachedFile = path.join(cacheDir, "webmentions.json");
-
-    if(fs.existsSync(cacheDir) === false) {
-        fs.mkdirSync(cacheDir)
-    }
-
     if(process.env.NODE_ENV === "production") {
         return await fetchWebmentions();
     } else {
-        if(fs.existsSync(cachedFile)) {
-            return JSON.parse(fs.readFileSync(cachedFile, {encoding: "utf-8"}));
+        const wmcache = datacache.get("webmentions");
+        if(wmcache) {
+            return JSON.parse(wmcache);
         } else {
             const webmentions = await fetchWebmentions();
-            fs.writeFileSync(cachedFile, JSON.stringify(webmentions, null, 4))
+            datacache.set("webmentions", webmentions);
             return webmentions;
         }
     }
