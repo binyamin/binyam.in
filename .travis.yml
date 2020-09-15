@@ -1,0 +1,14 @@
+language: node_js
+node_js: 12
+
+addons:
+  chrome: stable
+
+before_install: npm install -g @lhci/cli
+
+script:
+  - npm run build
+  - lhci autorun
+
+notifications:
+  email: false
