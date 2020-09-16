@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch");
+const axios = require("axios").default
 
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
 
@@ -10,7 +10,7 @@ async function fetchWebmentions() {
     const url = `${API_ORIGIN}?domain=${domain}&token=${token}`
 
     try {
-        const response = await fetch(url)
+        const response = await axios.get(url)
         if (response.ok) {
             const feed = await response.json()
             return feed

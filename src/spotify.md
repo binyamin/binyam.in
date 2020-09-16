@@ -5,5 +5,6 @@ title:
 # My Spotify Stats
 
 {% for song in spotifyStats %}
-$. {{song.title}}
+1. **{{song.title}}**\
+   {{song.artists}}
 {% endfor %}

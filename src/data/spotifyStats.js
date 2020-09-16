@@ -1,7 +1,7 @@
 const datacache = require("@binyamin/data-cache");
 
 module.exports = function() {
-    const data = datacache.get("spotify.top_tracks");
+    const data = datacache.get("spotify.tracks");
     
     return data.items.map(entry => ({
         title: entry.name,
