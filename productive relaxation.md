@@ -1,0 +1,1 @@
+Relaxation should never feel like a waste of time. Engage in enjoyable activities, with the understanding that humans enjoy fulfilling a purpose.
