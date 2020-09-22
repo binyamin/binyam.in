@@ -3,5 +3,4 @@ dist/
 .cache/
 .lighthouseci/
 src/notes/
-package-lock.json
 .env*

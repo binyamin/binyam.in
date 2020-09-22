@@ -26,7 +26,7 @@ module.exports = async function() {
     } else {
         const wmcache = datacache.get("webmentions");
         if(wmcache) {
-            return JSON.parse(wmcache);
+            return wmcache;
         } else {
             const webmentions = await fetchWebmentions();
             datacache.set("webmentions", webmentions);
