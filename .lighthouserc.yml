@@ -1,0 +1,24 @@
+ci:
+    collect:
+        url:
+          - http://localhost/
+          - http://localhost/blog/
+          - http://localhost/blog/filter-posts-by-tag/
+        numberOfRuns: 3
+        staticDistDir: "./dist"
+    assert:
+        preset: "lighthouse:no-pwa"
+        assertions:
+            # Disabled, since tests run on localhost
+            uses-long-cache-ttl: "off"
+            uses-http2: "off"
+            canonical: "off"
+
+            # Disabled until fixed by PR
+            cumulative-layout-shift: "off"
+            render-blocking-resources: "off"
+            unsized-images: "off"
+            uses-rel-preconnect: "off"
+            color-contrast: "off"
+    upload:
+        target: "temporary-public-storage"
