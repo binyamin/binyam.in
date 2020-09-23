@@ -1,0 +1,13 @@
+<div class="track">
+    <a href="{{song.link}}" class="track__link" aria-label="Listen on Spotify">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" role="img">
+            <image xlink:href={{song.album.album_art.64}} height="100%" width="100%" />
+            <path d="M7 6L7 18 17 12z" style="opacity: 0.8;"/>
+        </svg>
+    </a>
+    <div class="track__info">
+        <p class="track__title">{{song.title}}
+        <p class="track__artists">{{song.artists |join: ", "}}</p>
+    </div>
+    <p class="track__time">{{song.duration}}</p>
+</div>

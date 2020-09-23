@@ -272,3 +272,19 @@ ul > li p {
     color: currentColor !important;
   }
 }
+
+/* Now Playing Page */
+.now-playing__header {
+  text-align: center;
+}
+
+.track-list {
+  counter-reset: track_num;
+  margin: 0;
+  padding: 0;
+
+  li {
+    counter-increment: track_num;
+    list-style: none;
+  }
+}

@@ -1,0 +1,56 @@
+// Spotify Track
+.track {
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 3px 8px 0 rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 8px 0;
+    
+    &::before {
+        content: counter(track_num, decimal-leading-zero)".";
+        margin-right: 16px;
+        font-size: $fs-h3;
+        color: $clr-grey--dark;
+    }
+
+    &__link {
+        line-height: 0;
+        margin-right: 18px;
+        overflow: hidden;
+        border-radius: 4px;
+        
+        &:hover svg {
+            opacity: 0.8;
+        }
+    }
+
+
+    &__info {
+        flex: 1 0 0;
+        margin-right: 16px;
+        overflow: hidden;
+    }
+    
+    &__title {
+        margin: 0;
+        font-size: $fs-h5;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__artists {
+        margin: 0;
+        color: $clr-grey--dark;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__time {
+        text-align: right;
+    }
+}

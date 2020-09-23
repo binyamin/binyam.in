@@ -1,0 +1,16 @@
+---
+layout: default
+title: Now Playing
+---
+<header class="now-playing__header">
+    <h1>Now Playing</h1>
+    <p>Here are my top 10 spotify tracks from the past couple weeks
+    <br/>
+    (Last updated on <time datetime="{{'now' | date: '%Y-%m-%dT%H:%M:%S.%L%z' }}">{{"now"|date: "%h %d, %Y at %I:%M %p %z"}}</time>)
+    </p>
+</header>
+<ol class="track-list">
+    {% for song in spotifyStats %}
+    <li>{% include spotify-track.html %}</li>
+    {% endfor %}
+</ol>
