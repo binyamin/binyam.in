@@ -2,5 +2,5 @@ node_modules/
 dist/
 .cache/
 .lighthouseci/
-src/notes/
+src/notes/**/*.md
 .env*

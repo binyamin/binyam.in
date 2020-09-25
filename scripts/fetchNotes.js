@@ -1,4 +1,5 @@
 const cp = require('child_process');
+const del = require("del");
 
 function result(command) {
     return new Promise((resolve, reject) => {
@@ -14,12 +15,13 @@ function result(command) {
     })
 }
 
-async function fetchNotes() {
+async function configureGit() {
     try {
         // Assuming git is installed, configure git environment
         await result("git --version");
 
         if (process.env.NETLIFY) {
+            console.log("[fetchNotes] configure git user")
             await result("git config user.name \"Netlify Buildbot\" && git config user.email \"foo@bar.io\"");
         }
 
@@ -31,26 +33,37 @@ async function fetchNotes() {
             result("git remote add notes https://github.com/binyamin/notes");
             console.log("[fetchNotes] ", e.message);
         }
-
-
-        // The next three lines copy `notes/master` into a subdirectory without
-        // committing them, yet leaving the working tree clean. It's based on
-        // https://bneijt.nl/blog/post/merge-a-subdirectory-of-another-repository-with-git/
-        await result("git merge -s ours --no-commit notes/master");
-        await result("git read-tree --prefix=src/notes/ -u notes/master");
-        await result("git reset");
     } catch(error) {
-        throw error;
+        throw new Error(error);
     }
 }
 
-if (process.env.NETLIFY || process.env.NODE_ENV==="production") {
-    fetchNotes()
-        .then(() => {
+function fetchNotes() {
+    // The next three lines copy the contents of `notes/master` into a subdirectory
+    // without committing them, yet leaving the working tree clean. It's based on
+    // https://bneijt.nl/blog/post/merge-a-subdirectory-of-another-repository-with-git/
+    result("git merge -s ours --no-commit notes/master")
+    .catch(_ => {})
+    .finally(async () => {
+        try {
+            await del(["src/notes/**/*.md", "src/notes/.git*"]);
+            await result("git read-tree --prefix=src/notes/ -u notes/master");
+            await result("git reset");
             console.log("[fetchNotes] Notes written to `src/notes`")
+            del(["src/notes/.git*"]);
+        } catch (err) {
+            console.error(err)
+        }
+    })
+}
+
+if (process.env.NETLIFY || process.env.NODE_ENV==="production") {
+    configureGit()
+        .then(() => {
+            fetchNotes();
         })
         .catch(e => {
-            throw e;
+            console.error(e);
         })
 }
 else {
