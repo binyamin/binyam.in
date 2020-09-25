@@ -30,9 +30,10 @@ async function configureGit() {
             await result("git remote get-url notes");
             console.log("[fetchNotes] Remote `notes` found");
         } catch (e) {
-            result("git remote add notes https://github.com/binyamin/notes");
+            await result("git remote add notes https://github.com/binyamin/notes");
             console.log("[fetchNotes] ", e.message);
         }
+        await result("git fetch notes")
     } catch(error) {
         throw new Error(error);
     }
