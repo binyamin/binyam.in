@@ -12,9 +12,9 @@ module.exports = {
     layout: "note",
     type: "note",
     eleventyComputed: {
-        title: data => titleCase(data.page.fileSlug),
+        title: data => titleCase(data.title || data.page.fileSlug),
         permalink: data => (
-            data.page.fileSlug === "cranium" ? "/notes/" : `/notes/${slugify(data.page.fileSlug)}/`
+            data.page.fileSlug === "notes" ? "/notes/" : `/notes/${slugify(data.page.fileSlug)}/`
         ),
         backlinks: (data) => {
             const notes = data.collections.notes;
