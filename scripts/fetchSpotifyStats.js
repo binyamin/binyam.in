@@ -14,7 +14,7 @@ const cfg = require("../.env.json");
 // 4. Exchange code for access token with `codeToAccessToken()`;
 
 function initConfig() {
-    fs.writeFileSync(".env.json", JSON.stringify({ ...cfg, ...require("pkce-gen").create(true) }, null, 4));
+    fs.writeFileSync(".env.json", JSON.stringify({ ...cfg, ...require("pkce-gen").create({hasState: true}) }, null, 4));
 }
 
 function code_url() {
