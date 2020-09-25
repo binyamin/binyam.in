@@ -5,4 +5,4 @@ A digital garden, or mind garden, can be defined as "[a] computerized collection
 
 Anne-Laure Le Cunff wrote [a comprehensive article](https://nesslabs.com/mind-garden) on this concept.
 
-If you want to see more digital gardens, you can
+If you want some examples of digital gardens, see this list of [[Landscapers|gardens I like]].

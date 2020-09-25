@@ -1,5 +1,5 @@
 # Garden Guide
-> This page is adapted from and inspired by Shawn Wang's ["Digital Garden Terms of Service"](https://www.swyx.io/writing/digital-garden-tos)
+_This page is adapted from and inspired by Shawn Wang's ["Digital Garden Terms of Service"](https://www.swyx.io/writing/digital-garden-tos)_
 
 Welcome! You are now browsing a [[Digital Garden]]. This is my personal space for [learning In public](https://www.swyx.io/writing/learn-in-public). I am a lifelong learner, so everything here is a Work-In-Progress (like me), and I do not let perfectionism get in the way. **Nothing here is authoritative or complete, nor is it representative of my best work.**
 
