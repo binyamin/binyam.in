@@ -1,9 +1,6 @@
 const cp = require('child_process');
-const fs = require("fs");
 
-// Get node to recognize global modules
-
-const result = function(command) {
+function result(command) {
     return new Promise((resolve, reject) => {
         cp.exec(command, function(err, stdout, stderr){
             if(err != null){
@@ -17,40 +14,45 @@ const result = function(command) {
     })
 }
 
-const fetchNotes = () => {
-    result("git --version").then( __ => {
-        result("git remote get-url notes")
-        .then(__ => {
-            console.log("Remote `notes` found")
-        })
-        .catch(__ => {
-            result("git remote add notes https://github.com/binyamin/notes")
-        })
-        .finally(__ => {
-            if(process.env.NETLIFY) {
-                result("git config user.name \"Foobar\" && git config user.email \"foo@bar.io\"")
-                    .catch(e => console.error(e))
-            }
+async function fetchNotes() {
+    try {
+        // Assuming git is installed, configure git environment
+        await result("git --version");
 
-            result("git status").then(out => console.log(out)) // For debugging purposes
+        if (process.env.NETLIFY) {
+            await result("git config user.name \"Netlify Buildbot\" && git config user.email \"foo@bar.io\"");
+        }
 
-            result("git subtree add --squash --prefix=src/notes/ notes master")
-                .then(__ => {
-                    fs.copyFileSync("scripts/notesdata", "src/notes/notes.11tydata.js")
-                    console.log("Files written to src/notes")
-                })
-                .catch(e => {
-                    console.error(e.message)
-                })
-        })
-    }).catch(error => {
-        console.log(error.message)
-    })
+        // Add remote `notes`, if not existing.
+        try {
+            await result("git remote get-url notes");
+            console.log("[fetchNotes] Remote `notes` found");
+        } catch (e) {
+            result("git remote add notes https://github.com/binyamin/notes");
+            console.log("[fetchNotes] ", e.message);
+        }
+
+
+        // The next three lines copy `notes/master` into a subdirectory without
+        // committing them, yet leaving the working tree clean. It's based on
+        // https://bneijt.nl/blog/post/merge-a-subdirectory-of-another-repository-with-git/
+        await result("git merge -s ours --no-commit notes/master");
+        await result("git read-tree --prefix=src/notes/ -u notes/master");
+        await result("git reset");
+    } catch(error) {
+        throw error;
+    }
 }
 
-if (process.env.NETLIFY || process.env.NODE_ENV==="production"){
-    fetchNotes();
+if (process.env.NETLIFY || process.env.NODE_ENV==="production") {
+    fetchNotes()
+        .then(() => {
+            console.log("[fetchNotes] Notes written to `src/notes`")
+        })
+        .catch(e => {
+            throw e;
+        })
 }
 else {
-    console.log("Skipping fetchNotes");
+    console.log("[fetchNotes] Skipping");
 }
