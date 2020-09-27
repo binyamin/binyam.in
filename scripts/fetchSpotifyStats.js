@@ -67,19 +67,6 @@ function saveStats(accessToken) {
         console.error(err.response.data)
         throw err;
     })
-
-    axios.get("https://api.spotify.com/v1/me/top/artists?time_range=short_term", {
-        headers: {
-            Authorization: "Bearer "+ accessToken
-        }
-    })
-    .then(res => {
-        datacache.set("spotify.artists", res.data);
-    })
-    .catch(err => {
-        console.error(err.response.data)
-        throw err;
-    })
 }
 
 function refreshAccessToken(refresh_token) {
