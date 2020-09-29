@@ -4,6 +4,10 @@
     {% include head.html %}
 </head>
 <body>
+    {% if main_class.includes("home") %}
+        {% include banner.html%}
+    {% endif %}
+
     {% include nav.html %}
     <main class="{{main_class}}">
         {{ content }}
