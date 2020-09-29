@@ -4,14 +4,17 @@
     {% include head.html %}
 </head>
 <body>
-    {% if main_class.includes("home") %}
+    {% assign isHome = main_class | split: " " | includes: "home" %}
+    {% if isHome %}
         {% include banner.html%}
     {% endif %}
 
     {% include nav.html %}
+
     <main class="{{main_class}}">
         {{ content }}
     </main>
+
     {% include footer.html %}
     {% include metrical.html %}
 </body>
