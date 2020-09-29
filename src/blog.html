@@ -15,7 +15,7 @@ title: Writing
 
 <ul class="post-list" id="postList">
     {% for post in collections.posts reversed %}
-    <li class="post-item" data-tags={{ post.data.tags | default: "[]"}}>
+    <li class="post-item" data-tags={{ post.data.tags | default: "[]" | json }}>
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
         <p class="post-item__details">Posted {{ post.date | date: "%B %d, %Y"}}
         {% if post.data.tags %}
