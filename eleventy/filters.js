@@ -1,12 +1,14 @@
-const { arrayReplaceAt } = require("markdown-it/lib/common/utils");
-
 module.exports = (eleventyConfig, md) => {
     eleventyConfig.addFilter("absolute_url", value => {
         return "https://binyam.in" + (value.startsWith("/") ? value : "/" + value);
     })
-    
+
     eleventyConfig.addFilter("titlecase", str => {
         return titleCase(str);
+    })
+
+    eleventyConfig.addFilter("includes", (arr, value) => {
+        return arr.includes(value);
     })
 
     function alphabetaSort (left, right) {
@@ -24,14 +26,14 @@ module.exports = (eleventyConfig, md) => {
             const articleComparison = caselessCompare(left.replace(/^(a|an|the)\s/i, ""), right.replace(/^(a|an|the)\s/i, ""));
             return articleComparison === 0 ? caselessCompare(left, right) : articleComparison;
         }
-        
+
         return articleCompare(left, right);
     }
 
     eleventyConfig.addFilter("sort_ab", (arr, key) => {
         return arr.sort((a,b) => alphabetaSort(a[key], b[key]));
     })
-    
+
     eleventyConfig.addFilter("slugify", str => {
         return str
             .toLowerCase()
@@ -39,7 +41,7 @@ module.exports = (eleventyConfig, md) => {
             .replace(/\s+/g,'-')
         ;
     })
-    
+
     eleventyConfig.addFilter("markdownify", string => {
         return md.renderInline(string)
     })
