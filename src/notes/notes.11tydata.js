@@ -1,11 +1,19 @@
 const {titleCase} = require("title-case");
 
-const slugify = str => {
+function slugify(str) {
     return str
         .toLowerCase()
-        .replace(/[^\w\s]+/g,'')
-        .replace(/\s+/g,'-')
-    ;
+        .replace(/[^\w\s]+/g, '')
+        .replace(/\s+/g, '-');
+}
+
+function removeFrontmatter(content="") {
+    content = content.trimStart();
+    let yamlFm = content.substring(3, content.indexOf("---", 3)).trim();
+
+    if(!yamlFm || !content.startsWith("---")) return content; // Content has no frontmatter
+
+    return content.replace(`---\n${yamlFm}\n---`, "");
 }
 
 module.exports = {
@@ -37,11 +45,11 @@ module.exports = {
                 return linksInNote.includes(currentFileSlug);
             }).map(n => {
                 // Construct return object
-                const noteContent = n.template.inputContent;
+                const noteContent = removeFrontmatter(n.template.inputContent);
 
 
                 // Truncate noteContent for preview
-                let preview = noteContent.slice(0, 240);
+                let preview = noteContent.slice(0, 200);
 
                 // truncate preview further, to last period
                 preview = preview.slice(0, preview.lastIndexOf(".") +1);
