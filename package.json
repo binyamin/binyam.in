@@ -24,8 +24,8 @@
     "@binyamin/data-cache": "^1.1.0",
     "@kwvanderlinde/markdown-it-wikilinks": "^1.0.2",
     "canvas": "^2.6.1",
+    "clean-css": "^4.2.3",
     "del": "^6.0.0",
-    "eleventy-plugin-sass": "^1.1.1",
     "highlight.js": "^10.2.1",
     "js-yaml": "^3.14.0",
     "liquidjs": "^9.15.0",
@@ -34,6 +34,7 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
     "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
     "title-case": "^3.0.2"
   }
 }

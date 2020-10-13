@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
-    
+
     const wm = require("./eleventy/webmentions");
     eleventyConfig.addFilter("getMentionsForUrl", wm);
     require("./eleventy/filters")(eleventyConfig, md);
@@ -14,10 +14,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', "post.html");
 
     eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
-
-    eleventyConfig.addPlugin(require("eleventy-plugin-sass"), {
-        watch: ['src/sass/**/*.scss']
-    })
 
     eleventyConfig.addCollection("posts", function (collection) {
         return collection.getFilteredByGlob("src/posts/**/*.md");
@@ -31,20 +27,18 @@ module.exports = function (eleventyConfig) {
         return `<span id="wordCount">Number of words</span>`;
     })
 
-    eleventyConfig.addPairedShortcode("notice", function(content) {
-        return `<div class="notice">${md.render(content)}</div>`;
-    });
-
     eleventyConfig.setBrowserSyncConfig({
         online: false
     })
 
-    const {Liquid} = require("liquidjs");
+    const {Liquid} = require("liquidjs"); // Waiting for Eleventy@1.0.0 🎉
     eleventyConfig.setLibrary("liquid", new Liquid({
         extname: ".liquid",
         dynamicPartials: false,
         strict_filters: false
     }))
+
+    eleventyConfig.addWatchTarget("src/sass/**/*.scss");
 
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/js');
