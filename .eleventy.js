@@ -23,6 +23,10 @@ module.exports = function (eleventyConfig) {
         return collection.getFilteredByGlob("src/notes/**/*.md");
     });
 
+    eleventyConfig.addCollection("snippets", function (collection) {
+        return collection.getFilteredByGlob("src/snippets/**/*.md");
+    });
+
     eleventyConfig.addShortcode("wordCount", () => {
         return `<span id="wordCount">Number of words</span>`;
     })

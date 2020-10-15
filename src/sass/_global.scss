@@ -77,12 +77,17 @@ pre {
   line-height: normal;
 }
 
+pre.hljs {
+    border-radius: 8px;
+}
+
 pre.hljs code {
   color: inherit;
   background-color: transparent;
-  padding: inherit;
+  padding: 0 8px;
   border-radius: 0;
   line-height: normal;
+  display: inline-block;
 }
 
 /* Blockquote */

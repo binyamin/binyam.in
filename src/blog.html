@@ -21,7 +21,7 @@ title: Writing
         {% if post.data.tags %}
             &nbsp;•&nbsp;Tagged with
             {% for tag in post.data.tags %}
-                <a href="/blog?filter={{tag}}" role="button" class="post-item__tag"><strong role="img">#</strong>{{tag}}</a>
+                <a href="/blog?filter={{tag}}" role="button" class="post-item__tag"><b role="img">#</b>{{tag}}</a>
             {% endfor %}
         {% endif %}
         </p>
