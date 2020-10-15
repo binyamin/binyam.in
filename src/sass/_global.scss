@@ -23,7 +23,7 @@ main.home section.page-center {
   // 100vh, minus height of navbar, minus margin on main
   height: calc(100vh - 63px - 24px);
 
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,13 +55,22 @@ hr {
 }
 
 /* Code */
-var, kbd, code {
+var, code {
   font-family: $ff-mono;
   font-size: 90%;
-  color: #d43939;
-  background-color: #f3f3f6;
+  color: $clr-red;
+  background-color: $clr-grey--light;
   padding: 2px 4px;
   border-radius: 2px;
+}
+
+kbd {
+    font-family: $ff-mono;
+    font-size: 90%;
+    background-color: $clr-grey--light;
+    padding: 4px 8px;
+    border-radius: 999px;
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 pre {
@@ -96,12 +105,12 @@ ul > li p {
 
 // Screen Reader Only (from https://scottohara.me)
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 
@@ -255,7 +264,7 @@ ul > li p {
 
 .notes-footer {
   margin-top: 24px;
-  
+
   &::before {
     content: "";
     background-color: $clr-accent;
