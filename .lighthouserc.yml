@@ -2,8 +2,7 @@ ci:
   collect:
     url:
       - http://localhost/
-      - http://localhost/blog/
-      - http://localhost/blog/filter-posts-by-tag/
+      - http://localhost/style/
     numberOfRuns: 3
     staticDistDir: "./dist"
   assert:
