@@ -1,6 +1,7 @@
 ---
 title: Filter Posts by Tag
 date: 2020-06-10
+modified: 2020-10-18T10:47:39-04:00
 tags: [code, blogging]
 desc: >-
     Blogs can quickly become disorganized. With a bit of javascript, you can filter your posts by tag.
@@ -26,7 +27,7 @@ You can now filter your blog posts by tag. Here's the full snippet.
 
 ```js
 // Select all posts
-const posts = document.querySelectorAll(".post");
+const posts = [...document.querySelectorAll(".post")];
 
 // Get the tag in the url
 const tag = location.search.slice(location.search.indexOf("=") + 1);
