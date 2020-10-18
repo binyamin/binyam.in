@@ -12,5 +12,7 @@ This page is all about the future. Of this website.
 - Display my spotify habits from last month (wip)
 - add anchor tag to headings
 - redesign links
+- list site goals (roadmap page?)
+- list personal goals (now page?)
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
