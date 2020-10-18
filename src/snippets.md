@@ -3,15 +3,12 @@ layout: default
 title: Code Snippets
 ---
 
-# Code Snippets
+# Code Snippets {.page-title}
 Assorted pieces of code I find myself writing often.
 
 
 {% for snip in collections.snippets %}
 **{{snip.data.title}}**{.larger}
-⌚ {{snip.data.updated | date: "%B %d, %Y"}}
-{% for tag in snip.data.tags %}[<b role="img">#</b>{{tag}}](/search?tag={{tag}})&nbsp;{% endfor %}
+Last updated {{snip.data.updated | date: "%B %d, %Y"}}
 {{snip.templateContent}}
 {% endfor %}
-
-*[⌚]: Last updated
