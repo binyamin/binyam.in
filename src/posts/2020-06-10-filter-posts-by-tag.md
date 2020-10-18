@@ -1,6 +1,6 @@
 ---
 title: Filter Posts by Tag
-date: 2020-06-10
+date: 2020-06-10T12:00:00-04:00
 modified: 2020-10-18T10:47:39-04:00
 tags: [code, blogging]
 desc: >-

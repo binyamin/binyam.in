@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My top reading picks
-date: 2020-03-22T04:00:00.000Z
+date: 2020-03-23T12:00:00-04:00
 thumbnail: /assets/uploads/final.png
 desc: >-
     I love reading fantasy and science-fiction. Here

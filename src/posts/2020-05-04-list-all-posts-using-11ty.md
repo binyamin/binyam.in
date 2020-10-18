@@ -1,6 +1,6 @@
 ---
 title: List all Posts using 11ty
-date: 2020-05-04
+date: 2020-05-04T12:00:00-04:00
 thumbnail: /assets/uploads/11ty-post.jpg
 tags: [code, blogging, eleventy]
 desc: >-

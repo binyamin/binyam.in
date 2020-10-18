@@ -3,7 +3,7 @@ layout: post
 title: Six Uses for Webpack
 date: 2019-11-15T11:05:00.622Z
 desc: I've always tried to avoid Webpack. However, once you know how to use it, it can be a very effective tool.
-tags: [code]
+tags: [code, javascript]
 ---
 I've always tried to avoid Webpack. I would tell myself it was either too complicated or unnecessary. After all, it's not the only tool of its kind on the market. Yet recently I've come to terms with  Webpack. Once you know how to use it, it can be a very effective tool.
 
