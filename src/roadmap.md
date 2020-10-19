@@ -14,5 +14,8 @@ This page is all about the future. Of this website.
 - redesign links
 - list site goals (roadmap page?)
 - list personal goals (now page?)
+- collect & display bookmarks
+- show posse links for articles
+  show webmention likes
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
