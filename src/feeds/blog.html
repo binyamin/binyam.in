@@ -1,14 +1,14 @@
 ---
-permalink: feed.xml
+permalink: feeds/blog.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Writing | {{ site.title }}</title>
+    <title>{{ site.title }}</title>
     <description>RSS feed for https://binyam.in</description>
     <link>https://binyam.in/</link>
-    <atom:link href="http://binyam.in/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://binyam.in/feeds/index.xml" rel="self" type="application/rss+xml" />
     <pubDate>{{ "now" | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <copyright>Copyright 2020, Binyamin Aron Green</copyright>
     <docs>https://cyber.harvard.edu/rss/rss.html</docs>
