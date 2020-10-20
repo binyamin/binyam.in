@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/binyamin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://binyam.in
+  * I am binyamin (https://keybase.io/binyamin) on keybase.
+  * I have a public key with fingerprint 64F0 693F 3022 0749 E571  1A5A C27D 091C 9A45 3A1E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101958c277c305e1f85f0f1e6cad21082ff51ce8f68ae890f19959e945af1a58ab50a",
+      "fingerprint": "64f0693f30220749e5711a5ac27d091c9a453a1e",
+      "host": "keybase.io",
+      "key_id": "c27d091c9a453a1e",
+      "kid": "0101958c277c305e1f85f0f1e6cad21082ff51ce8f68ae890f19959e945af1a58ab50a",
+      "uid": "611b1f7fe3126d6ad49aaf31325f2419",
+      "username": "binyamin"
+    },
+    "service": {
+      "hostname": "binyam.in",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1603222394,
+  "expire_in": 157680000,
+  "prev": "6771550c3084783206089cdfcbc3f50d6fdd7284a7141954272b7d0d23546d34",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMIgAnicrZJbSBVBGMfPMbU8JakRpZjQFpXXZnZ39nIyCEKEoIdKSyXcZndndL3s
+OZ093jENMsFKi3yQExEUaIZGCFFQUZqBkSFKEmF3QiywHroQQtGs1EPQY/MyzDe/
+/3++/8eMxi/x+LwjzXGpkTx/mvfRcHeNR+va1tjE6QGzgfM3cZVkcSNVJnHCWqVl
+cn4OQABVpBi8LBsCQARSBVFAIZEMbPIQKDylCBpEoZKCiaKyK1VFKlFFhCnESME6
+ApjL4qhll5FQMGTZYWYriRRIqkAFwPNAFlWCZMhozN4xgQoNFYtIwJAwYXnAcRWs
+OR07JMcKsBo7aIvt/YP/z33XLNpJEOqQypQIkJdMCZuiijEVoMAjyotQdUGHhGxc
+TRitW3YDrrZsrjmLY9VayyDuYN0kfxE5DMnigqFAOGAEqli5PBwOOn5XFm4Iulwd
+0bXfDhrTmGyITFFLQo4VsDk/ZKQRtlxLKAGB53lBFbM4Uh+0QkSzXALJkgLYct8h
+tW4UWYYIATYVRZQVgQcSUFTDpIZuCBQBU6KmKfOKiGXIgiGRl3mdDdnkBSRKpiBy
+bqbDdoDzy6xNXMYsHavMxuGaEOGaR+4djPZ4fZ7YmCj3c3l8cQl/vtzeD0sXovr3
+pzrzucn2WNG79rgfBza3at9GI0PquqrGnMn+rd6LkSOXHngHZq9PFt6we1rFPH/m
+zLKrx+szuj7PTKzakZkeAxJenq24FaU1R9p13PfE2XemN8aTKx5Kqe0L1hfGJW/c
+3rKi5NzujgLf8PvV+ZvSrcv32xZGvt4Zj5bKejqOTo0NFb9Ymz96e2VK5qnuztGk
+4M4FC6R0TX7Z5T19TJkLPsv0dYReD01cmXk+PvtdvblhT2vJ+rnsn5OPtaKeuork
+lmuJb94mFs1nV38s7WyNL7Wrok8UJAoFFWks0PI1bdNPO1+dnCrOeKh5Yhe23O0d
+6JQ/RZIaLkwP9pwfHP4F/4k1XA==
+=ui+K
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/binyamin
+
+==================================================================

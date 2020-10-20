@@ -47,6 +47,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
+    eleventyConfig.addPassthroughCopy("src/keybase.txt");
 
     return {
         useGitIgnore: false,
