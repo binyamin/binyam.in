@@ -35,26 +35,26 @@
 
 <title>{{-metatitle-}}</title>
 
+<meta name="generator" content="Eleventy v0.11.0">
 <meta name="author" content="Binyamin Aron Green">
 <meta name="description" content="{{- metadesc -}}">
-<meta name="keywords" content="programmer, web developer, developer, websites, front-end, full-stack, back-end, web designer, html, html5, css, css3, javascript, react, node, express">
-<meta name="theme-color" content="#49a670">
+<meta name="keywords" content="web developer, developer, jewish, judaism, jew, front-end, designer, html, css, javascript, jamstack">
 
 <meta property="og:title" content="{{-metatitle-}}">
 <meta property="og:type" content="{{metatype}}">
-<meta property="og:url" content="{{ page.url | prepend: 'https://binyam.in' }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{- metaicon -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
-<link rel="canonical" href="{{ page.url | prepend: 'https://binyam.in'}}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <link href="https://binyam.in/feeds/blog.xml" rel="alternate" type="application/atom+xml" title="Binyamin Green's Blog"/>
-<link href="https://binyam.in/feeds/dev.xml" rel="alternate" type="application/atom+xml" title="Binyamin Green's Dev Blog"/>
+<link href="https://binyam.in/feeds/dev.xml" rel="alternate" type="application/atom+xml" title="Binyamin Green's Developer Blog"/>
 
 <link rel="webmention" href="https://webmention.io/binyam.in/webmention" />
 <link rel="pingback" href="https://webmention.io/binyam.in/xmlrpc" />
 
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@{{- site.author.twitter -}}" />
 <meta name="twitter:creator" content="@{{- site.author.twitter -}}" />
 <meta name="twitter:title" content="{{-metatitle-}}" />
@@ -74,7 +74,3 @@
 <script defer src="/js/index.js"></script>
 
 <link rel="preconnect" href="https://cdn.metrical.xyz/" crossorigin>
-
-<!-- Boxicons -->
-<!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> -->
-<!-- <script defer src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script> -->
