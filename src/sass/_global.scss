@@ -114,6 +114,26 @@ blockquote {
   }
 }
 
+/* Chips */
+.chip {
+    background-color: $clr-grey--light;
+    font-size: 90%;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: $clr-grey--dark !important;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $clr-accent--light;
+        color: $clr-accent--dark !important;
+    }
+
+    &:focus {
+        outline: none !important;
+        box-shadow: inset 0 0 0 1px currentColor;
+    }
+}
+
 /* Lists */
 ul > li p {
   margin: auto;
