@@ -1,0 +1,17 @@
+/* Backlinks */
+.bl {
+  &__title {
+    font-weight: 700;
+    margin: 8px 0;
+  }
+
+  &__note {
+    margin: 0;
+    color: $clr-grey--dark;
+    font-style: italic;
+  }
+
+  &__links {
+    margin-top: 0;
+  }
+}
