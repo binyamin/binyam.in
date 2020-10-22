@@ -1,29 +1,27 @@
 ---
 layout: default
-title: Writing
+title: Articles
 ---
 
-<header>
-    <h1 class="blog-title">Writing</h1>
+<header class="posts-header">
+    <h1 class="posts-title">Articles</h1>
     <p><a href="/feeds/blog.xml">RSS</a></p>
-    <p class="blog-tag" id="pageTag" hidden>
+    <p class="posts-tag" id="pageTag" hidden>
         <small>
             <a href="{{page.url}}" role="button">(clear)</a>
         </small>
     </p>
 </header>
 
-<ul class="post-list" id="postList">
+<ul class="posts" id="postList">
     {% for post in collections.posts reversed %}
-    <li class="post-item" data-tags={{ post.data.tags | default: "[]" | json }}>
+    <li class="post-item" data-tags='{{ post.data.tags | default: "[]" | json }}'>
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
-        <p class="post-item__details">Posted {{ post.date | date: "%B %d, %Y"}}
-        {% if post.data.tags %}
-            &nbsp;•&nbsp;Tagged with
-            {% for tag in post.data.tags %}
-                <a href="/blog?filter={{tag}}" role="button" class="post-item__tag"><b role="img">#</b>{{tag}}</a>
-            {% endfor %}
-        {% endif %}
+        <p class="post-item__details">Posted on {{ post.date | date: "%B %d, %Y"}}
+        {%if post.data.tags %}&bull;{%endif%}
+        {% for tag in post.data.tags %}
+            <a href="/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b role="img">#</b>{{tag}}</a>
+        {% endfor %}
         </p>
         <div class="post-item__desc">{{post.data.desc}}<div>
     </li>
