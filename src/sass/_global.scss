@@ -45,7 +45,22 @@ main.home {
 }
 
 hr {
-  width: 100%;
+  border: none;
+  height: 2px;
+  width: 80%;
+  background-color: $clr-grey;
+}
+
+.section-header{
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: calc(100% - 16px);
+    background-color: $clr-grey;
+  }
 }
 
 .text-center {
@@ -177,52 +192,5 @@ ul > li p {
 
   p:last-of-type {
     margin-top: 8px;
-  }
-}
-
-.bl {
-  margin-top: 12px;
-  color: $clr-grey--dark;
-
-  &__title {
-    font-size: $fs-h4;
-    margin-bottom: 0;
-  }
-
-  &__link-item {
-    margin-left: 12px;
-  }
-
-  &__url {
-    color: currentColor !important;
-  }
-
-  &__default {
-    margin: 0;
-    font-size: $fs-small;
-  }
-  &__link-item p {
-    font-size: $fs-small;
-    margin: 0 0 0 6px;
-  }
-}
-
-.notes-footer {
-  margin-top: 24px;
-
-  &::before {
-    content: "";
-    background-color: $clr-accent;
-    height: 2px;
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-  }
-
-  color: $clr-grey--dark;
-  font-style: italic;
-
-  a {
-    color: currentColor !important;
   }
 }

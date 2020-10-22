@@ -2,7 +2,7 @@
 {% assign mentions = webmentions | getMentionsForUrl: wm_url %}
 
 <section id="webmentions">
-    <p class="wm-title">Webmentions</p>
+    <p class="wm-title section-header">Webmentions</p>
     <div class="wm-summary">
         <p class="wm-likes" title="likes"><span aria-label="likes">❤️</span>{{ mentions.likes | size }}</p>
         <p class="wm-replies" title="replies"><span aria-label="Replies">💬</span> {{ mentions.replies | size }}</p>
