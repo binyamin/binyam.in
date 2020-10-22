@@ -1,0 +1,36 @@
+// Webmentions
+.wm-title {
+    font-weight: 700;
+    font-size: $fs-h5;
+    margin: 0 0 8px 0;
+}
+
+.wm-likes, .wm-replies {
+    display: inline-block;
+    margin: 0 8px 0 0;
+}
+.wm-mentions {
+    margin: 12px 0;
+    padding: 0;
+}
+
+.wm-mention {
+    margin: 36px 0;
+    list-style: none;
+}
+
+.wm-mentioner__img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin: 0 12px 4px 0;
+    float: left;
+}
+
+.wm-mentioner {
+    display: inline-block;
+}
+
+.wm-mention__time {
+    color: $clr-grey--dark;
+}
