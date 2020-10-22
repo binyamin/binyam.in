@@ -1,12 +1,13 @@
-[class^=btn] {
+[class*=btn] {
+    cursor: pointer;
     border: none;
-    background-color: $clr-accent--dark;
+    background-color: $clr-accent;
     color: white;
     border-radius: 4px;
     padding: 8px 12px;
 
     &:hover, &:focus {
-        background-color: $clr-accent;
+        opacity: 0.9;
     }
 }
 
