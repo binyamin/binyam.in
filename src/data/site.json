@@ -4,9 +4,31 @@
     "author": {
         "name": "Binyamin Aron Green",
         "twitter": "binyamingreen",
-        "github": "binyamin",
         "photo": "/assets/img/profile.webp"
     },
-    "url": "https://binyam.in",
-    "layout": "default"
+    "links": [
+        {
+            "name": "email",
+            "handle": "binyamingreen@protonmail.com",
+            "url": "mailto:binyamingreen@protonmail.com"
+        },
+        {
+            "name": "github",
+            "handle": "@binyamin",
+            "url": "https://github.com/binyamin",
+            "me": true
+        },
+        {
+            "name": "twitter",
+            "handle": "@binyamingreen",
+            "url": "https://twitter.com/binyamingreen"
+        },
+        {
+            "name": "mastodon",
+            "handle": "@binyamin@fosstodon.org",
+            "url": "https://fosstodon.org/@binyamin",
+            "me": true
+        }
+    ],
+    "url": "https://binyam.in"
 }
