@@ -1,4 +1,4 @@
-const titleCase = require("title-case");
+const {titleCase} = require("title-case");
 
 module.exports = (eleventyConfig, md) => {
     eleventyConfig.addFilter("absolute_url", value => {
