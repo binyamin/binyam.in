@@ -20,7 +20,7 @@ title: Articles
         <p class="post-item__details">Posted on {{ post.date | date: "%B %d, %Y"}}
         {%if post.data.tags %}&bull;{%endif%}
         {% for tag in post.data.tags %}
-            <a href="/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b role="img">#</b>{{tag}}</a>
+            <a href="/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b aria-label="tagged as">#</b>{{tag}}</a>
         {% endfor %}
         </p>
         <div class="post-item__desc">{{post.data.desc}}<div>

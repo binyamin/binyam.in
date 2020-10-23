@@ -12,7 +12,7 @@ main_class: post
             &bull;
             <span class="post__tags">
                 {% for tag in tags %}
-                <a href="/blog?filter={{tag}}" class="chip"><b role="img">#</b><span class="p-category">{{tag}}</span></a>
+                <a href="/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
                 {% endfor %}
                 <a href="/blog" class="p-category" hidden>article</a>
             </span>

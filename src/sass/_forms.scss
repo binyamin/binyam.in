@@ -6,8 +6,8 @@ button, a[class*=btn] {
     border-radius: 4px;
     padding: 8px 12px;
 
-    &:hover, &:focus {
-        opacity: 0.8;
+    &:hover {
+      color: $clr-black--light;
     }
 }
 

@@ -139,8 +139,8 @@ blockquote {
     text-decoration: none;
 
     &:hover {
-        background-color: $clr-accent--light;
-        color: $clr-accent--dark !important;
+        background-color: $clr-accent--extra-light;
+        color: $clr-accent--extra-dark !important;
     }
 
     &:focus {
