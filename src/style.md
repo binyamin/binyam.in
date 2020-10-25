@@ -1,6 +1,8 @@
 ---
 title: Style
 layout: default
+ignore: true
+eleventyExcludeFromCollections: true
 ---
 
 # Styles
