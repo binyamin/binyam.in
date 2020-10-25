@@ -3,7 +3,7 @@ title: Roadmap
 layout: default
 ---
 
-# 🚦 Roadmap {.page-title}
+# 🚦 Roadmap
 This page is all about the future. Of this website.
 - More animations
 - Send Webmentions automatically
@@ -18,5 +18,6 @@ This page is all about the future. Of this website.
 - show posse links for articles
 - ~~show webmention likes~~
 - ~~list internet profiles~~
+- blogroll
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)

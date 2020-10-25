@@ -3,7 +3,7 @@ layout: default
 title: Code Snippets
 ---
 
-# Code Snippets {.page-title}
+# Code Snippets
 Assorted pieces of code I find myself writing often.
 
 
