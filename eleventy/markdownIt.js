@@ -23,7 +23,14 @@ const markdownItOptions = {
 const md = markdownIt(markdownItOptions)
     .use(require('markdown-it-footnote'))
     .use(require('markdown-it-attrs'))
-    .use(require('markdown-it-abbr'))
+    .use(require('markdown-it-anchor'), {
+        level: 2,
+        permalink: true,
+        permalinkBefore: true,
+        permalinkSymbol: "#",
+        permalinkSpace: false,
+        permalinkAttrs: () => ({role: "none"})
+    })
     .use(function(md) {
         md.linkify.add("#", {
             validate: /^[\w-]+/,

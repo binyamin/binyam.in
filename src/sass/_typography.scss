@@ -7,7 +7,6 @@ html {
   }
 }
 
-
 body {
   line-height: 1.75;
   font-family: $ff-sans;
@@ -37,3 +36,17 @@ h4 {font-size: $fs-h4}
 h5, .text--larger {font-size: $fs-h5}
 
 small, .text--small {font-size: $fs-small}
+
+// Permalink Symbol
+.header-anchor {
+  margin-left: -1ch;
+  margin-right: 4px;
+  text-decoration: none;
+  color: $clr-grey--light !important;
+}
+
+h1, h2, h3, h4, h5 {
+  &:hover .header-anchor {
+    color: $clr-grey--dark !important;
+  }
+}
