@@ -27,10 +27,6 @@ module.exports = function (eleventyConfig) {
         return collection.getFilteredByGlob("src/snippets/**/*.md");
     });
 
-    eleventyConfig.addShortcode("wordCount", () => {
-        return `<span id="wordCount">Number of words</span>`;
-    })
-
     eleventyConfig.setBrowserSyncConfig({
         online: false
     })

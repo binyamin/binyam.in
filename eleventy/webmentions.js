@@ -1,14 +1,19 @@
 // Webmentions filter
 module.exports = (webmentions, url) => {
-    const allowedTypes = ['mention-of', 'in-reply-to']
+    const replyTypes = ['mention-of', 'in-reply-to']
+    const likeType = "like-of"
 
     const hasRequiredFields = entry => {
         const { author, published, content } = entry
         return author.name && published && content
     }
 
-    return webmentions.children
+    const children = webmentions.children
         .filter(entry => entry['wm-target'] === url)
-        .filter(entry => allowedTypes.includes(entry['wm-property']))
         .filter(hasRequiredFields)
+
+    return {
+        like: children.filter(entry => entry["wm-property"] === likeType),
+        replies: children.filter(entry => replyTypes.includes(entry['wm-property']))
+    }
 }

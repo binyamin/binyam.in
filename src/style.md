@@ -1,12 +1,13 @@
 ---
 title: Style
 layout: default
+ignore: true
+eleventyExcludeFromCollections: true
 ---
 
 # Styles
 
 ## Text
-
 # H1
 ## H2
 ### H3
@@ -30,10 +31,13 @@ function foo(bar) {
 
 <button class="btn">Button</button>
 
+
 ## Inline Elements
++ This is a [#chip](#){.chip}
 + Keyboard Input: <kbd>Enter</kbd>
 + Inline code - `Inline Code`
-+ [This is a text link](#).
++ [This is an internal text link](#).
++ [This is an external text link](https://github.com)
 + <strong>Strong is used to indicate strong importance.</strong>
 + <em>This text has added emphasis.</em>
 + The <b>b element</b> is stylistically different text from normal text, without any special importance.

@@ -2,24 +2,25 @@
 layout: default
 main_class: note
 ---
-<header>
-    <h1 class="p-name">{{title}}</h1>
-</header>
-<article class="p-content">
-    {{ content }}
+<article>
+    <header>
+        <h1 class="p-name">{{title}}</h1>
+    </header>
+    <section class="p-content">
+        {{ content }}
+    </section>
+
+    <section class="bl">
+        <p class="bl__title text--larger section-header">Linking to this Note</p>
+        {% if backlinks.length > 0 %}
+        <ul class="bl__links">
+            {% for link in backlinks %}
+            <li class="bl__link"><a href="{{link.url}}">{{link.title}}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="bl__note">No backlinks found</p>
+        {% endif %}
+    </section>
 </article>
-<div class="bl">
-    <p class="bl__title">Linking to this Note</p>
-    {% unless backlinks.length > 0 %}
-    <p class="bl__default">No backlinks found</p>
-    {% endunless%}
-    {% for link in backlinks %}
-    <div class="bl__link-item">
-        <a href="{{link.url}}" class="bl__url">{{link.title}}</a>
-        <p>{{link.preview | markdownify | strip_html | default: "This note is mysterious"}}</p>
-    </div>
-    {% endfor %}
-</div>
-<footer class="notes-footer details">
-    <p>If you enjoyed this note, let me know! You can <a href="mailto:binyamingreen@protonmail.com">email</a> me, or send me a <a href="https://twitter.com/messages/compose?recipient_id=1084624370327322624">direct message</a> on twitter.</p>
-</footer>
+

@@ -1,17 +1,28 @@
-$clr-accent--light: #6FCF97;
-$clr-accent: #5E9876;
-$clr-accent--dark: #386C4E;
+$clr-accent: #44835c;
+$clr-accent--extra-light: mix($clr-accent, white, 35);
+$clr-accent--extra-dark: mix($clr-accent, black, 65);
+
 $clr-blue: #2D9CDB;
-$clr-black: #000;
-$clr-grey--dark: #444;
+
 $clr-red: #c92c2c;
-$clr-grey--light: #f3f3f6;
-$clr-grey: mix($clr-grey--dark, $clr-grey--light);
 
-$fs-h3: 1.728em;
-$fs-h4: 1.44em;
-$fs-h5: 1.2em;
-$fs-small: 0.833em;
+$clr-black: #000;
+$clr-black--light: #080808;
 
-$ff-sans: 'Inter', "Segoe UI", Arial, Helvetica, sans-serif;
+$clr-white: #fff;
+$clr-white--dark: #f3f3f6;
+
+$clr-grey--light:#e1e1e1;
+$clr-grey: #9c9c9d;
+$clr-grey--dark: #444;
+
+$fs-h1: 2.488rem;
+$fs-h2: 2.074rem;
+$fs-h3: 1.728rem;
+$fs-h4: 1.44rem;
+$fs-h5: 1.2rem;
+$fs-small: 0.833rem;
+
+$ff-sans: 'Inter', Arial, Helvetica, sans-serif;
 $ff-mono: "Source Code Pro", Monaco, Consolas, "Courier New", monospace;
+$ff-serif: "Crimson Pro", 'Times New Roman', Times, serif;

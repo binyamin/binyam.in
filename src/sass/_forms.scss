@@ -1,12 +1,13 @@
-[class^=btn] {
+button, a[class*=btn] {
+    cursor: pointer;
     border: none;
-    background-color: $clr-accent--dark;
+    background-color: $clr-accent;
     color: white;
     border-radius: 4px;
     padding: 8px 12px;
 
-    &:hover, &:focus {
-        background-color: $clr-accent;
+    &:hover {
+      color: $clr-black--light;
     }
 }
 
@@ -17,9 +18,9 @@
 .form {
     text-align: center;
 
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 2px 4px;
     margin: 24px 0;
-    background-color: #efefef;
-    border: 1px solid #dddddd;
+    background-color: $clr-white--dark;
+    border: 2px solid $clr-grey--light;
 }

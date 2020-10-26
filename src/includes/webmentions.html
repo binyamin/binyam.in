@@ -1,20 +1,23 @@
 {% assign wm_url = page.url | absolute_url %}
 {% assign mentions = webmentions | getMentionsForUrl: wm_url %}
 
-{% if mentions.length > 0 %}
-<h2>Webmentions
-    <a href="https://indieweb.org/Webmention" class="wm-note" title="What are webmentions?">(?)</a>
-</h2>
-<ul class="wm-mentions">
-    {% for mention in mentions %}
-    <li class="u-comment h-cite wm-mention">
-        <a class="u-url h-card wm-mentioner" href="{{mention.url}}">
-            <img class="u-photo wm-mentioner__img" src="{{mention.author.photo}}" alt="Picture of {{mention.author.name}}">
-            <span class="p-name wm-mentioner__name">{{mention.author.name}}</span>
-        </a>
-        <time class="dt-published wm-mention__time" datetime="{{mention['wm-received'] | date: '%Y-%m-%dT%H:%M:%S%z'"}}">{{mention['wm-received'] | date: "%B %d, %Y - %I:%M%P"}}</time>
-        <div class="p-content wm-mention__content">{{mention.content.html | truncate: 160}}</div>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
+<section id="webmentions">
+    <p class="wm-title section-header">Webmentions</p>
+    <div class="wm-summary">
+        <p class="wm-likes" title="likes"><span aria-label="likes">❤️</span>{{ mentions.likes | size }}</p>
+        <p class="wm-replies" title="replies"><span aria-label="Replies">💬</span> {{ mentions.replies | size }}</p>
+        <a href="https://indieweb.org/Webmention" class="wm-info" title="What are webmentions?">What is this?</a>
+    </div>
+    <ul class="wm-mentions">
+        {% for mention in mentions.replies %}
+        <li class="u-comment h-cite wm-mention">
+            <a class="u-url h-card wm-mentioner" href="{{mention.url}}">
+                <img class="u-photo wm-mentioner__img" src="{{mention.author.photo}}" alt="Picture of {{mention.author.name}}">
+                <span class="p-name wm-mentioner__name">{{mention.author.name}}</span>
+            </a>
+            <time class="dt-published wm-mention__time" datetime="{{mention['wm-received'] | date: '%Y-%m-%dT%H:%M:%S%z'"}}">{{mention['wm-received'] | date: "%B %d, %Y - %I:%M%P"}}</time>
+            <div class="p-content wm-mention__content">{{mention.content.html | truncate: 160}}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

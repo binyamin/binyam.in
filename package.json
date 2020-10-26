@@ -29,9 +29,10 @@
     "js-yaml": "^3.14.0",
     "liquidjs": "^9.16.1",
     "markdown-it": "^12.0.1",
-    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-anchor": "^6.0.0",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
+    "markdown-it-link-attributes": "^3.0.0",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "title-case": "^3.0.2"

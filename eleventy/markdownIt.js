@@ -23,7 +23,25 @@ const markdownItOptions = {
 const md = markdownIt(markdownItOptions)
     .use(require('markdown-it-footnote'))
     .use(require('markdown-it-attrs'))
-    .use(require('markdown-it-abbr'))
+    .use(require('markdown-it-anchor'), {
+        level: 2,
+        permalink: true,
+        permalinkBefore: true,
+        permalinkSymbol: "#",
+        permalinkSpace: false,
+        permalinkAttrs: () => ({role: "none"})
+    })
+    .use(require('markdown-it-link-attributes'), [
+        // Prevent XSS attacks & provide good UX
+        // Mark external, absolute links correctly
+        {
+            pattern: /^https?:\/\/(?!(binyam\.in|localhost))/,
+            attrs: {
+                rel: "external noopener noreferrer",
+                target: "_blank"
+            }
+        }
+    ])
     .use(function(md) {
         md.linkify.add("#", {
             validate: /^[\w-]+/,

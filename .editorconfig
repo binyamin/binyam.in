@@ -10,5 +10,5 @@ insert_final_newline = true
 [.env*]
 insert_final_newline = false
 
-[*.{yml,yaml}]
+[*.{yml,yaml,scss}]
 indent_size = 2

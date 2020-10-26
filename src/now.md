@@ -4,7 +4,7 @@ layout: default
 modified: 2020-10-18T14:42:59-04:00
 ---
 
-# Now {.page-title}
+# Now
 Last updated on {{ modified | pretty_date }}
 
 * I've given up on my writing goals. I'd like to focus on hobby-coding and school.

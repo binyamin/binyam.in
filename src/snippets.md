@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Code Snippets
+ignore: true
+eleventyExcludeFromCollections: true
 ---
 
-# Code Snippets {.page-title}
+# Code Snippets
 Assorted pieces of code I find myself writing often.
 
 

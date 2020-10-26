@@ -20,6 +20,10 @@
   from = "/gifts"
   to = "https://www.gifthero.com/list/c94b429f-1dfa-4ab2-95d8-ad8094446ed7"
 
+[[redirects]]
+  from = "/listening"
+  to = "https://visualify.io/share/MB4iQ9yTQtgjtYpGC"
+
 [[headers]]
   for = "/**/*"
   [headers.values]
