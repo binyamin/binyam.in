@@ -1,19 +1,19 @@
 ---
-permalink: feeds/dev.xml
+permalink: /feed.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Developer Blog | {{ site.title }}</title>
-    <description>RSS feed for code-related articles on https://binyam.in</description>
+    <title>{{ site.title }}</title>
+    <description>RSS feed for https://binyam.in</description>
     <link>https://binyam.in/</link>
-    <atom:link href="http://binyam.in/feeds/dev.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://binyam.in/feeds/index.xml" rel="self" type="application/rss+xml" />
     <pubDate>{{ "now" | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <copyright>Copyright 2020, Binyamin Aron Green</copyright>
     <docs>https://cyber.harvard.edu/rss/rss.html</docs>
     <language>en-us</language>
-    {% for post in collections.code %}
+    {% for post in collections.posts %}
     <item>
       <title>{{ post.data.title }}</title>
       <description>{{ post.templateContent | escape_once }}</description>
