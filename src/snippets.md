@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Code Snippets
+ignore: true
+eleventyExcludeFromCollections: true
 ---
 
 # Code Snippets
