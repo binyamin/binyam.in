@@ -172,33 +172,3 @@ ul > li p {
   white-space: nowrap;
   width: 1px;
 }
-
-.reading-list {
-  list-style: none;
-  box-sizing: border-box;
-  margin: 72px 0 0 0;
-  padding: 0;
-}
-
-.book {
-    margin: 36px 0;
-    box-sizing: border-box;
-
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    grid-template-columns: 75px 1fr;
-    column-gap: 12px;
-
-  &-img {
-    grid-row: 1/-1;
-    width: 100%;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  p:last-of-type {
-    margin-top: 8px;
-  }
-}
