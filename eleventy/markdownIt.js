@@ -31,6 +31,17 @@ const md = markdownIt(markdownItOptions)
         permalinkSpace: false,
         permalinkAttrs: () => ({role: "none"})
     })
+    .use(require('markdown-it-link-attributes'), [
+        // Prevent XSS attacks & provide good UX
+        // Mark external, absolute links correctly
+        {
+            pattern: /^https?:\/\/(?!(binyam\.in|localhost))/,
+            attrs: {
+                rel: "external noopener noreferrer",
+                target: "_blank"
+            }
+        }
+    ])
     .use(function(md) {
         md.linkify.add("#", {
             validate: /^[\w-]+/,
