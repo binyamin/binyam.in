@@ -1,6 +1,10 @@
 /* Typography */
 html {
   font-size: 112.5%; /* 18px */
+
+  @media only screen and (max-width: 768px) {
+    font-size: 100%;
+  }
 }
 
 
