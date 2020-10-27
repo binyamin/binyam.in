@@ -1,5 +1,4 @@
 // Custom Markdown parser
-
 const hljs = require('highlight.js');
 
 const markdownIt = require('markdown-it');
@@ -31,17 +30,21 @@ const md = markdownIt(markdownItOptions)
         permalinkSpace: false,
         permalinkAttrs: () => ({role: "none"})
     })
-    .use(require('markdown-it-link-attributes'), [
+    .use(require("markdown-it-for-inline"), "link_external", "link_open", function(tokens, idx) {
         // Prevent XSS attacks & provide good UX
-        // Mark external, absolute links correctly
-        {
-            pattern: /^https?:\/\/(?!(binyam\.in|localhost))/,
-            attrs: {
-                rel: "external noopener noreferrer",
-                target: "_blank"
-            }
+        // Mark external, absolute links;
+
+        const regexp = /^https?:\/\/(?!(binyam\.in|localhost))/; // Is link external?
+        const url = tokens[idx].attrGet("href");
+
+        if(regexp.test(url)) {
+            let oldRel = tokens[idx].attrGet("rel");
+            let relStr = `${oldRel || ""} external noopener noreferrer`.trim();
+
+            tokens[idx].attrSet("rel",  relStr);
+            tokens[idx].attrSet("target", "_blank")
         }
-    ])
+    })
     .use(function(md) {
         md.linkify.add("#", {
             validate: /^[\w-]+/,

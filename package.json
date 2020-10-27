@@ -32,7 +32,7 @@
     "markdown-it-anchor": "^6.0.0",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
-    "markdown-it-link-attributes": "^3.0.0",
+    "markdown-it-for-inline": "^0.1.1",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "title-case": "^3.0.2"
