@@ -41,7 +41,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("src/sass/**/*.scss");
 
     eleventyConfig.addPassthroughCopy('src/assets');
-    eleventyConfig.addPassthroughCopy('src/js');
     eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
     eleventyConfig.addPassthroughCopy("src/keybase.txt");
 

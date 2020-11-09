@@ -1,24 +1,26 @@
+@use '../helpers' as *;
+
 html {
   scroll-behavior: smooth;
 }
 
 a[href]:not([class*=btn]) {
   color: currentColor;
-  text-decoration-color: $clr-accent;
+  text-decoration-color: $c-accent;
   text-decoration-thickness: 2px;
 
   &:hover {
-    color: $clr-accent;
+    color: $c-accent;
   }
 
   &:focus {
-    outline: 2px solid $clr-accent;
+    outline: 2px solid $c-accent;
     outline-offset: 2px;
   }
 
   &[rel*=external]::after {
     // content: "↗";
-    color: $clr-accent;
+    color: $c-accent;
     font-weight: 700;
   }
 }

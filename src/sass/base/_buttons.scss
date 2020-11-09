@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+button,
+a[class*=btn] {
+  background-color: $c-accent;
+  border: 0;
+  border-radius: 4px;
+  color: $c-white;
+  cursor: pointer;
+  padding: 8px 12px;
+
+  &:hover {
+    color: $c-black--light;
+  }
+}

@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+// Webmentions
+.wm-title {
+  font-size: f-size(5);
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.wm-likes,
+.wm-replies {
+  display: inline-block;
+  margin: 0 8px 0 0;
+}
+
+.wm-mentions {
+  margin: 12px 0;
+  padding: 0;
+}
+
+.wm-mention {
+  list-style: none;
+  margin: 36px 0;
+}
+
+.wm-mentioner__img {
+  border-radius: 50%;
+  float: left;
+  height: 32px;
+  margin: 0 12px 4px 0;
+  width: 32px;
+}
+
+.wm-mentioner {
+  display: inline-block;
+}
+
+.wm-mention__time {
+  color: $c-grey--dark;
+}

@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+var,
+code {
+  background-color: $c-white--dark;
+  border-radius: 2px;
+  color: $c-danger;
+  font-family: $f-mono;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+
+kbd {
+  background-color: $c-white--dark;
+  border-radius: 999px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  font-family: $f-mono;
+  font-size: 90%;
+  padding: 4px 8px;
+}
+
+pre {
+  line-height: normal;
+}
+
+.hljs {
+  border-radius: 8px;
+}
+
+.hljs code {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  display: inline-block;
+  line-height: normal;
+  padding: 0 8px;
+}

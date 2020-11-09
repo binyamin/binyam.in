@@ -1,5 +1,5 @@
 const path = require("path");
-const sass = require("node-sass");
+const sass = require("sass");
 const CleanCSS = require("clean-css");
 
 // Compile Sass - Shamelessly copied from MaxBoeck / eleventastic
@@ -10,9 +10,9 @@ const isProd = process.env.CI || !isDev;
 
 module.exports = class {
     async data() {
-        const entryPath = path.join(__dirname, "style.scss");
+        const entryPath = path.join(__dirname, "main.scss");
         return {
-            permalink: `/styles/style.css`,
+            permalink: `/assets/css/style.css`,
             eleventyExcludeFromCollections: true,
             entryPath
         }

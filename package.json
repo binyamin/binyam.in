@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "description": "My personal website",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --quiet --serve",
+    "dev": "eleventy --incremental --quiet --serve",
+    "lint": "stylelint \"src/sass/**/*.scss\"",
+    "test": "npm run lint",
     "prebuild": "node scripts/fetchNotes && node scripts/generateImages",
     "build": "eleventy"
   },
@@ -34,7 +37,11 @@
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-for-inline": "^0.1.1",
     "node-fetch": "^2.6.1",
-    "node-sass": "^4.14.1",
+    "sass": "^1.29.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "title-case": "^3.0.2"
   }
 }

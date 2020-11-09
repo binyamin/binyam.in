@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+/// @todo light/dark versions of each color
+
+// alerts
+$info: #2D9CDB;
+$success: #26A69A;
+$danger: #c92c2c;
+$warning: #ffd54f;
+
+$accent: #44835c;
+$accent--extra-light: mix($accent, #fff, 35);
+$accent--extra-dark: mix($accent, #000, 65);
+
+$black: #000;
+$black--light: #080808;
+
+$white: #fff;
+$white--dark: #f3f3f6;
+
+$grey--light: #e1e1e1;
+$grey: #9c9c9d;
+$grey--dark: #444;

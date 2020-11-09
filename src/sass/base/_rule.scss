@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+hr {
+  background-color: $c-grey;
+  border: 0;
+  height: 2px;
+  width: 80%;
+}

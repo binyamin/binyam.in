@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px;
+  min-height: 100vh;
+}
+
+main:not(.default) {
+  flex-grow: 1;
+  margin: 48px auto 0;
+  max-width: calc(100% - 48px); /* 100% width with 24px gutters */
+  min-width: 328px;
+  width: 66ch;
+}
+
+.page-footer {
+  border-top: 1px solid $c-grey;
+  display: inline-block;
+  margin: 8px auto;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.card {
+  background-color: $c-white--dark;
+  border: 2px solid $c-grey--light;
+  border-radius: 4px;
+  margin: 24px 0;
+  padding: 2px 4px;
+  text-align: center;
+}

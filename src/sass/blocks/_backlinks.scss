@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 /* Backlinks */
 .bl {
   &__title {
@@ -6,9 +8,9 @@
   }
 
   &__note {
-    margin: 0;
-    color: $clr-grey--dark;
+    color: $c-grey--dark;
     font-style: italic;
+    margin: 0;
   }
 
   &__links {

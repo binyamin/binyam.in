@@ -1,0 +1,16 @@
+$sizes: (
+  2.488rem,
+  2.074rem,
+  1.728rem,
+  1.44rem,
+  1.2rem,
+  0.833rem,
+);
+
+$sans: 'Inter', Arial, Helvetica, sans-serif;
+$mono: 'Source Code Pro', Monaco, Consolas, 'Courier New', monospace;
+$serif: 'Crimson Pro', 'Times New Roman', Times, serif;
+
+@function size($n) {
+  @return nth($sizes, $n);
+}
