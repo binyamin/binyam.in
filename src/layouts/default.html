@@ -11,6 +11,13 @@
     </main>
 
     {% include footer.html %}
+    <script async>
+        const b = document.getElementById("burger");
+        const m = document.getElementById("menu");
+        b.addEventListener("click", (evt) => {
+            m.classList.toggle("is-menu-visible")
+        })
+    </script>
     {% include metrical.html %}
 </body>
 </html>

@@ -10,9 +10,17 @@ body {
 main:not(.default) {
   flex-grow: 1;
   margin: 48px auto 0;
-  max-width: calc(100% - 48px); /* 100% width with 24px gutters */
+  max-width: calc(100% - 48px); // 100% width with 24px gutters
   min-width: 328px;
-  width: 66ch;
+  width: 66ch; // 66 characters, for optimal reading
+}
+
+.page-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap; // so mobile nav can expand
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
 .page-footer {

@@ -1,35 +1,22 @@
 @use '../helpers' as *;
-/* stylelint-disable max-nesting-depth */
 
-.nav {
-  align-items: center;
-  display: flex;
-  font-size: f-size(5);
-  justify-content: space-between;
-  margin-top: 8px;
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-  &-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      margin: 0 12px;
-    }
+  li {
+    display: inline-block;
+    font-size: f-size(5);
+    margin: 0 12px;
   }
+}
 
-  &-btn {
-    background-color: transparent;
-    margin: 3.5px 0;
-    padding: 3.5px 0;
-
-    &:hover &__bar,
-    &:focus &__bar {
-      background-color: $c-grey;
-    }
-
-  }
+.burger {
+  background-color: transparent;
+  display: none; // Only appear on small screens
+  margin: 3.5px 0;
+  padding: 3.5px 0;
 
   &__bar {
     background-color: $c-black;
@@ -37,33 +24,33 @@
     display: block;
     height: 3px;
     width: 24px;
-
-    &:nth-of-type(2) {
-      margin: 4px 0;
-    }
   }
 
-  @media only screen and (max-width: $m-small) {
-    &-btn {
-      display: block;
-    }
+  &__bar:nth-of-type(2) {
+    margin: 4px 0;
+  }
 
-    &-menu {
-      display: none;
-      left: 0;
-      margin-top: 16px;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-    }
+  &:hover &__bar {
+    background-color: $c-grey;
+  }
+}
 
-    &-wrapper {
-      padding: 4px 8px;
-    }
+@media only screen and (max-width: $m-small) {
+  .burger {
+    display: block;
+  }
 
-    &-wrapper:hover &-menu,
-    &-wrapper:focus-within &-menu {
-      display: block;
-    }
+  .menu-wrapper {
+    display: none;
+  }
+
+  .is-menu-visible {
+    display: block;
+  }
+
+  .menu-wrapper {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
   }
 }
