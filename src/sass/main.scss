@@ -5,19 +5,21 @@
 Contents
 =*=======
 
-  Based on Brad Frost's Atomic Design methodology and Hugo Giraudel's 7-1
-architecture pattern
+  Roughly based on Brad Frost's Atomic Design methodology and Hugo Giraudel's
+7-1 architecture pattern.
 
-  1. Base (Atoms, Patterns)
-  2. Elements (Molecules, small "micro" components)
-  3. Blocks (Organisms, large "macro" components)
-  4. Layouts (Templates, partials)
+  1. Base (atoms, patterns)
+  2. Elements (molecules, small "micro" components)
+  3. Blocks (organisms, large "macro" components)
+  4. Layouts (templates, partials)
   5. Pages
-  6. Helpers (utils, abstracts)
+  6. Helpers (abstracts, variables/functions)
+  7. Utils (utility classes)
 */
-
 @use 'base';
 @use 'blocks';
 @use 'elements';
 @use 'layouts';
 @use 'pages';
+
+@use 'utils';

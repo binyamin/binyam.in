@@ -1,0 +1,15 @@
+// remove margin from paragraphs which are inside a list
+ul > li p {
+  margin: auto;
+}
+
+// for screen-reader-only content (from https://scottohara.me)
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
