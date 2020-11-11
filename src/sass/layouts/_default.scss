@@ -21,6 +21,10 @@ main:not(.default) {
   flex-wrap: wrap; // so mobile nav can expand
   justify-content: space-between;
   margin-top: 8px;
+
+  &__logo {
+    display: flex;
+  }
 }
 
 .page-footer {

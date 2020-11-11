@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .menu {
+  display: flex; // flex, not block, so it all fits on one line
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,9 +13,12 @@
   }
 }
 
-.burger {
+.burger-btn {
   background-color: transparent;
   display: none; // Only appear on small screens
+}
+
+.burger {
   margin: 3.5px 0;
   padding: 3.5px 0;
 
@@ -36,21 +40,21 @@
 }
 
 @media only screen and (max-width: $m-small) {
-  .burger {
+  .burger-btn {
     display: block;
   }
 
   .menu-wrapper {
+    width: 100%;
+  }
+
+  .menu {
     display: none;
   }
 
   .is-menu-visible {
-    display: block;
-  }
-
-  .menu-wrapper {
-    margin-top: 16px;
-    text-align: center;
-    width: 100%;
+    display: flex; // flex, same as above
+    justify-content: center;
+    margin-top: 8px;
   }
 }

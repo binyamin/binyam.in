@@ -1,14 +1,26 @@
 <header class="page-header" id="top">
-    <a href="/">
-        <img src="/assets/logo.svg" alt="Binyamin Green's logo" width="48" height="48" />
+    <a href="/" class="page-header__logo">
+        <img
+            src="/assets/logo.svg"
+            alt="Binyamin Green's logo"
+            width="48"
+            height="48"
+        />
     </a>
-    <button class="burger" aria-label="toggle menu" id="burger">
-        <span class="burger__bar"></span>
-        <span class="burger__bar"></span>
-        <span class="burger__bar"></span>
+    <button
+        id="burger"
+        class="burger-btn"
+        aria-expanded="false"
+        aria-controls="menu"
+    >
+        <div class="burger" role="img" aria-label="click to toggle the menu">
+            <span role="none" class="burger__bar"></span>
+            <span role="none" class="burger__bar"></span>
+            <span role="none" class="burger__bar"></span>
+        </div>
     </button>
-    <nav class="menu-wrapper" id="menu">
-        <ul class="menu">
+    <nav class="menu-wrapper">
+        <ul class="menu" id="menu">
             <li><a class="menu__link" href="/me">Me</a></li>
             <li><a class="menu__link" href="/blog">Articles</a></li>
             <li><a class="menu__link" href="/notes">Notes</a></li>
