@@ -10,7 +10,7 @@ This page is all about the future. Of this website.
 - Pass skipped lighthouse audits
 - Client-side search
 - Display my spotify habits from the last month (wip)
-- add anchor tag to headings ([npm package](https://github.com/valeriangalliat/markdown-it-anchor))
+- ~~add anchor tag to headings ([npm package](https://github.com/valeriangalliat/markdown-it-anchor))~~
 - ~~redesign links~~
 - list site goals (roadmap page?)
 - list personal goals (now page?)
@@ -19,5 +19,6 @@ This page is all about the future. Of this website.
 - ~~show webmention likes~~
 - ~~list internet profiles~~
 - blogroll
+<!-- aesthetics: home page's main content should be roughly centered on desktop -->
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
