@@ -21,7 +21,7 @@ async function fetchWebmentions() {
 }
 
 module.exports = async function() {
-    if(process.env.NODE_ENV === "production") {
+    if(process.env.CI) {
         return await fetchWebmentions();
     } else {
         const wmcache = datacache.get("webmentions");
