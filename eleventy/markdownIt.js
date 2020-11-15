@@ -9,13 +9,13 @@ const markdownItOptions = {
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
             try {
-                return '<pre class="hljs"><code>' +
+                return '<pre class="hljs code-block"><code>' +
                 hljs.highlight(lang, str, true).value +
                 '</code></pre>';
             } catch (__) {}
         }
 
-        return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+        return '<pre class="hljs code-block"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
     }
 };
 
