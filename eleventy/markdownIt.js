@@ -34,12 +34,14 @@ const md = markdownIt(markdownItOptions)
         // Prevent XSS attacks & provide good UX
         // Mark external, absolute links;
 
+        // Note: Only affects markdown not HTML
+
         const regexp = /^https?:\/\/(?!(binyam\.in|localhost))/; // Is link external?
         const url = tokens[idx].attrGet("href");
 
         if(regexp.test(url)) {
             let oldRel = tokens[idx].attrGet("rel");
-            let relStr = `${oldRel || ""} external noopener noreferrer`.trim();
+            let relStr = `${oldRel || ""} noopener noreferrer`.trim();
 
             tokens[idx].attrSet("rel",  relStr);
             tokens[idx].attrSet("target", "_blank")
