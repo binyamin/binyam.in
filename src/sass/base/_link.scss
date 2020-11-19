@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a[href]:not([class*=btn]) {
+:any-link {
   color: currentColor;
   text-decoration-color: $c-accent;
   text-decoration-thickness: 2px;

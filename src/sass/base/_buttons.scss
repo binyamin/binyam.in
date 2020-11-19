@@ -1,7 +1,6 @@
 @use '../helpers' as *;
 
-button,
-a[class*=btn] {
+button {
   background-color: $c-accent;
   border: 0;
   border-radius: 4px;
