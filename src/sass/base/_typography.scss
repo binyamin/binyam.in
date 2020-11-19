@@ -60,3 +60,9 @@ h1 {
 small {
   font-size: f-size(6);
 }
+
+.icon {
+  bottom: -3px; // The extra pixels (see below) should be under the baseline
+  height: 21px; // The height of an emoji at font size 18px
+  position: relative;
+}

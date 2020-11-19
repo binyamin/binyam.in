@@ -66,7 +66,8 @@ module.exports = {
             true,
             {
                 "ignore": [
-                    "attribute"
+                    "attribute",
+                    "class"
                 ]
             }
         ],

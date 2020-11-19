@@ -2,16 +2,31 @@
 {% assign mentions = webmentions | getMentionsForUrl: wm_url %}
 
 <section id="webmentions">
-    <p class="wm-title section-header">Webmentions</p>
+    <p class="wm-title">Webmentions</p>
     <div class="wm-summary">
-        <p class="wm-likes" title="likes"><span aria-label="likes">❤️</span>{{ mentions.likes | size }}</p>
-        <p class="wm-replies" title="replies"><span aria-label="Replies">💬</span> {{ mentions.replies | size }}</p>
-        <a href="https://indieweb.org/Webmention" class="wm-info" title="What are webmentions?">What is this?</a>
+        <p class="wm-likes" title="likes">
+            <span aria-label="likes">❤️</span> {{ mentions.likes | size }}
+        </p>
+        <p class="wm-replies" title="replies">
+            <span aria-label="Replies">💬</span> {{ mentions.replies | size }}
+        </p>
+        <p>
+            <a
+            href="https://indieweb.org/Webmention"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="What are webmentions?"
+            class="wm-info"
+        >
+            <img src="/assets/img/icon-info.svg" alt="information symbol" width="24" height="24" class="icon">
+            What's this?
+        </a>
+        </p>
     </div>
     <ul class="wm-mentions">
         {% for mention in mentions.replies %}
         <li class="u-comment h-cite wm-mention">
-            <a class="u-url h-card wm-mentioner" href="{{mention.url}}">
+            <a class="u-url h-card wm-mentioner" href="{{mention.url}}" target="_blank" rel="noopener noreferrer">
                 <img class="u-photo wm-mentioner__img" src="{{mention.author.photo}}" alt="Picture of {{mention.author.name}}">
                 <span class="p-name wm-mentioner__name">{{mention.author.name}}</span>
             </a>
