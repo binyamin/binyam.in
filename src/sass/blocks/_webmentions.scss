@@ -7,10 +7,16 @@
   margin: 8px 0;
 }
 
+.wm-summary {
+  align-items: baseline;
+  display: flex;
+}
+
 .wm-likes,
-.wm-replies {
+.wm-replies,
+.wm-info {
   display: inline-block;
-  margin: 0 8px 0 0;
+  margin: 0 12px 0 0;
 }
 
 .wm-mentions {
