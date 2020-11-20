@@ -1,19 +1,13 @@
-const yaml = require("js-yaml");
-
 module.exports = function (eleventyConfig) {
-    eleventyConfig.setUseGitIgnore(false);
 
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
 
-    const wm = require("./eleventy/webmentions");
-    eleventyConfig.addFilter("getMentionsForUrl", wm);
+    // filters
     require("./eleventy/filters")(eleventyConfig, md);
 
-    eleventyConfig.addLayoutAlias('default', "default.html");
-    eleventyConfig.addLayoutAlias('post', "post.html");
-
-    eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
+    const wm = require("./eleventy/webmentions");
+    eleventyConfig.addFilter("getMentionsForUrl", wm);
 
     eleventyConfig.addCollection("posts", function (collection) {
         return collection.getFilteredByGlob("src/posts/**/*.md");
@@ -27,17 +21,13 @@ module.exports = function (eleventyConfig) {
         return collection.getFilteredByGlob("src/snippets/**/*.md");
     });
 
+
     eleventyConfig.setBrowserSyncConfig({
         online: false
     })
 
-    const {Liquid} = require("liquidjs"); // Waiting for Eleventy@1.0.0 🎉
-    eleventyConfig.setLibrary("liquid", new Liquid({
-        extname: ".liquid",
-        dynamicPartials: false,
-        strict_filters: false
-    }))
-
+    // Important, since the gitignore lists "src/notes/**/*"
+    eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addWatchTarget("src/sass/**/*.scss");
 
     eleventyConfig.addPassthroughCopy('src/assets');
@@ -45,7 +35,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/keybase.txt");
 
     return {
-        useGitIgnore: false,
         dir: {
             input: "src",
             output: "dist",
