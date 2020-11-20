@@ -1,3 +1,5 @@
+const htmlmin = require("html-minifier");
+
 module.exports = function (eleventyConfig) {
 
     const md = require("./eleventy/markdownIt");
@@ -9,18 +11,24 @@ module.exports = function (eleventyConfig) {
     const wm = require("./eleventy/webmentions");
     eleventyConfig.addFilter("getMentionsForUrl", wm);
 
-    eleventyConfig.addCollection("posts", function (collection) {
-        return collection.getFilteredByGlob("src/posts/**/*.md");
-    });
+    // Collections
+    const collections = ['posts', 'notes', 'snippets'];
 
-    eleventyConfig.addCollection("notes", function (collection) {
-        return collection.getFilteredByGlob("src/notes/**/*.md");
-    });
+    collections.forEach(collectionName => {
+        eleventyConfig.addCollection(collectionName, function(collectionObject) {
+            return collectionObject.getFilteredByGlob(`src/${collectionName}/**/*.md`)
+        })
+    })
 
-    eleventyConfig.addCollection("snippets", function (collection) {
-        return collection.getFilteredByGlob("src/snippets/**/*.md");
-    });
-
+    // Transforms
+    eleventyConfig.addTransform('htmlmin', function(content) {
+        if(this.outputPath.endsWith(".html")) {
+            return htmlmin.minify(content, {
+                collapseWhitespace: true
+            })
+        }
+        return content;
+    })
 
     eleventyConfig.setBrowserSyncConfig({
         online: false
