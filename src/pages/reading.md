@@ -19,6 +19,7 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 - [The Colour of Magic](https://www.amazon.com/Color-Magic-Discworld-Novel/dp/0060855924), by Terry Pratchett
 - [This is Marketing](https://www.amazon.com/This-Marketing-Cant-Until-Learn/dp/0525540830), by Seth Godin
 - [Weaving the Web](https://www.harpercollins.com/products/weaving-the-web-tim-berners-lee), by Tim Berners-Lee
+- [The Wisdom of the Jews](https://www.amazon.com/Wisdom-Jews-Using-Rationality-Practicality/dp/193444099X), by Yitzhak Shimon Hurwitz
 
 ## Past
 _Not comprehensive_
