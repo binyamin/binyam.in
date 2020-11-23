@@ -16,7 +16,7 @@ This page is all about the future. Of this website.
 - blogroll
 - redesign blockquotes, and style included citations specially
 - switch from [markdown-it](https://github.com/markdown-it/markdown-it) to [remark](https://github.com/remarkjs/remark) (smaller, faster, better-documented api)
-- minify HTML
+- ~~minify HTML~~
 - notice-banner markdown-plugin (see syntax example)
   ```md
   ::: info
