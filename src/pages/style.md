@@ -29,8 +29,13 @@ function foo(bar) {
 }
 ```
 
-<button class="btn">Button</button>
+{% callout "info" %}
+This is a callout. It can contain a lot of text; so much so that it continues on a new line.
 
+Sometimes, you need another paragraph.
+{% endcallout %}
+
+<button class="btn">Button</button>
 
 ## Inline Elements
 + This is a [#chip](#){.chip}

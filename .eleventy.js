@@ -8,6 +8,9 @@ module.exports = function (eleventyConfig) {
     // filters
     require("./eleventy/filters")(eleventyConfig, md);
 
+    // Shortcodes
+    require("./eleventy/shortcodes")(eleventyConfig, md);
+
     const wm = require("./eleventy/webmentions");
     eleventyConfig.addFilter("getMentionsForUrl", wm);
 
@@ -49,7 +52,6 @@ module.exports = function (eleventyConfig) {
             layouts: "layouts",
             includes: "includes",
             data: "data"
-        },
-        passthroughFileCopy: true
+        }
     };
 };
