@@ -4,7 +4,7 @@ const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
 const markdownItOptions = {
     html: true,
-    breaks: true,
+    // breaks: true, // off?
     linkify: true,
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {
@@ -19,7 +19,7 @@ const markdownItOptions = {
     }
 };
 
-const md = markdownIt(markdownItOptions)
+const md = new markdownIt(markdownItOptions)
     .use(require('markdown-it-footnote'))
     .use(require('markdown-it-attrs'))
     .use(require('markdown-it-anchor'), {
@@ -30,23 +30,7 @@ const md = markdownIt(markdownItOptions)
         permalinkSpace: false,
         permalinkAttrs: () => ({role: "none"})
     })
-    .use(require("markdown-it-for-inline"), "link_external", "link_open", function(tokens, idx) {
-        // Prevent XSS attacks & provide good UX
-        // Mark external, absolute links;
-
-        // Note: Only affects markdown not HTML
-
-        const regexp = /^https?:\/\/(?!(binyam\.in|localhost))/; // Is link external?
-        const url = tokens[idx].attrGet("href");
-
-        if(regexp.test(url)) {
-            let oldRel = tokens[idx].attrGet("rel");
-            let relStr = `${oldRel || ""} noopener noreferrer`.trim();
-
-            tokens[idx].attrSet("rel",  relStr);
-            tokens[idx].attrSet("target", "_blank")
-        }
-    })
+    .use(require("markdown-it-external-anchor"), { domain: 'binyam.in' })
     .use(function(md) {
         md.linkify.add("#", {
             validate: /^[\w-]+/,
