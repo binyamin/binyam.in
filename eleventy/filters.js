@@ -41,39 +41,17 @@ module.exports = (eleventyConfig, md) => {
         return arr.includes(value);
     })
 
-    function timeOfDay(h) {
-        if(h >= 0 && h < 6) {
-            // 12am - 6am
-            return "night";
-        } else if (h >= 6 && h < 12) {
-            //6am - 12pm
-            return "morning";
-        } else if (h >= 12 && h < 18) {
-            // 12pm - 6pm
-            return "afternoon";
-        } else if (h >= 18 && h <= 23) {
-            // 6pm - 12am
-            return "evening";
-        }
-    }
 
-    eleventyConfig.addFilter("pretty_date", (datetime) => {
-        if(!datetime) return datetime;
-        const dt = new Date(datetime);
+    eleventyConfig.addFilter("date_est", (datetime, format) => {
+        const estFormat = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/New_York",
+            dateStyle: format === "short" ? "short" : "long",
+            timeStyle: "long",
+        });
 
-        const monthNames = [
-            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-            'September', 'October', 'November', 'December'
-        ];
-        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        const dt = estFormat.format(new Date(datetime));
 
-        const tod = timeOfDay(dt.getHours());
-        const dow = dayNames[dt.getDay()];
-        const m = monthNames[dt.getMonth()];
-        const d = dt.getDate();
-        const y = dt.getFullYear();
-
-        return `${dow} ${tod}, ${m} ${d} ${y}`;
+        return dt.replace(/:\d{2}([\s\w]+)$/, "$1"); // remove seconds
     })
 
     function alphabetaSort (left, right) {
