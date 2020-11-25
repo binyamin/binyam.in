@@ -1,7 +1,6 @@
 ---
 title: My Reading List
 layout: default
-main_class: reading-list
 ---
 
 # My Reading List
