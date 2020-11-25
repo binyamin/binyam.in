@@ -25,6 +25,7 @@
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
     "@binyamin/data-cache": "^1.1.0",
+    "axios": "^0.21.0",
     "canvas": "^2.6.1",
     "clean-css": "^4.2.3",
     "del": "^6.0.0",
@@ -37,6 +38,7 @@
     "markdown-it-external-anchor": "^1.0.0",
     "markdown-it-footnote": "^3.0.2",
     "node-fetch": "^2.6.1",
+    "pkce-gen": "^1.1.0",
     "sass": "^1.29.0",
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
