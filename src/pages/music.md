@@ -3,9 +3,10 @@ title: Recent Songs
 modified: 2020-11-24T20:48:16-05:00
 ---
 
+{% header %}
 # Recently Played Songs
-Updated on {{ modified | pretty_date }}
-
+Last updated on {{ modified | date_est }}
+{% endheader %}
 
 ## Top Ten
 Here are the 10 songs I've listened to the most over the past 4 weeks. Data is from Spotify.
