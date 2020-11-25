@@ -9,5 +9,9 @@ module.exports = (eleventyConfig, md) => {
             +"</aside>"
         );
     })
+
+    eleventyConfig.addPairedShortcode('header', (content, className="") => {
+        return `<header class="${className}">\n${content}\n</header>`;
+    })
 }
 

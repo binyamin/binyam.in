@@ -4,8 +4,10 @@ layout: default
 modified: 2020-10-18T14:42:59-04:00
 ---
 
+{% header %}
 # Now
-Last updated on {{ modified | pretty_date }}
+Last updated on {{ modified | date_est }}
+{% endheader %}
 
 * I've given up on my writing goals. I'd like to focus on hobby-coding and school.
 * I triage issues for [Eleventy](https://github.com/11ty/eleventy). GitHub notifications went from "pointless" to "overwhelming" rather quickly.

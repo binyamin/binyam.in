@@ -43,6 +43,17 @@ h5 {
   }
 }
 
+// start h1-with-subtitle
+header > h1 {
+  margin-bottom: 0;
+}
+
+header > h1 + p {
+  font-size: f-size(6);
+  margin-top: 0.5em;
+}
+// end h1-with-subtitle
+
 h1 {
   margin-top: 0;
 }
@@ -57,7 +68,8 @@ h1 {
   font-size: f-size(5);
 }
 
-small {
+small,
+.text--smaller {
   font-size: f-size(6);
 }
 
