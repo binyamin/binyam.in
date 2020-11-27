@@ -4,11 +4,18 @@ button {
   background-color: $c-accent;
   border: 0;
   border-radius: 4px;
+  box-shadow: 0 0 0 0 mix($c-accent, #fff, 45%);
   color: $c-white;
   cursor: pointer;
   padding: 8px 12px;
+  transition: box-shadow 300ms ease-out;
 
   &:hover {
-    color: $c-black--light;
+    box-shadow: 0 0 2px 8px mix($c-accent, #fff, 14%);
+  }
+
+  &:active {
+    background-color: mix($c-accent, #fff, 90%);
+    box-shadow: 0 0 2px 8px mix($c-accent, #fff, 25%);
   }
 }
