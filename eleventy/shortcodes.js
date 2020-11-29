@@ -4,7 +4,7 @@ module.exports = (eleventyConfig, md) => {
 
         return (
             `<aside class="callout callout--${type}">\n`
-            + `<img class="callout__icon" src="/assets/img/icon-${type}.svg" alt="" width="24" height="24" />\n`
+            + `<img class="callout__icon" src="/assets/icons/icon-${type}.svg" alt="" width="24" height="24" />\n`
             + `<div>${md.render(content)}</div>\n`
             +"</aside>"
         );
