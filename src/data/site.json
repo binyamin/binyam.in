@@ -4,8 +4,8 @@
     "author": {
         "name": "Binyamin Aron Green",
         "twitter": "binyamingreen",
-        "photo": "/assets/img/profile.webp",
-        "photo2": "/assets/img/profile.jpeg"
+        "photo": "/assets/img/profile/profile.webp",
+        "photo2": "/assets/img/profile/profile.jpeg"
     },
     "url": "https://binyam.in"
 }

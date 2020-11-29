@@ -27,7 +27,7 @@ class Feed {
                 {
                     name: data.site.author.name,
                     url: data.site.url,
-                    avatar: "https://binyam.in/assets/img/profile@512.jpeg"
+                    avatar: "https://binyam.in/assets/img/profile/profile@512.jpeg"
                 }
             ],
             items: data.collections.posts.map(p => ({
