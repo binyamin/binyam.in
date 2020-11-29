@@ -19,6 +19,7 @@ This page is all about the future. Of this website.
 - ~~minify HTML~~
 - code-block titles
 - make [/style](/style) page into a comprehensive styleguide
+- hebrew/french versions of site
 <!-- aesthetics: home page's main content should be roughly centered on desktop -->
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
