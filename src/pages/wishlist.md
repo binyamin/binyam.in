@@ -24,4 +24,4 @@ I prefer to save towards more expensive products, rather than receive similar it
 * I also keep [a list](/reading#future) of some books I'd like to read.
 
 ## Other
-* Outdoor slippers, for regular use
+* Outdoor slippers (moccasins), for regular use
