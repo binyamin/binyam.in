@@ -24,6 +24,10 @@
   from = "/listening"
   to = "https://visualify.io/share/MB4iQ9yTQtgjtYpGC"
 
+[[redirects]]
+  from = "/profile.jpeg"
+  to = "/assets/img/profile/profile.jpeg"
+
 [[headers]]
   for = "/**/*"
   [headers.values]
