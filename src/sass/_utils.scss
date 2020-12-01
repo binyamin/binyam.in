@@ -1,6 +1,6 @@
 // remove margin from paragraphs which are inside a list
-li p {
-  margin: auto;
+li> p:only-child {
+  margin: 0 auto;
 }
 
 // for screen-reader-only content (from https://scottohara.me)
