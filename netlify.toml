@@ -34,3 +34,6 @@
     cache-control = '''
       max-age=31536000,
       no-cache'''
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
