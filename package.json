@@ -37,11 +37,11 @@
     "markdown-it-external-anchor": "^1.0.0",
     "markdown-it-footnote": "^3.0.2",
     "node-fetch": "^2.6.1",
-    "sass": "^1.29.0",
+    "sass": "^1.30.0",
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
-    "title-case": "^3.0.2"
+    "title-case": "^3.0.3"
   }
 }
