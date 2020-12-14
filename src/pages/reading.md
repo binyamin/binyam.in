@@ -19,6 +19,7 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 - [This is Marketing](https://www.amazon.com/This-Marketing-Cant-Until-Learn/dp/0525540830), by Seth Godin
 - [Weaving the Web](https://www.harpercollins.com/products/weaving-the-web-tim-berners-lee), by Tim Berners-Lee
 - [The Wisdom of the Jews](https://www.amazon.com/Wisdom-Jews-Using-Rationality-Practicality/dp/193444099X), by Yitzhak Shimon Hurwitz
+- [The Hitchhiker's Guide to the Galaxy](https://www.penguinrandomhouse.com/books/681/the-ultimate-hitchhikers-guide-to-the-galaxy-by-douglas-adams/), by Douglas Adams
 
 ## Past
 _Not comprehensive_
