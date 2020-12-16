@@ -11,7 +11,7 @@ module.exports = (eleventyConfig, md) => {
     })
 
     eleventyConfig.addPairedShortcode('header', (content, className="") => {
-        return `<header class="${className}">\n${content}\n</header>`;
+        return `<header class="heading-with-lead ${className}">\n${content}\n</header>`;
     })
 }
 

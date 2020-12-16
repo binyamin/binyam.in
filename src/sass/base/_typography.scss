@@ -44,11 +44,12 @@ h5 {
 }
 
 // start h1-with-subtitle
-header > h1 {
+// This should be class-based, not tag-based
+.heading-with-lead > h1 {
   margin-bottom: 0;
 }
 
-header > h1 + p {
+.heading-with-lead > h1 + p {
   font-size: f-size(6);
   margin-top: 0.5em;
 }
