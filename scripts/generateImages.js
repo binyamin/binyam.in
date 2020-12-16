@@ -71,13 +71,13 @@ const run = () => {
     if(fs.existsSync(path.join(__dirname, "../.cache/thumbnails")) === false) {
         fs.mkdirSync(path.join(__dirname, "../.cache/thumbnails"))
     }
-    let fileArray = fs.readdirSync(path.join(__dirname, "../src/posts"));
+    let fileArray = fs.readdirSync(path.join(__dirname, "../src/blog"));
 
     fileArray.forEach(filePath => {
         if(!(filePath.endsWith(".md") ||filePath.endsWith(".markdown"))) return;
 
         const content = fs.readFileSync(
-            path.join(__dirname, "../src/posts", filePath),
+            path.join(__dirname, "../src/blog", filePath),
             {encoding: "utf-8"}
         );
         const frontMatterText = content.substring(3, content.indexOf("---", 3)).trim();
