@@ -5,7 +5,7 @@ layout: default
 
 # 🚦 Roadmap
 This page is all about the future. Of this website.
-- More animations
+- More animations <!-- maybe pointless -->
 - Send Webmentions automatically
 - Client-side search
 - Display my spotify habits from the last month (wip)
@@ -20,6 +20,7 @@ This page is all about the future. Of this website.
 - code-block titles
 - make [/style](/style) page into a comprehensive styleguide
 - hebrew/french versions of site
+- auto-generate json/rss feeds for each collection (pagination?)
 <!-- aesthetics: home page's main content should be roughly centered on desktop -->
 
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)

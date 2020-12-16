@@ -8,7 +8,7 @@
 class Feed {
     data() {
         return {
-            permalink: "/feed.json",
+            permalink: "/feeds/blog.json",
             eleventyExcludeFromCollections: true
         }
     }
@@ -18,7 +18,7 @@ class Feed {
             version: "https://jsonfeed.org/version/1.1",
             title: "Binyamin Green's Blog",
             home_page_url: "https://binyam.in",
-            feed_url: "https://binyam.in/feed.json",
+            feed_url: "https://binyam.in/feeds/blog.json",
             description: data.site.desc,
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
