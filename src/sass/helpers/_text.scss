@@ -7,9 +7,9 @@ $sizes: (
   0.833rem,
 );
 
-$sans: 'Inter', Arial, Helvetica, sans-serif;
+$sans: 'Inter', 'Open Sans', Arial, Helvetica, sans-serif;
 $mono: 'Source Code Pro', Monaco, Consolas, 'Courier New', monospace;
-$serif: 'Crimson Pro', 'Times New Roman', Times, serif;
+$serif: 'Lora', Garamond, 'Times New Roman', Times, serif;
 
 @function size($n) {
   @return nth($sizes, $n);

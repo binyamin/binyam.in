@@ -1,0 +1,26 @@
+---
+permalink: /feeds/micro.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Binyamin Green's Micro Blog</title>
+    <description>RSS feed for https://binyam.in/micro</description>
+    <link>https://binyam.in/</link>
+    <atom:link href="http://binyam.in/feeds/micro.xml" rel="self" type="application/rss+xml" />
+    <pubDate>{{ "now" | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <copyright>Copyright 2020, Binyamin Aron Green</copyright>
+    <docs>https://cyber.harvard.edu/rss/rss.html</docs>
+    <language>en-us</language>
+    {% for post in collections.micro %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <description>{{ post.templateContent | escape_once }}</description>
+      <link>{{ post.url | url | prepend: "https://binyam.in" }}</link>
+      <guid>{{ post.url | url | prepend: "https://binyam.in" }}</guid>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

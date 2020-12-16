@@ -1,6 +1,6 @@
 {% assign metatitle = site.title %}
 {% if title %}
-    {% if type == 'post' %}
+    {% if isPost %}
         {% assign metatitle = title %}
     {% else %}
         {% assign metatitle = title | append: " • " | append: site.title %}
@@ -15,7 +15,7 @@
 {% assign metaicon = 'https://binyam.in/assets/favicon.ico' %}
 {% assign metaimg = metaicon %}
 
-{% if type == 'post' %}
+{% if category == 'article' %}
     {% assign filePath = title | slugify | prepend: "https://binyam.in/assets/uploads/" | append: ".png" %}
     {% assign metaimg = filePath %}
 {% endif %}
@@ -25,7 +25,7 @@
 {% endif %}
 
 {% assign metatype = 'website' %}
-{% if type == 'post' %}
+{% if isPost %}
     {% assign metatype = 'article' %}
 {% endif%}
 <meta charset="UTF-8">
@@ -35,7 +35,7 @@
 
 <title>{{-metatitle-}}</title>
 
-<meta name="generator" content="Eleventy v1.0.0-beta.0+sha:9042341">
+<meta name="generator" content="Eleventy v1.0.0-beta.0">
 <meta name="author" content="Binyamin Aron Green">
 <meta name="description" content="{{- metadesc -}}">
 <meta name="keywords" content="web developer, developer, jewish, judaism, jew, front-end, designer, html, css, javascript, jamstack">
@@ -68,10 +68,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap&family=Crimson+Pro" />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap&family=Lora" />
 <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap&family=Crimson+Pro"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap&family=Lora"
     media="print" onload="this.media='all'" />
 
 <!-- CSS (except fonts) -->

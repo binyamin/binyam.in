@@ -2,44 +2,16 @@
 
 // Single post
 .post {
+  h1 {
+    margin-bottom: 0;
+  }
+
   &__header {
-    margin: 2.5em 0 2em;
+    margin: 2.5em 0 1em;
   }
 
   &__details {
     color: $c-grey--dark;
-  }
-}
-
-// Posts feed
-.posts-title {
-  margin-bottom: 0;
-}
-
-.posts-tag {
-  // For text which shows when feed is filtered
-  color: $c-grey--dark;
-}
-
-.posts {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.post-item {
-  margin: 1.75em 0;
-
-  &__title {
-    font-family: $f-serif;
-    font-size: f-size(2);
-  }
-
-  &__details {
-    color: $c-grey--dark;
-  }
-
-  &__desc {
     margin-top: 8px;
   }
 }

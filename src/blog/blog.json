@@ -1,0 +1,5 @@
+{
+    "layout": "post",
+    "category": "article",
+    "permalink": "/blog/{{ title | slugify }}/"
+}

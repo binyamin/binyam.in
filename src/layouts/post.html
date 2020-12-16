@@ -1,5 +1,4 @@
 ---
-permalink: /blog/{{ title | slug }}/index.html
 layout: default
 main_class: post
 ---
@@ -9,14 +8,19 @@ main_class: post
         <p class="post__details">Published on <a href={{page.url}} class="u-url">
             <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date: "%B %d, %Y"}}</time>
             </a>
-            &bull;
+            {% if tags %}&bull;{% endif %}
             <!-- Should this be a div? -->
-            <span class="post__tags">
-                {% for tag in tags %}
-                <a href="/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
-                {% endfor %}
+            {% if category == 'article' %}
+                <span class="post__tags">
+                    {% for tag in tags %}
+                    <a href="/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
+                    {% endfor %}
+                </span>
                 <a href="/blog" class="p-category" hidden>article</a>
-            </span>
+            {% elsif category == 'micro' %}
+                <a href="/micro" class="p-category" hidden>microblog</a>
+            {% endif %}
+
         </p>
     </header>
     <section class="e-content">

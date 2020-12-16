@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.posts-title {
+  margin-bottom: 0;
+}
+
+.posts-details {
+  margin-top: 0.5rem;
+}
+
+.posts-tag {
+  // For text which shows when feed is filtered
+  color: $c-grey--dark;
+}
+
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-item {
+  margin: 0.5em 0;
+
+  &__title {
+    font-family: $f-serif;
+    font-size: f-size(5);
+  }
+
+  &__details {
+    color: $c-grey--dark;
+  }
+
+  &__desc {
+    margin: 8px 0 1.75em;
+  }
+}
