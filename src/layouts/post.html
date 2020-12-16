@@ -6,7 +6,7 @@ main_class: post
     <header class="post__header">
         <h1 class="post__title p-name">{{ title }}</h1>
         <p class="post__details">Published on <a href={{page.url}} class="u-url">
-            <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date: "%B %d, %Y"}}</time>
+            <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
             </a>
             {% if tags %}&bull;{% endif %}
             <!-- Should this be a div? -->

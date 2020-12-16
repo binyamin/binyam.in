@@ -17,7 +17,7 @@ title: Articles
     {% for post in collections.blog reversed %}
     <li class="post-item" data-tags='{{ post.data.tags | default: "[]" | json }}'>
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
-        <p class="post-item__details">Posted on {{ post.date | date: "%B %d, %Y"}}
+        <p class="post-item__details">Posted on {{ post.date | date_est: false }}
         {% if post.data.tags %}&bull;{% endif %}
         {% for tag in post.data.tags %}
             <a href="/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b aria-label="tagged as">#</b>{{tag}}</a>
