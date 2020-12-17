@@ -4,8 +4,7 @@ module.exports = (webmentions, url) => {
     const likeType = "like-of"
 
     const hasRequiredFields = entry => {
-        const { author, published, content } = entry
-        return author.name && published && content
+        return !!entry.author.name
     }
 
     const children = webmentions.children
@@ -13,7 +12,7 @@ module.exports = (webmentions, url) => {
         .filter(hasRequiredFields)
 
     return {
-        like: children.filter(entry => entry["wm-property"] === likeType),
+        likes: children.filter(entry => entry["wm-property"] === likeType),
         replies: children.filter(entry => replyTypes.includes(entry['wm-property']))
     }
 }
