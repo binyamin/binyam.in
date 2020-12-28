@@ -9,11 +9,11 @@ function caselessCompare(a, b) {
 
 module.exports = {
     layout: "note.html",
-    type: "note",
+    category: "wiki",
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
         backlinks: (data) => {
-            const notes = data.collections.notes;
+            const notes = data.collections.wiki;
             const currentFileSlug = data.page.fileSlug;
 
             let backlinks = [];
