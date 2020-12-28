@@ -15,11 +15,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("getMentionsForUrl", wm);
 
     // Collections
-    const collections = ['blog', 'notes', 'snippets', 'micro'];
+    const collections = ['blog', 'wiki', 'micro'];
 
     collections.forEach(collectionName => {
         eleventyConfig.addCollection(collectionName, function(collectionApi) {
-            return collectionApi.getFilteredByGlob(`src/${collectionName}/**/*.md`)
+            return collectionApi.getAll().filter(d => d.data.category === collectionName)
         })
     })
 
