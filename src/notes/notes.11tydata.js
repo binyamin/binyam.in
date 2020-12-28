@@ -1,7 +1,7 @@
 const {titleCase} = require("title-case");
 
 // This regex finds all wikilinks in a string
-const wikilinkRegExp = /\[\[([\w\s/-]+)(.\w+)?\s?(\|\s?([\w\s/]+))?\]\]/g
+const wikilinkRegExp = /\[\[\s?([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s?\]\]/g
 
 function caselessCompare(a, b) {
     return a.toLowerCase() === b.toLowerCase();

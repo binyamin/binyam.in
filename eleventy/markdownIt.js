@@ -42,7 +42,7 @@ const md = new markdownIt(markdownItOptions)
     .use(function(md) {
         // Recognize Mediawiki links ([[text]])
         md.linkify.add("[[", {
-            validate: /^([\w\s/-]+)(.\w+)?\s?(\|\s?([\w\s/]+))?\]\]/,
+            validate: /^\s?([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s?\]\]/,
             normalize: match => {
                 const parts = match.raw.slice(2,-2).split("|");
                 parts[0] = parts[0].replace(/.(md|markdown)\s?$/i, "");
