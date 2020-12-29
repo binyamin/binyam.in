@@ -8,9 +8,9 @@ main_class: post
         <p class="post__details">Published on <a href={{page.url}} class="u-url">
             <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
             </a>
-            {% if tags %}&bull;{% endif %}
-            <!-- Should this be a div? -->
             {% if category == 'blog' %}
+                {% if tags %}&bull;{% endif %}
+                <!-- Should this be a div? -->
                 <span class="post__tags">
                     {% for tag in tags %}
                     <a href="/c/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
