@@ -6,6 +6,7 @@ title: Articles
 <header class="posts-header">
     <h1 class="posts-title">Articles</h1>
     <p class="posts-details">Feeds: <a href="/feeds/blog.xml">RSS</a>, <a href="/feeds/blog.json">JSON</a></p>
+    <p class="posts-lead">In contrast to <a href="/c/micro">my journal</a>, these posts aim to be fleshed-out pieces of writing.</p>
     <p class="posts-tag" id="pageTag" hidden>
         <small>
             <a href="{{page.url}}" role="button">(clear)</a>
@@ -20,7 +21,7 @@ title: Articles
         <p class="post-item__details">Posted on {{ post.date | date_est: false }}
         {% if post.data.tags %}&bull;{% endif %}
         {% for tag in post.data.tags %}
-            <a href="/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b aria-label="tagged as">#</b>{{tag}}</a>
+            <a href="/c/blog?filter={{tag}}" role="button" class="post-item__tag chip"><b aria-label="tagged as">#</b>{{tag}}</a>
         {% endfor %}
         </p>
         <div class="post-item__desc">{{post.data.desc}}<div>

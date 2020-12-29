@@ -33,7 +33,7 @@ I began learning piano at age 6. When I sit down at the piano, I play whatever s
 My Keyboard is a [YPG-235](https://usa.yamaha.com/products/musical_instruments/pianos/portable_grand/ypg-235/), but Yamaha has discontinued that model in favor of the [PSR-EW300](https://usa.yamaha.com/products/musical_instruments/keyboards/portable_keyboards/psr-ew300/). I also own a [Blue Yeti Nano](https://www.bluemic.com/en-us/products/yeti-nano/) microphone for recording.
 
 ## Writing
-I've started a [journal](/micro), or _micro blog_. Sometimes, I write full articles and post them on [my blog](/blog). I used to maintain a [personal wiki](/wiki) of sorts. There are JSON and RSS [feeds](/feeds) for most of my writing.
+I've started a [journal](/c/micro), or _micro blog_. Sometimes, I write full articles and post them on [my blog](/c/blog). I used to maintain a [personal wiki](/wiki) of sorts. There are JSON and RSS [feeds](/feeds) for most of my writing.
 
 ## Code
 I've been coding (I think) since late 2017. If it means anything, I joined GitHub on May 31, 2018. I primarily work with HTML, CSS and JavaScript. I know a little Python, and I'm studying Java in college.

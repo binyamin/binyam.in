@@ -19,7 +19,7 @@ class Feed {
             title: "Binyamin Green's Blog",
             home_page_url: "https://binyam.in",
             feed_url: "https://binyam.in/feeds/blog.json",
-            description: data.site.desc,
+            description: "JSON feed for https://binyam.in/c/blog",
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
             language: "en-US",
