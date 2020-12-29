@@ -10,15 +10,15 @@ main_class: post
             </a>
             {% if tags %}&bull;{% endif %}
             <!-- Should this be a div? -->
-            {% if category == 'article' %}
+            {% if category == 'blog' %}
                 <span class="post__tags">
                     {% for tag in tags %}
-                    <a href="/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
+                    <a href="/c/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
                     {% endfor %}
                 </span>
-                <a href="/blog" class="p-category" hidden>article</a>
+                <a href="/c/blog" class="p-category" hidden>article</a>
             {% elsif category == 'micro' %}
-                <a href="/micro" class="p-category" hidden>microblog</a>
+                <a href="/c/micro" class="p-category" hidden>microblog</a>
             {% endif %}
 
         </p>

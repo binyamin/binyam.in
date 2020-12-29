@@ -16,10 +16,10 @@ class Feed {
     render(data) {
         return JSON.stringify({
             version: "https://jsonfeed.org/version/1.1",
-            title: "Binyamin Green's Micro Blog",
+            title: "Binyamin Green's Micro-blog",
             home_page_url: "https://binyam.in",
             feed_url: "https://binyam.in/feeds/micro.json",
-            description: "JSON feed for https://binyam.in/micro",
+            description: "JSON feed for https://binyam.in/c/micro",
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
             language: "en-US",
