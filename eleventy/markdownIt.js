@@ -35,7 +35,7 @@ const md = new markdownIt(markdownItOptions)
         md.linkify.add("#", {
             validate: /^[\w-]+/,
             normalize: match => {
-                match.url = "/notes/search?tag=" + match.raw.slice(1);
+                match.url = "/wiki/search?tag=" + match.raw.slice(1);
             }
         })
     })
@@ -47,7 +47,7 @@ const md = new markdownIt(markdownItOptions)
                 const parts = match.raw.slice(2,-2).split("|");
                 parts[0] = parts[0].replace(/.(md|markdown)\s?$/i, "");
                 match.text = (parts[1] || parts[0]).trim();
-                match.url = `/notes/${parts[0].trim()}/`;
+                match.url = `/wiki/${parts[0].trim()}/`;
             }
         })
     })

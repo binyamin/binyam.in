@@ -30,7 +30,7 @@ async function configureGit() {
     try {
         await result("git config user.name && git config user.email")
     } catch (error) {
-        await result("git config user.name \"Buildbot\" && git config user.email \"foo@bar.io\"");
+        await result("git config user.name \"Buildbot\" && git config user.email \"foo@example.com\"");
     }
 
     // Add remote `notes`, if not existing.
@@ -63,16 +63,16 @@ function copyNotes() {
         // Note: Merge command failed, so we use .finally() instead of .then()
         try {
             // Prepare directory
-            await del(["src/notes/**/*.md", "src/notes/.git*"]);
+            await del(["src/wiki/**/*.md", "src/wiki/.git*"]);
 
             // Read & save the notes files which we tried to merge above
-            await result("git read-tree --prefix=src/notes/ -u notes/master");
+            await result("git read-tree --prefix=src/wiki/ -u notes/master");
 
             // Reset the working tree, so notes are ignored
             await result("git reset");
 
             // Clean directory
-            del(["src/notes/.git*"]);
+            del(["src/wiki/.git*"]);
         } catch (err) {
             throw err;
         }
@@ -83,7 +83,7 @@ if(runIf) {
     configureGit()
         .then(() => {
             copyNotes();
-            console.log("[scripts] Notes written to `src/notes`")
+            console.log("[scripts] Notes written to `src/wiki`")
         })
         .catch(e => {
             console.error(e);

@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
         online: false
     })
 
-    // Important, since the gitignore lists "src/notes/**/*"
+    // Important, since the gitignore lists "src/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addWatchTarget("src/sass/**/*.scss");
 
