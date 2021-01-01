@@ -28,11 +28,19 @@
 # Temporary redirects (6 months ?)
 [[redirects]]
   from = "/blog/*"
-  to = "/c/blog/:splat"
+  to = "/c/blog"
+
+[[redirects]]
+  from = "/micro"
+  to = "/c/micro"
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/p/:splat"
 
 [[redirects]]
   from = "/micro/*"
-  to = "/c/micro/:splat"
+  to = "/p/:splat"
 
 
 [[headers]]
