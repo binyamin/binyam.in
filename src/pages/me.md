@@ -6,7 +6,7 @@ title: About Me
 
 My name is Binyamin Aron Green, and this is my website. This page contains a short description of me.
 
-I am a [Jewish ✡](#jewish) web developer and student from [Central Maryland 🗺️](https://www.maryland.com/regions/central-maryland/). I enjoy [reading 📚](#reading), [listening to music 🎼](#music), and [tinkering with this website ⚒](#this-site).
+I am a [Jewish ✡](#jewish) web developer and student from [Baltimore, Maryland 🗺️](https://baltimore.org/). I enjoy [reading 📚](#reading), [listening to music 🎼](#music), and [tinkering with this website ⚒](#this-site).
 
 You may be wondering what I'm up to [now ⏲️](/now) in life.
 
