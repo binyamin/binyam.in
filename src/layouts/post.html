@@ -5,17 +5,11 @@ main_class: post
 <article class="h-entry">
     <header class="post__header">
         <h1 class="post__title p-name">{{ title }}</h1>
-        <p class="post__details">Published on <a href={{page.url}} class="u-url">
-            <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
+        <p class="post__details">Published on
+            <a href={{page.url}} class="u-url">
+                <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
             </a>
             {% if category == 'blog' %}
-                {% if tags %}&bull;{% endif %}
-                <!-- Should this be a div? -->
-                <span class="post__tags">
-                    {% for tag in tags %}
-                    <a href="/c/blog?filter={{tag}}" class="chip"><b aria-label="tagged as">#</b><span class="p-category">{{tag}}</span></a>
-                    {% endfor %}
-                </span>
                 <a href="/c/blog" class="p-category" hidden>article</a>
             {% elsif category == 'micro' %}
                 <a href="/c/micro" class="p-category" hidden>microblog</a>
