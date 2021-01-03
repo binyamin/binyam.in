@@ -25,11 +25,23 @@ main:not(.default) {
   &__logo {
     display: flex;
   }
+
+  &__logo img {
+    border-radius: 4px;
+  }
 }
 
 .page-footer {
-  border-top: 1px solid $c-grey;
   display: inline-block;
   margin: 8px auto;
   text-align: center;
+
+  &::before {
+    background-color: $c-accent;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 0 auto;
+    width: 30%;
+  }
 }
