@@ -4,13 +4,14 @@
   margin-bottom: 0;
 }
 
-.posts-details {
-  margin-top: 0.5rem;
+.posts-lead {
+  margin-bottom: 4px;
 }
 
-.posts-tag {
-  // For text which shows when feed is filtered
+.posts-details {
   color: $c-grey--dark;
+  fill: $c-grey--dark;
+  margin-top: 0;
 }
 
 .posts {
@@ -20,10 +21,9 @@
 }
 
 .post-item {
-  margin: 0.5em 0;
+  margin: 32px 0;
 
   &__title {
-    font-family: $f-serif;
     font-size: f-size(5);
   }
 
@@ -32,6 +32,6 @@
   }
 
   &__desc {
-    margin: 8px 0 1.75em;
+    margin-top: 8px;
   }
 }

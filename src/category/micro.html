@@ -5,8 +5,13 @@ title: Micro
 
 <header class="posts-header">
     <h1 class="posts-title">Micro</h1>
-    <p class="posts-details">Feeds: <a href="/feeds/micro.xml">RSS</a>, <a href="/feeds/micro.json">JSON</a></p>
     <p class="posts-lead">These are my half-baked thoughts. It's sort-of a hatching ground for full-grown articles, with personal updates mixed in.</p>
+    <p class="posts-details">
+        <svg role="none" viewBox="0 0 24 24" class="icon">
+            <use href="/assets/icons/icon-rss.svg#sprite"/>
+        </svg>
+        Subscribe via <a href="/feeds/micro.xml">RSS</a> or <a href="/feeds/micro.json">JSON</a> feed
+    </p>
 </header>
 <ul class="posts">
     {% for micro in collections.micro reversed %}
