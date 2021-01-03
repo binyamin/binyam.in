@@ -1,5 +1,9 @@
 @use '../helpers' as *;
 
+.posts-header {
+  margin-bottom: 32px;
+}
+
 .posts-title {
   margin-bottom: 0;
 }
@@ -11,7 +15,11 @@
 .posts-details {
   color: $c-grey--dark;
   fill: $c-grey--dark;
-  margin-top: 0;
+  margin: 0;
+
+  :any-link {
+    text-decoration-color: currentColor;
+  }
 }
 
 .posts {
@@ -21,7 +29,7 @@
 }
 
 .post-item {
-  margin: 32px 0;
+  margin-bottom: 24px;
 
   &__title {
     font-size: f-size(5);
@@ -29,9 +37,6 @@
 
   &__details {
     color: $c-grey--dark;
-  }
-
-  &__desc {
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }
