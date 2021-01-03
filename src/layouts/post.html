@@ -3,9 +3,9 @@ layout: default
 main_class: post
 ---
 <article class="h-entry">
-    <header class="post__header">
-        <h1 class="post__title p-name">{{ title }}</h1>
-        <p class="post__details">Published on
+    <header class="post-header">
+        <h1 class="post-header__title p-name">{{ title }}</h1>
+        <p class="post-header__details">Published on
             <a href={{page.url}} class="u-url">
                 <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
             </a>
@@ -17,11 +17,12 @@ main_class: post
 
         </p>
     </header>
-    <section class="e-content">
+    <section class="e-content post-content">
         {{ content }}
     </section>
 
     {% include webmentions.html %}
+
 
     <div class="post-footer">
         <p class="h-card p-author" hidden>

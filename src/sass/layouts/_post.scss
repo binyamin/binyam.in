@@ -1,17 +1,19 @@
+@use 'sass:color';
 @use '../helpers' as *;
 
 // Single post
-.post {
-  h1 {
-    margin-bottom: 0;
-  }
 
-  &__header {
-    margin: 2.5em 0 1em;
+.post-header {
+  &__title {
+    margin-bottom: 0;
   }
 
   &__details {
     color: $c-grey--dark;
     margin-top: 8px;
   }
+}
+
+.post-content {
+  margin-bottom: 24px;
 }

@@ -2,9 +2,18 @@
 
 // Webmentions
 .wm-title {
+  font-family: $f-serif;
   font-size: f-size(5);
-  font-weight: 700;
-  margin: 8px 0;
+  margin: 0;
+
+  &::before {
+    background-color: $c-accent;
+    content: '';
+    display: block;
+    height: 4px;
+    margin-bottom: 4px;
+    width: 48px;
+  }
 }
 
 .wm-summary {

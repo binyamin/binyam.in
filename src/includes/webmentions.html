@@ -1,7 +1,7 @@
 {% assign wm_url = page.url | absolute_url %}
 {% assign mentions = webmentions | getMentionsForUrl: wm_url %}
 
-<section id="webmentions">
+<section id="webmentions" class="webmentions">
     <p class="wm-title">Webmentions</p>
     <div class="wm-summary">
         <p class="wm-likes" title="likes">
