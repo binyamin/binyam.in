@@ -1,7 +1,7 @@
 {
   "name": "binyam.in",
   "private": true,
-  "version": "1.0.0",
+  "version": "4.2.0",
   "description": "My personal website",
   "scripts": {
     "start": "eleventy --quiet --serve",
