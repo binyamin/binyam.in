@@ -21,6 +21,9 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 - [The Wisdom of the Jews](https://www.amazon.com/Wisdom-Jews-Using-Rationality-Practicality/dp/193444099X), by Yitzhak Shimon Hurwitz
 - [The Hitchhiker's Guide to the Galaxy](https://www.penguinrandomhouse.com/books/681/the-ultimate-hitchhikers-guide-to-the-galaxy-by-douglas-adams/), by Douglas Adams
 - [Steal like an Artist](http://www.barnesandnoble.com/w/steal-like-an-artist-austin-kleon/1110782807?ean=9780761169253), by Austin Kleon
+- [The Five People You Meet in Heaven](https://www.goodreads.com/book/show/3431.The_Five_People_You_Meet_in_Heaven), by Mitch Albom
+- [The Shallows: What the Internet Is Doing to Our Brains](https://www.indiebound.org/book/9780393357820), by Nicholas Carr
+
 ## Past
 _Not comprehensive_
 - [Tuesdays with Morrie](https://google.com/books/edition/_/T5PqPWS0GKwC), by Mitch Albom

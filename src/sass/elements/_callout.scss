@@ -15,6 +15,7 @@ $alerts: (
 .callout {
   background-color: bg($c-grey);
   border-left: 4px solid $c-grey;
+  margin: 16px 0;
   padding: 1em;
 
   p { margin: 0; }
