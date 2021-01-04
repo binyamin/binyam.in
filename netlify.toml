@@ -36,12 +36,12 @@
   to = "/p/:splat"
 
 [[redirects]]
-  from = "/micro/*"
-  to = "/p/:splat"
-
-[[redirects]]
   from = "/micro/"
   to = "/c/micro"
+
+[[redirects]]
+  from = "/micro/*"
+  to = "/p/:splat"
 
 [[headers]]
   for = "/**/*"
