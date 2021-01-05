@@ -12,16 +12,16 @@
     {% assign metadesc = desc %}
 {% endif %}
 
-{% assign metaicon = 'https://binyam.in/assets/favicon.ico' %}
-{% assign metaimg = metaicon %}
+{% assign metaimg = 'https://binyam.in/assets/logo.png' %}
+{% assign metaimg_twitter = metaimg %}
 
-{% if category == 'article' %}
+{% if category == 'blog' %}
     {% assign filePath = title | slugify | prepend: "https://binyam.in/assets/uploads/" | append: ".png" %}
-    {% assign metaimg = filePath %}
+    {% assign metaimg_twitter = filePath %}
 {% endif %}
 
 {% if thumbnail %}
-    {% assign metaimg = thumbnail | absolute_url %}
+    {% assign metaimg_twitter = thumbnail | absolute_url %}
 {% endif %}
 
 {% assign metatype = 'website' %}
@@ -46,7 +46,7 @@
 <meta property="og:title" content="{{-metatitle-}}">
 <meta property="og:type" content="{{metatype}}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{{- metaicon -}}">
+<meta property="og:image" content="{{- metaimg -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
 <!-- Feeds -->
@@ -66,7 +66,7 @@
 <meta name="twitter:creator" content="@{{- site.author.twitter -}}" />
 <meta name="twitter:title" content="{{-metatitle-}}" />
 <meta name="twitter:description" content="{{-metadesc-}}" />
-<meta name="twitter:image" content="{{- metaimg -}}" />
+<meta name="twitter:image" content="{{- metaimg_twitter -}}" />
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com/">
