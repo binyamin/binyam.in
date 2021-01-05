@@ -1,5 +1,6 @@
 {
     "layout": "post",
     "category": "micro",
+    "isPost": true,
     "permalink": "/p/{{page.fileSlug}}/"
 }
