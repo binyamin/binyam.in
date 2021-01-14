@@ -12,6 +12,10 @@
     color: $c-grey--dark;
     margin-top: 8px;
   }
+
+  &__details :any-link {
+    text-decoration-color: currentColor;
+  }
 }
 
 .post-content {
