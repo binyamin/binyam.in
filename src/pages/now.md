@@ -2,6 +2,7 @@
 title: Now
 layout: default
 modified: 2021-02-10T19:49:55-05:00
+desc: Semi-annual updates on what's happening in my life.
 ---
 
 {% header %}
