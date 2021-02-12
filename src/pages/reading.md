@@ -7,6 +7,7 @@ layout: default
 I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created this page. I'd love for you to [suggest a book](/contact).
 
 ## Present
+- [Exhalation: Stories](https://www.goodreads.com/book/show/41160292-exhalation), by Ted Chiang
 - [A Universe Made for Two](https://openlibrary.org/isbn/9781946351470), by Jack M. Daniel
 
 ## Future
