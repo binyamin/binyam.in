@@ -12,7 +12,7 @@ main:not(.default) {
   margin: 48px auto 0;
   max-width: calc(100% - 48px); // 100% width with 24px gutters
   min-width: 328px;
-  width: 66ch; // 66 characters, for optimal reading
+  width: 60ch; // ~60 characters, for optimal reading
 }
 
 .page-header {

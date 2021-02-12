@@ -16,9 +16,4 @@ html {
   &:hover .icon {
     opacity: 0.8;
   }
-
-  &:focus {
-    outline: 2px solid $c-accent;
-    outline-offset: 2px;
-  }
 }

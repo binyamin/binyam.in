@@ -7,6 +7,10 @@ eleventyExcludeFromCollections: true
 
 # Styles
 
+My "brand" is a visual representation of my personality and goals. I would like to be formal, clean, and sensible. Another value I'd like to display is friendliness. I want to be kind, warm, and inviting. This dichotomy of logic and emotion influences all my decisions, and my brand should reflect that.
+
+For the text, I want to be precise and neat, yet warm and inviting. [Work Sans](https://fonts.google.com/specimen/Work+Sans) seems fitting, and I really wanted it as my primary typeface. It wasn't designed for body text, so I decided to use it as an accent font instead. For the body, I chose [Roboto](https://fonts.google.com/specimen/Roboto), as it's simple, popular, and doesn't call attention to itself.
+
 ## Text
 # H1
 ## H2
