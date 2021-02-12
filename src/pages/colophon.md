@@ -2,6 +2,7 @@
 title: Colophon
 layout: default
 modified: 2020-10-18T16:18:24-04:00
+desc: How I built and maintain this site.
 ---
 
 {% header %}

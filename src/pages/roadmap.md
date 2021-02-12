@@ -1,13 +1,15 @@
 ---
 title: Roadmap
 layout: default
+desc: This page is all about the future. Of this website.
+modified: 2021-02-11T21:55:34-05:00
 ---
 
 # 🚦 Roadmap
 This page is all about the future. Of this website.
 - More animations <!-- maybe pointless -->
 - Send Webmentions automatically
-- Client-side search
+- ~~Client-side search~~ (costly and unnecessary)
 - Display my spotify habits from the last month (wip)
 - list site goals (roadmap page?)
 - list personal goals (now page?)

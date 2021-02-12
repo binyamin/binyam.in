@@ -1,14 +1,15 @@
 ---
 title: My Reading List
 layout: default
+desc: I enjoy reading. I enjoy sharing. I want to share my reading.
 ---
 
 # My Reading List
 I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created this page. I'd love for you to [suggest a book](/contact).
 
 ## Present
-- [Exhalation: Stories](https://www.goodreads.com/book/show/41160292-exhalation), by Ted Chiang
-- [A Universe Made for Two](https://openlibrary.org/isbn/9781946351470), by Jack M. Daniel
+- [Exhalation: Stories](https://www.goodreads.com/book/show/41160292-exhalation), by Ted Chiang (53%)
+- [A Universe Made for Two](https://openlibrary.org/isbn/9781946351470), by Jack M. Daniel (8%)
 
 ## Future
 - [How Emotions Are Made: The Secret Life of the Brain](https://www.google.com/books/edition/_/hN8MBgAAQBAJ), by Lisa Feldman Barrett
