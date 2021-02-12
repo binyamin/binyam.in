@@ -3,6 +3,7 @@ title: Wishlist
 layout: default
 ignore: true
 eleventyExcludeFromCollections: true
+desc: A range of products which I think I'd appreciate as gifts.
 ---
 
 # Wishlist
