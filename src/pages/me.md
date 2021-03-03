@@ -41,4 +41,4 @@ I've been coding (I think) since late 2017. If it means anything, I joined GitHu
 <!-- List of projects here ? -->
 
 ### This Site
-This website represents me, and helps me track my growth over time. I believe that personal websites are very beneficial for web developers, especially for beginners. I wrote about [how I built this site](/colophon), and I keep [a roadmap](/roadmap) for it. I store the source code both [on GitHub](https://github.com/binyamin/binyam.in) and [on GitLab](https://gitlab.com/b3u/binyam-in).
+This website represents me, and helps me track my growth over time. I believe that personal websites are very beneficial for web developers, especially for beginners. I wrote about [how I built this site](/colophon), and I keep [a roadmap](/roadmap) for it. I store the source code both [on GitHub](https://github.com/binyamin/binyam.in) and [on GitLab](https://gitlab.com/binyamin/binyam-in).
