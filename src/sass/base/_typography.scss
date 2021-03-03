@@ -12,7 +12,7 @@ html {
 body {
   color: $c-black;
   font-family: $f-body;
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
 p {
@@ -22,7 +22,7 @@ p {
 // Permalink Symbol
 .header-anchor {
   color: $c-grey--light !important;
-  margin-left: -1ch;
+  margin-left: -1.5ch;
   margin-right: 4px;
   text-decoration: none;
 }
@@ -50,28 +50,30 @@ h5 {
 }
 
 .heading-with-lead > h1 + p {
-  font-size: f-size(6);
+  font-size: $f-small;
   margin-top: 0.5em;
 }
 // end h1-with-subtitle
 
 h1 {
+  font-size: $f-heading-1;
   margin-top: 0;
 }
 
-@each $size in $f-sizes {
-  h#{index($f-sizes, $size)} {
-    font-size: $size;
-  }
+h2 {
+  font-size: $f-heading-2;
+}
+
+h3 {
+  font-size: $f-heading-3;
 }
 
 .text--larger {
-  font-size: f-size(5);
+  font-size: $f-byline;
 }
 
-small,
-.text--smaller {
-  font-size: f-size(6);
+small {
+  font-size: $f-small;
 }
 
 .icon {

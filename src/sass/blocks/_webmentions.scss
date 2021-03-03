@@ -3,17 +3,17 @@
 // Webmentions
 .wm-title {
   font-family: $f-display;
-  font-size: f-size(5);
+  font-size: $f-heading-3;
   margin: 0;
 
-  &::before {
-    background-color: $c-accent;
-    content: '';
-    display: block;
-    height: 4px;
-    margin-bottom: 4px;
-    width: 48px;
-  }
+  // &::before {
+  //   background-color: $c-accent;
+  //   content: '';
+  //   display: block;
+  //   height: 4px;
+  //   margin-bottom: 4px;
+  //   width: 48px;
+  // }
 }
 
 .wm-summary {

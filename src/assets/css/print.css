@@ -18,7 +18,7 @@ abbr[title]::after {
   content: ' (' attr(title) ')';
 }
 
-main:not(.default) {
+main {
   margin: 0;
   width: 100%;
 }

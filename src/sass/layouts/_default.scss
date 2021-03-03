@@ -7,12 +7,13 @@ body {
   min-height: 100vh;
 }
 
-main:not(.default) {
+// For specificity, it's easier if there's no `:not(.default)` selector
+main {
   flex-grow: 1;
   margin: 48px auto 0;
   max-width: calc(100% - 48px); // 100% width with 24px gutters
   min-width: 328px;
-  width: 60ch; // ~60 characters, for optimal reading
+  width: 70ch; // 60-75 characters, for optimal reading
 }
 
 .page-header {
@@ -32,16 +33,14 @@ main:not(.default) {
 }
 
 .page-footer {
+  color: $c-grey--dark;
   display: inline-block;
+  font-family: $f-display;
+  font-weight: 500;
   margin: 8px auto;
   text-align: center;
 
-  &::before {
-    background-color: $c-accent;
-    content: '';
-    display: block;
-    height: 2px;
-    margin: 0 auto;
-    width: 30%;
+  :any-link {
+    text-decoration-color: currentColor;
   }
 }
