@@ -23,6 +23,5 @@ This page is all about the future. Of this website.
 - make [/style](/style) page into a comprehensive styleguide
 - hebrew/french versions of site
 - auto-generate json/rss feeds for each collection (pagination?)
-<!-- aesthetics: home page's main content should be roughly centered on desktop -->
 - use [parse5](https://github.com/inikulin/parse5) to post-process html (deal with external link rels, heading anchors, etc.)
 This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
