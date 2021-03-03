@@ -23,7 +23,7 @@
   },
   "homepage": "https://binyam.in",
   "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy": "^1.0.0-canary.10",
     "@binyamin/data-cache": "^1.1.0",
     "canvas": "^2.7.0",
     "clean-css": "^5.1.0",
