@@ -1,14 +1,8 @@
-.home {
-  column-gap: 24px;
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-template-rows: auto auto 1fr;
-  margin-top: 96px;
+@use '../helpers' as *;
 
-  picture {
-    align-self: center;
-    grid-row: 1/3;
-  }
+.home {
+  margin-top: 96px;
+  text-align: center;
 
   img {
     border-radius: 2px;
@@ -16,30 +10,10 @@
   }
 
   &__title {
-    align-self: flex-end;
     margin: 0;
   }
 
   &__lead {
-    margin: 0;
-  }
-
-  &__desc {
-    align-self: start;
-    grid-column: 1/3;
-  }
-
-  @media only screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-
-    &__title,
-    &__lead {
-      align-self: center;
-    }
-
-    &__desc {
-      text-align: center;
-    }
+    font-size: $f-byline;
   }
 }

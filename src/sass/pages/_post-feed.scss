@@ -32,11 +32,14 @@
   margin-bottom: 24px;
 
   &__title {
-    font-size: f-size(5);
+    font-family: $f-display;
+    font-size: $f-byline;
+    font-weight: 500;
   }
 
   &__details {
     color: $c-grey--dark;
+    font-family: $f-display;
     margin-bottom: 8px;
   }
 }

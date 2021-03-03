@@ -1,16 +1,9 @@
-$sizes: (
-  2.488rem,
-  2.074rem,
-  1.728rem,
-  1.44rem,
-  1.2rem,
-  0.833rem,
-);
+$heading-1: 2.665rem;
+$heading-2: 2rem;
+$heading-3: 1.556rem;
+$byline: 1.223rem;
+$small: 0.778rem;
 
 $display: 'Work Sans', Ubuntu, Arial, Helvetica, sans-serif;
 $body: 'Roboto', Ubuntu, Arial, Helvetica, sans-serif;
 $code: 'Source Code Pro', Monaco, Consolas, 'Courier New', monospace;
-
-@function size($n) {
-  @return nth($sizes, $n);
-}

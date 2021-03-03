@@ -5,7 +5,7 @@ code {
   background-color: $c-white--dark;
   border-radius: 2px;
   color: $c-grey--dark;
-  font-family: $f-mono;
+  font-family: $f-code;
   font-size: 90%;
   padding: 2px 4px;
 }
@@ -14,7 +14,7 @@ kbd {
   background-color: $c-white--dark;
   border-radius: 999px;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
-  font-family: $f-mono;
+  font-family: $f-code;
   font-size: 90%;
   padding: 4px 8px;
 }

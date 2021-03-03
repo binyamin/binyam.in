@@ -8,7 +8,8 @@
 
   li {
     display: inline-block;
-    font-size: f-size(5);
+    font-family: $f-display;
+    font-size: $f-byline;
     margin: 0 12px;
   }
 }
