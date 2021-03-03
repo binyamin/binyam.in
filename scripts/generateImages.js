@@ -81,7 +81,7 @@ const run = () => {
             {encoding: "utf-8"}
         );
         const frontMatterText = content.substring(3, content.indexOf("---", 3)).trim();
-        const data = yaml.safeLoad(frontMatterText);
+        const data = yaml.load(frontMatterText);
 
         if(!data.thumbnail) {
             createImage(data.title, path.join(__dirname, "../.cache/thumbnails", slugify(data.title) + ".png"));
