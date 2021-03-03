@@ -25,7 +25,7 @@
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
     "@binyamin/data-cache": "^1.1.0",
-    "canvas": "^2.6.1",
+    "canvas": "^2.7.0",
     "clean-css": "^5.1.0",
     "del": "^6.0.0",
     "highlight.js": "^10.6.0",
