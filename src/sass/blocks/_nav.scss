@@ -12,6 +12,10 @@
     font-size: $f-byline;
     margin: 0 12px;
   }
+
+  li a {
+    text-decoration: none;
+  }
 }
 
 .burger-btn {
