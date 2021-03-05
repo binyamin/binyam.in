@@ -8,7 +8,7 @@
     "dev": "eleventy --incremental --quiet --serve",
     "lint": "stylelint \"src/sass/**/*.scss\"",
     "test": "npm run lint",
-    "precompile": "node scripts/fetchNotes && node scripts/generateImages",
+    "precompile": "node scripts/fetchNotes",
     "compile": "eleventy"
   },
   "repository": {
@@ -25,12 +25,10 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-canary.10",
     "@binyamin/data-cache": "^1.1.0",
-    "canvas": "^2.7.0",
     "clean-css": "^5.1.0",
     "del": "^6.0.0",
     "highlight.js": "^10.6.0",
     "html-minifier": "^4.0.0",
-    "js-yaml": "^4.0.0",
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.0.2",
     "markdown-it-attrs": "^4.0.0",
