@@ -6,7 +6,8 @@ modified: 2021-02-11T21:55:34-05:00
 ---
 
 # 🚦 Roadmap
-This page is all about the future. Of this website.
+This page is all about the future. Of this website. Inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/).
+
 - More animations <!-- maybe pointless -->
 - Send Webmentions automatically
 - ~~Client-side search~~ (costly and unnecessary)
@@ -24,4 +25,3 @@ This page is all about the future. Of this website.
 - hebrew/french versions of site
 - auto-generate json/rss feeds for each collection (pagination?)
 - use [parse5](https://github.com/inikulin/parse5) to post-process html (deal with external link rels, heading anchors, etc.)
-This roadmap was inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/)
