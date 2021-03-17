@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Feeds
-desc: Here are some RSS/JSON feeds for the content on this website
+desc: Some RSS and JSON feeds for the content on this website
 ---
 
 # Feeds
