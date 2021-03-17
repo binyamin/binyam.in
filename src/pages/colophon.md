@@ -5,10 +5,8 @@ modified: 2020-10-18T16:18:24-04:00
 desc: How I built and maintain this site.
 ---
 
-{% header %}
-# Colophon
+# Colophon {.has-lead}
 Last updated on {{ modified | date_est }}
-{% endheader %}
 
 This site began in early 2018, and the design has changed a lot over the years. The 2nd and 3rd iterations are [on GitHub Pages](https://binyamin.github.io/archives), just in case someone wants to see them. The current version was originally conceived in December of 2019, and implemented slowly over the following months.
 

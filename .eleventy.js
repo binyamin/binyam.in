@@ -37,16 +37,10 @@ module.exports = function (eleventyConfig) {
         return content;
     })
 
-    eleventyConfig.setBrowserSyncConfig({
-        online: false
-    })
-
     // Important, since the gitignore lists "src/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
-    eleventyConfig.addWatchTarget("src/sass/**/*.scss");
 
     eleventyConfig.addPassthroughCopy('src/assets');
-    eleventyConfig.addPassthroughCopy({'.cache/thumbnails': 'assets/uploads'});
     eleventyConfig.addPassthroughCopy("src/keybase.txt");
 
     return {

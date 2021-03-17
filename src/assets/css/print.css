@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: serif;
   font-size: 12pt;
   margin: 0;
 }
@@ -31,8 +31,7 @@ blockquote {
 }
 
 .page-header,
-.page-footer,
-.post-tags {
+.page-footer {
   display: none;
 }
 
@@ -64,7 +63,7 @@ pre.code-block {
   page-break-inside: avoid;
 }
 
-a:not([class^='btn']),
+:any-link,
 .post-details,
 code {
   color: inherit;

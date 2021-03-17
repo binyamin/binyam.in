@@ -25,20 +25,12 @@ const md = new markdownIt(markdownItOptions)
     .use(require('markdown-it-anchor'), {
         level: 2,
         permalink: true,
-        permalinkBefore: true,
+        // permalinkBefore: true,
         permalinkSymbol: "#",
         permalinkSpace: false,
         permalinkAttrs: () => ({role: "none"})
     })
     .use(require("markdown-it-external-anchor"), { domain: 'binyam.in' })
-    .use(function(md) {
-        // md.linkify.add("#", {
-        //     validate: /^[\w-]+/,
-        //     normalize: match => {
-        //         match.url = "/wiki/search?tag=" + match.raw.slice(1);
-        //     }
-        // })
-    })
     .use(function(md) {
         // Recognize Mediawiki links ([[text]])
         md.linkify.add("[[", {

@@ -2,12 +2,12 @@
 {% assign mentions = webmentions | getMentionsForUrl: wm_url %}
 
 <section id="webmentions" class="webmentions">
-    <p class="wm-title">Webmentions</p>
+    <h2 class="wm-title">Webmentions</h2>
     <div class="wm-summary">
-        <p class="wm-likes" title="likes">
+        <p class="wm-likes" title="{{ mentions.likes | size }} likes">
             <span aria-label="Likes:">❤️</span> {{ mentions.likes | size }}
         </p>
-        <p class="wm-replies" title="replies">
+        <p class="wm-replies" title="{{ mentions.replies | size }} replies">
             <span aria-label="Replies:">💬</span> {{ mentions.replies | size }}
         </p>
         <p class="wm-info" title="What are webmentions?">
@@ -23,11 +23,11 @@
         {% for mention in mentions.replies %}
         <li class="u-comment h-cite wm-mention">
             <a class="u-url h-card wm-mentioner" href="{{mention.url}}" target="_blank" rel="noopener noreferrer">
-                <img class="u-photo wm-mentioner__img" src="{{mention.author.photo}}" alt="Picture of {{mention.author.name}}">
+                <img class="u-photo wm-mentioner__img" src="{{mention.author.photo}}" alt="Picture of {{mention.author.name}}" width="48" height="48">
                 <span class="p-name wm-mentioner__name">{{mention.author.name}}</span>
             </a>
             <time class="dt-published wm-mention__time" datetime="{{mention['wm-received'] | date: '%Y-%m-%dT%H:%M:%S%z'}}">{{mention['wm-received'] | date: "%B %d, %Y - %I:%M%P"}}</time>
-            <div class="p-content wm-mention__content">{{mention.content.html | truncate: 160}}</div>
+            <p class="p-content wm-mention__content">{{mention.content.text | truncate: 160}}</p>
         </li>
         {% endfor %}
     </ul>

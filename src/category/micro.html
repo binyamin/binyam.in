@@ -16,7 +16,7 @@ title: Micro
 <ul class="posts">
     {% for micro in collections.micro reversed %}
     <li class="post-item">
-        <a href="{{micro.url}}" class="post-item__title">{{micro.data.title}}</a>
+        <p class="post-item__title"><a href="{{micro.url}}">{{micro.data.title}}</a></p>
         <p class="post-item__details">Published on {{ micro.date | date_est: false}}</p>
     </li>
     {% endfor %}
