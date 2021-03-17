@@ -173,10 +173,14 @@ code {
   display: flex;
   flex-wrap: wrap;
   font-weight: 700;
-  gap: 0 16px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.menu li {
+  padding: 4px 8px;
+  margin: 2px 0;
 }
 
 .menu__link {
