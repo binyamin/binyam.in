@@ -19,12 +19,12 @@ module.exports = function (eleventyConfig) {
 
     collections.forEach(collectionName => {
         eleventyConfig.addCollection(collectionName, function(collectionApi) {
-            return collectionApi.getAll().filter(d => d.data.category === collectionName)
+            return collectionApi.getAllSorted().filter(d => d.data.category === collectionName)
         })
     })
 
     eleventyConfig.addCollection('posts', function(collectionApi){
-        return collectionApi.getAll().filter(d => d.data.isPost);
+        return collectionApi.getAllSorted().filter(d => d.data.isPost);
     })
 
     // Transforms
