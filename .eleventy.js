@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
 
     // Transforms
     eleventyConfig.addTransform('htmlmin', function(content) {
-        if(this.outputPath.endsWith(".html")) {
+        if(this.outputPath && this.outputPath.endsWith(".html")) {
             return htmlmin.minify(content, {
                 collapseWhitespace: true
             })
