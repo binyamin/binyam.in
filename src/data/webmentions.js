@@ -3,6 +3,7 @@ const datacache = require("@binyamin/data-cache");
 
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
 
+// TODO results are paginated (`?page=<n>`). We need all pages.
 async function fetchWebmentions() {
     const domain = 'binyam.in'
     const token = "5fABdaCA4Cgxw1r6RhF4rw"
