@@ -26,6 +26,21 @@ A paragraph (from the Greek paragraphos, “to write beside” or “written bes
 2. of
 3. Things
 
+col|col|col
+---|---|---
+table|without|text
+rows|upon|rows
+
+<figure>
+
+col|col|col
+---|---|---
+has|detail|text
+another|pointless|row
+
+<figcaption>Technically, this is just a description.</figcaption>
+</figure>
+
 ## Block-level Elements
 ```js
 function foo(bar) {
