@@ -116,13 +116,12 @@ blockquote {
 /* Inline Code-like */
 
 pre, var, code {
-  font-family: 'Source Code Pro', Menlo, Monaco, Consola, 'Courier New', Courier, monospace;
+  font-family: 'Inconsolata', Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
   line-height: normal;
 }
 
 var,
 code {
-  font-size: 90%;
   color: var(--text--alt);
   font-weight: 700;
 }
