@@ -6,8 +6,6 @@
   "scripts": {
     "start": "eleventy --quiet --serve",
     "dev": "eleventy --incremental --quiet --serve",
-    "lint": "stylelint \"src/sass/**/*.scss\"",
-    "test": "npm run lint",
     "precompile": "node scripts/fetchNotes",
     "compile": "eleventy"
   },
@@ -35,11 +33,6 @@
     "markdown-it-external-anchor": "^1.0.0",
     "markdown-it-footnote": "^3.0.2",
     "node-fetch": "^2.6.1",
-    "sass": "^1.32.8",
-    "stylelint": "^13.12.0",
-    "stylelint-config-sass-guidelines": "^8.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
     "title-case": "^3.0.3"
   }
 }
