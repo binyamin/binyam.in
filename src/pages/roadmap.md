@@ -7,7 +7,11 @@ modified: 2021-02-11T21:55:34-05:00
 
 # 🚦 Roadmap
 This page is all about the future. Of this website. Inspired by [Marc Jenkins](https://marcjenkins.co.uk/roadmap/).
-
+<!-- Self-host fonts -->
+<!--
+Accessibility Statement
+https://ethanmarcotte.com/wrote/an-accessibility-statement/
+-->
 - More animations <!-- maybe pointless -->
 - Send Webmentions automatically
 - ~~Client-side search~~ (costly and unnecessary)
