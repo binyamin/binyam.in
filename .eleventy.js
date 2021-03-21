@@ -37,20 +37,18 @@ module.exports = function (eleventyConfig) {
         return content;
     })
 
-    // Important, since the gitignore lists "src/wiki/**/*"
+    // Important, since the gitignore lists "html/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
 
-    eleventyConfig.addPassthroughCopy('src/assets');
-    eleventyConfig.addPassthroughCopy("src/keybase.txt");
-    eleventyConfig.addPassthroughCopy("src/favicon.ico");
+    eleventyConfig.addPassthroughCopy({ 'static': '/' });
 
     return {
         dir: {
-            input: "src",
+            input: "html",
             output: "dist",
-            layouts: "layouts",
-            includes: "includes",
-            data: "data"
+            layouts: "_layouts",
+            includes: "_includes",
+            data: "_data"
         }
     };
 };
