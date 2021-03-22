@@ -1,6 +1,7 @@
 ---
 title: Style
 layout: default
+desc: This style guide discusses my site's visual design
 ignore: true
 eleventyExcludeFromCollections: true
 ---
