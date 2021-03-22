@@ -7,18 +7,41 @@ eleventyExcludeFromCollections: true
 
 # Styles
 
-My "brand" is a visual representation of my personality and goals. I would like to be formal, clean, and sensible. Another value I'd like to display is friendliness. I want to be kind, warm, and inviting. This dichotomy of logic and emotion influences all my decisions, and my brand should reflect that.
+{%callout "warning" %}
+🚧 **Work-In-Progress**\
+This document is evolving slowly. It's not done yet. Things are rough around the edges, etc.
+{%endcallout%}
 
-For the text, I want to be precise and neat, yet warm and inviting. [Work Sans](https://fonts.google.com/specimen/Work+Sans) seems fitting, and I really wanted it as my primary typeface. It wasn't designed for body text, so I decided to use it as an accent font instead. For the body, I chose [Roboto](https://fonts.google.com/specimen/Roboto), as it's simple, popular, and doesn't call attention to itself.
+This is my style guide. I also have [a colophon](/colophon), which explains what I used to build my website. This document talks more about the visual design.
 
-## Text
-# H1
-## H2
-### H3
-#### H4
-##### H5
+<!--
+Contents
+- Vision & Tone
+- Colors (very short, I guess)
+- Typography
+  - Font & Text (family, levels, line-height?, icons)
+  - Links
+  - Blockquote
+- Inline code/var, code-blocks, and pre-blocks
+- Tables (also: w/t caption)
+- Callouts
+- Images
+- Layouts (3 variants, each one gets a rough image/svg thumbnail)
+-->
 
-A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
+
+## Voice & Tone
+
+My "brand" is a visual representation of my personality and goals. I would like to exhibit formal, clean, and sensible. Another value I'd like to display is friendliness. I want to be kind, warm, and inviting. This dichotomy of logic and emotion influences all my decisions, and I want my brand to reflect that.
+
+## Typography
+- **Font stack** is just system fonts (sans-serif and color emoji)
+- **Body font size** is usually 18px, and 16px on smaller screens
+
+We really only use 3 levels of headings. This is largely for visual taste, readability, and the user's sanity. Unless you're writing an academic report, web pages generally aren't detailed enough to merit a 4 levels of headings. If you feel the need for a 4th level, try restructuring your content and/or using different components.
+
+
+## Block-level Elements
 
 > This is a blockquote
 
@@ -41,7 +64,6 @@ another|pointless|row
 <figcaption>Technically, this is just a description.</figcaption>
 </figure>
 
-## Block-level Elements
 ```js
 function foo(bar) {
     return bar;
@@ -57,7 +79,6 @@ Sometimes, you need another paragraph.
 <button class="btn">Button</button>
 
 ## Inline Elements
-+ This is a [#chip](#){.chip}
 + Keyboard Input: <kbd>Enter</kbd>
 + Inline code - `Inline Code`
 + [This is an internal text link](#).
