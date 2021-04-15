@@ -48,3 +48,4 @@
   [headers.values]
     cache-control = '''max-age=31536000'''
     X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "interest-cohort=()"
