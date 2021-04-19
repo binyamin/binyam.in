@@ -9,10 +9,10 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 
 ## Present
 - _Atomic Habits_, by James Clear (9%)
-- _Exhalation: Stories_, by Ted Chiang (53%)
-- [A Universe Made for Two](https://openlibrary.org/isbn/9781946351470), by Jack M. Daniel (8%)
+- _Weaving the Web_, by Tim Berners-Lee (40%)
 
 ## Future
+- [A Universe Made for Two](https://openlibrary.org/isbn/9781946351470), by Jack M. Daniel
 - [How Emotions Are Made: The Secret Life of the Brain](https://www.google.com/books/edition/_/hN8MBgAAQBAJ), by Lisa Feldman Barrett
 - [Journey to the West](https://google.com/books/edition/_/oglmvgEACAAJ), by Wu Cheng'en & Timothy Richard
 - [Dune](https://google.com/books/edition/_/B1hSG45JCX4C), by Frank Herbert
@@ -26,6 +26,7 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 - [Steal like an Artist](http://www.barnesandnoble.com/w/steal-like-an-artist-austin-kleon/1110782807?ean=9780761169253), by Austin Kleon
 - [The Five People You Meet in Heaven](https://www.goodreads.com/book/show/3431.The_Five_People_You_Meet_in_Heaven), by Mitch Albom
 - [The Shallows: What the Internet Is Doing to Our Brains](https://www.indiebound.org/book/9780393357820), by Nicholas Carr
+- [Don't Make Me Think, Revisited](https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited), by Steve Krug
 
 ## Past
 _Not comprehensive_
