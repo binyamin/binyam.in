@@ -10,7 +10,9 @@ const markdownItOptions = {
         if (lang && hljs.getLanguage(lang)) {
             try {
                 return '<pre class="hljs code-block"><code>' +
-                hljs.highlight(lang, str, true).value +
+                hljs.highlight(str, {
+                    language: lang
+                }).value +
                 '</code></pre>';
             } catch (__) {}
         }
