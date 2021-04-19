@@ -28,4 +28,3 @@ I prefer to save towards more expensive products, rather than receive similar it
 ## Other
 
 * [Ryan Tedder's songwriting course](https://monthly.com/ryan-tedder-songwriting?friend=moshe-siegel) ($279)
-* Quality headphones - Sony or Skullcandy brand. Not wireless. $20 - $50.
