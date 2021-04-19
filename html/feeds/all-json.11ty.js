@@ -16,7 +16,7 @@ class Feed {
     render(data) {
         return JSON.stringify({
             version: "https://jsonfeed.org/version/1.1",
-            title: "Binyamin Green's Feed",
+            title: "Binyamin Green",
             home_page_url: "https://binyam.in",
             feed_url: "https://binyam.in/feeds/all.json",
             description: data.meta.desc,
