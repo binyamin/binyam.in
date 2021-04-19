@@ -14,3 +14,4 @@ I appreciate seeing what other people recommend, so I decided to return the favo
 ## Audio
 - **Piano Keyboard**: Yamaha's _YPG-235_ (discontinued in favor of the _PSR-EW300_)
 - **Microphone**: [_Yeti Nano_](https://www.bluemic.com/en-us/products/yeti-nano/), by Blue
+- **Studio Headphones**: [ATH-M20x](https://www.audio-technica.com/en-us/ath-m20x), by Audio-Technica
