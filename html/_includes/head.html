@@ -1,19 +1,16 @@
-{% assign metatitle = site.title %}
+{% assign metatitle = meta.title %}
 {% if title %}
     {% if isPost %}
         {% assign metatitle = title %}
     {% else %}
-        {% assign metatitle = title | append: " • " | append: site.title %}
+        {% assign metatitle = title | append: " • " | append: meta.title %}
     {% endif %}
 {% endif %}
 
-{% assign metadesc = site.desc %}
-{% if desc %}
-    {% assign metadesc = desc %}
-{% endif %}
+{% assign metadesc = desc | default: meta.desc %}
 
-{% assign metaimg = 'https://binyam.in/assets/logo.png' %}
-{% assign metaimg_twitter = metaimg %}
+{% assign metaimg_og = meta.image.square %}
+{% assign metaimg_twitter = meta.image.twitter %}
 
 {% if category == 'blog' %}
     {% assign filePath = title | slugify | prepend: "https://binyam.in/assets/uploads/" | append: ".png" %}
@@ -28,6 +25,7 @@
 {% if isPost %}
     {% assign metatype = 'article' %}
 {% endif%}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -45,7 +43,7 @@
 <meta property="og:title" content="{{-metatitle-}}">
 <meta property="og:type" content="{{metatype}}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{{- metaimg -}}">
+<meta property="og:image" content="{{- metaimg_og -}}">
 <meta property="og:description" content="{{- metadesc -}}">
 
 <!-- Feeds -->
@@ -61,8 +59,8 @@
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@{{- site.author.twitter -}}" />
-<meta name="twitter:creator" content="@{{- site.author.twitter -}}" />
+<meta name="twitter:site" content="@{{- meta.twitter_handle -}}" />
+<meta name="twitter:creator" content="@{{- meta.twitter_handle -}}" />
 <meta name="twitter:title" content="{{-metatitle-}}" />
 <meta name="twitter:description" content="{{-metadesc-}}" />
 <meta name="twitter:image" content="{{- metaimg_twitter -}}" />

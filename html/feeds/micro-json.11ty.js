@@ -25,8 +25,8 @@ class Feed {
             language: "en-US",
             authors: [
                 {
-                    name: data.site.author.name,
-                    url: data.site.url,
+                    name: data.meta.author.name,
+                    url: data.meta.baseUrl,
                     avatar: "https://binyam.in/assets/img/profile/profile@128.jpeg"
                 }
             ],

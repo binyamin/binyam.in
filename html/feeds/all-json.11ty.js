@@ -19,14 +19,14 @@ class Feed {
             title: "Binyamin Green's Feed",
             home_page_url: "https://binyam.in",
             feed_url: "https://binyam.in/feeds/all.json",
-            description: data.site.desc,
+            description: data.meta.desc,
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
             language: "en-US",
             authors: [
                 {
-                    name: data.site.author.name,
-                    url: data.site.url,
+                    name: data.meta.author.name,
+                    url: data.meta.baseUrl,
                     avatar: "https://binyam.in/assets/img/profile/profile@128.jpeg"
                 }
             ],
