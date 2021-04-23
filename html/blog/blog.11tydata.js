@@ -4,7 +4,6 @@ module.exports = {
     eleventyComputed: {
         permalink: (d) => isMarkdown(d) ? "/p/{{ title | slugify }}/" : false,
         category: "blog",
-        isPost: true,
         layout: (d) => isMarkdown(d) ? "post" : "",
         eleventyExcludeFromCollections: (d) => isMarkdown(d) ? false : true,
     }

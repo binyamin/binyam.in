@@ -1,3 +1,5 @@
+{% assign isPost = postTypes | includes: category %}
+
 {% assign metatitle = meta.title %}
 {% if title %}
     {% if isPost %}

@@ -4,7 +4,6 @@ module.exports = {
     eleventyComputed: {
         permalink: (d) => isMarkdown(d) ? `/p/${d.page.fileSlug}/` : "false",
         category: "micro",
-        isPost: true,
         layout: (d) => isMarkdown(d) ? "post" : "",
         eleventyExcludeFromCollections: (d) => isMarkdown(d) ? false : true,
     }
