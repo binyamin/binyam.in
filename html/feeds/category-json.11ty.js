@@ -1,5 +1,5 @@
 /**
- * JSON feed for https://binyam.in
+ * JSON feed for https://binyam.in/c/<category>
  * @see https://jsonfeed.org/version/1.1 (docs)
  */
 
@@ -8,7 +8,12 @@
 class Feed {
     data() {
         return {
-            permalink: "/feeds/blog.json",
+            pagination: {
+                data: "categories",
+                size: 1,
+                alias: "c"
+            },
+            permalink: (data) => `/feeds/${data.c.key}.json`,
             eleventyExcludeFromCollections: true
         }
     }
@@ -16,9 +21,9 @@ class Feed {
     render(data) {
         return JSON.stringify({
             version: "https://jsonfeed.org/version/1.1",
-            title: "Binyamin Green (articles)",
-            home_page_url: "https://binyam.in/c/blog",
-            feed_url: "https://binyam.in/feeds/blog.json",
+            title: `${data.meta.title} (${data.c.title})`,
+            home_page_url: `https://binyam.in/c/${data.c.key}/`,
+            feed_url: this.absolute_url(data.page.url),
             description: data.meta.desc,
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
@@ -30,12 +35,12 @@ class Feed {
                     avatar: "https://binyam.in/assets/img/profile/profile@128.jpeg"
                 }
             ],
-            items: data.collections.blog.map(p => ({
+            items: data.collections[data.c.key].map(p => ({
                 id: this.absolute_url(p.url),
                 url: this.absolute_url(p.url),
                 title: p.data.title,
                 content_html: this.escape_once(p.templateContent),
-                summary: p.data.desc || "No description provided",
+                ...(p.data.desc ? {summary: p.data.desc } : {}),
                 date_published: p.data.date,
                 ...(p.data.modified ? {date_modified: p.data.modified} : {}),
                 ...(p.data.tags ? {tags: p.data.tags} : {})

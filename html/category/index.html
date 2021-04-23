@@ -1,21 +1,28 @@
 ---
 layout: default
-title: Articles
+pagination:
+    data: categories
+    size: 1
+    alias: c
+permalink: "/c/{{c.key}}/"
+eleventyComputed:
+    title: "{{c.title}}"
+    desc: "{{c.meta_desc | default: c.desc | strip_html}}"
 ---
 
 <header class="posts-header">
-    <h1 class="posts-title">Articles</h1>
-    <p class="posts-lead">In contrast to <a href="/c/micro">my journal</a>, these posts aim to be fleshed-out pieces of writing.</p>
+    <h1 class="posts-title">{{c.title}}</h1>
+    <p class="posts-lead">{{c.desc}}</p>
     <p class="posts-details">
         <svg role="none" viewBox="0 0 24 24" class="icon">
             <use href="/assets/icons/icon-rss.svg#sprite"/>
         </svg>
-        Subscribe via <a href="/feeds/blog.xml">RSS</a> or <a href="/feeds/blog.json">JSON</a> feed
+        Subscribe via <a href="/feeds/{{c.key}}.xml">RSS</a> or <a href="/feeds/{{c.key}}.json">JSON</a> feed
     </p>
 </header>
 
 <ul class="posts" id="postList">
-    {% for post in collections.blog reversed %}
+    {% for post in collections[c.key] reversed %}
     <li class="post-item">
         <p class="post-item__title"><a href="{{post.url}}">{{post.data.title}}</a></p>
         <p class="post-item__details">Posted on {{ post.date | date_est: false }}</p>

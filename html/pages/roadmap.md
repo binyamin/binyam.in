@@ -22,5 +22,5 @@ https://ethanmarcotte.com/wrote/an-accessibility-statement/
 - code-block titles
 - make [/style](/style) page into a comprehensive styleguide (wip)
 - hebrew/french versions of site
-- auto-generate json/rss feeds for each collection (pagination?)
+- ~~auto-generate json/rss feeds for each collection~~
 - use [parse5](https://github.com/inikulin/parse5) to post-process html (deal with external link rels, heading anchors, etc.)
