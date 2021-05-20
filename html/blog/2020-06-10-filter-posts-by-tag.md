@@ -1,14 +1,14 @@
 ---
 title: Filter Posts by Tag
 date: 2020-06-10T12:00:00-04:00
-modified: 2020-10-18T10:47:39-04:00
-tags: [code, blogging]
+modified: 2021-05-20T13:21:42-04:00
+tags: [code, blogging, html]
 desc: >-
     Blogs can quickly become disorganized. With a bit of javascript, you can filter your posts by tag.
 ---
 Blogs can quickly become disorganized. You might want to link to a page on your website which only lists posts about CSS. With a bit of javascript, you can use `/blog?tag=css` to filter your posts.
 
-⚠️ For the following method to work, each post item should have a [data attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*) of `data-tags="[tag1,tag2]">`.
+For the following method to work, each post item should have a [data attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*) of `data-tags="[tag1,tag2]">`. On a related note, the method assumes a basic knowledge of HTML. Feel free to glance at [W3Schools](https://www.w3schools.com/html/) or [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
 First, we need to find our posts. Use the `document.querySelectorAll` method[^1]. The method takes one parameter: A selector string formatted like a css selector. Now, we need to get the tag in the url. The global `location.search` variable provides us with the query parameters at the end of the url. This will give us a string, such as `?topic=css`, which we can manipulate to find the tag.
 
