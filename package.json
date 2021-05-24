@@ -21,7 +21,7 @@
   },
   "homepage": "https://binyam.in",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-canary.20",
+    "@11ty/eleventy": "^1.0.0-canary.23",
     "@binyamin/data-cache": "^1.1.0",
     "clean-css": "^5.1.2",
     "del": "^6.0.0",
@@ -31,7 +31,7 @@
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-external-anchor": "^1.0.0",
-    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-footnote": "^3.0.3",
     "node-fetch": "^2.6.1",
     "title-case": "^3.0.3"
   }
