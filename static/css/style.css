@@ -317,10 +317,11 @@ footer {
 
 
 /* Code block */
-.code-block__lang {
-  font-size: var(--font-small);
+.code-block::before {
   float: right;
-  margin: 0;
+  font-size: var(--font-small);
+  color: var(--text--alt);
+  content: attr(data-lang);
 }
 
 .code-block {
