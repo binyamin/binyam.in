@@ -317,6 +317,11 @@ footer {
 
 
 /* Code block */
+.code-block__lang {
+  font-size: var(--font-small);
+  float: right;
+  margin: 0;
+}
 
 .code-block {
   border-radius: 8px;
@@ -327,7 +332,6 @@ footer {
   color: inherit;
   font-weight: inherit;
 }
-
 
 /* Backlinks (in wiki) */
 
