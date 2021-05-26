@@ -24,10 +24,8 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addCollection('posts', function(collectionApi){
-        return collectionApi.getAllSorted().filter(d => ["blog", "micro"].includes(d.data.category));
+        return collectionApi.getAllSorted().filter(d => d.data.isPost);
     })
-
-    eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
 
     // Transforms
     eleventyConfig.addTransform('htmlmin', function(content) {

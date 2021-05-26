@@ -7,7 +7,7 @@ pagination:
 permalink: "/c/{{c.key}}/"
 eleventyComputed:
     title: "{{c.title}}"
-    desc: "{{c.meta_desc | default: c.desc | strip_html}}"
+    desc: "{{c.meta.desc | default: c.desc | strip_html}}"
 ---
 
 <header class="posts-header">
