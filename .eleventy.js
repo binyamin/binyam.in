@@ -1,7 +1,4 @@
-const htmlmin = require("html-minifier");
-
 module.exports = function (eleventyConfig) {
-
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
 
@@ -25,16 +22,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection('posts', function(collectionApi){
         return collectionApi.getAllSorted().filter(d => d.data.isPost);
-    })
-
-    // Transforms
-    eleventyConfig.addTransform('htmlmin', function(content) {
-        if(this.outputPath && this.outputPath.endsWith(".html")) {
-            return htmlmin.minify(content, {
-                collapseWhitespace: true
-            })
-        }
-        return content;
     })
 
     // Important, since the gitignore lists "html/wiki/**/*"
