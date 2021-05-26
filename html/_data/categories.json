@@ -8,5 +8,10 @@
         "title": "Microblog",
         "key": "micro",
         "desc": "These are my half-baked thoughts. It's sort-of a hatching ground for full-grown articles, with personal updates mixed in."
+    },
+    {
+        "title": "Weeknotes",
+        "key": "weeknote",
+        "desc": "A weekly collection of interesting links 🔗, inspiring quotes 🙶, and iridescent sunshine 🌞."
     }
 ]

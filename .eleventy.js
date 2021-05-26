@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("getMentionsForUrl", wm);
 
     // Collections
-    const collections = ['blog', 'wiki', 'micro'];
+    const collections = ['blog', 'wiki', 'micro', 'weeknote'];
 
     collections.forEach(collectionName => {
         eleventyConfig.addCollection(collectionName, function(collectionApi) {
@@ -24,10 +24,10 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addCollection('posts', function(collectionApi){
-        return collectionApi.getAllSorted().filter(d => ["blog", "micro"].includes(d.data.category));
+        return collectionApi.getAllSorted().filter(d => ["blog", "micro", 'weeknote'].includes(d.data.category));
     })
 
-    eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
+    eleventyConfig.addGlobalData("postTypes", ["blog", "micro", 'weeknote']);
 
     // Transforms
     eleventyConfig.addTransform('htmlmin', function(content) {
