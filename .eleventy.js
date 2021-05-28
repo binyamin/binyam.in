@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
         return collectionApi.getAllSorted().filter(d => d.data.isPost);
     })
 
+    eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
+
     // Important, since the gitignore lists "html/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
 

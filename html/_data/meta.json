@@ -1,0 +1,13 @@
+{
+    "title": "Binyamin Green",
+    "desc": "Binyamin Green is a student in practice and a web developer at heart.",
+    "author": {
+        "name": "Binyamin Aron Green"
+    },
+    "image": {
+        "square": "https://binyam.in/assets/logo.png",
+        "twitter": ""
+    },
+    "twitterHandle": "binyamingreen",
+    "baseUrl": "https://binyam.in"
+}
