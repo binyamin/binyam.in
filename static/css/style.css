@@ -402,7 +402,7 @@ main {
 }
 
 .post-item__title {
-  font-weight: 700;
+  font-size: var(--font-byline);
   margin-bottom: 0;
 }
 
