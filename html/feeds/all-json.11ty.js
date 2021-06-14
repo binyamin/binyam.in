@@ -30,7 +30,7 @@ class Feed {
                     avatar: "https://binyam.in/assets/img/profile/profile@128.jpeg"
                 }
             ],
-            items: data.collections.posts.map(p => ({
+            items: [...data.collections.posts].reverse().map(p => ({
                 id: this.absolute_url(p.url),
                 url: this.absolute_url(p.url),
                 title: p.data.title,

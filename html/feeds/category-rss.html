@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
     <copyright>Copyright 2021, Binyamin Aron Green</copyright>
     <docs>https://cyber.harvard.edu/rss/rss.html</docs>
     <language>en-us</language>
-    {% for post in collections[c.key] %}
+    {% for post in collections[c.key] reversed %}
     <item>
       <title>{{ post.data.title }}</title>
       <description>{{ post.templateContent | escape_once }}</description>

@@ -20,13 +20,14 @@ module.exports = function (eleventyConfig) {
         })
     })
 
+
     eleventyConfig.addCollection('posts', function(collectionApi){
         return collectionApi.getAllSorted().filter(d => {
-            return d.data.postTypes.includes(d.data.category)
+            return ["blog", "micro"].includes(d.data.category)
         });
     })
-
     eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
+
 
     // Important, since the gitignore lists "html/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
