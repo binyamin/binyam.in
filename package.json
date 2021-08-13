@@ -22,7 +22,7 @@
   },
   "homepage": "https://binyam.in",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-canary.23",
+    "@11ty/eleventy": "^1.0.0-canary.41",
     "@binyamin/data-cache": "^1.1.0",
     "clean-css": "^5.1.2",
     "del": "^6.0.0",
