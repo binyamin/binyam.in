@@ -21,3 +21,4 @@ This page is all about the future. Of this website. Inspired by [Marc Jenkins](h
 - hebrew/french versions of site
 - use [parse5](https://github.com/inikulin/parse5) to post-process html (deal with external link rels, heading anchors, etc.)
 - list of podcasts I like
+- `#bug`: webmention results are paginated. We need all pages.
