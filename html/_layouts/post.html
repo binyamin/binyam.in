@@ -2,19 +2,23 @@
 layout: default
 main_class: post
 ---
-<article class="h-entry">
+
+<article class="h-entry" datetime="{{date | _date: 'iso'}}" aria-labelledby="postTitle">
     <header class="post-header">
-        <h1 class="post-header__title p-name">{{ title }}</h1>
+        <h1 class="post-header__title p-name" id="postTitle">{{ title }}</h1>
         <p class="post-header__details">Published on
             <a href={{page.url}} class="u-url">
-                <time class="dt-published" datetime="{{ date | date: '%Y-%m-%d'}}">{{ date | date_est: false }}</time>
+                <time class="dt-published" datetime="{{ date | _date: 'iso'}}">{{ date | date_est: false }}</time>
             </a>
             {% if category == 'blog' %}
-                <a href="/c/blog" class="p-category" hidden>article</a>
+            <a href="/c/blog" class="p-category" hidden rel="tag">article</a>
             {% elsif category == 'micro' %}
-                <a href="/c/micro" class="p-category" hidden>microblog</a>
+            <a href="/c/micro" class="p-category" hidden rel="tag">microblog</a>
             {% endif %}
         </p>
+        <address class="h-card p-author" hidden>
+            <a href="https://binyam.in" class="p-name u-url" rel="author">Binyamin Green</a>
+        </address>
     </header>
     <section class="e-content post-content">
         {{ content }}
@@ -22,12 +26,6 @@ main_class: post
 
     {% include 'webmentions.html' %}
 
-    <div class="post-footer">
-        <p class="h-card p-author" hidden>
-            <a href="https://binyam.in" class="p-name u-url" rel="author">Binyamin Green</a>
-            <img src="/assets/img/profile/profile@128.webp" class="u-photo" alt="">
-        </p>
-        <a href="#top" class="sr-only">Top</a>
-    </div>
+    <a href="#top" class="sr-only">Top</a>
 </article>
 <script async src="/js/twitter.js"></script>
