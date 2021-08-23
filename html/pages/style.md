@@ -29,6 +29,7 @@ Contents
 - Images
 - Layouts (3 variants, each one gets a rough image/svg thumbnail)
 -->
+<!-- https://brianjdevries.com/style-guide/ -->
 
 
 ## Voice & Tone
