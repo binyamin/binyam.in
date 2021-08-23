@@ -30,3 +30,4 @@ I prefer to save towards more expensive products, rather than receive similar it
 * [Ryan Tedder's songwriting course](https://monthly.com/ryan-tedder-songwriting?friend=moshe-siegel) ($279)
 * [Teeturtle](https://www.teeturtle.com/) sells some very fun t-shirts for geeks. ($25, $12.50 on-sale)
 * Paracord bracelet ([walmart](https://www.walmart.com/ip/Deluxe-Paracord-Survival-Bracelet/49676108) - $7.25, [amazon](https://www.amazon.com/dp/B06XK9MF1F) - $6.97)
+* License for [Affinity Designer](https://affinity.serif.com/en-us/designer/) ($50)
