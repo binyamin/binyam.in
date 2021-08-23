@@ -70,6 +70,11 @@
   resolved "https://registry.yarnpkg.com/@binyamin/data-cache/-/data-cache-1.1.0.tgz#edc2971bf50a0f8de6305d0eab28ce034a275a4f"
   integrity sha512-CBm07ExKagVv2yMP1vM1lCq+j6hYRMSIWgJGo2FqrMMaK3F1Ucnw4D2uPhV7ccTpIsEntuq15n19+k3q2EY08g==
 
+"@binyamin/markdown-it-wikilinks@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@binyamin/markdown-it-wikilinks/-/markdown-it-wikilinks-1.1.0.tgz#7614152213bd7b9231e5f7acc0b9050f074c807d"
+  integrity sha512-sweBNYR/6Fb9lGgOQRtu6vIDH8F/Kp98L86uElxPtd0W+6SuDZCzBiE4EVbxSHgQ7F8SK88pr29liEhhIy5s9w==
+
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"

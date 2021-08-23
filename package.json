@@ -24,6 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-canary.41",
     "@binyamin/data-cache": "^1.1.0",
+    "@binyamin/markdown-it-wikilinks": "^1.1.0",
     "clean-css": "^5.1.5",
     "del": "^6.0.0",
     "highlight.js": "^11.2.0",
@@ -34,5 +35,6 @@
     "markdown-it-footnote": "^3.0.3",
     "node-fetch": "^2.6.1",
     "title-case": "^3.0.3"
-  }
+  },
+  "dependencies": {}
 }
