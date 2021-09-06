@@ -8,7 +8,7 @@ desc: I enjoy reading. I enjoy sharing. I want to share my reading.
 I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created this page. I'd love for you to [suggest a book](/contact).
 
 ## Present
-- _Atomic Habits_, by James Clear (26%)
+- _Atomic Habits_, by James Clear (56%)
 - _Weaving the Web_, by Tim Berners-Lee (70%)
 
 ## Future
