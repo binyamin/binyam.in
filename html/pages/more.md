@@ -3,7 +3,7 @@ title: More
 desc: A listing of all the random pages on my site.
 ---
 
-## More Links
+# More Links
 A listing of all the awesome pages on my site. Said differently, here are some links which didn't fit in the navbar.
 
 
