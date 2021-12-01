@@ -4,10 +4,9 @@ module.exports = (eleventyConfig, md) => {
     eleventyConfig.addFilter("absolute_url", slug => {
         return "https://binyam.in" + (slug.startsWith("/") ? slug : "/" + slug);
     })
-    
+
     const filters = {
         ...require("./date_filter"),
-        ...require("./sort_ab_filter")
     }
 
     for (const fn in filters) {
