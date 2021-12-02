@@ -33,7 +33,7 @@
     "markdown-it-attrs": "^4.1.0",
     "markdown-it-external-anchor": "^1.0.0",
     "markdown-it-footnote": "^3.0.3",
-    "node-fetch": "^2.6.5",
+    "node-fetch": "^2.6.6",
     "title-case": "^3.0.3"
   },
   "dependencies": {}
