@@ -1,10 +1,27 @@
+$ff-sans: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+"Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol", "Noto Color Emoji";
+
 html {
-  font-size: 112.5%;
+    font-family: 'Source Sans Pro', $ff-sans;
+    font-size: 112.5%;
+    line-height: 1.45; // for a11y, ideal line-height is 1.5
 }
 
-
-body {
-  // Choose font-family: IBM Plex, or EB Garamond + Work Sans
-  font-family: 'IBM Plex Sans', system-ui;
-  line-height: 1.3;
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
 }
+
+:is(h1, h2, h3, h4) {
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+/* TODO revisit font-sizing for headers */
+h1, %title { font-size: 2.665rem; }
+h2, %heading { font-size: 2rem; }
+h3, %subheading { font-size: 1.556rem; }
+h4, %byline { font-size: 1.223rem; }
+small, %small { font-size: 0.778rem; }
