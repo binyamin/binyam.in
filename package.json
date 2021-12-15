@@ -7,8 +7,8 @@
     "start": "eleventy --quiet --serve",
     "dev": "eleventy --incremental --quiet --serve",
     "watch": "eleventy --quiet --watch",
-    "precompile": "node scripts/fetchNotes",
-    "compile": "eleventy"
+    "prebuild": "node scripts/fetchNotes",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
