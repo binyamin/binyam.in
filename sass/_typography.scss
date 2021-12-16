@@ -1,20 +1,15 @@
-$ff-sans: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-"Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-"Segoe UI Symbol", "Noto Color Emoji";
+@use 'theme/type' as type;
+@use 'theme/color' as color;
 
 html {
-    font-family: 'Source Sans Pro', $ff-sans;
+    font-family: type.font-family("body");
     font-size: 112.5%;
-    line-height: 1.45; // for a11y, ideal line-height is 1.5
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 100%;
-  }
+    line-height: 1.45; // TODO for a11y, ideal line-height is 1.5
+    color: color.$text;
 }
 
 :is(h1, h2, h3, h4) {
+    font-family: type.font-family("display");
 	font-weight: 400;
 	line-height: 1.3;
 }
