@@ -4,7 +4,7 @@
     {% include 'head.html' %}
 </head>
 <body>
-    <header class="page-header" id="top">
+    <header class="page-header">
         <a href="/" class="page-header__logo">
             <img
                 src="/assets/logo.svg"
@@ -23,7 +23,7 @@
         </nav>
     </header>
 
-    <main class="{{main_class}}">
+    <main class="{{main_class}}" id="top">
         {{ content }}
     </main>
 
