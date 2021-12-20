@@ -18,10 +18,8 @@
 
 :root {
   --primary: #44835C;
-  --text: #0A0B0D;
   --text--alt: #555;
   /* --text--lighter-2: #9C9C9D; */
-  --surface: #FFF;
   --surface--alt: #F3F3F6;
   /* --surface--darker: #9C9C9D; */
 
@@ -38,24 +36,6 @@
   #region
   02-Base
 */
-
-body {
-  color: var(--text);
-  margin: 0;
-}
-
-/* Links */
-
-:any-link {
-  color: currentColor;
-  text-decoration-color: var(--primary);
-  text-decoration-thickness: 2px;
-}
-
-:any-link:hover {
-  color: var(--primary);
-}
-
 
 /* Blockquote */
 
@@ -139,48 +119,6 @@ table + figcaption {
 :is(h1,h2,h3,h4,h5,h6):hover .header-anchor,
 .header-anchor:focus {
   color: var(--primary);
-}
-
-
-/* Navbar */
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px 24px;
-  gap: 24px;
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 4px 16px;
-  margin: 2px 0;
-}
-
-.menu__link {
-  text-decoration: none;
-}
-
-
-/* Page Footer */
-
-footer {
-  text-align: center;
-  margin: 8px 24px;
-}
-
-@media (max-width: 768px) {
-  footer {
-    text-align: unset;
-  }
 }
 
 /* Webmentions (container) */
@@ -307,19 +245,6 @@ footer {
   #region
   04-Layouts
 */
-
-/* General */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex-grow: 1;
-  width: min(70ch, calc(100% - 24px - 24px));
-  margin: 0 auto;
-}
 
 /* Home page */
 .home img {

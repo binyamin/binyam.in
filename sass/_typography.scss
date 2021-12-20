@@ -4,8 +4,8 @@
 html {
     font-family: type.font-family("body");
     font-size: 112.5%;
-    line-height: 1.45; // TODO for a11y, ideal line-height is 1.5
     color: color.$text;
+    -webkit-font-smoothing: antialiased;
 }
 
 :is(h1, h2, h3, h4) {
@@ -20,3 +20,8 @@ h2, %heading { font-size: 2rem; }
 h3, %subheading { font-size: 1.556rem; }
 h4, %byline { font-size: 1.223rem; }
 small, %small { font-size: 0.778rem; }
+
+p {
+    line-height: 1.45; // TODO for a11y, ideal line-height is 1.5
+    margin: 8px 0;
+}
