@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home :: Typography Sample</title>
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header class="site-header">
@@ -21,11 +18,16 @@
     </header>
     <main class="site-content">
         <section class="hero">
-            <!-- next to my name is a button which pronounces my name -->
-            <h1>My name is <span style="text-decoration: underline dashed;">Binyamin Green</span></h1>
-            <p>I’m a designer, coder, and occassional writer.</p>
+            <picture>
+                <source srcset="/assets/img/profile/profile@128.webp">
+                <img src="/assets/img/profile/profile@128.jpeg" alt="" width="96" height="96" />
+            </picture>
+            <hgroup>
+                <h1>Hi, I&CloseCurlyQuote;m Binyamin</h1>
+                <p>I&CloseCurlyQuote;m a designer, developer, and occassional writer.</p>
+            </hgroup>
             <p>I want to build a happier, healthier internet community. I try to give users control of their technology. Accessibility is key, along with intuitive design.</p>
-            <p>I’m available for new projects! Feel free to <a href="/contact">reach out</a>.</p>
+            <p>I&CloseCurlyQuote;m available for new projects! Reach out <a href="mailto:binyamin[remove-me]green@protonmail.com">via e-mail</a>.</p>
         </section>
     </main>
     <footer class="site-footer">
