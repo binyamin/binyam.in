@@ -11,3 +11,7 @@
     }
 }
 
+@mixin alt {
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+}

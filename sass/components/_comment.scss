@@ -1,0 +1,38 @@
+// Card - a standalone piece of content, within a larger body of content - design token, not component
+@use '../theme/color';
+@use '../elements/hyperlink' as link;
+
+// Comment (indended for webmentions)
+
+// TODO link-to-source, in `.comment__meta`, looks like it should link the same
+// as the rest of `.person`
+
+.comment {
+    &__header {}
+
+    &__meta {
+        color: color.$text-alt;
+
+        &:any-link, :any-link {
+            @include link.alt;
+        }
+    }
+
+    &__body {
+        margin: 8px 0 24px 0;
+    }
+}
+
+
+.person {
+    display: block;
+    font-weight: 700;
+    margin-right: 8px;
+    text-decoration: none;
+
+    &__avatar {
+        border-radius: 2px;
+        float: left;
+        margin-right: 8px;
+    }
+}

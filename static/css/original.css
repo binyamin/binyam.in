@@ -50,36 +50,6 @@
   margin-bottom: 8px;
 }
 
-
-/* Webmentions (reply) */
-
-.wm-mentions {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.wm-mentioner {
-  display: block;
-  margin-right: 8px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.wm-mentioner__img {
-  border-radius: 2px;
-  float: left;
-  margin-right: 8px;
-}
-
-.wm-mention__time {
-  color: var(--text--alt);
-}
-
-.wm-mention__content {
-  margin: 8px 0 24px 0;
-}
-
 /* Backlinks (in wiki) */
 
 .bl__title {
