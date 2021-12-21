@@ -5,8 +5,12 @@ modified: 2021-02-10T19:49:55-05:00
 desc: Semi-annual updates on what's happening in my life.
 ---
 
-# Now {.has-lead}
+<hgroup>
+
+# Now
 Last updated on {{ modified | date_est }}
+
+</hgroup>
 
 * I'm pretty close to earning my Associate's Degree in Computer Science. Just a handful of classes left.
 * I'm looking for work experience as a front-end developer.
