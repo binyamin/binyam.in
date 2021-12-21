@@ -13,7 +13,6 @@
 
 @use 'typography'; // TODO merge with `elements`
 @use 'elements'; // raw HTML elements (no classes or ids)
-
-@use 'components/navbar';
+@use 'components'; // HTML elements with classes
 
 @use 'layouts/base';

@@ -1,0 +1,9 @@
+@use '../theme/color' as color;
+
+@use 'navbar';
+
+// inline icons
+.icon {
+    fill: currentColor;
+    vertical-align: text-bottom;
+}

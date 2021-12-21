@@ -42,30 +42,6 @@
   03-Blocks
 */
 
-
-/* Inline icons */
-
-.icon {
-  bottom: -3px; /* The extra pixels (see below) should be below the baseline */
-  fill: currentColor;
-  height: 21px; /* The height of an emoji at font-size 18px */
-  position: relative;
-}
-
-
-/* Header Anchor Symbol */
-
-.header-anchor {
-  color: transparent;
-  text-decoration: none;
-  margin-left: 4px;
-}
-
-:is(h1,h2,h3,h4,h5,h6):hover .header-anchor,
-.header-anchor:focus {
-  color: var(--primary);
-}
-
 /* Webmentions (container) */
 
 .wm-title {
@@ -137,18 +113,6 @@
 
 .callout--danger {
   --callout-color: var(--danger);
-}
-
-
-/* heading-lead */
-
-.has-lead {
-  margin-bottom: 0;
-}
-
-.has-lead + p {
-  margin-top: 0;
-  color: var(--text--alt);
 }
 
 
