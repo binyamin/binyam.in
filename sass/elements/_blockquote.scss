@@ -1,0 +1,8 @@
+@use '../theme/color' as color;
+
+blockquote {
+    border-left: 4px solid color.$primary;
+    padding-left: 8px;
+    margin: 0 0 0 24px;
+}
+// TODO citations via figcaption + cite

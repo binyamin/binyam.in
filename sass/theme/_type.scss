@@ -19,7 +19,7 @@ $-fallback: (
 
 $-type: (
     display: list.join('Source Serif Pro', map.get($-fallback, 'serif')),
-    body: list.join('Source Sans Pro', map.get($-fallback, 'serif')),
+    body: list.join('Source Sans Pro', map.get($-fallback, 'sans')),
     pre: list.join('Source Code Pro', map.get($-fallback, 'mono'))
 );
 

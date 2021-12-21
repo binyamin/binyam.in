@@ -17,10 +17,7 @@
 */
 
 :root {
-  --primary: #44835C;
-  --text--alt: #555;
   /* --text--lighter-2: #9C9C9D; */
-  --surface--alt: #F3F3F6;
   /* --surface--darker: #9C9C9D; */
 
   --info: #2e9cdc;
@@ -36,58 +33,6 @@
   #region
   02-Base
 */
-
-/* Blockquote */
-
-blockquote {
-  border-left: 4px solid var(--primary);
-  padding-left: 8px;
-  margin: 0 0 0 24px;
-}
-
-
-/* Inline Code-like */
-
-pre, var, code {
-  font-family: 'Inconsolata', Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
-  line-height: normal;
-}
-
-var,
-code {
-  color: var(--text--alt);
-  font-weight: 700;
-}
-
-
-/* Table */
-
-table {
-  border-collapse: collapse;
-  margin: 16px auto;
-}
-
-td, th {
-  border-bottom: 1px solid var(--text);
-  padding: 2px 8px;
-}
-
-th[scope=row] {
-  text-align: left;
-  font-weight: normal;
-  font-style: italic;
-}
-
-tbody tr:nth-of-type(2n + 1) {
-  background-color: var(--surface--alt);
-}
-
-
-table + figcaption {
-  text-align: center;
-  font-size: var(--font-small);
-  font-style: italic;
-}
 
 /* #endregion */
 
