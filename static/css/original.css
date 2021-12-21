@@ -19,11 +19,6 @@
 :root {
   /* --text--lighter-2: #9C9C9D; */
   /* --surface--darker: #9C9C9D; */
-
-  --info: #2e9cdc;
-  --success: #26a69a;
-  --danger: #c92c2c;
-  --warning: #eba656;
 }
 
 /* #endregion */
@@ -84,37 +79,6 @@
 .wm-mention__content {
   margin: 8px 0 24px 0;
 }
-
-
-/* Callout */
-
-.callout {
-  --callout-color: currentColor;
-  background-color: var(--callout-color);
-  background-image: linear-gradient(
-    rgba(255,255,255,0.85),
-    rgba(255,255,255,0.85)
-  );
-  border-left: 4px solid var(--callout-color);
-  padding: 4px 8px;
-}
-
-.callout--info {
-  --callout-color: var(--info);
-}
-
-.callout--success {
-  --callout-color: var(--success);
-}
-
-.callout--warning {
-  --callout-color: var(--warning);
-}
-
-.callout--danger {
-  --callout-color: var(--danger);
-}
-
 
 /* Code block */
 .code-block::before {
