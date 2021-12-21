@@ -1,0 +1,20 @@
+@use '../typography';
+@use '../theme/color' as color;
+
+/* Code block */
+.code-block::before {
+    float: right;
+    color: color.$text-alt;
+    content: attr(data-lang);
+    @extend %small;
+}
+
+.code-block {
+    border-radius: 8px;
+    border: 1px solid #cdcddb;
+}
+
+.code-block code {
+    color: inherit;
+    font-weight: inherit;
+}

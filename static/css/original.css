@@ -80,24 +80,6 @@
   margin: 8px 0 24px 0;
 }
 
-/* Code block */
-.code-block::before {
-  float: right;
-  font-size: var(--font-small);
-  color: var(--text--alt);
-  content: attr(data-lang);
-}
-
-.code-block {
-  border-radius: 8px;
-  border: 1px solid #cdcddb;
-}
-
-.code-block code {
-  color: inherit;
-  font-weight: inherit;
-}
-
 /* Backlinks (in wiki) */
 
 .bl__title {
