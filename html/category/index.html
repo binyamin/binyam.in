@@ -20,10 +20,8 @@ eleventyComputed:
             </svg>
             Subscribe via <a href="/feeds/{{c.key}}.xml">RSS</a> or <a href="/feeds/{{c.key}}.json">JSON</a> feed
         </p>
-        <div hidden>
-            <a href="{{- page.url -}}" class="u-url"></a>
-            <address class="p-author">Binyamin Green</address>
-        </div>
+        <link href="{{- page.url -}}" class="u-url" />
+        <data class="p-author" value="Binyamin Green"></data>
     </header>
 
     {% for post in collections[c.key] reversed %}
