@@ -1,0 +1,14 @@
+@use '../theme/color';
+@use '../typography';
+
+/* Backlinks (in wiki) */
+.bl__title {
+    font-weight: 700;
+    margin-bottom: 0;
+    @extend %byline;
+}
+
+.bl__note {
+    color: color.$text-alt;
+    margin-top: 0;
+}

@@ -1,4 +1,4 @@
-@use '../theme/color' as color;
+@use '../../theme/color' as color;
 
 blockquote {
     border-left: 4px solid color.$primary;

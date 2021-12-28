@@ -12,8 +12,7 @@
 */
 
 @use 'typography'; // TODO merge with `elements`
-@use 'elements'; // raw HTML elements (no classes or ids)
+@use 'base';
 @use 'components'; // HTML elements with classes
-
-@use 'layouts/base';
-@use 'layouts/post';
+@use 'layouts';
+@use 'pages';
