@@ -47,6 +47,9 @@ module.exports = function (eleventyConfig) {
             layouts: "_layouts",
             includes: "_includes",
             data: "_data"
-        }
+        },
+        htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
+        dataTemplateEngine: "njk"
     };
 };
