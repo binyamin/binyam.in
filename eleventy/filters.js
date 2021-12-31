@@ -70,6 +70,10 @@ module.exports = (eleventyConfig, md) => {
         if(timestamp == "now" || !timestamp) {
             timestamp = new Date();
         }
-        return dayjs(timestamp).format(format);
+        if(format === "rfc" || format === "string") {
+            return dayjs(timestamp).toString();
+        } else {
+            return dayjs(timestamp).format(format);
+        }
     })
 }
