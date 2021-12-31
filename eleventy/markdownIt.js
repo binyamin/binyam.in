@@ -23,6 +23,9 @@ const markdownItOptions = {
 
 const md = new markdownIt(markdownItOptions)
     .use(require('markdown-it-footnote'))
+    .use(require('markdown-it-attrs'), {
+        allowedAttributes: ['id', 'class', 'rel', /^data-.+$/]
+    })
     .use(require("markdown-it-external-anchor"), { domain: 'binyam.in' })
     .use(require("@binyamin/markdown-it-wikilinks"), {
         base: '/wiki/'
