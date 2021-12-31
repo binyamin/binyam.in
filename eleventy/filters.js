@@ -60,4 +60,16 @@ module.exports = (eleventyConfig, md) => {
     eleventyConfig.addFilter("markdownify", string => {
         return md.renderInline(string)
     })
+
+    const dayjs = require("dayjs");
+    const dayjsAdvancedFormat = require("dayjs/plugin/advancedFormat");
+
+    dayjs.extend(dayjsAdvancedFormat);
+
+    eleventyConfig.addNunjucksFilter("date", function(timestamp, format, _kwargs) {
+        if(timestamp == "now" || !timestamp) {
+            timestamp = new Date();
+        }
+        return dayjs(timestamp).format(format);
+    })
 }
