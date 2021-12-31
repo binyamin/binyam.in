@@ -1,14 +1,22 @@
 @charset 'utf-8';
 
 /*
-  Contents
-  01-Variables.........css custom properties
-  02-Base..............raw elements (no classes or ids)
-  03-Blocks............grouped and nested sets of elements
-  04-Layouts...........blocks grouped in a particular manner
-  05-Utils.............misc rulesets
+  TODO: implement this
+  Architecture
+    abstracts.....Sass tools & helpers
+      Global functions, variables, mixins, and placeholders
+    base..........Boilerplate code
+      Styles for raw HTML, typography, helper classes
+    components....Small UI widgets
+      Usually class-based and project-specific; there are
+      often lots of these
+    layout........Main sections of the site ("macro" widgets)
+      (eg. header, footer, sidebar, navigation, forms)
+    pages.........Page-specific styles
+      (eg. Home)
+    vendor........External libraries
 
-  Ref: https://cssguidelin.es/
+  Roughly based on Kitty Giraudel's "7-1 pattern" (https://sass-guidelin.es/#the-7-1-pattern).
 */
 
 @use 'typography'; // TODO merge with `elements`
