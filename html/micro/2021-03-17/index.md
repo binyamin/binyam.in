@@ -12,7 +12,7 @@ I also started loading fewer web-fonts. I removed the body and display web-fonts
 
 Otherwise, I made minimal changes to the website's visual design. In the process of rewriting the CSS, I made some stylistic decisions. For example, I changed the theme of my code blocks from "Nord" (a dark theme) to "GitHub Light". I also removed the CSS reset I was using, which was [normalize.css by Nicolas Gallagher](https://necolas.github.io/normalize.css/).
 
-{% render './table.html' %}
+{% include './table.html' %}
 
 Oh, and the best part is... my site is now only 100 ms faster. 326% smaller, 8.3% faster. Go figure. 🤷‍♂️
 

@@ -1,0 +1,13 @@
+---
+layout: "rss.njk"
+pagination:
+    data: categories
+    size: 1
+    alias: c
+permalink: "/feeds/{{c.key}}.xml"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+    title: "Binyamin Green - {{c.title}}"
+    link: "https://binyam.in/c/{{c.key}}"
+    collection: "{{c.key}}"
+---

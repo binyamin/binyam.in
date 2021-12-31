@@ -1,5 +1,5 @@
-{% assign wm_url = page.url | absolute_url %}
-{% assign mentions = webmentions | getMentionsForUrl: wm_url %}
+{% set wm_url = page.url | absolute_url %}
+{% set mentions = webmentions | getMentionsForUrl(wm_url) %}
 
 <!--
 <article class="comment">
@@ -16,12 +16,12 @@
     <p class="wm-summary">
         <!-- TODO these shouldn't be right next to each other -->
         <!-- TODO these shouldn't use the `title` attribute; if necessary, try some sort of tooltip -->
-        <span class="wm-likes" title="{{ mentions.likes | size }} likes">
+        <span class="wm-likes" title="{{ mentions.likes | length }} likes">
             <!-- TODO replace these 2 emoji with icons (or text) -->
-            <span aria-label="Likes:">❤️</span> {{ mentions.likes | size }}
+            <span aria-label="Likes:">❤️</span> {{ mentions.likes | length }}
         </span>
-        <span class="wm-replies" title="{{ mentions.replies | size }} replies">
-            <span aria-label="Replies:">💬</span> {{ mentions.replies | size }}
+        <span class="wm-replies" title="{{ mentions.replies | length }} replies">
+            <span aria-label="Replies:">💬</span> {{ mentions.replies | length }}
         </span>
         <span class="wm-info" title="What are webmentions?">
             <img src="/assets/icons/icon-info.svg" alt="" width="24" height="24" class="icon">
@@ -43,14 +43,14 @@
             </a>
         </div>
         <a class="u-url comment__meta" href="{{mention.url}}" target="_blank" rel="noopener noreferrer">
-            <time class="dt-published" datetime="{{mention['wm-received'] | date: '%Y-%m-%dT%H:%M:%S%z'}}">
-                {{mention['wm-received'] | date: "%B %d, %Y - %I:%M%P"}}
+            <time class="dt-published" datetime="{{mention['wm-received'] | date('iso')}}">
+                {{mention['wm-received'] | date("MMMM D, YYYY - hh:mma")}}
             </time>
         </a>
     </header>
     <!-- TODO append "read more" button to truncated text -->
     <div class="p-summary comment__body">
-        <p>{{mention.content.text | truncate: 160}}</p>
+        <p>{{mention.content.text | truncate(160) }}</p>
     </div>
 </article>
 {% endfor %}

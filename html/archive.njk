@@ -7,7 +7,7 @@ pagination:
 permalink: "/c/{{c.key}}/"
 eleventyComputed:
     title: "{{c.title}}"
-    desc: "{{c.meta.desc | default: c.desc | strip_html}}"
+    desc: "{{ c.meta.desc | default(c.desc) | striptags }}"
 ---
 
 <div class="h-feed">
@@ -24,12 +24,12 @@ eleventyComputed:
         <data class="p-author" value="Binyamin Green"></data>
     </header>
 
-    {% for post in collections[c.key] reversed %}
+    {% for post in collections[c.key] | reverse %}
     <article class="post-item h-entry" aria-labelledby="post--{{post.data.title|slugify}}">
         <a href="{{post.url}}" class="u-url u-uid">
             <h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
         </a>
-        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| _date: 'iso' }}">{{ post.date | date_est: false }}</time></p>
+        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| _date('iso') }}">{{ post.date | date_est(false) }}</time></p>
         <div class="post-item__desc p-summary">{{post.data.desc}}</div>
     </article>
     {% endfor %}

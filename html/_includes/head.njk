@@ -1,31 +1,32 @@
-{% assign isPost = postTypes | includes: category %}
+{# TODO Convert the logic here to global eleventyComputed javascript #}
+{% set isPost = postTypes | includes(category) %}
 
-{% assign metatitle = meta.title %}
+{% set metatitle = meta.title %}
 {% if title %}
     {% if isPost %}
-        {% assign metatitle = title %}
+        {% set metatitle = title %}
     {% else %}
-        {% assign metatitle = title | append: " • " | append: meta.title %}
+        {% set metatitle = title + " • " + meta.title %}
     {% endif %}
 {% endif %}
 
-{% assign metadesc = desc | default: meta.desc %}
+{% set metadesc = desc | default(meta.desc) %}
 
-{% assign metaimg_og = meta.image.square %}
-{% assign metaimg_twitter = meta.image.twitter %}
+{% set metaimg_og = meta.image.square %}
+{% set metaimg_twitter = meta.image.twitter %}
 
 {% if category == 'blog' %}
-    {% assign filePath = title | slugify | prepend: "https://binyam.in/assets/uploads/" | append: ".png" %}
-    {% assign metaimg_twitter = filePath %}
+    {% set filePath = "https://binyam.in/assets/uploads/" + (title | slugify) + ".png" %}
+    {% set metaimg_twitter = filePath %}
 {% endif %}
 
 {% if thumbnail %}
-    {% assign metaimg_twitter = thumbnail | absolute_url %}
+    {% set metaimg_twitter = thumbnail | absolute_url %}
 {% endif %}
 
-{% assign metatype = 'website' %}
+{% set metatype = 'website' %}
 {% if isPost %}
-    {% assign metatype = 'article' %}
+    {% set metatype = 'article' %}
 {% endif%}
 
 <meta charset="UTF-8">
