@@ -3,21 +3,21 @@ layout: default
 main_class: post
 ---
 
-<article class="h-entry" datetime="{{date | _date: 'iso'}}">
+<article class="h-entry" datetime="{{date | _date('iso') }}">
     <header>
         <h1 class="p-name">{{ title }}</h1>
         <p>
             Published on
             <a href={{page.url}} class="u-url">
-                <time class="dt-published" datetime="{{ date | _date: 'iso'}}">
-                    {{ date | date_est: false }}
+                <time class="dt-published" datetime="{{ date | _date('iso')}}">
+                    {{ date | date_est(false) }}
                 </time>
             </a>
         </p>
         <!-- link to category visibly? (blog/micro) -->
         {% if category == 'blog' %}
         <data class="p-category" value="article"></data>
-        {% elsif category == 'micro' %}
+        {% elseif category == 'micro' %}
         <data class="p-category" value="microblog"></data>
         {% endif %}
 
@@ -28,11 +28,11 @@ main_class: post
     </header>
 
     <div class="e-content post-content">
-        {{ content }}
+        {{ content |safe }}
     </div>
 
     <section id="webmentions">
-        {% include 'webmentions.html' %}
+        {% include 'webmentions.njk' %}
     </section>
 
     <a href="#top" class="sr-only">Top</a>
