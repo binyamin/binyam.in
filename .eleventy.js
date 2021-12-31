@@ -1,3 +1,7 @@
+/**
+ *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ *  @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
+ */
 module.exports = function (eleventyConfig) {
     const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
