@@ -1,0 +1,28 @@
+@use 'sass:list';
+@use 'sass:map';
+
+$-fallback: (
+    sans: (
+        system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+        "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji"
+    ),
+    serif: (
+        'Times New Roman', Times, serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji"
+    ),
+    mono: (
+        Menlo, Monaco, Consolas, 'Courier New', Courier, monospace, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    )
+);
+
+$-type: (
+    display: list.join('Source Serif Pro', map.get($-fallback, 'serif')),
+    body: list.join('Source Sans Pro', map.get($-fallback, 'sans')),
+    pre: list.join('Source Code Pro', map.get($-fallback, 'mono'))
+);
+
+@function font-family($name) {
+    @return map.get($-type, $name);
+}

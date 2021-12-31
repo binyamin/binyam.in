@@ -1,0 +1,17 @@
+@use '../../theme/color' as color;
+
+// Hyperlinks
+:any-link {
+    color: currentColor;
+    text-decoration-color: color.$primary;
+    text-decoration-thickness: 2px;
+
+    &:hover {
+        color: color.$primary;
+    }
+}
+
+@mixin alt {
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+}

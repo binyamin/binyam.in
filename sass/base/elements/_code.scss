@@ -1,0 +1,15 @@
+@use '../../theme/type' as type;
+@use '../../theme/color' as color;
+
+/* Code-like */
+
+pre, var, code {
+    font-family: type.font-family('pre');
+    line-height: normal;
+}
+
+var,
+code {
+    color: color.$text-alt;
+    font-weight: 700;
+}

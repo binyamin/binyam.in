@@ -3,28 +3,37 @@ layout: default
 main_class: post
 ---
 
-<article class="h-entry" datetime="{{date | _date: 'iso'}}" aria-labelledby="postTitle">
-    <header class="post-header">
-        <h1 class="post-header__title p-name" id="postTitle">{{ title }}</h1>
-        <p class="post-header__details">Published on
+<article class="h-entry" datetime="{{date | _date: 'iso'}}">
+    <header>
+        <h1 class="p-name">{{ title }}</h1>
+        <p>
+            Published on
             <a href={{page.url}} class="u-url">
-                <time class="dt-published" datetime="{{ date | _date: 'iso'}}">{{ date | date_est: false }}</time>
+                <time class="dt-published" datetime="{{ date | _date: 'iso'}}">
+                    {{ date | date_est: false }}
+                </time>
             </a>
-            {% if category == 'blog' %}
-            <a href="/c/blog" class="p-category" hidden rel="tag">article</a>
-            {% elsif category == 'micro' %}
-            <a href="/c/micro" class="p-category" hidden rel="tag">microblog</a>
-            {% endif %}
         </p>
-        <address class="h-card p-author" hidden>
-            <a href="https://binyam.in" class="p-name u-url" rel="author">Binyamin Green</a>
+        <!-- link to category visibly? (blog/micro) -->
+        {% if category == 'blog' %}
+        <data class="p-category" value="article"></data>
+        {% elsif category == 'micro' %}
+        <data class="p-category" value="microblog"></data>
+        {% endif %}
+
+        <address class="p-author h-card">
+            <data class="p-name" value="Binyamin Green"></data>
+            <link class="u-url" rel="author" href="https://binyam.in" />
         </address>
     </header>
-    <section class="e-content post-content">
-        {{ content }}
-    </section>
 
-    {% include 'webmentions.html' %}
+    <div class="e-content post-content">
+        {{ content }}
+    </div>
+
+    <section id="webmentions">
+        {% include 'webmentions.html' %}
+    </section>
 
     <a href="#top" class="sr-only">Top</a>
 </article>

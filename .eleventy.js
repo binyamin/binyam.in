@@ -34,6 +34,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ 'static': '/' });
 
+    eleventyConfig.addWatchTarget("sass");
+
     return {
         dir: {
             input: "html",

@@ -1,0 +1,10 @@
+@use 'navbar';
+@use 'callout';
+@use 'code-block';
+@use 'comment';
+
+// inline icons
+.icon {
+    fill: currentColor;
+    vertical-align: text-bottom;
+}
