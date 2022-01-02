@@ -6,14 +6,14 @@ pagination:
     alias: c
 permalink: "/c/{{c.key}}/"
 eleventyComputed:
-    title: "{{c.title}}"
-    desc: "{{ c.meta.desc | default(c.desc) | striptags }}"
+    title: "{{c.title}}" # for meta tags
+    desc: "{{ c.desc | striptags }}" # for meta tags
 ---
 
 <div class="h-feed">
     <header class="posts-header">
         <h1 class="posts-title p-name">{{c.title}}</h1>
-        <p class="posts-lead p-summary">{{c.desc}}</p>
+        <p class="posts-lead p-summary">{{c.desc | safe}}</p>
         <p class="posts-details">
             <svg role="none" viewBox="0 0 24 24" class="icon" width="24" height="24">
                 <use href="/assets/icons/icon-rss.svg#sprite"/>
@@ -30,7 +30,7 @@ eleventyComputed:
             <h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
         </a>
         <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| _date('iso') }}">{{ post.date | date_est(false) }}</time></p>
-        <div class="post-item__desc p-summary">{{post.data.desc}}</div>
+        <div class="post-item__desc p-summary">{{ post.data.desc | safe }}</div>
     </article>
     {% endfor %}
 </div>
