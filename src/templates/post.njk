@@ -3,13 +3,13 @@ layout: default
 main_class: post
 ---
 
-<article class="h-entry" datetime="{{date | _date('iso') }}">
+<article class="h-entry" datetime="{{date | date('iso') }}">
     <header>
         <h1 class="p-name">{{ title }}</h1>
         <p>
             Published on
             <a href={{page.url}} class="u-url">
-                <time class="dt-published" datetime="{{ date | _date('iso')}}">
+                <time class="dt-published" datetime="{{ date | date('iso')}}">
                     {{ date | date_est(false) }}
                 </time>
             </a>

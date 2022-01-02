@@ -29,7 +29,7 @@ eleventyComputed:
         <a href="{{post.url}}" class="u-url u-uid">
             <h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
         </a>
-        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| _date('iso') }}">{{ post.date | date_est(false) }}</time></p>
+        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| date('iso') }}">{{ post.date | date_est(false) }}</time></p>
         <div class="post-item__desc p-summary">{{ post.data.desc | safe }}</div>
     </article>
     {% endfor %}
