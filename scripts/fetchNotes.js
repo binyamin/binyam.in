@@ -63,16 +63,16 @@ function copyNotes() {
         // Note: Merge command failed, so we use .finally() instead of .then()
         try {
             // Prepare directory
-            await del(["html/wiki/**/*.md", "html/wiki/.git*"]);
+            await del(["src/posts/wiki/**/*.md", "src/posts/wiki/.git*"]);
 
             // Read & save the notes files which we tried to merge above
-            await result("git read-tree --prefix=html/wiki/ -u notes/master");
+            await result("git read-tree --prefix=src/posts/wiki/ -u notes/master");
 
             // Reset the working tree, so notes are ignored
             await result("git reset");
 
             // Clean directory
-            del(["html/wiki/.git*"]);
+            del(["src/posts/wiki/.git*"]);
         } catch (err) {
             throw err;
         }
@@ -83,7 +83,7 @@ if(runIf) {
     configureGit()
         .then(() => {
             copyNotes();
-            console.log("[scripts] Notes written to `html/wiki`")
+            console.log("[scripts] Notes written to `src/posts/wiki`")
         })
         .catch(e => {
             console.error(e);

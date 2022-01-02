@@ -10,7 +10,7 @@ const isProd = process.env.CI || !isDev;
 
 module.exports = class {
     async data() {
-        const entryPath = path.join(__dirname, "../sass/main.scss");
+        const entryPath = path.join(__dirname, "../../sass/main.scss");
         return {
             permalink: `/css/style.css`,
             eleventyExcludeFromCollections: true,
@@ -31,8 +31,8 @@ module.exports = class {
             return sass.render({
                 ...config,
                 includePaths: [
-                    "../sass",
-                    "../node_modules"
+                    "../../sass",
+                    "../../node_modules"
                 ]
                 // importer: function(url, prev, _done) {
                 //     console.log(url)

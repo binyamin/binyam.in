@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
 
 
-    // Important, since the gitignore lists "html/wiki/**/*"
+    // Important, since the gitignore lists "src/posts/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addPassthroughCopy({ 'static': '/' });
@@ -42,11 +42,11 @@ module.exports = function (eleventyConfig) {
 
     return {
         dir: {
-            input: "html",
+            input: "src",
             output: "dist",
-            layouts: "_layouts",
-            includes: "_includes",
-            data: "_data"
+            layouts: "templates",
+            includes: "templates/includes",
+            data: "data"
         },
         htmlTemplateEngine: "njk",
         markdownTemplateEngine: "njk",

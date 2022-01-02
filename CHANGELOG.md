@@ -7,7 +7,22 @@ Note: This changelog begins at v4.2.0, since that's when I decided to start keep
 ## Unreleased
 - Use nunjucks instead of liquid, for template engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
 - Switch back to sass. The gain from css was minimal, and the size of the css file made it annoying to when scrolling.
-
+- Rework folder structure
+  - `/html` -> `/src` - the folder isn't just for html; it's for RSS, JSON-feed, XML, and everything on the site except for assets (eg. js, css, images).
+  - `/../_data` -> `/../data` - looks better & more uniform when there are fewer folders under the root.
+  - Group folders by kind (posts, pages, files):
+    - (posts)
+      - `/../{blog,micro,wiki}` -> `/../posts/..`
+      - `/../archive.njk` -> `/../posts/archive.njk`
+    - (pages - standalone HTML)
+      - `/../test` -> `/../pages/test`
+      - `/../feeds/index.md` -> `/../pages/feeds.md`
+    - (files - not HTML)
+      - `/../feeds/*.{njk,11ty.js}` -> `/../files/feeds/..`
+      - `/../{sitemap.njk,style.11ty.js}` -> `/../files/..`
+  - Group markup files which don't produce any output
+    - `/../_layouts` -> `/../templates`
+    - `/../_includes` -> `/../templates/includes`
 ## 4.6.0 - 10-31-2021
 **Partial listing**
 - Typography overhaul

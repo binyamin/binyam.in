@@ -2,5 +2,5 @@ node_modules/
 dist/
 .cache/
 .lighthouseci/
-html/wiki/**/*.md
+src/posts/wiki/**/*.md
 .env*
