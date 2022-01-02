@@ -35,7 +35,7 @@ class Feed {
                 url: this.absolute_url(p.url),
                 title: p.data.title,
                 content_html: this.escape_once(p.templateContent),
-                summary: p.data.desc || "No description provided",
+                ...(p.data.desc ? { summary: p.data.desc } : {}),
                 date_published: p.data.date,
                 ...(p.data.modified ? {date_modified: p.data.modified} : {}),
                 ...(p.data.tags ? {tags: p.data.tags} : {})
