@@ -59,5 +59,5 @@ module.exports = {
 
         return escape(unescape(str))
     },
-    webmentions: (require("./webmentions.js"))
+    getMentionsForUrl: (require("./webmentions.js"))
 }

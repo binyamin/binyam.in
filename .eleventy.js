@@ -1,5 +1,5 @@
-const filters = require("./eleventy/filters");
-const md = require("./eleventy/markdownIt");
+const filters = require("./utils/filters");
+const md = require("./utils/markdownIt");
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addFilter(fn, filters[fn])
     }
 
-    eleventyConfig.addNunjucksFilter("date", require("./eleventy/date-njk"));
+    eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
 
     eleventyConfig.addFilter("markdownify", string => {
         return md.renderInline(string)
@@ -21,10 +21,8 @@ module.exports = function (eleventyConfig) {
 
 
     // Shortcodes
-    require("./eleventy/shortcodes")(eleventyConfig, md);
+    require("./utils/shortcodes")(eleventyConfig, md);
 
-    const wm = require("./eleventy/webmentions");
-    eleventyConfig.addFilter("getMentionsForUrl", wm);
 
     // Collections
     const collections = ['blog', 'wiki', 'micro'];
