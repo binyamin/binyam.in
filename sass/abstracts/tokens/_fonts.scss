@@ -1,0 +1,51 @@
+@use 'sass:list';
+@use 'sass:map';
+
+$fonts: (
+    display: 'Source Serif Pro',
+    body: 'Source Sans Pro',
+    code: 'Source Code Pro'
+);
+
+// #region fallbacks
+$-fallbacks: (
+    emoji: (
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji"
+    ),
+    display: (
+        'Times New Roman', Times, serif
+    ),
+    body: (
+        system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell",
+        "Noto Sans", sans-serif
+    ),
+    code: (
+        Menlo, Monaco, Consolas, 'Courier New', Courier, monospace
+    )
+);
+// #endregion
+
+@each $k, $v in $fonts {
+    $fallback: map.get($-fallbacks, $k);
+    $emoji: map.get($-fallbacks, 'emoji');
+    $stack: $v, list.join($fallback, $emoji);
+    $fonts: map.set($fonts, $k, $stack);
+}
+
+/// From @link https://www.fluid-type-scale.com/ with a 18px max base size
+$font-sizes: (
+    sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.844rem),
+    base: clamp(1rem, 0.227vw + 0.943rem, 1.125rem),
+    md: clamp(1.25rem, 0.454vw + 1.137rem, 1.5rem),
+    lg: clamp(1.563rem, 0.794vw + 1.364rem, 1.999rem),
+    xl: clamp(1.953rem, 1.294vw + 1.63rem, 2.665rem),
+    xxl: clamp(2.441rem, 2.019vw + 1.937rem, 3.552rem),
+    xxxl: clamp(3.052rem, 3.06vw + 2.287rem, 4.735rem),
+);
+
+/// Fluid, scalable line-height, modified slightly
+/// @author Jesús Ricarte
+/// @link https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/
+/// Guest post on the subject
+$line-height: calc(2ex + 5px);

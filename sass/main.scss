@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+/*
+  TODO: implement this
+  Architecture
+    abstracts.....Sass tools & helpers
+      Global functions, variables, mixins, and placeholders
+    base..........Boilerplate code
+      Styles for raw HTML, typography, helper classes
+    components....Small UI widgets
+      Usually class-based and project-specific; there are
+      often lots of these
+    layout........Main sections of the site ("macro" widgets)
+      (eg. header, footer, sidebar, navigation, forms)
+    pages.........Page-specific styles
+      (eg. Home)
+    vendor........External libraries
+
+  Roughly based on Kitty Giraudel's "7-1 pattern" (https://sass-guidelin.es/#the-7-1-pattern).
+*/
+
+@use 'base';

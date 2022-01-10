@@ -1,0 +1,29 @@
+//----------
+// CSS Custom Properties
+//
+// Used instead of sass variables, when the value is very
+// long, and it produces less CSS to just reference a custom
+// property.
+//----------
+
+@use 'sass:meta';
+@use '../abstracts/tokens';
+
+@mixin vars($prefix, $map) {
+    @each $key, $value in $map {
+        @if meta.type-of($value) == 'string' {
+            --#{$prefix}-#{$key}: "#{$value}";
+        } @else if meta.type-of($value) == "list" {
+            --#{$prefix}-#{$key}: #{"" + $value};
+        } @else if meta.type-of($value) == 'map' {
+            @warn 'Maps are invalid for CSS Custom Properties';
+        } @else {
+            --#{$prefix}-#{$key}: #{$value};
+        }
+    }
+}
+
+:root {
+    @include vars('ff', tokens.$fonts);
+    @include vars('fz', tokens.$font-sizes);
+}
