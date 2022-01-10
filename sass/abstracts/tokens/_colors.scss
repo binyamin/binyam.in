@@ -1,6 +1,19 @@
+//----------
+// Color Tokens
+//----------
+
 $pearl: (
     default: hsl(0, 50%, 100%),
     surface: hsl(240, 14%, 96%)
+);
+
+$basalt: (
+    default: hsl(220, 13%, 5%),
+);
+
+$emerald: (
+    // '1': hsl(145, 50%, 62%),
+    default: hsl(143, 32%, 39%)
 );
 
 $maple: (
