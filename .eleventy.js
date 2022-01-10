@@ -40,6 +40,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addWatchTarget("sass");
 
+    // Ignore draft wiki posts
+    eleventyConfig.ignores.add('src/posts/wiki/**/_*.md');
+
     return {
         dir: {
             input: "src",
