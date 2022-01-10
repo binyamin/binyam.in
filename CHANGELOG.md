@@ -1,13 +1,20 @@
 # Changelog for this site
 
-Note: This changelog begins at v4.2.0, since that's when I decided to start keeping it.
-<!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
-<!-- https://keepachangelog.com/en/1.0.0/ -->
+This changelog begins at v4.2.0, since that's when I decided to start keeping it.
 
-## Unreleased
-- Use nunjucks instead of liquid, for template engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
-- Switch back to sass. The gain from css was minimal, and the size of the css file made it annoying to when scrolling.
-- Rework folder structure
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+<!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
+
+## 4.7.0 - 1-10-2022
+- Use nunjucks instead of liquid for the templating engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
+- Switch back to sass. The gain from css was minimal, and the size of the css file became annoying when scrolling.
+- Made major changes to the folder structure. More information is available in the dropdown.
+<details>
+   <summary>Specific folder changes</summary>
+
+  - `/eleventy` -> `/utils` - it's a more generic name, and I'm using this convention with other projects
   - `/html` -> `/src` - the folder isn't just for html; it's for RSS, JSON-feed, XML, and everything on the site except for assets (eg. js, css, images).
   - `/../_data` -> `/../data` - looks better & more uniform when there are fewer folders under the root.
   - Group folders by kind (posts, pages, files):
@@ -23,7 +30,11 @@ Note: This changelog begins at v4.2.0, since that's when I decided to start keep
   - Group markup files which don't produce any output
     - `/../_layouts` -> `/../templates`
     - `/../_includes` -> `/../templates/includes`
+</details>
+
 ## 4.6.0 - 10-31-2021
+<strong>Edit</strong>: For some reason, I jumped from `4.2.0` to `4.6.0`. I'm not sure why.
+
 **Partial listing**
 - Typography overhaul
 - rewrote home-page
