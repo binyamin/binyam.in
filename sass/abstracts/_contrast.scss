@@ -1,0 +1,116 @@
+////
+/// Contrast & Accessibility
+/// From <https://github.com/oddbird/accoutrement/blob/main/sass/plugin/color/_contrast.scss>
+/// @group color-contrast
+/// @author Miriam Suzanne
+////
+
+// WCAG Contrast Ratios
+// - 'AA-large' == `3:1`
+// - 'AA' == `4.5:1`
+// - 'AAA' == `7:1`
+
+@use 'sass:meta';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:color';
+
+
+/// Compare two colors using the WCAG comparison algorithm,
+/// and return the resulting contrast-ratio.
+/// Optionally pass in a standard (AA, AAA, AA-large)
+/// and return `false` when the contrast-check fails.
+///
+/// @link https://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef WCAG Contrast Definition
+/// @param {Color} $base - Base color
+/// @param {Color} $contrast - A color to contrast against the first.
+/// @param {'AA' | 'AA-large' | 'AAA' | number | false} $require [false] -
+///   An optional WCAG contrast ratio to require.
+///   The function will return `false` if the required ratio is not met.
+/// @return {number} - The WCAG-defined contrast-ratio of two colors.
+@function ratio($base, $contrast, $require: false) {
+    $is-lumins: (meta.type-of($base) == 'number');
+
+    $base-lumin: if($is-lumins, $base, _luminance($base));
+    $contrast-lumin: if($is-lumins, $contrast, _luminance($contrast));
+
+    $darker: math.min($base-lumin, $contrast-lumin);
+    $lighter: math.max($base-lumin, $contrast-lumin);
+
+    $ratio: math.div(($lighter + 0.05), ($darker + 0.05));
+
+    $require: _is-valid-contrast($require);
+
+    @if $require and ($ratio < $require) {
+        @return false;
+    }
+
+    @return $ratio;
+}
+
+
+/// Get the WCAG luminance of a color in your palette.
+/// @link https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef WCAG Relative Luminance
+/// @param {string | list} $color - The name or value of a color.
+/// @return {number} - WCAG-defined numeric luminance value.
+@function _luminance($color) {
+    $luminance: 0;
+
+    @each $component in "red" "green" "blue" {
+        $function: meta.get-function($component, $module: color);
+
+        $value: math.div(meta.call($function, $color), 255);
+
+        @if ($value < 0.03928) {
+            $value: math.div($value, 12.92);
+        } @else {
+            $base: math.div($value + 0.055, 1.055);
+            $value: math.pow($base, 2.4);
+        }
+
+        @if ($component == "red") {
+            $value: $value * 0.2126;
+        } @else if ($component == "green") {
+            $value: $value * 0.7152;
+        } @else {
+            $value: $value * 0.0722;
+        }
+
+        $luminance: $luminance + $value;
+    }
+
+    @return $luminance;
+}
+
+
+/// These named contrast-ratios are defined by the [WCAG][WCAG].
+/// [WCAG]: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast
+///
+/// @access private
+$_WCAG-CONTRAST: (
+  'AA-large': 3,
+  'AA': 4.5,
+  'AAA': 7,
+);
+
+
+/// Return a valid contrast ratio or `false`
+///
+/// @access private
+/// @param {'AA' | 'AA-large' | 'AAA' | 0-21} $ratio -
+///   WCAG or 0-21 contrast ratios will pass validation,
+///   all other values will return false
+@function _is-valid-contrast($ratio) {
+    @if (meta.type-of($ratio) == "number") and ($ratio >= 1) and ($ratio <= 21) {
+        @return $ratio;
+    }
+
+    $uppercase: (
+        "aaa": "AAA",
+        "aa": "AA",
+        "aa-large": "AA-large",
+    );
+
+    $ratio: map.get($uppercase, $ratio) or $ratio;
+    @return map.get($_WCAG-CONTRAST, $ratio);
+}

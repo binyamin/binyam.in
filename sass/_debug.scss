@@ -1,0 +1,25 @@
+%border {
+    outline: 1px dashed #000;
+}
+
+$dir: 'ltr' !default;
+$class: false !default;
+$grayscale: false !default;
+
+@if $class {
+    .#{$class} {
+        @extend %border;
+    }
+}
+
+@if $dir == 'rtl' {
+    :root {
+        direction: rtl;
+    }
+}
+
+@if $grayscale {
+    html {
+        filter: #{'grayscale()'};
+    }
+}
