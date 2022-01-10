@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - rewrote home-page
 - switch from scss to css
 - add h-feed
-Also updated a bunch of static pages
+- Also updated a bunch of static pages
 
 ## 4.2.0 - 01-04-2021
 - Added this changelog, in order to track my thought process and make better design decisions in the future
