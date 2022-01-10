@@ -1,13 +1,24 @@
+const filters = require("./eleventy/filters");
+const md = require("./eleventy/markdownIt");
+
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  *  @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 module.exports = function (eleventyConfig) {
-    const md = require("./eleventy/markdownIt");
     eleventyConfig.setLibrary('md', md);
 
     // filters
-    require("./eleventy/filters")(eleventyConfig, md);
+    for (const fn in filters) {
+        eleventyConfig.addFilter(fn, filters[fn])
+    }
+
+    eleventyConfig.addNunjucksFilter("date", require("./eleventy/date-njk"));
+
+    eleventyConfig.addFilter("markdownify", string => {
+        return md.renderInline(string)
+    })
+
 
     // Shortcodes
     require("./eleventy/shortcodes")(eleventyConfig, md);

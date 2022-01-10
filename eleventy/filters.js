@@ -1,19 +1,38 @@
 const {titleCase} = require("title-case");
 
-module.exports = (eleventyConfig, md) => {
-    eleventyConfig.addFilter("absolute_url", slug => {
+module.exports = {
+    absolute_url(slug) {
         return "https://binyam.in" + (slug.startsWith("/") ? slug : "/" + slug);
-    })
+    },
+    date_est(datetime, time=true, format) {
+        const estFormat = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/New_York",
+            dateStyle: format === "short" ? "short" : "long",
+            ...(time ? { timeStyle: "long" } : null),
+        });
 
-    const filters = {
-        ...require("./date_filter"),
-    }
+        const dt = estFormat.format(new Date(datetime));
 
-    for (const fn in filters) {
-        eleventyConfig.addFilter(fn, filters[fn])
-    }
-
-    eleventyConfig.addFilter("escape_once", str => {
+        return dt.replace(/:\d{2}([\s\w]+)$/, "$1"); // remove seconds
+    },
+    // TODO is this necessary? Can nunjucks do this? (ie. `{{ foo | title }}`)
+    titlecase(str) {
+        return titleCase(str);
+    },
+    // TODO I think nunjucks can do this with `in`
+    includes(arr, value) {
+        return arr.includes(value);
+    },
+    // TODO revisit - is this necessary? Would eleventy's native slugify produce any different results?
+    slugify(str) {
+        return str
+            .toLowerCase()
+            .replace(/[^\w\s-]+/g,'')
+            .replace(/\s+/g,'-')
+        ;
+    },
+    // TODO What happens without this filter?
+    escape_once(str) {
         // From <https://github.com/harttle/liquidjs/blob/master/src/builtin/filters/html.ts>
         const escapeMap = {
             '&': '&amp;',
@@ -39,43 +58,6 @@ module.exports = (eleventyConfig, md) => {
         }
 
         return escape(unescape(str))
-    })
-
-    eleventyConfig.addFilter("titlecase", str => {
-        return titleCase(str);
-    })
-
-    eleventyConfig.addFilter("includes", (arr, value) => {
-        return arr.includes(value);
-    })
-
-    eleventyConfig.addFilter("slugify", str => {
-        return str
-            .toLowerCase()
-            .replace(/[^\w\s-]+/g,'')
-            .replace(/\s+/g,'-')
-        ;
-    })
-
-    eleventyConfig.addFilter("markdownify", string => {
-        return md.renderInline(string)
-    })
-
-    const dayjs = require("dayjs");
-    const dayjsAdvancedFormat = require("dayjs/plugin/advancedFormat");
-
-    dayjs.extend(dayjsAdvancedFormat);
-
-    eleventyConfig.addNunjucksFilter("date", function(timestamp, format, _kwargs) {
-        if(timestamp == "now" || !timestamp) {
-            timestamp = new Date();
-        }
-        if(format === "rfc" || format === "string") {
-            return dayjs(timestamp).toString();
-        } else if (format == 'iso') {
-            return dayjs(timestamp).toISOString();
-        } else {
-            return dayjs(timestamp).format(format);
-        }
-    })
+    },
+    webmentions: (require("./webmentions.js"))
 }

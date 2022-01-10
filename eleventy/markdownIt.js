@@ -4,7 +4,6 @@ const hljs = require('highlight.js');
 const markdownIt = require('markdown-it');
 const markdownItOptions = {
     html: true,
-    // breaks: true, // off?
     linkify: true,
     highlight: function (str, lang) {
         if (lang && hljs.getLanguage(lang)) {

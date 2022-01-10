@@ -1,3 +1,4 @@
+// TODO move to nunjucks macro
 module.exports = (eleventyConfig, md) => {
     eleventyConfig.addPairedShortcode('callout', (content, type="info") => {
         if(['info', 'warning', 'danger', 'success'].includes(type) === false) type = "info";
