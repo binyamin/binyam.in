@@ -1,11 +1,23 @@
+const path = require("path");
+
 const filters = require("./utils/filters");
 const md = require("./utils/markdownIt");
+const sass = require("@binyamin/eleventy-plugin-sass");
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  *  @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 module.exports = function (eleventyConfig) {
+
+    eleventyConfig.addPlugin(sass, {
+        dir: "sass",
+        file: "main.scss",
+        outDir: path.resolve("dist", "css"),
+        outFile: "style.min.css",
+        minify: 2
+    });
+
     eleventyConfig.setLibrary('md', md);
 
     // filters
@@ -46,8 +58,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addPassthroughCopy({ 'static': '/' });
-
-    eleventyConfig.addWatchTarget("sass");
 
     // Ignore draft wiki posts
     eleventyConfig.ignores.add('src/posts/wiki/**/_*.md');
