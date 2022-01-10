@@ -1,0 +1,36 @@
+////
+/// Theming Utils
+/// @group theme-utils
+/// @author Binyamin Green
+////
+
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+
+@forward 'tokens';
+@use 'tokens';
+
+/// Spacing between elements
+/// @param {Number} $n from 0 to 5
+/// @return {Length} eg. 8px
+@function spacing($n) {
+    @return #{list.nth(tokens.$space, $n - 1)}px;
+}
+
+/// Get a color from the palette
+/// @param {String} $group
+/// @param {String} $kind ['default']
+/// @return {Color} subchild of `$group`
+@function color($group, $kind: 'default') {
+    $g: map.get(tokens.$colors, $group);
+    @return map.get($g, $kind);
+}
+
+@function font-family($kind) {
+    @return var(--ff-#{$kind});
+}
+
+@function font-size($level) {
+   @return var(--fz-#{$level});
+}
