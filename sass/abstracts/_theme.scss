@@ -11,26 +11,59 @@
 @forward 'tokens';
 @use 'tokens';
 
+/// Util: Get for a token group or a token, with error checking
+///
+/// @access private
+///
+/// @param {string} $group A child of @see tokens
+/// @param {String} $token [false] A child of @see $group
+/// @return {Map|Value} The value of the requested variable
+@function -get($group, $token) {
+    $-tokens: meta.module-variables(tokens);
+    $map: ();
+    @if map.has-key($-tokens, $group) {
+        $map: map.get($-tokens, $group);
+    } @else {
+        @warn 'Token group #{$group} does not exist';
+        @return none;
+    }
+
+    @if $token {
+        @if map.has-key($map, $token) {
+            @return map.get($map, $token);
+        } @else {
+            @warn 'Token #{$token} does not exist in token group #{$group}';
+            @return none;
+        }
+    }
+
+    @return $map;
+}
+
 /// Spacing between elements
-/// @param {Number} $n from 0 to 5
+/// @param {'none'|'tiny'|'small'|'medium'|'large'|'huge'} $name
 /// @return {Length} eg. 8px
-@function spacing($n) {
-    @return #{list.nth(tokens.$space, $n + 1)}px;
+@function space($name) {
+    @return #{-get('space', $name)}px;
 }
 
 /// Get a color from the palette
-/// @param {String} $group
+/// @param {String} $name
 /// @param {String} $kind ['default']
-/// @return {Color} subchild of `$group`
-@function color($group, $kind: 'default') {
-    $g: map.get(tokens.$colors, $group);
+/// @return {Color} subchild of @see $name
+@function color($name, $kind: 'default') {
+    $g: -get('colors', $name);
     @return map.get($g, $kind);
 }
 
-@function font-family($kind) {
-    @return var(--ff-#{$kind});
+@function font-family($name) {
+    @if -get('fonts', $name) {
+        @return var(--ff-#{$name});
+    }
 }
 
-@function font-size($level) {
-   @return var(--fz-#{$level});
+@function font-size($name) {
+    @if -get('font-sizes', $name) {
+        @return var(--fz-#{$name});
+    }
 }

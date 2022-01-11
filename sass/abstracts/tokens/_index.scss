@@ -6,6 +6,13 @@
 
 $colors: meta.module-variables(colors);
 
-$space: (0, 4, 8, 16, 32, 64);
+$space: (
+    none: 0,
+    tiny: 4,
+    small: 8,
+    medium: 16,
+    large: 32,
+    huge: 64
+);
 // $shadows: ();
 // $borders: ();

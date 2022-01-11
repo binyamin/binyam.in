@@ -2,9 +2,16 @@
     outline: 1px dashed #000;
 }
 
+$parent: false !default;
 $dir: 'ltr' !default;
 $class: false !default;
 $grayscale: false !default;
+
+@if $parent {
+    .#{$parent} > * {
+        @extend %border;
+    }
+}
 
 @if $class {
     .#{$class} {
