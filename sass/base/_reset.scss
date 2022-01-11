@@ -10,6 +10,13 @@ body {
     margin: 0;
 }
 
+// Remove list styles on ul, ol elements with a list role,
+// which suggests default styling will be removed
+:is(ul, ol)[role=list] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 input,
 button,
@@ -18,7 +25,8 @@ select {
     font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people who prefer not to see them */
+// Remove all animations, transitions and smooth scroll for
+// people who prefer not to see them
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
