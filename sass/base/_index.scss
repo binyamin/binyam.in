@@ -1,2 +1,11 @@
+//----------
+// Boilerplate Code
+//
+// Component-agnostic. Includes CSS resets, styles for
+// raw HTML, helper classes, and CSS custom properties
+//----------
+
 @use 'variables';
 @use 'reset';
+@use 'typography';
+@use 'helpers';

@@ -1,0 +1,32 @@
+//----------
+// Heading Placeholders
+//----------
+
+@use 'theme';
+
+%h1, %h2, %h3, %h4 {
+    font-family: theme.font-family('display');
+    font-weight: 400;
+    margin: theme.space('medium') 0 theme.space('small');
+}
+
+%h1 {
+    font-size: theme.font-size('xl');
+}
+
+%h2 {
+    font-size: theme.font-size('lg');
+}
+
+%h3 {
+    font-size: theme.font-size('md');
+}
+
+%h4 {
+    // TODO possibly should be `inherit` instead
+    font-size: revert;
+}
+
+%small {
+    font-size: theme.font-size('sm');
+}

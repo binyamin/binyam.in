@@ -1,0 +1,36 @@
+//----------
+// Typography
+//----------
+
+@use '../abstracts/theme';
+@use '../abstracts/typography';
+
+html {
+    font-family: theme.font-family('body');
+    font-size: theme.font-size('base');
+}
+
+html * {
+    // Line-height is a calculation, so it must be set on children explicitely
+    line-height: theme.$line-height;
+}
+
+h1 {
+    @extend %h1;
+}
+
+h2 {
+    @extend %h2;
+}
+
+h3 {
+    @extend %h3;
+}
+
+h4 {
+    @extend %h4;
+}
+
+small {
+    @extend %small;
+}

@@ -1,0 +1,12 @@
+//----------
+// Helper Classes
+//----------
+
+@use '../abstracts/typography';
+
+// Emulate headings without a heading element
+@for $n from 1 to 4 {
+    .as-h#{$n} {
+        @extend %h#{$n};
+    }
+}
