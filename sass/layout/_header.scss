@@ -1,0 +1,20 @@
+//----------
+// Global Header (Navbar)
+//----------
+
+@use '../abstracts/theme';
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: theme.space('small');
+}
+
+.site-logo {}
+
+.link-nav ul {
+    display: flex;
+    gap: theme.space('medium');
+}
