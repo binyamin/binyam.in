@@ -3,44 +3,39 @@
 <head>
     {% include 'head.njk' %}
 </head>
-<body class="site-wrapper">
+<body class="page">
     <header class="site-header">
-        <a href="/" class="site-title">
-            <img
-            src="/assets/logo.svg"
-            alt="Home"
-            width="48"
-            height="48"
-            />
+        <a href="/" class="site-logo">
+            <img src="{{site.logo}}" alt="Home" height="48" />
         </a>
-        <nav class="site-nav">
-            <ul>
-                <li><a class="site-nav__link" href="/me">Me</a></li>
-                <li><a class="site-nav__link" href="/c/blog">Articles</a></li>
-                <li><a class="site-nav__link" href="/c/micro">Microblog</a></li>
-                <li><a class="site-nav__link" href="/more">More Links</a></li>
+        <nav class="link-nav" aria-label="Primary Navigation">
+            <ul role="list">
+                <li role="listitem"><a href="/me">Me</a></li>
+                <li role="listitem"><a href="/c/blog">Articles</a></li>
+                <li role="listitem"><a href="/c/micro">Microblog</a></li>
+                <li role="listitem"><a href="/more">More Links</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="{{main_class}} site-content" id="top">
-        {{ content |safe}}
+    <main class="{{ [ 'content', main_class ] | join(" ") }}" id="top">
+        {{ content | safe}}
     </main>
 
     <footer class="site-footer">
         <p class="h-card"><small>Copyright 2018-2022 <a href={{site.base_url}} rel="me" class="u-url p-name">{{site.author.name}}</a></small> | <a href="/contact">Contact Me</a></p>
 
-        <!-- microsub -->
-        <link rel="microsub" href="https://aperture.p3k.io/microsub/680">
+        {# microsub #}
+        <link rel="microsub" href="https://aperture.p3k.io/microsub/680" />
 
-        <!-- Indieauth -->
+        {# Indieauth #}
 
-        <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-        <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+        <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+        <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
 
-        <link href="mailto:binyamingreen@protonmail.com" rel="me"/>
-        <link href="https://github.com/binyamin" rel="me"/>
-        <link href="https://mas.to/@binyamin" rel="me"/>
+        <link href="mailto:binyamingreen@protonmail.com" rel="me" />
+        <link href="https://github.com/binyamin" rel="me" />
+        <link href="https://mas.to/@binyamin" rel="me" />
     </footer>
     {% include 'metrical.html' %}
 </body>

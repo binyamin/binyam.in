@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
 
+## Unreleased
+- Compute metadata values in JavaScript, instead of within the template. This way, the HTML won't have a bunch of empty lines where the compution was done.
+- (WIP) Rewrite sass from scratch. I just wanted to start fresh, so I could build a nice infrastructure, instead of adapting the existing folders, which I transferred directly from the CSS.
+  - add design tokens, and a system for using them
+
 ## 4.7.0 - 1-10-2022
 - Use nunjucks instead of liquid for the templating engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
 - Switch back to sass. The gain from css was minimal, and the size of the css file became annoying when scrolling.
