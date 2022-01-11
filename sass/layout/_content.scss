@@ -1,0 +1,13 @@
+//----------
+// Sitewide Content
+//
+// A wrapper for the main content on the site (not sidebars)
+//----------
+
+@use '../abstracts/theme';
+
+.content {
+    margin-top: theme.space('large');
+    width: clamp(52ch, 78ch, 100%);
+    margin-inline: auto;
+}

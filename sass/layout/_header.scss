@@ -1,5 +1,5 @@
 //----------
-// Global Header (Navbar)
+// Sitewide Header (aka. navbar)
 //----------
 
 @use '../abstracts/theme';
@@ -9,10 +9,10 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: theme.space('small');
+    padding-block: theme.space('small');
 }
 
-.site-logo {}
+// .site-logo {}
 
 .link-nav ul {
     display: flex;

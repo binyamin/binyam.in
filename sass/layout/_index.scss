@@ -4,4 +4,7 @@
 // Main sections of the site
 //----------
 
+@use 'page';
 @use 'header';
+@use 'content';
+@use 'footer';

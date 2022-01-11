@@ -1,0 +1,19 @@
+//----------
+// Sitewide Footer
+//----------
+
+@use '../abstracts/theme';
+@use '../abstracts';
+
+.site-footer {
+    padding-block: theme.space('small');
+    text-align: center;
+}
+
+.site-footer p:only-of-type {
+    margin: 0;
+
+    small {
+        font-size: inherit;
+    }
+}
