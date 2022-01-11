@@ -21,17 +21,17 @@ class Feed {
     render(data) {
         return JSON.stringify({
             version: "https://jsonfeed.org/version/1.1",
-            title: `${data.meta.title} (${data.c.title})`,
+            title: `${data.site.title} (${data.c.title})`,
             home_page_url: `https://binyam.in/c/${data.c.key}/`,
             feed_url: this.absolute_url(data.page.url),
-            description: data.meta.desc,
+            description: data.site.desc,
             icon: "https://binyam.in/assets/logo.png",
             favicon: "https://binyam.in/assets/logo.png",
             language: "en-US",
             authors: [
                 {
-                    name: data.meta.author.name,
-                    url: data.meta.baseUrl,
+                    name: data.site.author.name,
+                    url: data.site.base_url,
                     avatar: "https://binyam.in/assets/img/profile/profile@128.jpeg"
                 }
             ],

@@ -1,53 +1,22 @@
-{# TODO Convert the logic here to global eleventyComputed javascript #}
-{% set isPost = postTypes | includes(category) %}
-
-{% set metatitle = meta.title %}
-{% if title %}
-    {% if isPost %}
-        {% set metatitle = title %}
-    {% else %}
-        {% set metatitle = title + " • " + meta.title %}
-    {% endif %}
-{% endif %}
-
-{% set metadesc = desc | default(meta.desc) %}
-
-{% set metaimg_og = meta.image.square %}
-{% set metaimg_twitter = meta.image.twitter %}
-
-{% if category == 'blog' %}
-    {% set filePath = "https://binyam.in/assets/uploads/" + (title | slugify) + ".png" %}
-    {% set metaimg_twitter = filePath %}
-{% endif %}
-
-{% if thumbnail %}
-    {% set metaimg_twitter = thumbnail | absolute_url %}
-{% endif %}
-
-{% set metatype = 'website' %}
-{% if isPost %}
-    {% set metatype = 'article' %}
-{% endif%}
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-<title>{{ metatitle }}</title>
+<title>{{ meta.title }}</title>
 
-<meta name="generator" content="Eleventy v{{meta.eleventyVersion}}">
-<meta name="author" content="{{meta.author.name}}">
-<meta name="description" content="{{ metadesc }}">
-<meta name="keywords" content="web developer, developer, jewish, judaism, jew, front-end, designer, html, css, javascript, jamstack">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta name="generator" content="Eleventy v{{ meta.eleventyVersion }}">
+<meta name="author" content="{{ site.author.name }}">
+<meta name="description" content="{{ meta.desc }}">
+<meta name="keywords" content="web developer, developer, jewish, judaism, jew, front-end, designer, html, css, javascript, jamstack, indieweb">
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
 {% if ignore %}<meta name="robots" content="noindex">{% endif %}
 
 <!-- OpenGraph tags -->
-<meta property="og:title" content="{{ metatitle }}">
-<meta property="og:type" content="{{ metatype }}">
+<meta property="og:title" content="{{ meta.title }}">
+<meta property="og:type" content="{{ 'article' if meta.isPost else 'website' }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{{ metaimg_og }}">
-<meta property="og:description" content="{{ metadesc }}">
+<meta property="og:image" content="{{ site.image.square }}">
+<meta property="og:description" content="{{ meta.desc }}">
 
 <!-- Feeds -->
 <link rel="alternate" title="Binyamin Green" type="application/rss+xml" href="https://binyam.in/feeds/all.xml" />
@@ -62,14 +31,13 @@
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@{{meta.twitterHandle}}" />
-<meta name="twitter:creator" content="@{{meta.twitterHandle}}" />
-<meta name="twitter:title" content="{{ metatitle }}" />
-<meta name="twitter:description" content="{{ metadesc }}" />
-<meta name="twitter:image" content="{{ metaimg_twitter }}" />
+<meta name="twitter:site" content="@{{site.author.twitter}}" />
+<meta name="twitter:creator" content="@{{site.author.twitter}}" />
+<meta name="twitter:title" content="{{ meta.title }}" />
+<meta name="twitter:description" content="{{ meta.desc }}" />
+{%- if meta.image_twitter %}<meta name="twitter:image" content="{{ meta.image_twitter }}" />{% endif %}
 
-<!-- CSS (except fonts) -->
-<!-- <link rel="stylesheet" href="/css/reset.css"> -->
+<!-- CSS -->
 <link rel="stylesheet" href="/css/github.min.css" />
 <link rel="stylesheet" href="/css/print.css" media="print">
 <link rel="stylesheet" href="/css/style.min.css">

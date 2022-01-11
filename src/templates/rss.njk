@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{title | default("Binyamin Green") }}</title>
-    <description>{{meta.desc}}</description>
+    <description>{{site.desc}}</description>
     <link>{{link | default("https://binyam.in/")}}</link>
     <atom:link href="{{page.url| absolute_url}}" rel="self" type="application/rss+xml" />
     <pubDate>{{ "now" | date("rfc") }}</pubDate>
