@@ -4,8 +4,8 @@
 
 @use '../abstracts/typography';
 
-// Emulate headings without a heading element
-@for $n from 1 to 4 {
+// Emulate headings without a heading element (1 - 5 excludes 5)
+@for $n from 1 to 5 {
     .as-h#{$n} {
         @extend %h#{$n};
     }

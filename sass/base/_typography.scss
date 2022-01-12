@@ -15,20 +15,11 @@ html * {
     line-height: theme.$line-height;
 }
 
-h1 {
-    @extend %h1;
-}
-
-h2 {
-    @extend %h2;
-}
-
-h3 {
-    @extend %h3;
-}
-
-h4 {
-    @extend %h4;
+// (1 - 5 excludes 5)
+@for $n from 1 to 5 {
+    h#{$n} {
+        @extend %h#{$n};
+    }
 }
 
 small {
