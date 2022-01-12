@@ -51,8 +51,6 @@ module.exports = function (eleventyConfig) {
             return ["blog", "micro"].includes(d.data.category)
         });
     })
-    eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
-
 
     // Important, since the gitignore lists "src/posts/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
