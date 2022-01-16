@@ -18,6 +18,9 @@ module.exports = function (eleventyConfig) {
         minify: 2
     });
 
+    // Some tweaks just for nunjucks
+    eleventyConfig.addPlugin(require("./utils/nunjucks"));
+
     eleventyConfig.setLibrary('md', md);
 
     // filters
@@ -25,12 +28,9 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addFilter(fn, filters[fn])
     }
 
-    eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
-
     eleventyConfig.addFilter("markdownify", string => {
         return md.renderInline(string)
     })
-
 
     // Shortcodes
     require("./utils/shortcodes")(eleventyConfig, md);

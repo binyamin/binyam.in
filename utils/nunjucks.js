@@ -10,7 +10,7 @@ dayjs.extend(advancedFormat);
 
 dayjs.tz.setDefault("America/New_York");
 
-module.exports = function date(timestamp, format, kwargs={}) {
+function date(timestamp, format, kwargs={}) {
     if(timestamp == "now" || !timestamp) {
         timestamp = new Date();
     }
@@ -27,4 +27,22 @@ module.exports = function date(timestamp, format, kwargs={}) {
     } else {
         return dt.format(format);
     }
+}
+
+function joinClasses(...groups) {
+    // Combine arrays of classes as `one two | three`
+    return groups.map(g => {
+        if(["symbol", "object"].includes(typeof g)) {
+            let gg = g.filter(n => !!n);
+            return gg.length > 0 ? gg.join(" ") : [];
+        }
+        return g ?? [];
+    }).flat().join(" | ");
+}
+
+module.exports = function(eleventyConfig, _opts) {
+    eleventyConfig.addNunjucksFilter("date", date);
+
+    // This is a function to use inside my templates; it's a nunjucks-specific feature
+    eleventyConfig.addNunjucksGlobal("class", joinClasses);
 }
