@@ -8,6 +8,6 @@
 
 .content {
     margin-top: theme.space('large');
-    width: clamp(52ch, 78ch, 100%);
+    max-width: min(100%, 68ch);
     margin-inline: auto;
 }

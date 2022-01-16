@@ -4,11 +4,12 @@
     {% include 'head.njk' %}
 </head>
 <body class="page">
+
     <header class="site-header">
-        <a href="/" class="site-logo">
-            <img src="{{site.logo}}" alt="Home" height="48" />
+        <a href="/" rel="home" class="site-logo">
+            <img src="{{site.logo}}" alt="Home" height="40" />
         </a>
-        <nav class="link-nav" aria-label="Primary Navigation">
+        <nav aria-label="Primary Navigation" class="navigation">
             <ul role="list">
                 <li role="listitem"><a href="/me">Me</a></li>
                 <li role="listitem"><a href="/c/blog">Articles</a></li>
@@ -18,7 +19,7 @@
         </nav>
     </header>
 
-    <main class="{{ [ 'content', main_class ] | join(" ") }}" id="top">
+    <main class="page-content content" id="top" tabindex="-1">
         {{ content | safe}}
     </main>
 

@@ -1,22 +1,20 @@
 @use '../abstracts/theme';
 
-// Use `.page` instead of `body`, b/c this is a layout component
-// and doesn't *need* to be the `body`.
-.page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
+body {
     // This scales with the viewport; see <https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/>
     padding-inline: theme.space('small');
     margin-inline: auto;
     width: clamp(16rem, 90vw, 70rem);
 }
 
-// .page-header {}
-
-.page .content {
-    flex: auto;
+// Use `.page` instead of `body`, b/c this is a layout component
+// and doesn't *need* to be the `body`.
+.page {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
 }
 
-// .page-footer {}
+.page > .page-content {
+    flex: auto;
+}

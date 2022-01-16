@@ -6,15 +6,30 @@
 
 .site-header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
+    gap: theme.space('medium');
 
-    padding-block: theme.space('small');
+    padding-block: theme.space('medium');
 }
 
-// .site-logo {}
+.site-logo {
+    line-height: 0;
+    flex-basis: 0;
+    flex-grow: 999;
+}
 
-.link-nav ul {
+.navigation {
+    flex-grow: 1;
+}
+
+.navigation ul {
     display: flex;
     gap: theme.space('medium');
+
+    :any-link {
+        color: currentColor;
+        text-decoration: none;
+    }
 }
