@@ -5,12 +5,12 @@
 @use '../abstracts/theme';
 @use '../abstracts/typography';
 
-html {
+body {
     font-family: theme.font-family('body');
     font-size: theme.font-size('base');
 }
 
-html * {
+body * {
     // Line-height is a calculation, so it must be set on children explicitely
     line-height: theme.$line-height;
 }
