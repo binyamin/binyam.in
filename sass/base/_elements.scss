@@ -1,0 +1,13 @@
+@use '../abstracts/theme';
+@use '../abstracts/utilities' as *;
+
+:any-link {
+    color: currentColor;
+    text-underline-offset: 2px;
+    text-decoration-color: theme.color('emerald');
+    transition: text-underline-offset 110ms ease-out;
+
+    @include on-event {
+        text-underline-offset: 5px;
+    }
+}
