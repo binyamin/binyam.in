@@ -10,3 +10,10 @@
         @extend %h#{$n};
     }
 }
+
+:where(h1,h2,h3,h4).as-p {
+    font-family: unset;
+    font-weight: unset;
+    font-size: unset;
+    margin-block: unset;
+}
