@@ -10,11 +10,11 @@ eleventyComputed:
     desc: "{{ c.desc | striptags }}" # for meta tags
 ---
 
-<div class="h-feed">
-    <header class="posts-header">
-        <h1 class="posts-title p-name">{{c.title}}</h1>
-        <p class="posts-lead p-summary">{{c.desc | safe}}</p>
-        <p class="posts-details">
+<div class="feed | h-feed">
+    <header>
+        <h1 class="p-name">{{c.title}}</h1>
+        <p class="p-summary">{{c.desc | safe}}</p>
+        <p>
             <svg role="none" viewBox="0 0 24 24" class="icon" width="24" height="24">
                 <use href="/assets/icons/icon-rss.svg#sprite"/>
             </svg>
@@ -25,12 +25,12 @@ eleventyComputed:
     </header>
 
     {% for post in collections[c.key] | reverse %}
-    <article class="post-item h-entry" aria-labelledby="post--{{post.data.title|slugify}}">
+    <article class="h-entry" aria-labelledby="post--{{post.data.title|slugify}}">
         <a href="{{post.url}}" class="u-url u-uid">
-            <h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
+            <h2 class="p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
         </a>
-        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| date('iso') }}">{{ post.date | date_est(false) }}</time></p>
-        <div class="post-item__desc p-summary">{{ post.data.desc | safe }}</div>
+        <p>Posted on <time class="dt-published" datetime="{{post.date| date('iso') }}">{{ post.date | date_est(false) }}</time></p>
+        <p class="p-summary">{{ post.data.desc | safe }}</p>
     </article>
     {% endfor %}
 </div>

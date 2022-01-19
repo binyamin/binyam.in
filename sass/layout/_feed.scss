@@ -1,0 +1,13 @@
+@use '../abstracts/theme';
+
+.feed > * {
+    margin-block: 0;
+}
+
+.feed > * + * {
+    margin-block: theme.space('medium');
+}
+
+.feed > :first-child + * {
+    margin-top: theme.space('large');
+}
