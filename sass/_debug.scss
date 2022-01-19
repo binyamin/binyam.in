@@ -2,6 +2,10 @@
     outline: 1px dashed #000;
 }
 
+[data-debug]{
+    @extend %border;
+}
+
 $parent: false !default;
 $dir: 'ltr' !default;
 $class: false !default;
