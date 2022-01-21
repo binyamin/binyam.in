@@ -1,7 +1,7 @@
 ---
 title: Writing CSS with Purpose
 desc: I don’t understand CSS. I just write it.
-date: 2022-01-20T13:00:58.453Z
+date: 2022-01-20T19:00:58.453Z
 
 # The post talks about ...
 tags: [code, css, web, design]
