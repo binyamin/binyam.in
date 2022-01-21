@@ -16,8 +16,14 @@ folders:
   # - yearly-review
 
 # Array of links to syndicated copies
-elsewhere: []
+elsewhere:
+  - https://news.indieweb.org/en/binyam.in/p/writing-css-with-purpose/
+  - https://twitter.com/binyamingreen/status/1484581274148876297
+  - https://mas.to/web/statuses/107661662800086647
 ---
+
+<!-- this `link` should be removed, once POSSE is part of the post layout -->
+<link class="u-syndication" href="https://news.indieweb.org/en" />
 
 I've been paying more attention to my website recently. I've been asking why it exists, what I want it to look like, and other such questions.
 
