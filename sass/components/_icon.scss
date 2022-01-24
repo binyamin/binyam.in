@@ -1,0 +1,14 @@
+//----------
+// Inline Icons
+//
+// May change with new icon system
+//----------
+
+@use '../abstracts/theme';
+
+.icon {
+    fill: currentColor;
+    height: theme.$line-height;
+    width: theme.$line-height;
+    vertical-align: text-bottom;
+}
