@@ -4,25 +4,29 @@
 
 @use 'theme';
 
-%h1, %h2, %h3, %h4 {
+%h1, %h2, %h3, %h4, %h5 {
     font-family: theme.font-family('display');
     font-weight: 400;
-    margin: theme.space('medium') 0 theme.space('small');
+    margin: theme.space('large') 0 theme.space('medium');
 }
 
 %h1 {
-    font-size: theme.font-size('xl');
+    font-size: theme.font-size('xxl');
 }
 
 %h2 {
-    font-size: theme.font-size('lg');
+    font-size: theme.font-size('xl');
 }
 
 %h3 {
-    font-size: theme.font-size('md');
+    font-size: theme.font-size('lg');
 }
 
 %h4 {
+    font-size: theme.font-size('md');
+}
+
+%h5 {
     font-size: inherit;
 }
 

@@ -2,8 +2,8 @@
 @use 'sass:map';
 
 $fonts: (
-    display: 'Source Serif Pro',
-    body: 'Source Sans Pro',
+    display: var(--ff-body),
+    body: 'Open Sans',
     code: 'Source Code Pro'
 );
 
@@ -33,15 +33,16 @@ $-fallbacks: (
     $fonts: map.set($fonts, $k, $stack);
 }
 
-/// From @link https://www.fluid-type-scale.com/ with a 18px max base size
+/// Fluid Typography (scales with the viewport)
+/// From @link https://www.fluid-type-scale.com/ with a 1.25 type-scale ratio, 16px/18px (mobile/desktop)
 $font-sizes: (
-    sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.844rem),
+    sm: clamp(0.8rem, 0.182vw + 0.755rem, 0.9rem),
     base: clamp(1rem, 0.227vw + 0.943rem, 1.125rem),
-    md: clamp(1.25rem, 0.454vw + 1.137rem, 1.5rem),
-    lg: clamp(1.563rem, 0.794vw + 1.364rem, 1.999rem),
-    xl: clamp(1.953rem, 1.294vw + 1.63rem, 2.665rem),
-    xxl: clamp(2.441rem, 2.019vw + 1.937rem, 3.552rem),
-    xxxl: clamp(3.052rem, 3.06vw + 2.287rem, 4.735rem),
+    md: clamp(1.25rem, 0.284vw + 1.179rem, 1.406rem),
+    lg: clamp(1.563rem, 0.355vw + 1.474rem, 1.758rem),
+    xl: clamp(1.953rem, 0.444vw + 1.842rem, 2.197rem),
+    xxl: clamp(2.441rem, 0.555vw + 2.303rem, 2.747rem),
+    xxxl: clamp(3.052rem, 0.694vw + 2.878rem, 3.433rem),
 );
 
 /// Fluid, scalable line-height, modified slightly

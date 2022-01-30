@@ -15,8 +15,8 @@ body * {
     line-height: theme.$line-height;
 }
 
-// (1 - 5 excludes 5)
-@for $n from 1 to 5 {
+// (1 - n excludes n)
+@for $n from 1 to 6 {
     h#{$n} {
         @extend %h#{$n};
     }
