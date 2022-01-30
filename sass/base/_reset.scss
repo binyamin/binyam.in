@@ -2,19 +2,12 @@
 // CSS Reset
 //
 // Inspired by Andy Bell in https://piccalil.li/blog/a-modern-css-reset/
-// Inspired by Josh W. Comeau in https://www.joshwcomeau.com/css/custom-css-reset/
 //----------
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+@use 'modern-normalize/modern-normalize.css';
 
 html:focus-within {
     scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
 }
 
 // Remove list styles on ul, ol elements with a list role,
