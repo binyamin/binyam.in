@@ -1,4 +1,5 @@
-const fetch = require("node-fetch");
+/** @type {import("node-fetch").default} */
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const datacache = require("@binyamin/data-cache");
 
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
