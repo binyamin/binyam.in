@@ -5,7 +5,7 @@ dist/
 src/posts/wiki/**/*.md
 .env*
 
-# NPM & friends
-yarn.lock
-pnpm-lock.yaml
-package-lock.json
+## NPM & friends ##
+# yarn.lock
+# pnpm-lock.yaml
+# package-lock.json
