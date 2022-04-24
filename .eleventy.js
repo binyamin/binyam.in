@@ -5,11 +5,10 @@ const md = require("./utils/markdownIt");
 const sass = require("@binyamin/eleventy-plugin-sass");
 
 /**
- *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
- *  @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
+ * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 module.exports = function (eleventyConfig) {
-
     eleventyConfig.addPlugin(sass, {
         dir: "sass",
         file: "main.scss",
@@ -21,8 +20,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLibrary('md', md);
 
     // filters
-    for (const fn in filters) {
-        eleventyConfig.addFilter(fn, filters[fn])
+    for (const [key, value] of Object.entries(filters)) {
+        eleventyConfig.addFilter(key, value);
     }
 
     eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
