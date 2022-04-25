@@ -1,0 +1,13 @@
+{
+    "title": "Binyamin Green",
+    "desc": "Binyamin Green is a UI Designer and Front-end Developer.",
+    "author": {
+        "name": "Binyamin Aron Green"
+    },
+    "image": {
+        "square": "https://binyam.in/assets/logo.png",
+        "twitter": ""
+    },
+    "twitterHandle": "binyamingreen",
+    "baseUrl": "https://binyam.in"
+}

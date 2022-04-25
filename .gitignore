@@ -2,5 +2,10 @@ node_modules/
 dist/
 .cache/
 .lighthouseci/
-html/wiki/**/*.md
+src/posts/wiki/**/*.md
 .env*
+
+## NPM & friends ##
+# yarn.lock
+# pnpm-lock.yaml
+# package-lock.json

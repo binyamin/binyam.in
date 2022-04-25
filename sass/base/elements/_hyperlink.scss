@@ -1,0 +1,12 @@
+@use '../../theme/color' as color;
+
+// Hyperlinks
+:any-link {
+    color: currentColor;
+    text-underline-offset: 2px;
+    transition: text-underline-offset 150ms ease;
+
+    &:hover {
+        text-underline-offset: 5px;
+    }
+}

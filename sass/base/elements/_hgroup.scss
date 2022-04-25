@@ -1,0 +1,17 @@
+@use '../../theme/color' as color;
+
+// Heading with description
+hgroup {
+    :first-child:is(h1,h2,h3,h4) + p {
+        color: color.$text-alt;
+    }
+}
+
+hgroup, header, footer {
+    :is(h1,h2,h3,h4):where(:first-child) {
+        margin-bottom: 0;
+    }
+    :is(h1,h2,h3,h4):where(:first-child) + p {
+        margin-top: 0;
+    }
+}

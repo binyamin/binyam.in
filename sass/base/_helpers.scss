@@ -1,0 +1,28 @@
+/* for screen-reader-only content (from https://scottohara.me) */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.u-italics {
+    font-style: italic;
+}
+
+.u-no-italics {
+    font-style: normal;
+}
+
+.u-bold {
+    font-weight: 700;
+}
+
+.u-no-bold {
+    font-weight: 400;
+}
+

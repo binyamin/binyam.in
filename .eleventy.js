@@ -1,15 +1,33 @@
+const path = require("path");
+
+const filters = require("./utils/filters.js");
+const markdown = require("./utils/markdown.js");
+const sass = require("@binyamin/eleventy-plugin-sass");
+
+/**
+ * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
+ */
 module.exports = function (eleventyConfig) {
-    const md = require("./eleventy/markdownIt");
-    eleventyConfig.setLibrary('md', md);
+    eleventyConfig.addPlugin(markdown);
+    eleventyConfig.addPlugin(sass, {
+        dir: "sass",
+        file: "main.scss",
+        outDir: path.resolve("dist", "css"),
+        outFile: "style.min.css",
+        minify: 2
+    });
 
     // filters
-    require("./eleventy/filters")(eleventyConfig, md);
+    for (const [key, value] of Object.entries(filters)) {
+        eleventyConfig.addFilter(key, value);
+    }
+
+    eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
 
     // Shortcodes
-    require("./eleventy/shortcodes")(eleventyConfig, md);
+    eleventyConfig.addPlugin(require("./utils/shortcodes"));
 
-    const wm = require("./eleventy/webmentions");
-    eleventyConfig.addFilter("getMentionsForUrl", wm);
 
     // Collections
     const collections = ['blog', 'wiki', 'micro'];
@@ -29,18 +47,24 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addGlobalData("postTypes", ["blog", "micro"]);
 
 
-    // Important, since the gitignore lists "html/wiki/**/*"
+    // Important, since the gitignore lists "src/posts/wiki/**/*"
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addPassthroughCopy({ 'static': '/' });
 
+    // Ignore draft wiki posts
+    eleventyConfig.ignores.add('src/posts/wiki/**/_*.md');
+
     return {
         dir: {
-            input: "html",
+            input: "src",
             output: "dist",
-            layouts: "_layouts",
-            includes: "_includes",
-            data: "_data"
-        }
+            layouts: "templates",
+            includes: "templates/includes",
+            data: "data"
+        },
+        htmlTemplateEngine: "njk",
+        markdownTemplateEngine: "njk",
+        dataTemplateEngine: "njk"
     };
 };
