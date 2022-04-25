@@ -3,10 +3,28 @@
 // Hyperlinks
 :any-link {
     color: currentColor;
-    text-underline-offset: 2px;
-    transition: text-underline-offset 150ms ease;
 
     &:hover {
-        text-underline-offset: 5px;
+        text-decoration-style: dashed;
+        color: color.$primary--text;
+    }
+
+    &:focus-visible {
+        outline: 2px solid color.$primary;
+        outline-offset: 0.1em;
+    }
+}
+
+/// Don't use yet:
+/// Not all browsers support `text-underline-offset` (eg.
+/// Firefox Android), and transitions don't work with it
+/// in Chrome/Edge, or Safari<12.1 (self-tested).
+@mixin experimental {
+    color: currentColor;
+    text-underline-offset: 0.1em;
+    transition: text-underline-offset 350ms ease;
+
+    &:hover {
+        text-underline-offset: 0.3em;
     }
 }
