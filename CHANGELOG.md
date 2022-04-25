@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
 
+## 4.7.1 - 4-24-2022
+- Removed green color from hyperlink underline
+- Upgraded to eleventy v1.0.1
+- Brought back header id's
+
 ## 4.7.0 - 1-10-2022
 - Use nunjucks instead of liquid for the templating engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
 - Switch back to sass. The gain from css was minimal, and the size of the css file became annoying when scrolling.
