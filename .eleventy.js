@@ -1,7 +1,7 @@
 const path = require("path");
 
-const filters = require("./utils/filters");
-const md = require("./utils/markdownIt");
+const filters = require("./utils/filters.js");
+const markdown = require("./utils/markdown.js");
 const sass = require("@binyamin/eleventy-plugin-sass");
 
 /**
@@ -9,6 +9,7 @@ const sass = require("@binyamin/eleventy-plugin-sass");
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(markdown);
     eleventyConfig.addPlugin(sass, {
         dir: "sass",
         file: "main.scss",
@@ -17,8 +18,6 @@ module.exports = function (eleventyConfig) {
         minify: 2
     });
 
-    eleventyConfig.setLibrary('md', md);
-
     // filters
     for (const [key, value] of Object.entries(filters)) {
         eleventyConfig.addFilter(key, value);
@@ -26,13 +25,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
 
-    eleventyConfig.addFilter("markdownify", string => {
-        return md.renderInline(string)
-    })
-
-
     // Shortcodes
-    require("./utils/shortcodes")(eleventyConfig, md);
+    eleventyConfig.addPlugin(require("./utils/shortcodes"));
 
 
     // Collections
