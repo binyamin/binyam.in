@@ -19,7 +19,9 @@
   Roughly based on Kitty Giraudel's "7-1 pattern" (https://sass-guidelin.es/#the-7-1-pattern).
 */
 
+@use 'reset'; // TODO replace with `modern-normalize`
 @use 'typography'; // TODO merge with `elements`
+
 @use 'base';
 @use 'components'; // HTML elements with classes
 @use 'layouts';

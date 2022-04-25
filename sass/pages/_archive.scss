@@ -16,10 +16,6 @@
 .posts-details {
     color: color.$text-alt;
     margin: 0;
-
-    :any-link {
-        @include hyperlink.alt;
-    }
 }
 
 .post-item {

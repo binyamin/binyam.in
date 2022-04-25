@@ -12,10 +12,6 @@
 
     &__meta {
         color: color.$text-alt;
-
-        &:any-link, :any-link {
-            @include link.alt;
-        }
     }
 
     &__body {
