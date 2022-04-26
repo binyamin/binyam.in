@@ -13,6 +13,7 @@ The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes a
   - SemVer is designed for software, not for websites.
   - The new versioning scheme is more informative. It actually means something to me.
 - Reworded 404 page, to make it more user-friendly. Also, added a title to the metadata.
+- Changed code styling. Formerly the code was given a bold weight, which called attention to it unnecessarily. Now, it's different but equally attention-grabbing to the text beside it.
 
 ## 4.7.1 - 4-24-2022
 - Removed green color from hyperlink underline
