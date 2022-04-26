@@ -2,10 +2,17 @@
 
 This changelog begins at v4.2.0, since that's when I decided to start keeping it.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes an overhaul/rewrite of either the design or the code. **Year** is the last two numbers of the year. **Iteration** is a count of how often I updated the website that year.
 
 <!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
+
+## 4.22.3 - Unreleased
+- Changed versioning scheme
+  - SemVer is designed for software, not for websites.
+  - The new versioning scheme is more informative. It actually means something to me.
+- Reworded 404 page, to make it more user-friendly. Also, added a title to the metadata.
 
 ## 4.7.1 - 4-24-2022
 - Removed green color from hyperlink underline
