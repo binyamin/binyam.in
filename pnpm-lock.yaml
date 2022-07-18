@@ -7,7 +7,7 @@ specifiers:
   '@binyamin/markdown-it-wikilinks': ^1.1.0
   dayjs: ^1.11.2
   del: ^6.1.1
-  highlight.js: ^11.5.1
+  highlight.js: ^11.6.0
   markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.4
   markdown-it-attrs: ^4.1.4
@@ -25,7 +25,7 @@ devDependencies:
   '@binyamin/markdown-it-wikilinks': 1.1.0_markdown-it@13.0.1
   dayjs: 1.11.2
   del: 6.1.1
-  highlight.js: 11.5.1
+  highlight.js: 11.6.0
   markdown-it: 13.0.1
   markdown-it-anchor: 8.6.4_markdown-it@13.0.1
   markdown-it-attrs: 4.1.4_markdown-it@13.0.1
@@ -945,8 +945,8 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /highlight.js/11.5.1:
-    resolution: {integrity: sha512-LKzHqnxr4CrD2YsNoIf/o5nJ09j4yi/GcH5BnYz9UnVpZdS4ucMgvP61TDty5xJcFGRjnH4DpujkS9bHT3hq0Q==}
+  /highlight.js/11.6.0:
+    resolution: {integrity: sha512-ig1eqDzJaB0pqEvlPVIpSSyMaO92bH1N2rJpLMN/nX396wTpDA4Eq0uK+7I/2XG17pFaaKE0kjV/XPeGt7Evjw==}
     engines: {node: '>=12.0.0'}
     dev: true
 
@@ -991,7 +991,7 @@ packages:
     dev: true
 
   /immutable/3.8.2:
-    resolution: {integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=}
+    resolution: {integrity: sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg==}
     engines: {node: '>=0.10.0'}
 
   /immutable/4.0.0:
