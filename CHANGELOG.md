@@ -14,6 +14,8 @@ The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes a
   - The new versioning scheme is more informative. It actually means something to me.
 - Reworded 404 page, to make it more user-friendly. Also, added a title to the metadata.
 - Changed code styling. Formerly the code was given a bold weight, which called attention to it unnecessarily. Now, it's different but equally attention-grabbing to the text beside it.
+- For "Feeds" page, explained what a web feed is.
+- Updated "Reading" page
 
 ## 4.7.1 - 4-24-2022
 - Removed green color from hyperlink underline

@@ -8,8 +8,12 @@ desc: I enjoy reading. I enjoy sharing. I want to share my reading.
 I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created this page. I'd love for you to [suggest a book](/contact).
 
 ## Present
-- _Atomic Habits_, by James Clear (56%)
-- _Weaving the Web_, by Tim Berners-Lee (70%)
+- _Apeirogon_, by Colum McCann
+- _Merlin: A Wizard's Wings_, by T. A. Barron
+
+## Dropped
+- _Atomic Habits_, by James Clear
+- _Weaving the Web_, by Tim Berners-Lee
 
 ## Future
 - [The Comfort Crisis](https://eastermichael.com/book/), by Michael Easter
@@ -31,6 +35,7 @@ I enjoy reading. I enjoy sharing. I wanted to share my reading, so I created thi
 
 ## Past
 _Not comprehensive_
+- _The Merlin Series (1 - 4)_, by T. A. Abbott
 - [Tuesdays with Morrie](https://google.com/books/edition/_/T5PqPWS0GKwC), by Mitch Albom
 - [The Letter for the King](https://www.amazon.com/Letter-King-Tonke-Dragt/dp/1782690816), by Tonke Dragt
 - [Letters to a Young Writer: Some Practical and Philosophical Advice](https://www.goodreads.com/book/show/31868169-letters-to-a-young-writer), by Colum McCann
