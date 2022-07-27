@@ -4,11 +4,11 @@ This changelog begins at v4.2.0, since that's when I decided to start keeping it
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes an overhaul/rewrite of either the design or the code. **Year** is the last two numbers of the year. **Iteration** is a count of how often I updated the website that year.
+As of v4.22.3, The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes an overhaul/rewrite of either the design or the code. **Year** is the last two numbers of the year. **Iteration** is a count of how often I updated the website that year.
 
 <!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
 
-## 4.22.3 - Unreleased
+## 4.22.3 - 2022-27-7
 - Changed versioning scheme
   - SemVer is designed for software, not for websites.
   - The new versioning scheme is more informative. It actually means something to me.
@@ -17,12 +17,12 @@ The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes a
 - For "Feeds" page, explained what a web feed is.
 - Updated "Reading" page
 
-## 4.7.1 - 4-24-2022
+## 4.7.1 - 2022-04-24
 - Removed green color from hyperlink underline
 - Upgraded to eleventy v1.0.1
-- Brought back header id's
+- Brought back header IDs
 
-## 4.7.0 - 1-10-2022
+## 4.7.0 - 2022-01-10
 - Use nunjucks instead of liquid for the templating engine. Nunjucks has the bonus of supporting [macros](http://mozilla.github.io/nunjucks/templating.html#macro).
 - Switch back to sass. The gain from css was minimal, and the size of the css file became annoying when scrolling.
 - Made major changes to the folder structure. More information is available in the dropdown.
@@ -47,7 +47,7 @@ The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes a
     - `/../_includes` -> `/../templates/includes`
 </details>
 
-## 4.6.0 - 10-31-2021
+## 4.6.0 - 2021-10-31
 <strong>Edit</strong>: For some reason, I jumped from `4.2.0` to `4.6.0`. I'm not sure why.
 
 **Partial listing**
@@ -57,7 +57,7 @@ The versioning uses the format `<major>.<year>.<iteration>`. **Major** denotes a
 - add h-feed
 - Also updated a bunch of static pages
 
-## 4.2.0 - 01-04-2021
+## 4.2.0 - 2021-01-04
 - Added this changelog, in order to track my thought process and make better design decisions in the future
 - removed hashtags from posts (visibly). I don't have enough posts for it to be important. Now, it just takes up space.
 - inline code is now dark-grey instead of red, since the red color disrupted the flow of reading.
