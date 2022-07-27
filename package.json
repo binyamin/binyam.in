@@ -1,7 +1,7 @@
 {
   "name": "binyam.in",
   "private": true,
-  "version": "4.7.1",
+  "version": "4.22.3",
   "description": "My personal website",
   "scripts": {
     "start": "eleventy --quiet --serve",
@@ -24,16 +24,16 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@binyamin/data-cache": "^1.1.0",
-    "@binyamin/markdown-it-wikilinks": "^1.1.0",
-    "dayjs": "^1.11.2",
+    "@binyamin/markdown-it-wikilinks": "^1.1.1",
+    "dayjs": "^1.11.4",
     "del": "^6.1.1",
-    "highlight.js": "^11.5.1",
+    "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-external-anchor": "^1.0.0",
     "markdown-it-footnote": "^3.0.3",
-    "node-fetch": "^3.2.4",
+    "node-fetch": "^3.2.9",
     "title-case": "^3.0.3"
   },
   "dependencies": {
