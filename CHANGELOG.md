@@ -8,6 +8,9 @@ As of v4.22.3, The versioning uses the format `<major>.<year>.<iteration>`. **Ma
 
 <!-- Write that what AND why, in order to track my thought process throughout development, and not revert changes left and right. -->
 
+## Unreleased
+- Replaced much of the reading list with a link to my Literal profile (https://literal.club/binyamin).
+
 ## 4.22.3 - 2022-27-7
 - Changed versioning scheme
   - SemVer is designed for software, not for websites.
