@@ -22,7 +22,7 @@
   },
   "homepage": "https://binyam.in",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.0",
     "@binyamin/data-cache": "^1.1.0",
     "@binyamin/markdown-it-wikilinks": "^1.1.1",
     "dayjs": "^1.11.4",
