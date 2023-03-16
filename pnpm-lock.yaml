@@ -7,13 +7,13 @@ specifiers:
   '@binyamin/markdown-it-wikilinks': ^1.1.1
   dayjs: ^1.11.4
   del: ^6.1.1
-  highlight.js: ^11.6.0
+  highlight.js: ^11.7.0
   markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.4
   markdown-it-attrs: ^4.1.4
   markdown-it-external-anchor: ^1.0.0
   markdown-it-footnote: ^3.0.3
-  node-fetch: ^3.2.9
+  node-fetch: ^3.3.1
   title-case: ^3.0.3
 
 dependencies:
@@ -25,13 +25,13 @@ devDependencies:
   '@binyamin/markdown-it-wikilinks': 1.1.1_markdown-it@13.0.1
   dayjs: 1.11.4
   del: 6.1.1
-  highlight.js: 11.6.0
+  highlight.js: 11.7.0
   markdown-it: 13.0.1
   markdown-it-anchor: 8.6.4_markdown-it@13.0.1
   markdown-it-attrs: 4.1.4_markdown-it@13.0.1
   markdown-it-external-anchor: 1.0.0
   markdown-it-footnote: 3.0.3
-  node-fetch: 3.2.9
+  node-fetch: 3.3.1
   title-case: 3.0.3
 
 packages:
@@ -814,6 +814,17 @@ packages:
     dependencies:
       debug: 4.3.2
 
+  /follow-redirects/1.15.1_debug@4.3.4:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+
   /formdata-polyfill/4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
     engines: {node: '>=12.20.0'}
@@ -937,8 +948,8 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /highlight.js/11.6.0:
-    resolution: {integrity: sha512-ig1eqDzJaB0pqEvlPVIpSSyMaO92bH1N2rJpLMN/nX396wTpDA4Eq0uK+7I/2XG17pFaaKE0kjV/XPeGt7Evjw==}
+  /highlight.js/11.7.0:
+    resolution: {integrity: sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==}
     engines: {node: '>=12.0.0'}
     dev: true
 
@@ -966,7 +977,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.1_debug@4.3.2
+      follow-redirects: 1.15.1_debug@4.3.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -1345,8 +1356,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: true
 
-  /node-fetch/3.2.9:
-    resolution: {integrity: sha512-/2lI+DBecVvVm9tDhjziTVjo2wmTsSxSk58saUYP0P/fRJ3xxtfMDY24+CKTkfm0Dlhyn3CSXNL0SoRiCZ8Rzg==}
+  /node-fetch/3.3.1:
+    resolution: {integrity: sha512-cRVc/kyto/7E5shrWca1Wsea4y6tL9iYJE5FBCius3JQfb/4P4I295PfhgbJQBLTx6lATE4z+wK0rPM4VS2uow==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       data-uri-to-buffer: 4.0.0
