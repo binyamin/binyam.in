@@ -14,8 +14,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1
   '@binyamin/data-cache':
-    specifier: ^1.1.0
-    version: 1.1.0
+    specifier: ^2.0.0
+    version: 2.0.0
   '@binyamin/markdown-it-wikilinks':
     specifier: ^1.1.1
     version: 1.1.1(markdown-it@13.0.2)
@@ -152,9 +152,9 @@ packages:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
 
-  /@binyamin/data-cache@1.1.0:
-    resolution: {integrity: sha512-CBm07ExKagVv2yMP1vM1lCq+j6hYRMSIWgJGo2FqrMMaK3F1Ucnw4D2uPhV7ccTpIsEntuq15n19+k3q2EY08g==}
-    engines: {node: '>=10'}
+  /@binyamin/data-cache@2.0.0:
+    resolution: {integrity: sha512-bMVHt2bXmKvV60T0ENjn5GxPCQs7Z+/khk4Qubgh18y6MbRo54Dhbf9skMvgS/ukWNarupFKve7Y+FRIO6uOOQ==}
+    engines: {node: '>=16'}
     dev: true
 
   /@binyamin/markdown-it-wikilinks@1.1.1(markdown-it@13.0.2):
