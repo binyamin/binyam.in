@@ -3,11 +3,11 @@
 
 {% set metatitle = meta.title %}
 {% if title %}
-    {% if isPost %}
-        {% set metatitle = title %}
-    {% else %}
-        {% set metatitle = title + " • " + meta.title %}
-    {% endif %}
+	{% if isPost %}
+		{% set metatitle = title %}
+	{% else %}
+		{% set metatitle = title + " • " + meta.title %}
+	{% endif %}
 {% endif %}
 
 {% set metadesc = desc | default(meta.desc) %}
@@ -16,17 +16,17 @@
 {% set metaimg_twitter = meta.image.twitter %}
 
 {% if category == 'blog' %}
-    {% set filePath = "https://binyam.in/assets/uploads/" + (title | slugify) + ".png" %}
-    {% set metaimg_twitter = filePath %}
+	{% set filePath = "https://binyam.in/assets/uploads/" + (title | slugify) + ".png" %}
+	{% set metaimg_twitter = filePath %}
 {% endif %}
 
 {% if thumbnail %}
-    {% set metaimg_twitter = thumbnail | absolute_url %}
+	{% set metaimg_twitter = thumbnail | absolute_url %}
 {% endif %}
 
 {% set metatype = 'website' %}
 {% if isPost %}
-    {% set metatype = 'article' %}
+	{% set metatype = 'article' %}
 {% endif%}
 
 <meta charset="UTF-8">

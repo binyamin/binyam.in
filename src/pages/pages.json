@@ -1,4 +1,4 @@
 {
-    "layout": "default",
-    "permalink": "/{{page.filePathStem | replace('pages/', '')}}/"
+	"layout": "default",
+	"permalink": "/{{page.filePathStem | replace('pages/', '')}}/"
 }

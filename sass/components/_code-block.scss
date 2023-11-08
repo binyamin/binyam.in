@@ -3,13 +3,13 @@
 
 /* Code block */
 .code-block[data-lang]::before {
-    float: right;
-    color: color.$text-alt;
-    content: attr(data-lang);
-    @extend %small;
+	float: right;
+	color: color.$text-alt;
+	content: attr(data-lang);
+	@extend %small;
 }
 
 .code-block {
-    border-radius: 0.3em;
-    border: 1px solid #c9c9c9;
+	border-radius: 0.3em;
+	border: 1px solid #c9c9c9;
 }

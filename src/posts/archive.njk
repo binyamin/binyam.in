@@ -1,36 +1,36 @@
 ---
 layout: default
 pagination:
-    data: categories
-    size: 1
-    alias: c
+  data: categories
+  size: 1
+  alias: c
 permalink: "/c/{{c.key}}/"
 eleventyComputed:
-    title: "{{c.title}}" # for meta tags
-    desc: "{{ c.desc | striptags }}" # for meta tags
+  title: "{{c.title}}" # for meta tags
+  desc: "{{ c.desc | striptags }}" # for meta tags
 ---
 
 <div class="h-feed">
-    <header class="posts-header">
-        <h1 class="posts-title p-name">{{c.title}}</h1>
-        <p class="posts-lead p-summary">{{c.desc | safe}}</p>
-        <p class="posts-details">
-            <svg role="none" viewBox="0 0 24 24" class="icon" width="24" height="24">
-                <use href="/assets/icons/icon-rss.svg#sprite"/>
-            </svg>
-            Subscribe via <a href="/feeds/{{c.key}}.xml">RSS</a> or <a href="/feeds/{{c.key}}.json">JSON</a> feed
-        </p>
-        <link href="{{- page.url -}}" class="u-url" />
-        <data class="p-author" value="Binyamin Green"></data>
-    </header>
+	<header class="posts-header">
+		<h1 class="posts-title p-name">{{c.title}}</h1>
+		<p class="posts-lead p-summary">{{c.desc | safe}}</p>
+		<p class="posts-details">
+			<svg role="none" viewBox="0 0 24 24" class="icon" width="24" height="24">
+				<use href="/assets/icons/icon-rss.svg#sprite"/>
+			</svg>
+			Subscribe via <a href="/feeds/{{c.key}}.xml">RSS</a> or <a href="/feeds/{{c.key}}.json">JSON</a> feed
+		</p>
+		<link href="{{- page.url -}}" class="u-url" />
+		<data class="p-author" value="Binyamin Green"></data>
+	</header>
 
-    {% for post in collections[c.key] | reverse %}
-    <article class="post-item h-entry" aria-labelledby="post--{{post.data.title|slugify}}">
-        <a href="{{post.url}}" class="u-url u-uid">
-            <h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
-        </a>
-        <p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| date('iso') }}">{{ post.date | date_est(false) }}</time></p>
-        <div class="post-item__desc p-summary">{{ post.data.desc | safe }}</div>
-    </article>
-    {% endfor %}
+	{% for post in collections[c.key] | reverse %}
+	<article class="post-item h-entry" aria-labelledby="post--{{post.data.title|slugify}}">
+		<a href="{{post.url}}" class="u-url u-uid">
+			<h2 class="post-item__title p-name" id="post--{{post.data.title|slugify}}">{{post.data.title}}</h2>
+		</a>
+		<p class="post-item__details">Posted on <time class="dt-published" datetime="{{post.date| date('iso') }}">{{ post.date | date_est(false) }}</time></p>
+		<div class="post-item__desc p-summary">{{ post.data.desc | safe }}</div>
+	</article>
+	{% endfor %}
 </div>

@@ -3,24 +3,24 @@ layout: default
 main_class: note
 ---
 <article>
-    <header>
-        <h1 class="p-name">{{title}}</h1>
-    </header>
-    <section class="p-content">
-        {{ content | safe }}
-    </section>
+	<header>
+		<h1 class="p-name">{{title}}</h1>
+	</header>
+	<section class="p-content">
+		{{ content | safe }}
+	</section>
 
-    <section class="bl">
-        <p class="bl__title">Linking to this Note</p>
-        {% if backlinks.length > 0 %}
-        <ul class="bl__links">
-            {% for link in backlinks %}
-            <li class="bl__link"><a href="{{link.url}}">{{link.title}}</a></li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p class="bl__note">No backlinks found</p>
-        {% endif %}
-    </section>
+	<section class="bl">
+		<p class="bl__title">Linking to this Note</p>
+		{% if backlinks.length > 0 %}
+		<ul class="bl__links">
+			{% for link in backlinks %}
+			<li class="bl__link"><a href="{{link.url}}">{{link.title}}</a></li>
+			{% endfor %}
+		</ul>
+		{% else %}
+		<p class="bl__note">No backlinks found</p>
+		{% endif %}
+	</section>
 </article>
 
