@@ -1,74 +1,74 @@
 body {
-  background-color: #fff;
-  color: #000;
-  font-family: serif;
-  font-size: 12pt;
-  margin: 0;
+	background-color: #fff;
+	color: #000;
+	font-family: serif;
+	font-size: 12pt;
+	margin: 0;
 }
 
 @page {
-  margin: 2cm;
+	margin: 2cm;
 }
 
 abbr[title] {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 abbr[title]::after {
-  content: ' (' attr(title) ')';
+	content: ' (' attr(title) ')';
 }
 
 main {
-  margin: 0;
-  width: 100%;
+	margin: 0;
+	width: 100%;
 }
 
 blockquote {
-  background-color: transparent;
-  border: 0;
-  margin: 0 0 0 1em;
-  padding: 0;
+	background-color: transparent;
+	border: 0;
+	margin: 0 0 0 1em;
+	padding: 0;
 }
 
 .page-header,
 .page-footer {
-  display: none;
+	display: none;
 }
 
 .post-header::after {
-  content: 'Written By Binyamin Green';
+	content: 'Written By Binyamin Green';
 }
 
 .post-details,
 .post-header::after {
-  font-size: 11pt;
-  margin-left: 0.5em;
+	font-size: 11pt;
+	margin-left: 0.5em;
 }
 
 code {
-  background-color: transparent;
-  padding: 0;
+	background-color: transparent;
+	padding: 0;
 }
 
 pre.code-block,
 pre.code-block * {
-  color: #000;
+	color: #000;
 }
 
 pre.code-block {
-  background-color: transparent;
-  border: 1px solid #000;
-  margin: 0 0.5em;
-  overflow-wrap: break-word;
-  page-break-inside: avoid;
+	background-color: transparent;
+	border: 1px solid #000;
+	margin: 0 0.5em;
+	overflow-wrap: break-word;
+	page-break-inside: avoid;
 }
 
 :any-link,
 .post-details,
 code {
-  color: inherit;
+	color: inherit;
 }
 
 a[href*='//']::after {
-  content: ' (' attr(href) ')';
+	content: ' (' attr(href) ')';
 }

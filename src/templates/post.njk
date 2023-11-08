@@ -4,37 +4,37 @@ main_class: post
 ---
 
 <article class="h-entry" datetime="{{date | date('iso') }}">
-    <header>
-        <h1 class="p-name">{{ title }}</h1>
-        <p>
-            Published on
-            <a href={{page.url}} class="u-url">
-                <time class="dt-published" datetime="{{ date | date('iso')}}">
-                    {{ date | date_est(false) }}
-                </time>
-            </a>
-        </p>
-        <!-- link to category visibly? (blog/micro) -->
-        {% if category == 'blog' %}
-        <data class="p-category" value="article"></data>
-        {% elseif category == 'micro' %}
-        <data class="p-category" value="microblog"></data>
-        {% endif %}
+	<header>
+		<h1 class="p-name">{{ title }}</h1>
+		<p>
+			Published on
+			<a href={{page.url}} class="u-url">
+				<time class="dt-published" datetime="{{ date | date('iso')}}">
+					{{ date | date_est(false) }}
+				</time>
+			</a>
+		</p>
+		<!-- link to category visibly? (blog/micro) -->
+		{% if category == 'blog' %}
+		<data class="p-category" value="article"></data>
+		{% elseif category == 'micro' %}
+		<data class="p-category" value="microblog"></data>
+		{% endif %}
 
-        <address class="p-author h-card">
-            <data class="p-name" value="Binyamin Green"></data>
-            <link class="u-url" rel="author" href="https://binyam.in" />
-        </address>
-    </header>
+		<address class="p-author h-card">
+			<data class="p-name" value="Binyamin Green"></data>
+			<link class="u-url" rel="author" href="https://binyam.in" />
+		</address>
+	</header>
 
-    <div class="e-content post-content">
-        {{ content |safe }}
-    </div>
+	<div class="e-content post-content">
+		{{ content |safe }}
+	</div>
 
-    <section id="webmentions">
-        {% include 'webmentions.njk' %}
-    </section>
+	<section id="webmentions">
+		{% include 'webmentions.njk' %}
+	</section>
 
-    <a href="#top" class="sr-only">Top</a>
+	<a href="#top" class="sr-only">Top</a>
 </article>
 <script async src="/js/twitter.js"></script>

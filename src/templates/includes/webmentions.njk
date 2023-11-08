@@ -3,54 +3,54 @@
 
 <!--
 <article class="comment">
-    <header class="comment__header">
-        <div class="person"></div>
-        <a href="#" class="comment__meta"></a>
-    </header>
-    <div class="comment__body"></div>
+	<header class="comment__header">
+		<div class="person"></div>
+		<a href="#" class="comment__meta"></a>
+	</header>
+	<div class="comment__body"></div>
 </article>
 -->
 
 <header>
-    <h2>Webmentions</h2>
-    <p class="wm-summary">
-        <!-- TODO these shouldn't be right next to each other -->
-        <!-- TODO these shouldn't use the `title` attribute; if necessary, try some sort of tooltip -->
-        <span class="wm-likes" title="{{ mentions.likes | length }} likes">
-            <!-- TODO replace these 2 emoji with icons (or text) -->
-            <span aria-label="Likes:">❤️</span> {{ mentions.likes | length }}
-        </span>
-        <span class="wm-replies" title="{{ mentions.replies | length }} replies">
-            <span aria-label="Replies:">💬</span> {{ mentions.replies | length }}
-        </span>
-        <span class="wm-info" title="What are webmentions?">
-            <img src="/assets/icons/icon-info.svg" alt="" width="24" height="24" class="icon">
-            <a
-            href="https://indieweb.org/Webmention"
-            target="_blank"
-            rel="noopener noreferrer"
-            >What's this?</a>
-        </span>
-    </p>
+	<h2>Webmentions</h2>
+	<p class="wm-summary">
+		<!-- TODO these shouldn't be right next to each other -->
+		<!-- TODO these shouldn't use the `title` attribute; if necessary, try some sort of tooltip -->
+		<span class="wm-likes" title="{{ mentions.likes | length }} likes">
+			<!-- TODO replace these 2 emoji with icons (or text) -->
+			<span aria-label="Likes:">❤️</span> {{ mentions.likes | length }}
+		</span>
+		<span class="wm-replies" title="{{ mentions.replies | length }} replies">
+			<span aria-label="Replies:">💬</span> {{ mentions.replies | length }}
+		</span>
+		<span class="wm-info" title="What are webmentions?">
+			<img src="/assets/icons/icon-info.svg" alt="" width="24" height="24" class="icon">
+			<a
+			href="https://indieweb.org/Webmention"
+			target="_blank"
+			rel="noopener noreferrer"
+			>What's this?</a>
+		</span>
+	</p>
 </header>
 {% for mention in mentions.replies %}
 <article class="u-comment h-cite comment">
-    <header class="comment__header">
-        <div class="p-author">
-            <a class="u-url h-card person" href="{{mention.author.url}}" rel="noopener noreferrer" target="_blank">
-                <img class="u-photo person__avatar" src="{{mention.author.photo}}" width="48" height="48" />
-                <span class="p-name person__name">{{mention.author.name}}</span>
-            </a>
-        </div>
-        <a class="u-url comment__meta" href="{{mention.url}}" target="_blank" rel="noopener noreferrer">
-            <time class="dt-published" datetime="{{mention['wm-received'] | date('iso')}}">
-                {{mention['wm-received'] | date("MMMM D, YYYY - hh:mma")}}
-            </time>
-        </a>
-    </header>
-    <!-- TODO append "read more" button to truncated text -->
-    <div class="p-summary comment__body">
-        <p>{{mention.content.text | truncate(160) }}</p>
-    </div>
+	<header class="comment__header">
+		<div class="p-author">
+			<a class="u-url h-card person" href="{{mention.author.url}}" rel="noopener noreferrer" target="_blank">
+				<img class="u-photo person__avatar" src="{{mention.author.photo}}" width="48" height="48" />
+				<span class="p-name person__name">{{mention.author.name}}</span>
+			</a>
+		</div>
+		<a class="u-url comment__meta" href="{{mention.url}}" target="_blank" rel="noopener noreferrer">
+			<time class="dt-published" datetime="{{mention['wm-received'] | date('iso')}}">
+				{{mention['wm-received'] | date("MMMM D, YYYY - hh:mma")}}
+			</time>
+		</a>
+	</header>
+	<!-- TODO append "read more" button to truncated text -->
+	<div class="p-summary comment__body">
+		<p>{{mention.content.text | truncate(160) }}</p>
+	</div>
 </article>
 {% endfor %}

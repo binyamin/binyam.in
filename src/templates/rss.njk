@@ -4,23 +4,23 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{title | default("Binyamin Green") }}</title>
-    <description>{{meta.desc}}</description>
-    <link>{{link | default("https://binyam.in/")}}</link>
-    <atom:link href="{{page.url| absolute_url}}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ "now" | date("rfc") }}</pubDate>
-    <copyright>Copyright 2021, Binyamin Aron Green</copyright>
-    <docs>https://cyber.harvard.edu/rss/rss.html</docs>
-    <language>en-us</language>
-    <generator>Eleventy v{{meta.eleventyVersion}}</generator>
-    {% for post in collections[collection] | reverse %}
-    <item>
-      <title>{{ post.data.title }}</title>
-      <description>{{ post.templateContent | escape }}</description>
-      <link>{{ post.url | absolute_url }}</link>
-      <guid>{{ post.url | absolute_url }}</guid>
-      <pubDate>{{ post.date | date("rfc") }}</pubDate>
-    </item>
-    {% endfor %}
+	<title>{{title | default("Binyamin Green") }}</title>
+	<description>{{meta.desc}}</description>
+	<link>{{link | default("https://binyam.in/")}}</link>
+	<atom:link href="{{page.url| absolute_url}}" rel="self" type="application/rss+xml" />
+	<pubDate>{{ "now" | date("rfc") }}</pubDate>
+	<copyright>Copyright 2021, Binyamin Aron Green</copyright>
+	<docs>https://cyber.harvard.edu/rss/rss.html</docs>
+	<language>en-us</language>
+	<generator>Eleventy v{{meta.eleventyVersion}}</generator>
+	{% for post in collections[collection] | reverse %}
+	<item>
+	  <title>{{ post.data.title }}</title>
+	  <description>{{ post.templateContent | escape }}</description>
+	  <link>{{ post.url | absolute_url }}</link>
+	  <guid>{{ post.url | absolute_url }}</guid>
+	  <pubDate>{{ post.date | date("rfc") }}</pubDate>
+	</item>
+	{% endfor %}
   </channel>
 </rss>

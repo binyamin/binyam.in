@@ -4,14 +4,14 @@
 /* Code-like */
 
 pre, var, code {
-    font-family: type.font-family('pre');
-    line-height: normal;
+	font-family: type.font-family('pre');
+	line-height: normal;
 }
 
 var,
 :not(pre) > code {
-    border: 1px solid #c9c9c9;
-    background-color: color.$surface-alt;
-    padding: 0.1em 0.3em 0;
-    border-radius: 0.2em;
+	border: 1px solid #c9c9c9;
+	background-color: color.$surface-alt;
+	padding: 0.1em 0.3em 0;
+	border-radius: 0.2em;
 }

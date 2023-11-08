@@ -1,14 +1,14 @@
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 8px 0;
 }
 
 .site-nav {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 36px;
-    }
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 36px;
+	}
 }
