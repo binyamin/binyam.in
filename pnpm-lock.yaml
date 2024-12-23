@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^6.1.1
     version: 6.1.1
   highlight.js:
-    specifier: ^11.9.0
-    version: 11.9.0
+    specifier: ^11.11.0
+    version: 11.11.0
   markdown-it:
     specifier: ^13.0.2
     version: 13.0.2
@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^8.6.7
     version: 8.6.7(@types/markdown-it@13.0.6)(markdown-it@13.0.2)
   markdown-it-attrs:
-    specifier: ^4.1.6
-    version: 4.1.6(markdown-it@13.0.2)
+    specifier: ^4.3.1
+    version: 4.3.1(markdown-it@13.0.2)
   markdown-it-external-anchor:
     specifier: ^1.0.0
     version: 1.0.0
@@ -727,8 +727,8 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /highlight.js@11.9.0:
-    resolution: {integrity: sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==}
+  /highlight.js@11.11.0:
+    resolution: {integrity: sha512-6ErL7JlGu2CNFHyRQEuDogOyGPNiqcuWdt4iSSFUPyferNTGlNTPFqeV36Y/XwA4V/TJ8l0sxp6FTnxud/mf8g==}
     engines: {node: '>=12.0.0'}
     dev: true
 
@@ -920,8 +920,8 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /markdown-it-attrs@4.1.6(markdown-it@13.0.2):
-    resolution: {integrity: sha512-O7PDKZlN8RFMyDX13JnctQompwrrILuz2y43pW2GagcwpIIElkAdfeek+erHfxUOlXWPsjFeWmZ8ch1xtRLWpA==}
+  /markdown-it-attrs@4.3.1(markdown-it@13.0.2):
+    resolution: {integrity: sha512-/ko6cba+H6gdZ0DOw7BbNMZtfuJTRp9g/IrGIuz8lYc/EfnmWRpaR3CFPnNbVz0LDvF8Gf1hFGPqrQqq7De0rg==}
     engines: {node: '>=6'}
     peerDependencies:
       markdown-it: '>= 9.0.0'
