@@ -25,7 +25,7 @@
 		"markdown-it-external-anchor": "^1.0.0",
 		"markdown-it-footnote": "^3.0.3",
 		"node-fetch": "^3.3.2",
-		"title-case": "^3.0.3"
+		"title-case": "^4.3.2"
 	},
 	"dependencies": {
 		"@binyamin/eleventy-plugin-sass": "github:binyamin/eleventy-plugin-sass"
