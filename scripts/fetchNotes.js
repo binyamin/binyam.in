@@ -72,7 +72,7 @@ function copyNotes() {
 			await result("git reset");
 
 			// Clean directory
-			del(["src/posts/wiki/.git*"]);
+			await del(["src/posts/wiki/.git*"]);
 		} catch (err) {
 			throw err;
 		}
@@ -88,7 +88,7 @@ if(runIf) {
 		.catch(e => {
 			console.error(e);
 			process.exit(1);
-		})
+		});
 }
 else {
 	console.log("[scripts] Not CI, skipping fetchNotes");
