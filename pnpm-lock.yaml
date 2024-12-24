@@ -16,8 +16,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       '@binyamin/data-cache':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^2.0.0
+        version: 2.0.0
       '@binyamin/markdown-it-wikilinks':
         specifier: ^1.1.1
         version: 1.1.1(markdown-it@13.0.2)
@@ -92,9 +92,9 @@ packages:
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
-  '@binyamin/data-cache@1.1.0':
-    resolution: {integrity: sha512-CBm07ExKagVv2yMP1vM1lCq+j6hYRMSIWgJGo2FqrMMaK3F1Ucnw4D2uPhV7ccTpIsEntuq15n19+k3q2EY08g==}
-    engines: {node: '>=10'}
+  '@binyamin/data-cache@2.0.0':
+    resolution: {integrity: sha512-bMVHt2bXmKvV60T0ENjn5GxPCQs7Z+/khk4Qubgh18y6MbRo54Dhbf9skMvgS/ukWNarupFKve7Y+FRIO6uOOQ==}
+    engines: {node: '>=16'}
 
   '@binyamin/eleventy-plugin-sass@https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/c2aa1fc8ca1a683cdf017385fd8131a8d98aaf08':
     resolution: {tarball: https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/c2aa1fc8ca1a683cdf017385fd8131a8d98aaf08}
@@ -1202,7 +1202,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@binyamin/data-cache@1.1.0': {}
+  '@binyamin/data-cache@2.0.0': {}
 
   '@binyamin/eleventy-plugin-sass@https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/c2aa1fc8ca1a683cdf017385fd8131a8d98aaf08(@11ty/eleventy@2.0.1)':
     dependencies:

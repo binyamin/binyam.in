@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
-		"@binyamin/data-cache": "^1.1.0",
+		"@binyamin/data-cache": "^2.0.0",
 		"@binyamin/markdown-it-wikilinks": "^1.1.1",
 		"dayjs": "^1.11.13",
 		"del": "^6.1.1",
