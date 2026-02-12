@@ -17,7 +17,7 @@
 		"@binyamin/data-cache": "^1.1.0",
 		"@binyamin/markdown-it-wikilinks": "^1.1.1",
 		"dayjs": "^1.11.13",
-		"del": "^6.1.1",
+		"del": "^8.0.0",
 		"highlight.js": "^11.11.0",
 		"markdown-it": "^13.0.2",
 		"markdown-it-anchor": "^8.6.7",
