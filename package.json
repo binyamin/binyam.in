@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
 		"@binyamin/data-cache": "^1.1.0",
-		"@binyamin/markdown-it-wikilinks": "^1.1.1",
+		"@binyamin/markdown-it-wikilinks": "^2.0.0",
 		"dayjs": "^1.11.13",
 		"del": "^6.1.1",
 		"highlight.js": "^11.11.0",
