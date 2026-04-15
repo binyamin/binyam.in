@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.5",
 		"@binyamin/data-cache": "^2.0.0",
+		"@binyamin/eleventy-plugin-sass": "github:binyamin/eleventy-plugin-sass",
 		"@binyamin/markdown-it-wikilinks": "^2.0.0",
 		"dayjs": "^1.11.20",
 		"del": "^8.0.1",
@@ -27,8 +28,5 @@
 		"markdown-it-footnote": "^4.0.0",
 		"node-fetch": "^3.3.2",
 		"title-case": "^4.3.2"
-	},
-	"dependencies": {
-		"@binyamin/eleventy-plugin-sass": "github:binyamin/eleventy-plugin-sass"
 	}
 }
