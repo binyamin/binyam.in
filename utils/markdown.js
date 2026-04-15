@@ -1,7 +1,6 @@
 import markdownIt from "markdown-it";
 
 // markdown-it plugins
-import wikilinks from "@binyamin/markdown-it-wikilinks";
 import anchor from "markdown-it-anchor";
 import attrs from "markdown-it-attrs";
 import external from "markdown-it-external-anchor";
@@ -42,9 +41,6 @@ export default function plugin(eleventyConfig) {
     })
     .use(anchor, { level: 2 })
     .use(external, { domain: "binyam.in" })
-    .use(wikilinks, {
-      base: "/wiki/",
-    });
 
   eleventyConfig.setLibrary("md", md);
   eleventyConfig.addFilter("markdownify", (str) => md.renderInline(str));

@@ -17,15 +17,15 @@ importers:
       '@binyamin/eleventy-plugin-sass':
         specifier: github:binyamin/eleventy-plugin-sass
         version: https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/8e105cde01c5822439b9458c79ce7552e187f0dc(@11ty/eleventy@3.1.5)
-      '@binyamin/markdown-it-wikilinks':
-        specifier: ^2.0.0
-        version: 2.0.0(markdown-it@14.1.1)
       dayjs:
         specifier: ^1.11.20
         version: 1.11.20
       del:
         specifier: ^8.0.1
         version: 8.0.1
+      eleventy-plugin-backlinks:
+        specifier: ^1.0.0
+        version: 1.0.0(@11ty/eleventy@3.1.5)
       highlight.js:
         specifier: ^11.11.1
         version: 11.11.1
@@ -95,12 +95,6 @@ packages:
     version: 1.0.0
     peerDependencies:
       '@11ty/eleventy': '>=3.x'
-
-  '@binyamin/markdown-it-wikilinks@2.0.0':
-    resolution: {integrity: sha512-yuZ4i5lAF8abpR0vqErthubsylo+v3ciNv07Uk15eGfCgf/QP/aenFHq9DsFPzCRJoD8Q4gwl89WLcdubo3Dqg==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      markdown-it: 14.x
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -352,6 +346,11 @@ packages:
 
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
+
+  eleventy-plugin-backlinks@1.0.0:
+    resolution: {integrity: sha512-L9I+vgi9V1INa/RMJQ1Rmg8akp0ejhkVp2XgxBcDNoOupVpAR4wFEmwryZ9Cy4NVumR19FlT4nmbedxDnwatwg==}
+    peerDependencies:
+      '@11ty/eleventy': ^3.0.0
 
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
@@ -938,10 +937,6 @@ snapshots:
       deepmerge: 4.3.1
       sass: 1.99.0
 
-  '@binyamin/markdown-it-wikilinks@2.0.0(markdown-it@14.1.1)':
-    dependencies:
-      markdown-it: 14.1.1
-
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1160,6 +1155,10 @@ snapshots:
       domhandler: 4.3.1
 
   ee-first@1.1.1: {}
+
+  eleventy-plugin-backlinks@1.0.0(@11ty/eleventy@3.1.5):
+    dependencies:
+      '@11ty/eleventy': 3.1.5
 
   encodeurl@2.0.0: {}
 

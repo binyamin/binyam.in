@@ -5,6 +5,7 @@ import markdown from "./utils/markdown.js";
 import dateNjk from "./utils/date-njk.js";
 import shortcodes from "./utils/shortcodes.js";
 import sass from "@binyamin/eleventy-plugin-sass";
+import eleventyBacklinks from 'eleventy-plugin-backlinks';
 
 /**
  * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -18,6 +19,10 @@ export default function (eleventyConfig) {
 		outDir: path.resolve("dist", "css"),
 		outFile: "style.min.css",
 		minify: 2
+	});
+
+	eleventyConfig.addPlugin(eleventyBacklinks, {
+		folder: "/wiki",
 	});
 
 	// filters
