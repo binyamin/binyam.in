@@ -1,6 +1,4 @@
-/** @type {import("node-fetch").default} */
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const datacache = require("@binyamin/data-cache");
+import * as datacache from "@binyamin/data-cache";
 
 const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
 
@@ -22,7 +20,7 @@ async function fetchWebmentions() {
 	}
 }
 
-module.exports = async function() {
+export default async function() {
 	if(process.env.CI) {
 		return await fetchWebmentions();
 	} else {

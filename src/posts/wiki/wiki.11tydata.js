@@ -1,4 +1,4 @@
-const {titleCase} = require("title-case");
+import {titleCase} from "title-case";
 
 // This regex finds all wikilinks in a string
 const wikilinkRegExp = /\[\[\s?([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s?\]\]/g
@@ -7,7 +7,7 @@ function caselessCompare(a, b) {
 	return a.toLowerCase() === b.toLowerCase();
 }
 
-module.exports = {
+export default {
 	layout: "note",
 	category: "wiki",
 	eleventyComputed: {

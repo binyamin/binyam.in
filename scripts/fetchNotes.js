@@ -1,5 +1,5 @@
-const cp = require('child_process');
-const del = require("del");
+import cp from 'node:child_process';
+import { deleteAsync as del } from "del";
 
 const runIf = (process.env.CI || process.env.DEBUG === "notes");
 

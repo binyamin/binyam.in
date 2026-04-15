@@ -1,6 +1,6 @@
 const isMarkdown = (data) => data.page.inputPath.endsWith("md");
 
-module.exports = {
+export default {
 	eleventyComputed: {
 		permalink: (d) => isMarkdown(d) ? `/p/${d.page.fileSlug}/` : false,
 		category: "micro",
