@@ -1,14 +1,16 @@
-const path = require("path");
+import path from "node:path";
 
-const filters = require("./utils/filters.js");
-const markdown = require("./utils/markdown.js");
-const sass = require("@binyamin/eleventy-plugin-sass");
+import filters from "./utils/filters.js";
+import markdown from "./utils/markdown.js";
+import dateNjk from "./utils/date-njk.js";
+import shortcodes from "./utils/shortcodes.js";
+import sass from "@binyamin/eleventy-plugin-sass";
 
 /**
  * @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(markdown);
 	eleventyConfig.addPlugin(sass, {
 		dir: "sass",
@@ -23,10 +25,10 @@ module.exports = function (eleventyConfig) {
 		eleventyConfig.addFilter(key, value);
 	}
 
-	eleventyConfig.addNunjucksFilter("date", require("./utils/date-njk"));
+	eleventyConfig.addNunjucksFilter("date", dateNjk);
 
 	// Shortcodes
-	eleventyConfig.addPlugin(require("./utils/shortcodes"));
+	eleventyConfig.addPlugin(shortcodes);
 
 
 	// Collections
