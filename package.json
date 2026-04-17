@@ -7,25 +7,11 @@
 	"author": "Binyamin Aron Green",
 	"license": "MIT",
 	"scripts": {
-		"start": "eleventy --quiet --serve",
-		"dev": "eleventy --incremental --quiet --serve",
-		"watch": "eleventy --quiet --watch",
-		"prebuild": "node scripts/fetchNotes",
-		"build": "eleventy --quiet"
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.5",
-		"@binyamin/data-cache": "^2.0.0",
-		"@binyamin/eleventy-plugin-sass": "github:binyamin/eleventy-plugin-sass",
-		"dayjs": "^1.11.20",
-		"del": "^8.0.1",
-		"eleventy-plugin-backlinks": "^1.0.0",
-		"highlight.js": "^11.11.1",
-		"markdown-it": "^14.1.1",
-		"markdown-it-anchor": "^9.2.0",
-		"markdown-it-attrs": "^4.3.1",
-		"markdown-it-external-anchor": "^2.0.0",
-		"markdown-it-footnote": "^4.0.0",
-		"title-case": "^4.3.2"
+		"astro": "^6.1.7"
 	}
 }
