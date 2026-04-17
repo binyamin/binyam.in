@@ -1,11 +1,19 @@
+## IDE
+.vscode/
+!.vscode/extensions.json
+.idea/
+.zed/
+
+## Secrets
+.env
+.env.local
+.env.*.local
+
+## Generated
 node_modules/
 dist/
-.cache/
-.lighthouseci/
-src/posts/wiki/**/*.md
-.env*
+.astro/
 
-## NPM & friends ##
-# yarn.lock
-# pnpm-lock.yaml
-# package-lock.json
+## Custom
+.cache/
+src/posts/wiki/**/*.md
