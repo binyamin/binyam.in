@@ -1,0 +1,49 @@
+---
+import logo from '~/assets/logo.png';
+import * as cfg from '~/site.config';
+
+export interface Props {
+	title: string;
+	description?: string;
+	thumbnail?: string;
+	type: 'post' | 'page';
+}
+
+if (Astro.props.type !== 'post') {
+	Astro.props.title = [
+		Astro.props.title || [],
+		cfg.site.title,
+	].flat().join(' • ');
+}
+Astro.props.description ||= cfg.site.description;
+const url = new URL(Astro.url, cfg.site.url);
+const og_image = logo.src;
+---
+
+<title>{Astro.props.title}</title>
+<meta name="generator" content={Astro.generator} />
+<meta name="author" content={cfg.me.name} />
+<meta name="description" content={Astro.props.description} />
+<meta
+	name="keywords"
+	content="web developer, developer, jewish, judaism, jew, front-end, designer, html, css, javascript, jamstack"
+/>
+<link rel="canonical" href={url} />
+
+<!-- OpenGraph tags -->
+<meta property="og:title" content={Astro.props.title} />
+<meta
+	property="og:type"
+	content={Astro.props.type === 'post' ? 'article' : 'website'}
+/>
+<meta property="og:url" content={url} />
+<meta property="og:image" content={og_image} />
+<meta property="og:description" content={Astro.props.description} />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content={'@' + cfg.me.twitter} />
+<meta name="twitter:creator" content={'@' + cfg.me.twitter} />
+<meta name="twitter:title" content={Astro.props.title} />
+<meta name="twitter:description" content={Astro.props.description} />
+<meta name="twitter:image" content={Astro.props.thumbnail} />
