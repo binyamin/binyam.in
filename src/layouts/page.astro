@@ -1,0 +1,15 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import Layout, { type Props as BaseProps } from '../layouts/base.astro';
+
+type MaybeMarkdown<T extends Record<string, any>> = MarkdownLayoutProps<T> | T;
+type Props = MaybeMarkdown<Omit<BaseProps, 'type'>>;
+
+const props = 'frontmatter' in Astro.props
+	? Astro.props.frontmatter
+	: Astro.props;
+---
+
+<Layout {...props} type="page">
+	<slot />
+</Layout>
