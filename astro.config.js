@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { site } from '~/site.config';
+import { site } from './src/site.config';
 
 export default defineConfig({
 	site: site.url,
