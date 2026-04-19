@@ -1,15 +1,14 @@
 ---
-layout: post
 title: Five Useful Tips for Adobe XD
 date: 2019-06-18T16:11:04.629Z
-thumbnail: /assets/uploads/5-tips-xd.jpeg
-desc: >-
-    Adobe XD is free, modern, and extensible. Here are five useful tips for working within Adobe XD.
+thumbnail: ~/assets/uploads/5-tips-xd.jpeg
+description: >-
+  Adobe XD is free, modern, and extensible. Here are five useful tips for working within Adobe XD.
 ---
 
 Adobe XD is becoming the go-to tools for UI/UX Designers in 2019. It’s free, modern, and extensible. XD has many features, some of which you may not be aware of. Here are five useful tips for working within Adobe XD.
 
-- - -
+---
 
 ## Math
 
@@ -31,7 +30,7 @@ XD has awesome automatic guides which can help you align things perfectly. Somet
 
 ## Adjust Corners Separately
 
-I found this awesome tip in [a tweet  from Elaine Chao](https://twitter.com/elainecchao/status/1123289664671100928).
+I found this awesome tip in [a tweet from Elaine Chao](https://twitter.com/elainecchao/status/1123289664671100928).
 
 <blockquote class="twitter-tweet">
 #adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
@@ -47,6 +46,6 @@ Thanks Elaine.
 
 Shortcuts are awesome. They speed up your workflow, and make you look really professional 😎. You can find a comprehensive list here. Some useful shortcuts are:
 
-* `ctr/cmd + k`: Create component from selection
-* `ctrl/cmd + shift + y`: Toggle assets panel
-* `alt + drag`: Duplicate selection
+- `ctr/cmd + k`: Create component from selection
+- `ctrl/cmd + shift + y`: Toggle assets panel
+- `alt + drag`: Duplicate selection

@@ -1,6 +1,6 @@
 ---
 title: Writing CSS with Purpose
-desc: I don’t understand CSS. I just write it.
+description: I don’t understand CSS. I just write it.
 date: 2022-01-20T19:00:58.453Z
 
 # The post talks about ...
@@ -29,9 +29,8 @@ I've been paying more attention to my website recently. I've been asking why it 
 
 Anyhow, as I rewrite my CSS, I've begun to realize how poorly I use it as a language. My process for writing it consists mostly of trial-and-error, without any idea of what I'm doing. That makes it hard to rewrite the code, since there's no organization or logic.
 
-{#
 <!-- There are many methods for writing and structuring CSS. There are linters to keep you in check, and style-guides to give you advice. And that's great &mdash; it's important to be able to find a block of CSS when you need to change it. -->
-#}
+
 ## An Analogy
 
 I guess my point is that <b>writing CSS is kinda like typing on a keyboard</b>.[^css-kbd] Some typists don't have the layout memorized. This group looks down at the keyboard when typing, then up at the screen to check for accuracy, and then down again. Other typists know the layout perfectly well, and focus their eyes on the screen at all times.

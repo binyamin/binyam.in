@@ -1,12 +1,8 @@
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import {
-	type BaseSchema,
-	defineCollection,
-	type SchemaContext,
-} from 'astro:content';
+import { defineCollection, type SchemaContext } from 'astro:content';
 
-const Post: (ctx: SchemaContext) => BaseSchema = ({ image }) =>
+const Post = ({ image }: SchemaContext) =>
 	z.object({
 		title: z.string().nonempty(),
 		description: z.string().nonempty().optional(),
