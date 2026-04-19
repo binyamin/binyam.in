@@ -1,8 +1,12 @@
 ---
-import { type MaybeMarkdown } from '~/lib/utils';
+import { dateEst, type MaybeMarkdown } from '~/lib/utils';
 import Layout, { type Props as BaseProps } from '../layouts/base.astro';
 
-type Props = MaybeMarkdown<Omit<BaseProps, 'type'>>;
+type Props = MaybeMarkdown<
+	Omit<BaseProps, 'type'> & {
+		modified?: Date;
+	}
+>;
 
 const props = 'frontmatter' in Astro.props
 	? Astro.props.frontmatter
@@ -11,5 +15,6 @@ const props = 'frontmatter' in Astro.props
 
 <Layout {...props} type="page">
 	<h1>{props.title}</h1>
+	{props.modified && <p>Last updated on {dateEst(props.modified)}</p>}
 	<slot />
 </Layout>
