@@ -4,8 +4,6 @@ title: About Me
 description: A short, personal overview of me
 ---
 
-# About Me
-
 My name is Binyamin Aron Green, and this is my website.
 
 I am a [Jewish ✡](#jewish) web developer and student from [Baltimore, Maryland 🗺️](https://baltimore.org/). I enjoy [reading 📚](#reading), [listening to music 🎼](#music), and [tinkering with this website ⚒](#this-site).

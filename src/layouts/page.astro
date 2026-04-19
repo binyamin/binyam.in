@@ -10,5 +10,6 @@ const props = 'frontmatter' in Astro.props
 ---
 
 <Layout {...props} type="page">
+	<h1>{props.title}</h1>
 	<slot />
 </Layout>
