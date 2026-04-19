@@ -1,0 +1,55 @@
+---
+import { type CollectionEntry, render } from 'astro:content';
+import Layout from '~/layouts/base.astro';
+import { dateEst } from '~/lib/utils';
+import * as cfg from '~/site.config';
+
+interface Props {
+	post: CollectionEntry<'blog' | 'micro'>;
+}
+const data = Astro.props.post.data;
+const { Content } = await render(Astro.props.post);
+---
+
+<Layout
+	title={data.title}
+	description={data.description}
+	thumbnail={data.thumbnail?.src}
+	type="post"
+>
+	<article class="h-entry">
+		<h1 class="p-name">{data.title}</h1>
+		<p>
+			Published on
+			<a href={Astro.url} class="u-url">
+				<time
+					class="dt-published"
+					datetime={data.date.toISOString().split('T')[0]}
+				>
+					{dateEst(data.date, undefined, false)}
+				</time>
+			</a>
+		</p>
+
+		<data
+			class="p-category"
+			value={Astro.props.post.collection === 'micro' ? 'microblog' : 'article'}
+		></data>
+
+		<address class="p-author h-card">
+			<data class="p-name" value={cfg.me.name}></data>
+			<link class="u-url" rel="author" href={cfg.site.url} />
+		</address>
+
+		<div class="e-content">
+			<Content />
+		</div>
+
+		<section id="webmentions">
+			<!-- {% include 'webmentions.njk' %} -->
+		</section>
+
+		<a href="#top" class="sr-only">Top</a>
+	</article>
+	<script async src="/js/twitter.js" />
+</Layout>
