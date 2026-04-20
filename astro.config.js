@@ -1,3 +1,4 @@
+import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import remarkDirective from 'remark-directive';
 import { site } from './src/site.config';
@@ -14,4 +15,5 @@ export default defineConfig({
 			directives,
 		],
 	},
+	integrations: [sitemap()],
 });
