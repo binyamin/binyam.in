@@ -6,9 +6,9 @@ description: >-
   I read some wonderful books in 2020. While I didn't reach my quota, I'm ready for next year.
 ---
 
-{% callout %}
+:::callout
 This post explores the efficiency of my goal. To see what I actually finished in 2020, go to [the end of the article](#full-list). Head to [my reading list](/reading) for titles I may read in 2021.
-{% endcallout %}
+:::
 
 At the beginning of 2020, after seeing a Goodreads challenge, I decided to read twelve books that year. And I did read some wonderful books and novels. In [_Norse Mythology_](https://www.goodreads.com/book/show/37903770-norse-mythology), Neil Gaiman paints a pretty picture of the Norse pantheon. [_Letters to a Young Writer_](https://www.goodreads.com/book/show/31868169-letters-to-a-young-writer), by Colum McCann, advises young writers on how to hone their craft, and itself exhibits excellent writing.
 

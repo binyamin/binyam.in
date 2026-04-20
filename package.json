@@ -12,6 +12,10 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"astro": "^6.1.7"
+		"@types/mdast": "^4.0.4",
+		"astro": "^6.1.7",
+		"remark-directive": "^4.0.0",
+		"unist-util-visit": "^5.1.0",
+		"vfile": "^6.0.3"
 	}
 }
