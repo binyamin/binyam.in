@@ -12,7 +12,10 @@ const Post = ({ image }: SchemaContext) =>
 		tags: z.array(z.string().nonempty()).min(1).optional(),
 		folders: z.array(z.string().nonempty()).min(1).optional(),
 		elsewhere: z.array(z.httpUrl()).min(1).optional(),
-	}).strict();
+	}).strict().transform((d) => ({
+		...d,
+		slug: d.date.toISOString().split('T')[0],
+	}));
 
 const blog = defineCollection({
 	loader: glob({ base: './content/blog', pattern: '**/*.md' }),

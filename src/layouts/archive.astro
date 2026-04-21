@@ -41,7 +41,7 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 						title={p.data.title}
 						description={p.data.description}
 						date={p.data.date}
-						url={'/p/' + p.id}
+						url={'/p/' + p.data.slug}
 					/>
 				</li>
 			))}
