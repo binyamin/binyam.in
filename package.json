@@ -12,6 +12,7 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
+		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.2",
 		"@types/mdast": "^4.0.4",
 		"astro": "^6.1.7",
