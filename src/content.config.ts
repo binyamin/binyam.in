@@ -12,19 +12,24 @@ const Post = ({ image }: SchemaContext) =>
 		tags: z.array(z.string().nonempty()).min(1).optional(),
 		folders: z.array(z.string().nonempty()).min(1).optional(),
 		elsewhere: z.array(z.httpUrl()).min(1).optional(),
-	}).strict().transform((d) => ({
-		...d,
-		slug: d.date.toISOString().split('T')[0],
-	}));
+	}).strict();
 
 const blog = defineCollection({
 	loader: glob({ base: './content/blog', pattern: '**/*.md' }),
-	schema: Post,
+	schema: (c) =>
+		Post(c).transform((data) => ({
+			...data,
+			slug: z.util.slugify(data.title),
+		})),
 });
 
 const micro = defineCollection({
 	loader: glob({ base: './content/micro', pattern: '**/*.md' }),
-	schema: Post,
+	schema: (c) =>
+		Post(c).transform((data) => ({
+			...data,
+			slug: data.date.toISOString().split('T')[0],
+		})),
 });
 
 export const collections = { blog, micro };
