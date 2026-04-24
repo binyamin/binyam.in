@@ -32,7 +32,7 @@ XD has awesome automatic guides which can help you align things perfectly. Somet
 
 I found this awesome tip in [a tweet from Elaine Chao](https://twitter.com/elainecchao/status/1123289664671100928).
 
-<blockquote class="twitter-tweet">
+<blockquote>
 #adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
 @adobexd
 
