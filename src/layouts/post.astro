@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, render } from 'astro:content';
+import Webmentions from '~/components/blog/wm.astro';
 import Layout from '~/layouts/base.astro';
 import { dateEst } from '~/lib/utils';
 import * as cfg from '~/site.config';
@@ -33,7 +34,9 @@ const { Content } = await render(Astro.props.post);
 
 		<data
 			class="p-category"
-			value={Astro.props.post.collection === 'micro' ? 'microblog' : 'article'}
+			value={Astro.props.post.collection === 'micro'
+			? 'microblog'
+			: 'article'}
 		></data>
 
 		<address class="p-author h-card">
@@ -45,11 +48,8 @@ const { Content } = await render(Astro.props.post);
 			<Content />
 		</div>
 
-		<section id="webmentions">
-			<!-- {% include 'webmentions.njk' %} -->
-		</section>
-
+		<Webmentions />
 		<a href="#top" class="sr-only">Top</a>
 	</article>
-	<script async src="/js/twitter.js" />
+	<script async src="/js/twitter.js"></script>
 </Layout>

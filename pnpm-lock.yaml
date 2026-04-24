@@ -29,6 +29,9 @@ importers:
       unist-util-visit:
         specifier: ^5.1.0
         version: 5.1.0
+      unstorage:
+        specifier: ^1.17.5
+        version: 1.17.5
       vfile:
         specifier: ^6.0.3
         version: 6.0.3

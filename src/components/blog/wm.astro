@@ -1,0 +1,75 @@
+---
+import IconInfo from '~/assets/icons/info.svg';
+import { striptags } from '~/lib/utils';
+import { getMentions } from '~/lib/webmentions';
+
+const wm = await getMentions(Astro.url);
+---
+
+<section id="webmentions">
+	<h2>Webmentions</h2>
+	<span aria-label={`${wm.likes.length} likes`}>❤️ {wm.likes.length}</span>
+	<span aria-label={`${wm.comments.length} likes`}>💬
+		{wm.comments.length}</span>
+	<a href="https://indieweb.org/Webmention">
+		<IconInfo />
+		What's this?
+	</a>
+
+	<div>
+		{wm.comments.map((v) => (
+			<article class="u-comment h-cite">
+				<div class="p-author">
+					{v.data.author.url
+						? (
+						 <a
+							 class="u-url h-card"
+							 href={v.data.author.url}
+							 rel="noopener noreferrer"
+							 target="_blank"
+						 >
+							 <img
+								 class="u-photo"
+								 src={v.data.author.photo}
+								 alt=""
+								 width="48"
+								 height="48"
+							 />
+							 <span class="p-name">{v.data.author.name}</span>
+						 </a>
+					 )
+						: (
+						 <img
+							 class="u-photo"
+							 src={v.data.author.photo}
+							 alt=""
+							 width="48"
+							 height="48"
+						 />
+						 <span class="p-name">{v.data.author.name}</span>
+					 )}
+				</div>
+				<a
+					class="u-url"
+					href={v.data.url}
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<time
+						class="dt-published"
+						datetime={new Date(v.data.published || v.verified_date).toISOString()}
+					>
+						{new Date(v.data.published || v.verified_date).toLocaleString(['en-us'], {
+							dateStyle: 'long',
+							timeStyle: 'short',
+						})}
+					</time>
+				</a>
+				<p class="p-summary">
+					{striptags(v.data.content!).slice(0, 160).trim()}
+					{striptags(v.data.content!).length > 160 ? '…' : ''}
+				</p>
+			</article>
+		))}
+	</div>
+</section>
