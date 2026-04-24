@@ -16,4 +16,3 @@ dist/
 
 ## Custom
 .cache/
-src/posts/wiki/**/*.md
