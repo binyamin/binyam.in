@@ -1,4 +1,5 @@
 import sitemap from '@astrojs/sitemap';
+import sugarcube from '@sugarcube-sh/vite';
 import { defineConfig } from 'astro/config';
 import remarkDirective from 'remark-directive';
 import { site } from './src/site.config';
@@ -16,4 +17,7 @@ export default defineConfig({
 		],
 	},
 	integrations: [sitemap()],
+	vite: {
+		plugins: [sugarcube()],
+	},
 });

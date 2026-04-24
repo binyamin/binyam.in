@@ -1,0 +1,11 @@
+{
+	"$schema": "https://designtokens.org/schemas/2025.10/resolver.json",
+	"version": "2025.10",
+	"resolutionOrder": [
+		{
+			"type": "set",
+			"name": "base",
+			"sources": []
+		}
+	]
+}
