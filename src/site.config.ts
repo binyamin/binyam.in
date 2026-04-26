@@ -11,6 +11,5 @@ export const site = {
 };
 
 export const blog = {
-	title: site.title,
-	description: site.description,
+	title: "Binyamin's Blog",
 };

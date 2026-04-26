@@ -18,7 +18,6 @@ const PAGE_TITLE = 'Blog';
 <Layout
 	type="page"
 	title={PAGE_TITLE}
-	description={cfg.blog.description}
 >
 	<Fragment slot="head">
 		<link
@@ -38,7 +37,6 @@ const PAGE_TITLE = 'Blog';
 
 	<div class="h-feed">
 		<h1 class="p-name">{PAGE_TITLE}</h1>
-		<p class="p-summary">{cfg.blog.description}</p>
 		<p>
 			<IconRSS /> Subscribe via <a href={`/p/feed.xml`}>RSS</a>
 			or

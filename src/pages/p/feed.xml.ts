@@ -40,7 +40,6 @@ export const GET: APIRoute = async (ctx) => {
 				},
 			],
 			published: p.data.date,
-			summary: p.data.description ? { value: p.data.description } : undefined,
 			content: { value: p.rendered!.html, type: 'html' },
 		})),
 	});

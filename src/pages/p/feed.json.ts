@@ -23,7 +23,6 @@ export const GET: APIRoute = async (ctx) => {
 	return Response.json({
 		version: 'https://jsonfeed.org/version/1.1',
 		title: cfg.blog.title,
-		description: cfg.blog.description,
 		home_page_url: new URL('/p', cfg.site.url),
 		feed_url: ctx.url,
 		icon: logo.src,
