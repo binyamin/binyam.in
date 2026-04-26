@@ -1,0 +1,33 @@
+/**
+ * SIDEBAR
+ *
+ * Config:
+ * --sidebar-gap (space-sm) Defines the space between items
+ * --sidebar-width (content) Defines width for the sidebar area
+ */
+
+.sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sidebar-gap, var(--space-sm));
+	align-items: start;
+
+	> * {
+		--sidebar-gap: initial;
+	}
+}
+
+.sidebar > :first-child {
+	flex-grow: 1;
+	flex-basis: var(--sidebar-width, content);
+
+	> * {
+		--sidebar-width: initial;
+	}
+}
+
+.sidebar > :first-child + * {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 50%;
+}

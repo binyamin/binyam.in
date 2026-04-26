@@ -1,3 +1,10 @@
 @layer base, composition, block, utility;
 
 @import './base/reset.css' layer(base);
+
+@import './composition/center.css' layer(composition);
+@import './composition/cluster.css' layer(composition);
+@import './composition/cover.css' layer(composition);
+@import './composition/flow.css' layer(composition);
+@import './composition/repel.css' layer(composition);
+@import './composition/sidebar.css' layer(composition);
