@@ -3,15 +3,18 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import * as cfg from '~/site.config';
 
-export const GET: APIRoute = async () => {
-	const posts = await getCollection('micro');
+export const GET: APIRoute = async (ctx) => {
+	const posts = (await Promise.all([
+		getCollection('blog'),
+		getCollection('micro'),
+	])).flat();
+
 	posts.sort((a, b) => +b.data.date - +a.data.date);
 
 	return rss({
-		site: new URL('/c/micro', cfg.site.url),
-		title: `${cfg.site.title} - Microblog`,
-		description:
-			`These are my half-baked thoughts. It's sort-of a hatching ground for full-grown articles, with personal updates mixed in.`,
+		site: cfg.site.url,
+		title: cfg.blog.title,
+		description: cfg.blog.description,
 		items: posts.map((p) => ({
 			title: p.data.title,
 			link: `/p/${p.data.slug}`,

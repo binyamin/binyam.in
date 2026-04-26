@@ -1,35 +1,32 @@
 ---
-import { type CollectionKey, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import IconRSS from '~/assets/icons/rss.svg';
 import ListEntry from '~/components/blog/ListEntry.astro';
 import Layout from '~/layouts/base.astro';
 import * as cfg from '~/site.config';
 
-interface Props {
-	title: string;
-	description?: string;
-	key: Extract<CollectionKey, 'blog' | 'micro'>;
-}
+const posts = (await Promise.all([
+	getCollection('blog'),
+	getCollection('micro'),
+])).flat();
 
-const posts = await getCollection(Astro.props.key);
 posts.sort((a, b) => +b.data.date - +a.data.date);
+
+const PAGE_TITLE = 'Blog';
 ---
 
 <Layout
 	type="page"
-	title={Astro.props.title}
-	description={Astro.props.description}
+	title={PAGE_TITLE}
+	description={cfg.blog.description}
 >
 	<div class="h-feed">
-		<h1 class="p-name">{Astro.props.title}</h1>
-		<p class="p-summary">
-			<slot name="description">{Astro.props.description}</slot>
-		</p>
+		<h1 class="p-name">{PAGE_TITLE}</h1>
+		<p class="p-summary">{cfg.blog.description}</p>
 		<p>
-			<IconRSS /> Subscribe via <a href={`/feeds/${Astro.props.key}.xml`}
-			>RSS</a>
+			<IconRSS /> Subscribe via <a href={`/p/feed.xml`}>RSS</a>
 			or
-			<a href={`/feeds/${Astro.props.key}.json`}>JSON</a> feed
+			<a href={`/p/feed.json`}>JSON</a> feed
 		</p>
 		<link class="u-url" href={Astro.url} />
 		<data class="p-author" value={cfg.me.name}></data>

@@ -5,6 +5,7 @@ import 'virtual:sugarcube.css';
 import Footer from '~/components/site/footer.astro';
 import Header from '~/components/site/header.astro';
 import Seo, { type Props as SeoProps } from '~/components/site/seo.astro';
+import * as cfg from '~/site.config';
 
 export interface Props extends SeoProps {}
 ---
@@ -19,39 +20,15 @@ export interface Props extends SeoProps {}
 		<!-- Feeds -->
 		<link
 			rel="alternate"
-			title="Binyamin Green"
+			title={cfg.blog.title}
 			type="application/rss+xml"
-			href="https://binyam.in/feeds/all.xml"
+			href="https://binyam.in/p/feed.xml"
 		/>
 		<link
 			rel="alternate"
-			title="Binyamin Green"
+			title={cfg.blog.title}
 			type="application/feed+json"
-			href="https://binyam.in/feeds/all.json"
-		/>
-		<link
-			rel="alternate"
-			title="Binyamin Green (articles)"
-			type="application/rss+xml"
-			href="https://binyam.in/feeds/blog.xml"
-		/>
-		<link
-			rel="alternate"
-			title="Binyamin Green (articles)"
-			type="application/feed+json"
-			href="https://binyam.in/feeds/blog.json"
-		/>
-		<link
-			rel="alternate"
-			title="Binyamin Green (microblog)"
-			type="application/rss+xml"
-			href="https://binyam.in/feeds/micro.xml"
-		/>
-		<link
-			rel="alternate"
-			title="Binyamin Green (microblog)"
-			type="application/feed+json"
-			href="https://binyam.in/feeds/micro.json"
+			href="https://binyam.in/p/feed.json"
 		/>
 
 		<!-- Webmentions -->

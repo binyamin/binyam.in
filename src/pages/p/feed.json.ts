@@ -5,7 +5,7 @@ import logo from '~/assets/img/logo.png';
 import profile from '~/assets/img/profile.jpeg';
 import * as cfg from '~/site.config';
 
-export const GET: APIRoute = async () => {
+export const GET: APIRoute = async (ctx) => {
 	const avatar = await getImage({
 		src: profile,
 		format: 'jpeg',
@@ -22,10 +22,10 @@ export const GET: APIRoute = async () => {
 
 	return Response.json({
 		version: 'https://jsonfeed.org/version/1.1',
-		title: cfg.site.title,
-		home_page_url: cfg.site.url,
-		feed_url: new URL('/feeds/all.json', cfg.site.url),
-		description: cfg.site.description,
+		title: cfg.blog.title,
+		description: cfg.blog.description,
+		home_page_url: new URL('/p', cfg.site.url),
+		feed_url: ctx.url,
 		icon: logo.src,
 		favicon: logo.src,
 		language: 'en-US',

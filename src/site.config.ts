@@ -8,3 +8,8 @@ export const site = {
 	title: me.name,
 	description: 'Binyamin Green is a UI Designer and Front-end Developer.',
 };
+
+export const blog = {
+	title: site.title,
+	description: site.description,
+};
