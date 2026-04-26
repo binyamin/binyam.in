@@ -2,16 +2,22 @@
 import * as cfg from '~/site.config';
 ---
 
-<footer class="h-card">
-	<small>
-		Copyright 2018-2023 <a
-			href="/"
-			rel="me"
-			class="u-url p-name"
-		>{cfg.me.name}</a> | <a href="/contact">Contact Me</a>
-	</small>
+<footer>
+	<div class="h-card">
+		<small>
+			Copyright 2018-2023 <a
+				href="/"
+				rel="me"
+				class="u-url p-name"
+			>{cfg.me.name}</a>
+		</small>
 
-	<link href="mailto:binyamingreen@protonmail.com" rel="me" />
-	<link href="https://github.com/binyamin" rel="me" />
-	<link href="https://front-end.social/@binyamin" rel="me" />
+		<link href="mailto:binyamingreen@protonmail.com" rel="me" />
+		<link href="https://github.com/binyamin" rel="me" />
+		<link href="https://front-end.social/@binyamin" rel="me" />
+	</div>
+	<div>
+		<a href="/colophon">Colophon</a>
+		<a href={cfg.site.github_url} target="_blank">Source Code</a>
+	</div>
 </footer>
