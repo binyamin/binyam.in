@@ -5,7 +5,6 @@ import 'virtual:sugarcube.css';
 import Footer from '~/components/site/footer.astro';
 import Header from '~/components/site/header.astro';
 import Seo, { type Props as SeoProps } from '~/components/site/seo.astro';
-import * as cfg from '~/site.config';
 
 export interface Props extends SeoProps {}
 ---
@@ -17,20 +16,6 @@ export interface Props extends SeoProps {}
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<Seo {...Astro.props} />
 
-		<!-- Feeds -->
-		<link
-			rel="alternate"
-			title={cfg.blog.title}
-			type="application/rss+xml"
-			href="https://binyam.in/p/feed.xml"
-		/>
-		<link
-			rel="alternate"
-			title={cfg.blog.title}
-			type="application/feed+json"
-			href="https://binyam.in/p/feed.json"
-		/>
-
 		<!-- Webmentions -->
 		<link rel="webmention" href="https://webmention.io/binyam.in/webmention" />
 		<link rel="pingback" href="https://webmention.io/binyam.in/xmlrpc" />
@@ -41,6 +26,8 @@ export interface Props extends SeoProps {}
 		<!-- Indieauth -->
 		<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
 		<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+
+		<slot name="head" />
 	</head>
 	<body>
 		<Header />

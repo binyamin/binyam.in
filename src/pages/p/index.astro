@@ -20,6 +20,22 @@ const PAGE_TITLE = 'Blog';
 	title={PAGE_TITLE}
 	description={cfg.blog.description}
 >
+	<Fragment slot="head">
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/rss+xml"
+			href={new URL('/p/feed.xml', Astro.site)}
+		/>
+
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/feed+json"
+			href={new URL('/p/feed.json', Astro.site)}
+		/>
+	</Fragment>
+
 	<div class="h-feed">
 		<h1 class="p-name">{PAGE_TITLE}</h1>
 		<p class="p-summary">{cfg.blog.description}</p>
