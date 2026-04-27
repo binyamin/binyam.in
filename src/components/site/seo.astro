@@ -16,7 +16,9 @@ const page = {
 	url: new URL(Astro.url, cfg.site.url),
 	image: {
 		square: logo.src,
-		wide: Astro.props.thumbnail ? new URL(Astro.props.thumbnail, Astro.url): undefined,
+		wide: Astro.props.thumbnail
+			? new URL(Astro.props.thumbnail, Astro.url)
+			: undefined,
 	},
 };
 ---
