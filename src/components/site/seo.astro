@@ -41,12 +41,17 @@ const page = {
 />
 <meta property="og:url" content={page.url} />
 <meta property="og:image" content={page.image.square} />
-<meta property="og:description" content={page.description} />
+{page.description && (
+	<meta property="og:description" content={page.description} />
+)}
 
 <!-- Twitter tags -->
-<meta name="twitter:card" content="summary_large_image" />
+<meta
+	name="twitter:card"
+	content={page.image.wide ? 'summary_large_image' : 'summary'}
+/>
 <meta name="twitter:site" content={'@' + cfg.me.twitter} />
 <meta name="twitter:creator" content={'@' + cfg.me.twitter} />
 <meta name="twitter:title" content={page.title} />
 <meta name="twitter:description" content={page.description} />
-<meta name="twitter:image" content={page.image.wide} />
+{page.image.wide && <meta name="twitter:image" content={page.image.wide} />}

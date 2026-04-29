@@ -5,7 +5,6 @@ export const me = {
 
 export const site = {
 	url: 'https://binyam.in',
-	github_url: 'https://github.com/binyamin/binyam.in',
 	title: me.name,
 	description: 'Binyamin Green is a UI Designer and Front-end Developer.',
 };

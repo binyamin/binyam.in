@@ -14,10 +14,15 @@ export const GET: APIRoute = async (ctx) => {
 
 	const BLOG_URL = new URL('/p', cfg.site.url);
 
+	const latestFeedUpdated = posts.reduce((latest, post) => {
+		const postUpdated = post.data.modified ?? post.data.date;
+		return postUpdated > latest ? postUpdated : latest;
+	}, posts[0]?.data.modified ?? posts[0]?.data.date ?? new Date(0));
+
 	const xml = feedsmith.generateAtomFeed({
 		id: BLOG_URL.href,
 		title: { value: cfg.blog.title },
-		updated: new Date(),
+		updated: latestFeedUpdated,
 		authors: [
 			{
 				name: cfg.me.name,
@@ -35,7 +40,7 @@ export const GET: APIRoute = async (ctx) => {
 			updated: p.data.modified ?? p.data.date,
 			links: [
 				{
-					href: `/p/${p.data.slug}`,
+					href: new URL(`/p/${p.data.slug}`, cfg.site.url).href,
 					rel: 'alternate',
 				},
 			],
@@ -46,7 +51,7 @@ export const GET: APIRoute = async (ctx) => {
 
 	return new Response(xml, {
 		headers: {
-			'Content-Type': 'application/xml',
+			'Content-Type': 'application/atom+xml; charset=utf-8',
 		},
 	});
 };
