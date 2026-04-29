@@ -27,8 +27,24 @@ to = "/assets/img/profile/profile.jpeg"
 ## Blog redirects
 
 [[redirects]]
+from = "/blog"
+to = "/p"
+
+[[redirects]]
+from = "/blog/*"
+to = "/p/:splat"
+
+[[redirects]]
 from = "/c/blog"
 to = "/p"
+
+[[redirects]]
+from = "/micro"
+to = "/p"
+
+[[redirects]]
+from = "/micro/*"
+to = "/p/:splat"
 
 [[redirects]]
 from = "/c/micro"
