@@ -32,13 +32,6 @@ const { Content } = await render(Astro.props.post);
 			</a>
 		</p>
 
-		<data
-			class="p-category"
-			value={Astro.props.post.collection === 'micro'
-			? 'microblog'
-			: 'article'}
-		></data>
-
 		<address class="p-author h-card">
 			<data class="p-name" value={cfg.me.name}></data>
 			<link class="u-url" rel="author" href={cfg.site.url} />

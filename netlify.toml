@@ -24,23 +24,39 @@ to = "https://listenbrainz.org/user/BinyaminG"
 from = "/profile.jpeg"
 to = "/assets/img/profile/profile.jpeg"
 
-# Temporary redirects (6 months ?)
+## Blog redirects
 
 [[redirects]]
-from = "/blog/"
-to = "/c/blog"
+from = "/blog"
+to = "/p"
 
 [[redirects]]
 from = "/blog/*"
 to = "/p/:splat"
 
 [[redirects]]
-from = "/micro/"
-to = "/c/micro"
+from = "/c/blog"
+to = "/p"
+
+[[redirects]]
+from = "/micro"
+to = "/p"
 
 [[redirects]]
 from = "/micro/*"
 to = "/p/:splat"
+
+[[redirects]]
+from = "/c/micro"
+to = "/p"
+
+[[redirects]]
+from = "/feeds/all.json"
+to = "/p/feed.json"
+
+[[redirects]]
+from = "/feeds/all.xml"
+to = "/p/feed.xml"
 
 [[headers]]
 for = "/**/*"

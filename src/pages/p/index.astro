@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import IconRSS from '~/assets/icons/rss.svg';
+import ListEntry from '~/components/blog/ListEntry.astro';
+import Layout from '~/layouts/base.astro';
+import * as cfg from '~/site.config';
+
+const posts = (await Promise.all([
+	getCollection('blog'),
+	getCollection('micro'),
+])).flat();
+
+posts.sort((a, b) => +b.data.date - +a.data.date);
+
+const PAGE_TITLE = 'Blog';
+---
+
+<Layout
+	type="page"
+	title={PAGE_TITLE}
+>
+	<Fragment slot="head">
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/atom+xml"
+			href={new URL('/p/feed.xml', Astro.site)}
+		/>
+
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/feed+json"
+			href={new URL('/p/feed.json', Astro.site)}
+		/>
+	</Fragment>
+
+	<div class="h-feed">
+		<h1 class="p-name">{PAGE_TITLE}</h1>
+		<p>
+			<IconRSS /> Subscribe via <a href={`/p/feed.xml`}>RSS</a>
+			or
+			<a href={`/p/feed.json`}>JSON</a> feed
+		</p>
+		<link class="u-url" href={Astro.url} />
+		<data class="p-author" value={cfg.me.name}></data>
+
+		<ul>
+			{posts.map((p) => (
+				<li>
+					<ListEntry
+						title={p.data.title}
+						description={p.data.description}
+						date={p.data.date}
+						url={'/p/' + p.data.slug}
+					/>
+				</li>
+			))}
+		</ul>
+	</div>
+</Layout>
