@@ -31,16 +31,16 @@ importers:
         version: 11.11.1
       markdown-it:
         specifier: ^14.1.1
-        version: 14.1.1
+        version: 14.2.0
       markdown-it-anchor:
         specifier: ^9.2.0
-        version: 9.2.0(@types/markdown-it@13.0.6)(markdown-it@14.1.1)
+        version: 9.2.0(@types/markdown-it@13.0.6)(markdown-it@14.2.0)
       markdown-it-attrs:
         specifier: ^4.3.1
-        version: 4.3.1(markdown-it@14.1.1)
+        version: 4.3.1(markdown-it@14.2.0)
       markdown-it-external-anchor:
         specifier: ^2.0.0
-        version: 2.0.0(markdown-it@14.1.1)
+        version: 2.0.0(markdown-it@14.2.0)
       markdown-it-footnote:
         specifier: ^4.0.0
         version: 4.0.0
@@ -91,7 +91,7 @@ packages:
     engines: {node: '>=16'}
 
   '@binyamin/eleventy-plugin-sass@https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/8e105cde01c5822439b9458c79ce7552e187f0dc':
-    resolution: {tarball: https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/8e105cde01c5822439b9458c79ce7552e187f0dc}
+    resolution: {gitHosted: true, integrity: sha512-q1UEfsZ+trSiO7KYSpk9pZcAAqrfUzGJmEbX07tHGwDo3y6OX5EMxk2wLsbkAjaFGxmqylkmjZAs+8/y1EOx5w==, tarball: https://codeload.github.com/binyamin/eleventy-plugin-sass/tar.gz/8e105cde01c5822439b9458c79ce7552e187f0dc}
     version: 1.0.0
     peerDependencies:
       '@11ty/eleventy': '>=3.x'
@@ -540,8 +540,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  linkify-it@5.0.0:
-    resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
+  linkify-it@5.0.1:
+    resolution: {integrity: sha512-wVoTjP4Q6R0NW5hiZkVJaFZPWgtXfoGF+6LucL3/FtiNjmcHhYjEr5f1Kqjirc1nBW07J/ZuRFumqr2oqccEWg==}
 
   liquidjs@10.25.5:
     resolution: {integrity: sha512-GKiKeZjJDdVoQAu+S9rzkYsYnYhcep5W3WwZXgb5f+yq484P/k9JqamBbGYu+LBEixcUAXZr2jogdAIjB3ki1w==}
@@ -575,8 +575,8 @@ packages:
   markdown-it-footnote@4.0.0:
     resolution: {integrity: sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ==}
 
-  markdown-it@14.1.1:
-    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
+  markdown-it@14.2.0:
+    resolution: {integrity: sha512-1TGiQiJVRQ3NPmZH6sx5Cfnmg6GQm9jvC1ch4TK511NjSJvjzKLzn5pPfZRNZkRPZP0HqCioSndqH8v2nRaWVQ==}
     hasBin: true
 
   mdurl@2.0.0:
@@ -895,7 +895,7 @@ snapshots:
       kleur: 4.1.5
       liquidjs: 10.25.5
       luxon: 3.7.2
-      markdown-it: 14.1.1
+      markdown-it: 14.2.0
       minimist: 1.2.8
       moo: 0.5.2
       node-retrieve-globals: 6.0.1
@@ -1322,7 +1322,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  linkify-it@5.0.0:
+  linkify-it@5.0.1:
     dependencies:
       uc.micro: 2.1.0
 
@@ -1334,27 +1334,27 @@ snapshots:
 
   luxon@3.7.2: {}
 
-  markdown-it-anchor@9.2.0(@types/markdown-it@13.0.6)(markdown-it@14.1.1):
+  markdown-it-anchor@9.2.0(@types/markdown-it@13.0.6)(markdown-it@14.2.0):
     dependencies:
       '@types/markdown-it': 13.0.6
-      markdown-it: 14.1.1
+      markdown-it: 14.2.0
 
-  markdown-it-attrs@4.3.1(markdown-it@14.1.1):
+  markdown-it-attrs@4.3.1(markdown-it@14.2.0):
     dependencies:
-      markdown-it: 14.1.1
+      markdown-it: 14.2.0
 
-  markdown-it-external-anchor@2.0.0(markdown-it@14.1.1):
+  markdown-it-external-anchor@2.0.0(markdown-it@14.2.0):
     dependencies:
       '@types/node': 22.19.17
-      markdown-it: 14.1.1
+      markdown-it: 14.2.0
 
   markdown-it-footnote@4.0.0: {}
 
-  markdown-it@14.1.1:
+  markdown-it@14.2.0:
     dependencies:
       argparse: 2.0.1
       entities: 4.5.0
-      linkify-it: 5.0.0
+      linkify-it: 5.0.1
       mdurl: 2.0.0
       punycode.js: 2.3.1
       uc.micro: 2.1.0
