@@ -9,13 +9,10 @@
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
-		"preview": "astro build && astro preview",
-		"lint:tokens": "sugarcube validate"
+		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.7.2",
-		"@sugarcube-sh/cli": "^0.1.9",
-		"@sugarcube-sh/vite": "^0.1.10",
 		"@types/mdast": "^4.0.4",
 		"astro": "^6.1.7",
 		"feedsmith": "3.0.0-next.6",
