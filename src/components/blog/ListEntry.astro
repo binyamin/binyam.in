@@ -1,0 +1,26 @@
+---
+import { dateEst } from '~/lib/utils';
+
+export interface Props {
+	url: string;
+	title: string;
+	date: Date;
+	description?: string;
+}
+
+const { props } = Astro;
+---
+
+<div class="h-entry">
+	<a href={props.url} class="u-url u-uid p-name">
+		{props.title}
+	</a>
+	<p>
+		Posted on
+		<time
+			class="dt-published"
+			datetime={props.date.toISOString().split('T')[0]}
+		>{dateEst(props.date, undefined, false)}</time>
+	</p>
+	{props.description && <p class="p-summary">{props.description}</p>}
+</div>

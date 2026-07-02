@@ -1,0 +1,23 @@
+---
+import { Picture } from 'astro:assets';
+import Layout from '~/layouts/base.astro';
+
+import profile from '~/assets/img/profile.jpeg';
+---
+
+<Layout title="" type="page">
+	<Picture src={profile} alt="" layout="constrained" width={96} height={96} />
+
+	<h1>Hi, I'm Binyamin</h1>
+	<p>I'm a designer, developer, and occassional writer.</p>
+	<p>
+		I want to build a happier, healthier internet community. I try to give users
+		control of their technology. Accessibility is key, along with intuitive
+		design.
+	</p>
+	<p>
+		I'm available for new projects! Reach out <a
+			href="mailto:binyamin[remove-me]green@protonmail.com"
+		>via e-mail</a>.
+	</p>
+</Layout>

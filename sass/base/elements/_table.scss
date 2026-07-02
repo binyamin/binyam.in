@@ -11,16 +11,15 @@ td, th {
 	padding: 2px 8px;
 }
 
-th[scope=row] {
+th[scope='row'] {
 	text-align: left;
 	font-weight: normal;
 	font-style: italic;
 }
 
-tbody tr:nth-of-type(2n + 1) {
+tbody tr:nth-of-type(2n+1) {
 	background-color: color.$surface-alt;
 }
-
 
 table + figcaption {
 	text-align: center;

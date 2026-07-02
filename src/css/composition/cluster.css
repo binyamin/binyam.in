@@ -1,0 +1,22 @@
+/**
+ * CLUSTER
+ *
+ * Config:
+ * --cluster-gap (space-sm) Defines the space between items
+ * --cluster-halign (start) Controls horizontal alignment
+ * --cluster-valign (stretch) Controls vertical alignment
+ */
+
+.cluster {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: var(--cluster-halign, start);
+	align-items: var(--cluster-valign, stretch);
+	gap: var(--cluster-gap, var(--space-sm));
+
+	> * {
+		--cluster-gap: initial;
+		--cluster-halign: initial;
+		--cluster-valign: initial;
+	}
+}

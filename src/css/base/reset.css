@@ -1,0 +1,101 @@
+/**
+ * CSS Reset
+ *
+ * Sources:
+ *   - Andy Bell - https://github.com/Andy-set-studio/modern-css-reset/blob/e7500a6c7fa35be8d23f95b6e85f2cde0203f422/src/reset.css
+ *   - Stephanie Eckles - https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#css-reset-additions
+ *   - Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+
+/* Box sizing rules (Andy Bell) */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin (Andy Bell) */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+hr {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+which suggests default styling will be removed (Andy Bell) */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Set core root defaults (Andy Bell) */
+html:focus-within {
+	/* Enabled smooth-scrolling */
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	/* (Binyamin Green) */
+	min-height: 100dvh;
+
+	/* (Andy Bell) */
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* Baseline for default links (Stephanie Eckles) */
+a:not([class]) {
+	/* Relatively sized thickness and offset */
+	text-decoration-thickness: max(0.08em, 1px);
+	text-underline-offset: 0.15em;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+video,
+canvas,
+picture {
+	/* (Josh Comeau) */
+	display: block;
+	max-width: 100%;
+
+	/* When adjusting size, don't stretch the image (Binyamin Green) */
+	object-fit: cover;
+}
+
+/* Remove all animations and transitions for people that
+prefer not to see them (Andy Bell) */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+#root {
+	/* (Binyamin Green) */
+	min-height: inherit;
+
+	/* Reset the stacking context for JSX (Josh Comeau) */
+	isolation: isolate;
+}

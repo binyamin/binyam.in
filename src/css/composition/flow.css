@@ -1,0 +1,15 @@
+/**
+ * FLOW
+ * Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+ *
+ * Config:
+ * --flow-gap (space-md) Defines the space between items
+ */
+
+.flow > * + * {
+	margin-block-start: var(--flow-gap, var(--space-md));
+
+	> * {
+		--flow-gap: initial;
+	}
+}

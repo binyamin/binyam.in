@@ -1,0 +1,24 @@
+/**
+ * COVER
+ *
+ * Config:
+ * .cover_target (*) Defines which item(s) should expand
+ * --cover-gap (space-sm) Defines the (minimum) space between items
+ * --cover-min-height (100dvh) Defines container's minimum height
+ */
+
+.cover {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cover-gap, var(--space-sm));
+	min-block-size: var(--cover-min-height, 100dvh);
+
+	> .cover_target {
+		flex-grow: 1;
+	}
+
+	> * {
+		--cover-gap: initial;
+		--cover-min-height: initial;
+	}
+}
