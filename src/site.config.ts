@@ -1,5 +1,6 @@
 export const me = {
 	name: 'Binyamin Green',
+	firstName: 'Binyamin',
 	twitter: 'binyamingreen',
 };
 
