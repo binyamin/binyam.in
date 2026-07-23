@@ -1,0 +1,46 @@
+/**
+ * Design Tokens
+ */
+
+:root {
+	--color-accent: oklch(0.45 0.09 160);
+
+	--color-bg: oklch(0.97 0.006 65);
+	--color-bg-raised: oklch(0.93 0.006 65);
+	--color-border: oklch(0.80 0.006 65);
+	--color-text: oklch(0.18 0.006 65);
+	--color-text-muted: oklch(0.45 0.006 65);
+	--color-text-link: var(--color-accent);
+
+	--font-family-display: system-ui, sans-serif;
+	--font-family-body: system-ui, sans-serif;
+
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+
+	--font-size-s: 0.844rem;
+	--font-size-m: 1.125rem;
+	--font-size-l: 1.5rem;
+	--font-size-xl: 2rem;
+	--font-size-2xl: 2.666rem;
+	--font-size-3xl: 3.552rem;
+
+	--leading-tight: 1.2;
+	--leading-normal: 1.5;
+
+	--space-3xs: 0.25rem;
+	--space-2xs: 0.5rem;
+	--space-xs: 0.75rem;
+	--space-s: 1rem;
+	--space-m: 1.5rem;
+	--space-l: 2rem;
+	--space-xl: 3rem;
+	--space-2xl: 4rem;
+	--space-3xl: 6rem;
+
+	--measure-layout: 80rem;
+	--measure-prose: 65ch;
+
+	--radius-s: 0.25em;
+	--radius-m: 0.5em;
+}
