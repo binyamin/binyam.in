@@ -1,8 +1,8 @@
+import { satteri } from '@astrojs/markdown-satteri';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import remarkDirective from 'remark-directive';
 import { site } from './src/site.config';
-import directives from './utils/directives';
+import mdastPlugins from './utils/mdast';
 
 export default defineConfig({
 	site: site.url,
@@ -10,10 +10,10 @@ export default defineConfig({
 		port: 3000,
 	},
 	markdown: {
-		remarkPlugins: [
-			remarkDirective,
-			directives,
-		],
+		processor: satteri({
+			features: { directive: true },
+			mdastPlugins,
+		}),
 	},
 	integrations: [sitemap()],
 });
