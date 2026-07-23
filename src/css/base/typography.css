@@ -1,0 +1,43 @@
+/**
+ * Typography
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-display);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--leading-tight);
+	overflow-wrap: break-word;
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: var(--font-size-2xl);
+}
+
+h2 {
+	font-size: var(--font-size-xl);
+}
+
+h3 {
+	font-size: var(--font-size-l);
+}
+
+p {
+	line-height: var(--leading-normal);
+	overflow-wrap: break-word;
+	text-wrap: pretty;
+}
+
+a {
+	color: var(--color-text-link);
+
+	&:hover,
+	&:focus-visible {
+		text-decoration: none;
+	}
+}
