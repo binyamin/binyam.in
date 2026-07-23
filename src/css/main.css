@@ -2,6 +2,7 @@
 
 @import './base/reset.css' layer(base);
 @import './base/tokens.css' layer(base);
+@import './base/global.css' layer(base);
 
 @import './composition/center.css' layer(composition);
 @import './composition/cluster.css' layer(composition);
