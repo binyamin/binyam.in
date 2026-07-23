@@ -13,13 +13,10 @@
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.7.3",
-		"@types/mdast": "^4.0.4",
 		"astro": "^6.4.8",
 		"feedsmith": "3.0.0-rc.2",
 		"remark-directive": "^4.0.0",
-		"sharp": "^0.34.5",
 		"unist-util-visit": "^5.1.0",
-		"unstorage": "^1.17.5",
-		"vfile": "^6.0.3"
+		"unstorage": "^1.17.5"
 	}
 }
