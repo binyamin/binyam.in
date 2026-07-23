@@ -10,11 +10,10 @@ export interface Props {
 const { props } = Astro;
 ---
 
-<div class="h-entry">
+<div>
 	<time
-		class="dt-published"
 		datetime={props.date.toISOString().split('T')[0]}
 	>{dateEst(props.date, undefined, false)}</time>
 
-	<a href={props.url} class="u-url u-uid p-name">{props.title}</a>
+	<a href={props.url}>{props.title}</a>
 </div>

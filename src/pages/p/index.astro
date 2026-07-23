@@ -35,15 +35,13 @@ const PAGE_TITLE = 'Blog';
 		/>
 	</Fragment>
 
-	<div class="h-feed">
-		<h1 class="p-name">{PAGE_TITLE}</h1>
-		<p class="p-summary">
+	<div>
+		<h1>{PAGE_TITLE}</h1>
+		<p>
 			I don't blog actively anymore. The posts stay online because <a
 				href="https://www.w3.org/Provider/Style/URI.html"
 			>cool URIs don't change</a>.
 		</p>
-		<link class="u-url" href={Astro.url} />
-		<data class="p-author" value={cfg.me.name}></data>
 
 		<ul>
 			{posts.map((p) => (
