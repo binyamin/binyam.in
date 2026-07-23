@@ -1,6 +1,5 @@
 ---
 import { type CollectionEntry, render } from 'astro:content';
-import Webmentions from '~/components/blog/wm.astro';
 import Layout from '~/layouts/base.astro';
 import { dateEst } from '~/lib/utils';
 import * as cfg from '~/site.config';
@@ -41,7 +40,6 @@ const { Content } = await render(Astro.props.post);
 			<Content />
 		</div>
 
-		<Webmentions />
 		<a href="#top" class="sr-only">Top</a>
 	</article>
 </Layout>
