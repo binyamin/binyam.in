@@ -1,6 +1,7 @@
 ---
 import '~/css/main.css';
 
+import { Font } from 'astro:assets';
 import Footer from '~/components/site/footer.astro';
 import Header from '~/components/site/header.astro';
 import Seo, { type Props as SeoProps } from '~/components/site/seo.astro';
@@ -16,6 +17,8 @@ export interface Props extends SeoProps {}
 		<link rel="icon" href="data:," />
 
 		<Seo {...Astro.props} />
+
+		<Font cssVariable="--font-family-serif" preload />
 
 		<!-- Indieauth -->
 		<link rel="authorization_endpoint" href="https://indieauth.com/auth" />

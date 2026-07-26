@@ -12,8 +12,8 @@
 	--color-text-muted: oklch(0.45 0.006 65);
 	--color-text-link: var(--color-accent);
 
-	--font-family-display: system-ui, sans-serif;
-	--font-family-body: system-ui, sans-serif;
+	--font-family-display: var(--font-family-serif);
+	--font-family-body: ui-sans-serif, Inter, system-ui, sans-serif;
 
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
