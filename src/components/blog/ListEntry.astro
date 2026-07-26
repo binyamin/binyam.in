@@ -10,7 +10,13 @@ export interface Props {
 const { props } = Astro;
 ---
 
-<div>
+<style>
+	.stack {
+		--stack-gap: 0;
+	}
+</style>
+
+<div class="stack">
 	<time
 		datetime={props.date.toISOString().split('T')[0]}
 	>{dateEst(props.date, undefined, false)}</time>

@@ -14,6 +14,13 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 const PAGE_TITLE = 'Blog';
 ---
 
+<style>
+	.post-list {
+		--region-space: var(--space-m);
+		--stack-gap: var(--space-xs);
+	}
+</style>
+
 <Layout
 	type="page"
 	title={PAGE_TITLE}
@@ -43,7 +50,7 @@ const PAGE_TITLE = 'Blog';
 			>cool URIs don't change</a>.
 		</p>
 
-		<ul>
+		<ul role="list" class="post-list stack region">
 			{posts.map((p) => (
 				<li>
 					<ListEntry

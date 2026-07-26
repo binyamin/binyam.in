@@ -1,0 +1,26 @@
+/**
+ * STACK
+ * Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+ *
+ * Config:
+ * --stack-gap (space-s) Defines the space between items
+ * [data-grow] (?) Defines which item(s) should expand
+ */
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.stack > * + * {
+	margin-block-start: var(--stack-gap, var(--space-s));
+
+	> * {
+		--stack-gap: initial;
+	}
+}
+
+.stack > [data-grow] {
+	margin-block-start: auto;
+}
