@@ -16,15 +16,15 @@ h6 {
 }
 
 h1 {
-	font-size: var(--font-size-2xl);
+	font-size: var(--font-size-3xl);
 }
 
 h2 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-2xl);
 }
 
 h3 {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-xl);
 }
 
 p {

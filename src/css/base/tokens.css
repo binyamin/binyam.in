@@ -18,25 +18,27 @@
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;
 
-	--font-size-s: 0.844rem;
-	--font-size-m: 1.125rem;
-	--font-size-l: 1.5rem;
-	--font-size-xl: 2rem;
-	--font-size-2xl: 2.666rem;
-	--font-size-3xl: 3.552rem;
+	--font-size-xs: clamp(0.6944rem, 0.684rem + 0.0465vw, 0.72rem);
+	--font-size-s: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
+	--font-size-m: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+	--font-size-l: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
+	--font-size-xl: clamp(1.44rem, 1.31rem + 0.5778vw, 1.7578rem);
+	--font-size-2xl: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+	--font-size-3xl: clamp(2.0736rem, 1.7983rem + 1.2236vw, 2.7466rem);
+	--font-size-4xl: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
 
 	--leading-tight: 1.2;
 	--leading-normal: 1.5;
 
-	--space-3xs: 0.25rem;
-	--space-2xs: 0.5rem;
-	--space-xs: 0.75rem;
-	--space-s: 1rem;
-	--space-m: 1.5rem;
-	--space-l: 2rem;
-	--space-xl: 3rem;
-	--space-2xl: 4rem;
-	--space-3xl: 6rem;
+	--space-3xs: clamp(0.25rem, 0.2244rem + 0.1136vw, 0.3125rem);
+	--space-2xs: clamp(0.5rem, 0.4744rem + 0.1136vw, 0.5625rem);
+	--space-xs: clamp(0.75rem, 0.6989rem + 0.2273vw, 0.875rem);
+	--space-s: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+	--space-m: clamp(1.5rem, 1.4233rem + 0.3409vw, 1.6875rem);
+	--space-l: clamp(2rem, 1.8977rem + 0.4545vw, 2.25rem);
+	--space-xl: clamp(3rem, 2.8466rem + 0.6818vw, 3.375rem);
+	--space-2xl: clamp(4rem, 3.7955rem + 0.9091vw, 4.5rem);
+	--space-3xl: clamp(6rem, 5.6932rem + 1.3636vw, 6.75rem);
 
 	--measure-layout: 80rem;
 	--measure-prose: 65ch;
