@@ -16,7 +16,7 @@ const { Content } = await render(Astro.props.post);
 	thumbnail={data.thumbnail?.src}
 	type="post"
 >
-	<article>
+	<article class="prose flow">
 		<h1>{data.title}</h1>
 		<p>
 			Published on{' '}

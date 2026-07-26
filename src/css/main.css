@@ -13,3 +13,5 @@
 @import './composition/sidebar.css' layer(composition);
 
 @import './utility/visually-hidden.css' layer(utility);
+
+@import './block/prose.css' layer(block);

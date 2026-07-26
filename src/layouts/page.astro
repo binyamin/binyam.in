@@ -12,7 +12,7 @@ const props = 'frontmatter' in Astro.props
 ---
 
 <Layout {...props} type="page">
-	<article>
+	<article class="prose flow">
 		<h1>{props.title}</h1>
 		<slot />
 	</article>

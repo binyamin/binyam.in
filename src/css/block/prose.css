@@ -1,0 +1,13 @@
+.prose {
+	:is(h1, h2, h3) {
+		--flow-gap: var(--space-l);
+
+		& + * {
+			--flow-gap: var(--space-2xs);
+		}
+	}
+
+	.footnotes {
+		border-block-start: 1px solid var(--color-border);
+	}
+}
