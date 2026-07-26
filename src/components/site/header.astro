@@ -2,9 +2,30 @@
 import * as cfg from '~/site.config';
 ---
 
+<style>
+	header {
+		font-family: var(--font-family-display);
+	}
+
+	.logo {
+		color: currentColor;
+		font-size: var(--font-size-l);
+		font-style: italic;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration-line: none;
+
+		&:hover {
+			text-decoration-line: underline;
+		}
+	}
+</style>
 <header>
 	<nav class="repel">
-		<a href="/">{cfg.me.firstName}</a>
+		<a href="/" class="logo">{cfg.me.firstName}</a>
 
 		<ul role="list" class="cluster">
 			<li><a href="/me">About</a></li>
