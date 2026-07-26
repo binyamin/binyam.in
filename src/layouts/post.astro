@@ -19,7 +19,7 @@ const { Content } = await render(Astro.props.post);
 	<article>
 		<h1>{data.title}</h1>
 		<p>
-			Published on
+			Published on{' '}
 			<a href={Astro.url}>
 				<time datetime={data.date.toISOString().split('T')[0]}>
 					{dateEst(data.date, undefined, false)}
@@ -27,10 +27,8 @@ const { Content } = await render(Astro.props.post);
 			</a>
 		</p>
 
-		<div>
-			<Content />
-		</div>
-
-		<a href="#top" class="sr-only">Top</a>
+		<Content />
 	</article>
+
+	<a href="#top" class="sr-only">Back to top</a>
 </Layout>
