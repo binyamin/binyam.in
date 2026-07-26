@@ -4,6 +4,17 @@ import Layout from '~/layouts/base.astro';
 import * as cfg from '~/site.config';
 ---
 
+<style>
+	h1 {
+		font-size: var(--font-size-4xl);
+	}
+
+	a {
+		display: flex;
+		gap: var(--space-3xs);
+	}
+</style>
+
 <Layout title="" type="page">
 	<div class="prose flow">
 		<h1>{cfg.me.firstName}</h1>
