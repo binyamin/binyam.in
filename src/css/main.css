@@ -14,6 +14,7 @@
 @import './composition/stack.css' layer(composition);
 
 @import './utility/region.css' layer(utility);
+@import './utility/text.css' layer(utility);
 @import './utility/visually-hidden.css' layer(utility);
 
 @import './block/prose.css' layer(block);
