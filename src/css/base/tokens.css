@@ -8,7 +8,8 @@
 	--color-bg: oklch(0.97 0.006 65);
 	--color-bg-raised: oklch(0.93 0.006 65);
 
-	--color-border: oklch(0.80 0.006 65);
+	--color-border: oklch(0.88 0.006 65);
+	--color-border-darker: oklch(0.80 0.006 65);
 
 	--color-text: oklch(0.18 0.006 65);
 	--color-text-muted: oklch(0.45 0.006 65);
