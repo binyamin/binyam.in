@@ -9,7 +9,7 @@ body {
 	font-family: var(--font-family-body);
 	font-size: var(--font-size-m);
 
-	--cover-gap: 0;
+	--cover-gap: var(--space-m);
 
 	margin-inline: auto;
 	max-inline-size: var(--measure-prose);
@@ -18,5 +18,5 @@ body {
 }
 
 main {
-	--flow-gap: var(--space-l);
+	padding-block-start: var(--space-l);
 }
