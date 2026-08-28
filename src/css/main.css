@@ -17,4 +17,5 @@
 @import './utility/text.css' layer(utility);
 @import './utility/visually-hidden.css' layer(utility);
 
+@import './block/icon.css' layer(block);
 @import './block/prose.css' layer(block);

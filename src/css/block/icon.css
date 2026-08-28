@@ -1,0 +1,5 @@
+.icon {
+	display: inline-block;
+	height: round(1em, 2px);
+	width: round(1em, 2px);
+}
