@@ -7,6 +7,9 @@
  * - Visual hierarchy (font-size, font-weight, color)
  * - Vertical rhythm (spacing)
  * - Structural framing (e.g. border)
+ *
+ * Config:
+ * --prose-gap (prose-gap-{tight|normal|loose}) Defines the space between items
  */
 
 .prose {
@@ -14,7 +17,9 @@
 	--prose-gap-normal: var(--space-s);
 	--prose-gap-tight: var(--space-2xs);
 
-	--flow-gap: var(--prose-gap-normal);
+	> * + * {
+		margin-block-start: var(--prose-gap, var(--prose-gap-normal));
+	}
 
 	/* =====================================================================
 	   Typography & Flow Elements
@@ -22,30 +27,30 @@
 
 	/* Headings */
 	header:has(h1) {
-		* + * {
-			margin-block-start: var(--prose-gap-tight);
+		> * + * {
+			margin-block-start: var(--prose-gap, var(--prose-gap-tight));
 		}
 
 		& + * {
-			--flow-gap: var(--prose-gap-loose);
+			--prose-gap: var(--prose-gap-loose);
 		}
 	}
 
 	:is(h2, h3, h4) {
-		--flow-gap: var(--prose-gap-loose);
+		--prose-gap: var(--prose-gap-loose);
 
 		& + * {
-			--flow-gap: var(--prose-gap-tight);
+			--prose-gap: var(--prose-gap-tight);
 		}
 	}
 
 	/* Lists */
 	:is(ul, ol) {
-		--flow-gap: var(--prose-gap-tight);
+		--prose-gap: var(--prose-gap-tight);
 	}
 
 	li > * + * {
-		margin-block-start: var(--prose-gap-tight);
+		margin-block-start: var(--prose-gap, var(--prose-gap-tight));
 	}
 
 	/* Inline Code */
@@ -62,7 +67,7 @@
 		font-size: var(--font-size-l);
 
 		& + :is(h2, h3, h4) {
-			--flow-gap: var(--prose-gap-tight);
+			--prose-gap: var(--prose-gap-tight);
 		}
 	}
 
@@ -73,7 +78,7 @@
 		height: 1px;
 
 		&, & + * {
-			--flow-gap: var(--prose-gap-loose);
+			--prose-gap: var(--prose-gap-loose);
 		}
 	}
 
