@@ -19,6 +19,9 @@ export default defineConfig({
 		},
 	],
 	markdown: {
+		shikiConfig: {
+			theme: 'vitesse-light',
+		},
 		processor: satteri(),
 	},
 	integrations: [sitemap()],

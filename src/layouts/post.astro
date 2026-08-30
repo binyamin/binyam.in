@@ -17,15 +17,17 @@ const { Content } = await render(Astro.props.post);
 	type="post"
 >
 	<article class="prose flow">
-		<h1>{data.title}</h1>
-		<p>
-			Published on{' '}
-			<a href={Astro.url}>
-				<time datetime={data.date.toISOString().split('T')[0]}>
-					{dateEst(data.date, undefined, false)}
-				</time>
-			</a>
-		</p>
+		<header>
+			<h1>{data.title}</h1>
+			<p>
+				Published on{' '}
+				<a href={Astro.url}>
+					<time datetime={data.date.toISOString().split('T')[0]}>
+						{dateEst(data.date, undefined, false)}
+					</time>
+				</a>
+			</p>
+		</header>
 
 		<Content />
 	</article>
