@@ -12,11 +12,25 @@ export default defineConfig({
 	fonts: [
 		{
 			name: 'Fraunces',
-			provider: fontProviders.fontsource(),
+			// We use local fonts, instead of fontsource, because Astro Fonts
+			// uses the version w/o optical sizing & most other axes
+			provider: fontProviders.local(),
 			cssVariable: '--font-family-serif',
 			fallbacks: ['serif'],
-			weights: ['400 700'],
-			styles: ['normal', 'italic'],
+			options: {
+				variants: [
+					{
+						src: ['./src/assets/fonts/fraunces-latin-full-normal.woff2'],
+						style: 'normal',
+						weight: '400 700',
+					},
+					{
+						src: ['./src/assets/fonts/fraunces-latin-full-italic.woff2'],
+						style: 'italic',
+						weight: '400 700',
+					},
+				],
+			},
 		},
 	],
 	markdown: {
