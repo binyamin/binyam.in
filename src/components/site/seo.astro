@@ -1,5 +1,4 @@
 ---
-import logo from '~/assets/img/logo.png';
 import * as cfg from '~/site.config';
 
 export interface Props {
@@ -14,44 +13,35 @@ const page = {
 	description: Astro.props.description,
 	type: Astro.props.type,
 	url: new URL(Astro.url, cfg.site.url),
-	image: {
-		square: logo.src,
-		wide: Astro.props.thumbnail
-			? new URL(Astro.props.thumbnail, Astro.url)
-			: undefined,
-	},
+	image: Astro.props.thumbnail
+		? new URL(Astro.props.thumbnail, Astro.url)
+		: undefined,
 };
+
+const TITLE_TAG = page.title
+	? [page.title, cfg.site.title].join(' | ')
+	: cfg.site.title + ' — Front-end developer and design engineer';
 ---
 
-<title>
-	{[page.title, cfg.site.title].filter(Boolean).join(' | ')}
-</title>
+<title>{TITLE_TAG}</title>
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
-<meta name="author" content={cfg.me.name} />
-{page.description && <meta name="description" content={page.description} />}
 <link rel="canonical" href={page.url} />
+<meta name="description" content={cfg.site.description} />
 
 <!-- OpenGraph tags -->
-<meta property="og:title" content={page.title} />
+<meta property="og:site_name" content={cfg.site.title} />
+<meta property="og:title" content={page.title ?? cfg.site.title} />
 <meta
 	property="og:type"
 	content={page.type === 'post' ? 'article' : 'website'}
 />
 <meta property="og:url" content={page.url} />
-<meta property="og:image" content={page.image.square} />
-{page.description && (
-	<meta property="og:description" content={page.description} />
-)}
-
-<!-- Twitter tags -->
+<meta property="og:image" content={page.image} />
 <meta
-	name="twitter:card"
-	content={page.image.wide ? 'summary_large_image' : 'summary'}
+	property="og:description"
+	content={page.description ?? cfg.site.description}
 />
-<meta name="twitter:site" content={'@' + cfg.me.twitter} />
-<meta name="twitter:creator" content={'@' + cfg.me.twitter} />
-<meta name="twitter:title" content={page.title} />
-<meta name="twitter:description" content={page.description} />
-{page.image.wide && <meta name="twitter:image" content={page.image.wide} />}
+
+<meta name="twitter:card" content="summary_large_image" />
