@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.7.3",
 		"astro": "^7.1.3",
-		"feedsmith": "3.0.0-rc.2",
-		"unstorage": "^1.17.5"
+		"feedsmith": "3.0.0-rc.2"
 	}
 }
