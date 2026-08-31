@@ -47,14 +47,21 @@ making XD understand where exactly you want to position your item.
 I found this awesome tip in
 [a tweet from Elaine Chao](https://twitter.com/elainecchao/status/1123289664671100928).
 
-<blockquote>
-#adobexd #protip Want to adjust the corners independently? Simply hold down Alt/Opt while dragging the corner to detach it from the others.
-@adobexd
+::::figure
+
+> #adobexd #protip Want to adjust the corners independently? Simply hold down
+> Alt/Opt while dragging the corner to detach it from the others.
+>
+> @adobexd
+
+:::caption
 
 By [@elaincchao](https://twitter.com/elainecchao/status/1123289664671100928) on
 Twitter
 
-</blockquote>
+:::
+
+::::
 
 Thanks Elaine.
 

@@ -6,7 +6,7 @@
 	--color-accent: oklch(0.45 0.09 160);
 
 	--color-bg: oklch(0.97 0.006 65);
-	--color-bg-raised: oklch(0.93 0.006 65);
+	--color-bg-raised: oklch(0.95 0.006 65);
 
 	--color-border: oklch(0.88 0.006 65);
 	--color-border-darker: oklch(0.80 0.006 65);
@@ -17,6 +17,14 @@
 
 	--font-family-display: var(--font-family-serif);
 	--font-family-body: ui-sans-serif, Inter, system-ui, sans-serif;
+	--font-family-code:
+		ui-monospace,
+		'Cascadia Code',
+		'Source Code Pro',
+		Menlo,
+		Consolas,
+		'DejaVu Sans Mono',
+		monospace;
 
 	--font-weight-regular: 400;
 	--font-weight-bold: 700;

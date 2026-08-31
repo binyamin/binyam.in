@@ -41,3 +41,9 @@ a {
 		text-decoration: none;
 	}
 }
+
+pre, code {
+	font-family: var(--font-family-code);
+	font-size: var(--font-size-s);
+	font-variant-numeric: tabular-nums;
+}

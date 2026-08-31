@@ -16,16 +16,18 @@ const { Content } = await render(Astro.props.post);
 	thumbnail={data.thumbnail?.src}
 	type="post"
 >
-	<article class="prose flow">
-		<h1>{data.title}</h1>
-		<p>
-			Published on{' '}
-			<a href={Astro.url}>
-				<time datetime={data.date.toISOString().split('T')[0]}>
-					{dateEst(data.date, undefined, false)}
-				</time>
-			</a>
-		</p>
+	<article class="prose">
+		<header>
+			<h1>{data.title}</h1>
+			<p>
+				Published on{' '}
+				<a href={Astro.url}>
+					<time datetime={data.date.toISOString().split('T')[0]}>
+						{dateEst(data.date, undefined, false)}
+					</time>
+				</a>
+			</p>
+		</header>
 
 		<Content />
 	</article>
