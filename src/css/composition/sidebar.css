@@ -2,14 +2,14 @@
  * SIDEBAR
  *
  * Config:
- * --sidebar-gap (space-sm) Defines the space between items
+ * --sidebar-gap (space-s) Defines the space between items
  * --sidebar-width (content) Defines width for the sidebar area
  */
 
 .sidebar {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--sidebar-gap, var(--space-sm));
+	gap: var(--sidebar-gap, var(--space-s));
 	align-items: start;
 
 	> * {

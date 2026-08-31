@@ -1,0 +1,22 @@
+/**
+ * Global Styles
+ * Low-specificity styles that apply to the whole project
+ */
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-family-body);
+	font-size: var(--font-size-m);
+
+	--cover-gap: var(--space-m);
+
+	margin-inline: auto;
+	max-inline-size: var(--measure-prose);
+	padding-block: var(--space-s);
+	padding-inline: var(--space-m);
+}
+
+main {
+	padding-block-start: var(--space-l);
+}

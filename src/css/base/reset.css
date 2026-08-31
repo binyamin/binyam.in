@@ -1,10 +1,11 @@
 /**
- * CSS Reset
+ * Reset
  *
  * Sources:
  *   - Andy Bell - https://github.com/Andy-set-studio/modern-css-reset/blob/e7500a6c7fa35be8d23f95b6e85f2cde0203f422/src/reset.css
  *   - Stephanie Eckles - https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#css-reset-additions
  *   - Josh Comeau - https://www.joshwcomeau.com/css/custom-css-reset/
+ *   - web.dev - https://web.dev/learn/design/responsive-images#constrain
  */
 
 /* Box sizing rules (Andy Bell) */
@@ -21,6 +22,7 @@ h2,
 h3,
 h4,
 p,
+pre,
 figure,
 blockquote,
 dl,
@@ -55,7 +57,7 @@ body {
 }
 
 /* Baseline for default links (Stephanie Eckles) */
-a:not([class]) {
+a {
 	/* Relatively sized thickness and offset */
 	text-decoration-thickness: max(0.08em, 1px);
 	text-underline-offset: 0.15em;
@@ -69,10 +71,30 @@ canvas,
 picture {
 	/* (Josh Comeau) */
 	display: block;
-	max-width: 100%;
+
+	/* Maintain aspect-ratio when resizing (web.dev) */
+	block-size: auto;
+	max-inline-size: 100%;
 
 	/* When adjusting size, don't stretch the image (Binyamin Green) */
 	object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons (Andy Bell) */
+input,
+button,
+textarea,
+select,
+/* Headings & captions are unstyled by default. They should
+be used semantically, not visually. (Binyamin Green) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+	font: inherit;
 }
 
 /* Remove all animations and transitions for people that

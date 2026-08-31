@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import IconRSS from '~/assets/icons/rss.svg';
 import ListEntry from '~/components/blog/ListEntry.astro';
 import Layout from '~/layouts/base.astro';
 import * as cfg from '~/site.config';
@@ -15,9 +14,17 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 const PAGE_TITLE = 'Blog';
 ---
 
+<style>
+	.post-list {
+		--region-space: var(--space-m);
+		--stack-gap: var(--space-xs);
+	}
+</style>
+
 <Layout
 	type="page"
 	title={PAGE_TITLE}
+	description={cfg.blog.description}
 >
 	<Fragment slot="head">
 		<link
@@ -35,22 +42,19 @@ const PAGE_TITLE = 'Blog';
 		/>
 	</Fragment>
 
-	<div class="h-feed">
-		<h1 class="p-name">{PAGE_TITLE}</h1>
+	<div>
+		<h1>{PAGE_TITLE}</h1>
 		<p>
-			<IconRSS /> Subscribe via <a href={`/p/feed.xml`}>RSS</a>
-			or
-			<a href={`/p/feed.json`}>JSON</a> feed
+			I don't blog actively anymore. The posts stay online because <a
+				href="https://www.w3.org/Provider/Style/URI.html"
+			>cool URIs don't change</a>.
 		</p>
-		<link class="u-url" href={Astro.url} />
-		<data class="p-author" value={cfg.me.name}></data>
 
-		<ul>
+		<ul role="list" class="post-list stack region">
 			{posts.map((p) => (
 				<li>
 					<ListEntry
 						title={p.data.title}
-						description={p.data.description}
 						date={p.data.date}
 						url={'/p/' + p.data.slug}
 					/>

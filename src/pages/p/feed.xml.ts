@@ -23,6 +23,7 @@ export const GET: APIRoute = async (ctx) => {
 		id: BLOG_URL.href,
 		title: { value: cfg.blog.title },
 		updated: latestFeedUpdated,
+		subtitle: { value: cfg.blog.description },
 		authors: [
 			{
 				name: cfg.me.name,

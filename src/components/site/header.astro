@@ -1,19 +1,35 @@
 ---
-import Logo from '~/assets/img/logo.svg';
+import * as cfg from '~/site.config';
 ---
 
+<style>
+	header {
+		font-family: var(--font-family-display);
+	}
+
+	.logo {
+		color: currentColor;
+		font-size: var(--font-size-l);
+		font-style: italic;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration-line: none;
+
+		&:hover {
+			text-decoration-line: underline;
+		}
+	}
+</style>
 <header>
-	<nav>
-		<a href="/">
-			<Logo
-				height={48}
-				width={48}
-				aria-label={'A logo with the letters "B" and "G"'}
-			/>
-		</a>
-		<ul>
+	<nav class="repel">
+		<a href="/" class="logo">{cfg.me.firstName}</a>
+
+		<ul role="list" class="cluster">
 			<li><a href="/me">About</a></li>
-			<!-- <li><a href="/projects">Projects</a></li> -->
+			<li><a href="/projects">Projects</a></li>
 			<li><a href="/contact">Contact</a></li>
 		</ul>
 	</nav>

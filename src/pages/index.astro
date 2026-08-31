@@ -1,23 +1,30 @@
 ---
-import { Picture } from 'astro:assets';
+import IconArrow from '~/assets/icons/arrow-right.svg';
 import Layout from '~/layouts/base.astro';
-
-import profile from '~/assets/img/profile.jpeg';
+import * as cfg from '~/site.config';
 ---
 
-<Layout title="" type="page">
-	<Picture src={profile} alt="" layout="constrained" width={96} height={96} />
+<style>
+	h1 {
+		font-size: var(--font-size-4xl);
+	}
 
-	<h1>Hi, I'm Binyamin</h1>
-	<p>I'm a designer, developer, and occassional writer.</p>
-	<p>
-		I want to build a happier, healthier internet community. I try to give users
-		control of their technology. Accessibility is key, along with intuitive
-		design.
-	</p>
-	<p>
-		I'm available for new projects! Reach out <a
-			href="mailto:binyamin[remove-me]green@protonmail.com"
-		>via e-mail</a>.
-	</p>
+	a {
+		display: flex;
+		gap: var(--space-3xs);
+	}
+</style>
+
+<Layout title="" type="page">
+	<div class="prose">
+		<h1>{cfg.me.firstName}</h1>
+		<p>Many people build websites. I build websites for people.</p>
+		<p>
+			I focus on the pieces some developers forget: well-structured code,
+			cohesive design, and the end-user. If you've landed here, you probably
+			care about them too.
+		</p>
+		<!-- <a href="/projects"><IconArrow />See my work</a> -->
+		<a href="/contact"><IconArrow />My inbox is open 24/6</a>
+	</div>
 </Layout>

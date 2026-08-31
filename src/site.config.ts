@@ -1,5 +1,6 @@
 export const me = {
 	name: 'Binyamin Green',
+	firstName: 'Binyamin',
 	twitter: 'binyamingreen',
 };
 
@@ -11,4 +12,6 @@ export const site = {
 
 export const blog = {
 	title: "Binyamin's Blog",
+	/** For metadata & feeds, not for HTML */
+	description: 'Archived musings on code, the web, and passing thoughts.',
 };

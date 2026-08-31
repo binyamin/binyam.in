@@ -3,7 +3,7 @@
  * Pushes items apart if there is space, otherwise stacks.
  *
  * Config:
- * --repel-gap (space-sm) Defines the space between items
+ * --repel-gap (space-s) Defines the space between items
  * --repel-valign (stretch) Controls vertical alignment
  * [data-repel-nowrap] Disable wrapping on overflow
  */
@@ -13,7 +13,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: var(--repel-valign, center);
-	gap: var(--repel-gap, var(--space-sm));
+	gap: var(--repel-gap, var(--space-s));
 
 	&[data-repel-nowrap] {
 		flex-wrap: nowrap;
