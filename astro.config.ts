@@ -2,6 +2,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 import { site } from './src/site.config';
+import mdastPlugins from './utils/mdast';
 
 export default defineConfig({
 	site: site.url,
@@ -22,7 +23,10 @@ export default defineConfig({
 		shikiConfig: {
 			theme: 'vitesse-light',
 		},
-		processor: satteri(),
+		processor: satteri({
+			features: { directive: true },
+			mdastPlugins,
+		}),
 	},
 	integrations: [sitemap()],
 });

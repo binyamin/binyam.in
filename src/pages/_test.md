@@ -90,10 +90,19 @@ Something a wise person once told me about typography is:
 
 It's probably important that images look okay here by default as well:
 
-<figure>
-	<img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="" />
-	<figcaption>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</figcaption>
-</figure>
+::::figure
+
+![](https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80)
+
+:::caption
+
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+in a piece of classical Latin literature from 45 BC, making it over 2000 years
+old.
+
+:::
+
+::::
 
 Now I'm going to show you an example of an unordered list to make sure that
 looks good, too:
@@ -261,13 +270,18 @@ text. I can't explain why I want things to end that way but I have to assume
 it's because I think things will look weird or unbalanced if there is a heading
 too close to the end of the document.
 
-<figure>
+::::figure
 
 > Words can be like X-rays, if you use them properly—they'll go through
 > anything. You read and you're pierced.
 
-<figcaption>Aldous Huxley, <cite>Brave New World</cite></figcaption>
-</figure>
+:::caption
+
+Aldous Huxley, <cite>Brave New World</cite>
+
+:::
+
+::::
 
 What I've written here is probably long enough, but adding this final sentence
 can't hurt.

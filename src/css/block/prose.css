@@ -107,6 +107,10 @@
 			&::before {
 				content: '— ';
 			}
+
+			p:only-child {
+				display: contents;
+			}
 		}
 	}
 
