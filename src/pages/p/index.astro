@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import ListEntry from '~/components/blog/ListEntry.astro';
+import Layout from '~/layouts/base.astro';
+import * as cfg from '~/site.config';
+
+const posts = (await Promise.all([
+	getCollection('blog'),
+	getCollection('micro'),
+])).flat();
+
+posts.sort((a, b) => +b.data.date - +a.data.date);
+
+const PAGE_TITLE = 'Blog';
+---
+
+<style>
+	.post-list {
+		--region-space: var(--space-m);
+		--stack-gap: var(--space-xs);
+	}
+</style>
+
+<Layout
+	type="page"
+	title={PAGE_TITLE}
+	description={cfg.blog.description}
+>
+	<Fragment slot="head">
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/atom+xml"
+			href={new URL('/p/feed.xml', Astro.site)}
+		/>
+
+		<link
+			rel="alternate"
+			title={cfg.blog.title}
+			type="application/feed+json"
+			href={new URL('/p/feed.json', Astro.site)}
+		/>
+	</Fragment>
+
+	<div>
+		<h1>{PAGE_TITLE}</h1>
+		<p>
+			I don't blog actively anymore. The posts stay online because <a
+				href="https://www.w3.org/Provider/Style/URI.html"
+			>cool URIs don't change</a>.
+		</p>
+
+		<ul role="list" class="post-list stack region">
+			{posts.map((p) => (
+				<li>
+					<ListEntry
+						title={p.data.title}
+						date={p.data.date}
+						url={'/p/' + p.data.slug}
+					/>
+				</li>
+			))}
+		</ul>
+	</div>
+</Layout>

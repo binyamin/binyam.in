@@ -1,0 +1,9 @@
+/**
+ * Text-related utilities
+ */
+
+.text-label {
+	font-family: var(--font-family-display);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--leading-tight);
+}

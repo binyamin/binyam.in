@@ -1,0 +1,47 @@
+---
+import * as cfg from '~/site.config';
+
+export interface Props {
+	title: string;
+	description?: string;
+	thumbnail?: string;
+	type: 'post' | 'page';
+}
+
+const page = {
+	title: Astro.props.title,
+	description: Astro.props.description,
+	type: Astro.props.type,
+	url: new URL(Astro.url, cfg.site.url),
+	image: Astro.props.thumbnail
+		? new URL(Astro.props.thumbnail, Astro.url)
+		: new URL('/img/og-image.png', Astro.url),
+};
+
+const TITLE_TAG = page.title
+	? [page.title, cfg.site.title].join(' | ')
+	: cfg.site.title + ' — Front-end developer and design engineer';
+---
+
+<title>{TITLE_TAG}</title>
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="generator" content={Astro.generator} />
+<link rel="canonical" href={page.url} />
+<meta name="description" content={cfg.site.description} />
+
+<!-- OpenGraph tags -->
+<meta property="og:site_name" content={cfg.site.title} />
+<meta property="og:title" content={page.title || cfg.site.title} />
+<meta
+	property="og:type"
+	content={page.type === 'post' ? 'article' : 'website'}
+/>
+<meta property="og:url" content={page.url} />
+<meta property="og:image" content={page.image} />
+<meta
+	property="og:description"
+	content={page.description ?? cfg.site.description}
+/>
+
+<meta name="twitter:card" content="summary_large_image" />

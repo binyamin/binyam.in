@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/base.astro';
+
+import IconGithub from '~/assets/icons/github.svg';
+import IconMail from '~/assets/icons/mail.svg';
+---
+
+<style>
+	ul {
+		display: inline-grid;
+		grid-template-columns: 14rem;
+		gap: var(--space-2xs);
+	}
+
+	.card {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2xs);
+
+		border-radius: var(--radius-m);
+		border: 1px solid var(--color-border);
+		padding-block: var(--space-2xs);
+		padding-inline: var(--space-s);
+		color: currentColor;
+		text-decoration-line: none;
+
+		&:hover {
+			border-color: var(--color-border-darker);
+		}
+	}
+</style>
+
+<Layout title="Contact Me" type="page">
+	<article class="prose">
+		<h1>Get in Touch</h1>
+
+		<p>
+			If you're looking to connect, you've come to the right place. My inbox is
+			open 24/6. Whenever you're ready&hellip;
+		</p>
+
+		<ul role="list">
+			<li>
+				<a href="mailto:me@binyam.in" class="card">
+					<IconMail
+						class="icon"
+						aria-label="Email"
+					/>
+					<span>me@binyam.in</span>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://github.com/binyamin"
+					target="_blank"
+					rel="external"
+					class="card"
+				>
+					<IconGithub class="icon" aria-label="GitHub" />
+					<span>@binyamin</span>
+				</a>
+			</li>
+		</ul>
+	</article>
+</Layout>

@@ -1,0 +1,164 @@
+/**
+ * PROSE
+ * Styles for long-form text
+ *
+ * Concerns:
+ * - Readability (measure/line-length, line-height)
+ * - Visual hierarchy (font-size, font-weight, color)
+ * - Vertical rhythm (spacing)
+ * - Structural framing (e.g. border)
+ *
+ * Config:
+ * --prose-gap (prose-gap-{tight|normal|loose}) Defines the space between items
+ */
+
+.prose {
+	--prose-gap-loose: var(--space-m);
+	--prose-gap-normal: var(--space-s);
+	--prose-gap-tight: var(--space-2xs);
+
+	> * + * {
+		margin-block-start: var(--prose-gap, var(--prose-gap-normal));
+	}
+
+	/* =====================================================================
+	   Typography & Flow Elements
+	   ===================================================================== */
+
+	/* Headings */
+	header:has(h1) {
+		> * + * {
+			margin-block-start: var(--prose-gap, var(--prose-gap-tight));
+		}
+
+		& + * {
+			--prose-gap: var(--prose-gap-loose);
+		}
+	}
+
+	:is(h2, h3, h4) {
+		--prose-gap: var(--prose-gap-loose);
+
+		& + * {
+			--prose-gap: var(--prose-gap-tight);
+		}
+	}
+
+	/* Lists */
+	:is(ul, ol) {
+		--prose-gap: var(--prose-gap-tight);
+	}
+
+	li > * + * {
+		margin-block-start: var(--prose-gap, var(--prose-gap-tight));
+	}
+
+	/* Inline Code */
+	:not(pre) > code {
+		background-color: var(--color-bg-raised);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-s);
+		padding: 0.2em 0.4em;
+	}
+
+	/* Lede */
+	.lede {
+		color: var(--color-text-muted);
+		font-size: var(--font-size-l);
+
+		& + :is(h2, h3, h4) {
+			--prose-gap: var(--prose-gap-tight);
+		}
+	}
+
+	/* hr */
+	hr {
+		background-color: var(--color-border);
+		border: none;
+		height: 1px;
+
+		&, & + * {
+			--prose-gap: var(--prose-gap-loose);
+		}
+	}
+
+	/* =====================================================================
+	   Block Components
+	   ===================================================================== */
+
+	/* Generic figure/caption */
+	figcaption {
+		font-size: var(--font-size-s);
+		margin-block-start: var(--prose-gap-tight);
+		text-align: center;
+	}
+
+	/* Blockquote */
+	figure:has(blockquote),
+	blockquote:not(figure blockquote) {
+		border-left: 4px solid var(--color-border-darker);
+		padding-inline-start: var(--space-s);
+
+		figcaption {
+			color: var(--color-text-muted);
+			font-size: var(--font-size-s);
+			text-align: start;
+
+			&::before {
+				content: '— ';
+			}
+
+			p:only-child {
+				display: contents;
+			}
+		}
+	}
+
+	/* Pre & Code Blocks */
+	pre {
+		background-color: var(--color-bg-raised);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-m);
+		overflow-x: auto;
+		padding: var(--space-xs);
+		tab-size: 4;
+	}
+
+	/* Tables */
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	thead {
+		border-block-end: 2px solid var(--color-border);
+	}
+
+	tr {
+		border-block-end: 1px solid var(--color-border);
+	}
+
+	th,
+	td {
+		padding-block: var(--prose-gap-tight);
+		padding-inline: var(--space-s);
+		text-align: start;
+	}
+
+	th {
+		font-weight: var(--font-weight-bold);
+		font-family: var(--font-family-display);
+	}
+
+	caption {
+		caption-side: bottom;
+		font-size: var(--font-size-s);
+		margin-block-start: var(--prose-gap-tight);
+		text-align: center;
+	}
+
+	/* Footnotes */
+	.footnotes {
+		border-block-start: 1px solid var(--color-border);
+	}
+}

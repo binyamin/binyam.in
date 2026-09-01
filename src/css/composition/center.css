@@ -1,0 +1,8 @@
+/**
+ * CENTER
+ */
+
+.center {
+	display: grid;
+	place-items: center;
+}

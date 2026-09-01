@@ -2,30 +2,15 @@
 	"name": "binyam.in",
 	"type": "module",
 	"private": true,
-	"version": "4.22.4",
-	"description": "My personal website",
-	"author": "Binyamin Aron Green",
 	"license": "MIT",
 	"scripts": {
-		"start": "eleventy --quiet --serve",
-		"dev": "eleventy --incremental --quiet --serve",
-		"watch": "eleventy --quiet --watch",
-		"prebuild": "node scripts/fetchNotes",
-		"build": "eleventy --quiet"
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.6",
-		"@binyamin/data-cache": "^2.0.0",
-		"@binyamin/eleventy-plugin-sass": "github:binyamin/eleventy-plugin-sass",
-		"dayjs": "^1.11.21",
-		"del": "^8.0.1",
-		"eleventy-plugin-backlinks": "^1.0.0",
-		"highlight.js": "^11.11.1",
-		"markdown-it": "^14.2.0",
-		"markdown-it-anchor": "^9.2.0",
-		"markdown-it-attrs": "^5.0.0",
-		"markdown-it-external-anchor": "^2.0.0",
-		"markdown-it-footnote": "^4.0.0",
-		"title-case": "^4.3.2"
+		"@astrojs/sitemap": "^3.7.4",
+		"astro": "^7.2.10",
+		"feedsmith": "^3.0.0-rc.3"
 	}
 }

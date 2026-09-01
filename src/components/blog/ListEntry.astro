@@ -1,0 +1,25 @@
+---
+import { dateEst } from '~/lib/utils';
+
+export interface Props {
+	url: string;
+	title: string;
+	date: Date;
+}
+
+const { props } = Astro;
+---
+
+<style>
+	.stack {
+		--stack-gap: 0;
+	}
+</style>
+
+<div class="stack">
+	<time
+		datetime={props.date.toISOString().split('T')[0]}
+	>{dateEst(props.date, undefined, false)}</time>
+
+	<a href={props.url} class="text-label">{props.title}</a>
+</div>
