@@ -16,14 +16,6 @@ pretty_urls = true
 [build.processing.images]
 compress = true
 
-[[redirects]]
-from = "/listening"
-to = "https://listenbrainz.org/user/BinyaminG"
-
-[[redirects]]
-from = "/profile.jpeg"
-to = "/assets/img/profile.jpeg"
-
 ## Blog redirects
 
 [[redirects]]
