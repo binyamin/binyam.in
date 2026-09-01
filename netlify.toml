@@ -22,7 +22,7 @@ to = "https://listenbrainz.org/user/BinyaminG"
 
 [[redirects]]
 from = "/profile.jpeg"
-to = "/assets/img/profile/profile.jpeg"
+to = "/img/profile.jpeg"
 
 ## Blog redirects
 
