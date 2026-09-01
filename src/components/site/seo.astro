@@ -32,7 +32,7 @@ const TITLE_TAG = page.title
 
 <!-- OpenGraph tags -->
 <meta property="og:site_name" content={cfg.site.title} />
-<meta property="og:title" content={page.title ?? cfg.site.title} />
+<meta property="og:title" content={page.title || cfg.site.title} />
 <meta
 	property="og:type"
 	content={page.type === 'post' ? 'article' : 'website'}
