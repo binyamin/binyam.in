@@ -7,7 +7,7 @@
       "devDependencies": {
         "@astrojs/sitemap": "^3.7.4",
         "astro": "^7.2.10",
-        "feedsmith": "^3.0.0-rc.2",
+        "feedsmith": "^3.0.0-rc.3",
       },
     },
   },

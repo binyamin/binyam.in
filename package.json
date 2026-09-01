@@ -2,9 +2,6 @@
 	"name": "binyam.in",
 	"type": "module",
 	"private": true,
-	"version": "4.22.4",
-	"description": "My personal website",
-	"author": "Binyamin Aron Green",
 	"license": "MIT",
 	"scripts": {
 		"dev": "astro dev",
