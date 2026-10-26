@@ -29,12 +29,9 @@ export interface Props extends SeoProps {}
 		<Font cssVariable="--font-family-serif" preload />
 
 		<!-- Indieauth -->
-		<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-		<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
-
-		<!-- IndieAuth rel-me links -->
-		<link href="mailto:binyamingreen@protonmail.com" rel="me" />
-		<link href="https://github.com/binyamin" rel="me" />
+		<link rel="indieauth-metadata" href="https://indiekey.id/.well-known/oauth-authorization-server/s/x19qsvp555qb97tn">
+		<link rel="authorization_endpoint" href="https://indiekey.id/s/x19qsvp555qb97tn/auth">
+		<link rel="token_endpoint" href="https://indiekey.id/token">
 
 		<slot name="head" />
 	</head>
